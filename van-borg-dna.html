@@ -1,0 +1,331 @@
+<!--
+  VAN BORG DNA – Source of truth for the company.
+  This file is the canonical reference for: SEO meta, Open Graph, Twitter,
+  structured data (JSON-LD), prices, locations, contact, and noscript fallback.
+  The live app uses index.html (Vite entry: /src/main.tsx); head and noscript
+  content there are derived from this file.
+-->
+<!doctype html>
+<html lang="nl-NL">
+  <head>
+    <script>
+      (function(){
+        var s = localStorage.getItem('vanborg-theme');
+        var isDark = s === 'dark' || (s !== 'light' && (!window.matchMedia || !window.matchMedia('(prefers-color-scheme: light)').matches));
+        document.documentElement.classList.toggle('dark', isDark);
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Core -->
+    <title>Beste marketingbureau uit Veendam. Wij zorgen voor een Top 3 Google ranking voor lokale bedrijven, Google Ads en SEO-websites</title>
+    <meta
+      name="description"
+      content="Marketing consultant uit Veendam voor lokale bedrijven in Nederland. Wij helpen bedrijven in o.a. Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie, Zuidbroek, Muntendam, Meeden, Bareveld, Noordbroek, Sappemeer en Hoogezand met Google Top 3 ranking (Local SEO/Google Business Profile), Google Ads-campagnes en SEO-websites. Werkgebied: heel Nederland. Prijzen in €."
+    />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="author" content="Van Borg" />
+    <link rel="canonical" href="https://vanborg.com/" />
+    <meta name="document-outline" content="h1: page title; h2: main sections (services, FAQ, contact); h3: subsections (pricing, tiers); h4: content headings (tiers, FAQ questions)" />
+
+    <!-- Icons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Platform colours -->
+    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="msapplication-TileColor" content="#0ea5e9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Van Borg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vanborg.com/" />
+    <meta property="og:title" content="Google Top 3 ranking voor lokale bedrijven | Google Ads & Websites | Van Borg" />
+    <meta
+      property="og:description"
+      content="Marketing consultant uit Veendam voor lokale bedrijven in Nederland. Wij helpen bedrijven in o.a. Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie, Zuidbroek, Muntendam, Meeden, Bareveld, Noordbroek, Sappemeer en Hoogezand met Google Top 3 ranking (Local SEO/Google Business Profile), Google Ads-campagnes en SEO-websites. Werkgebied: heel Nederland. Prijzen in €."
+    />
+    <meta property="og:image" content="https://vanborg.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Beste Lokale SEO & Google Ranking Specialisten in Nederland" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:site_name" content="Van Borg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Google Top 3 ranking voor lokale bedrijven | Google Ads & Websites | Van Borg" />
+    <meta
+      name="twitter:description"
+      content="Marketing consultant uit Veendam voor lokale bedrijven in Nederland. Wij helpen bedrijven in o.a. Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie, Zuidbroek, Muntendam, Meeden, Bareveld, Noordbroek, Sappemeer en Hoogezand met Google Top 3 ranking (Local SEO/Google Business Profile), Google Ads-campagnes en SEO-websites. Werkgebied: heel Nederland. Prijzen in €."
+    />
+    <meta name="twitter:image" content="https://vanborg.com/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Beste Lokale SEO & Google Ranking Specialisten in Nederland" />
+    <meta name="twitter:site" content="@VanBorgLimited" />
+    <meta name="twitter:creator" content="@VanBorgLimited" />
+
+    <!-- DNS prefetch for faster resource loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Maps preconnect for lazy-loaded maps -->
+    <link rel="preconnect" href="https://maps.google.com" />
+    <link rel="dns-prefetch" href="https://maps.google.com" />
+
+    <!-- Load Google Fonts with font-display: swap for better performance -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+
+    <!-- Alleen minimale CSS voor laadfase. Geen Hero/h1/padding – alles uit src/ (Tailwind + globals). -->
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body, #root { height: 100%; }
+      body { font-family: system-ui, -apple-system, sans-serif; }
+      #root { min-height: 100vh; }
+      noscript .seo-shell { max-width: 1024px; margin: 0 auto; padding: 24px; line-height: 1.6; }
+      noscript h1 { font-size: 32px; margin-bottom: 12px; }
+      noscript h2 { font-size: 22px; margin-top: 24px; }
+      noscript h3 { font-size: 16px; margin-top: 12px; }
+      noscript p { margin: 8px 0; }
+    </style>
+
+    <!-- Polyfill for async CSS loading (for browsers that don't support onload on link tags) -->
+    <script>
+      !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=r.createElement("link");if(n)i=n;else{var l=(r.body||r.getElementsByTagName("head")[0]).childNodes;i=l[l.length-1]}var d=r.styleSheets;a.rel="stylesheet",a.href=t,a.media="only x",function e(t){if(r.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(a,n?i:i.nextSibling)});var f=function(e){for(var t=a.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){f(e)})};return a.addEventListener&&a.addEventListener("load",function(){this.media=o||"all"}),a.onloadcssdefined=f,f(function(){a.media!==o&&(a.media=o||"all")}),a};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+    </script>
+
+    <!-- Content Security Policy for localhost development -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' blob: https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://cdn.voiceflow.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.voiceflow.com; font-src 'self' https://fonts.gstatic.com https://cdn.voiceflow.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://cdn.voiceflow.com https://general-runtime.voiceflow.com https://runtime-api.voiceflow.com https://cm4-production-assets.s3.amazonaws.com https://maps.googleapis.com https://maps.gstatic.com; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://api.airtable.com https://general-runtime.voiceflow.com https://runtime-api.voiceflow.com wss://general-runtime.voiceflow.com wss://runtime-api.voiceflow.com https://maps.googleapis.com https://maps.gstatic.com; frame-src 'self' https://maps.google.com https://www.google.com https://calendly.com https://docs.google.com; worker-src blob:; upgrade-insecure-requests"
+    />
+
+    <!-- Analytics (lazy-loaded after page load to keep LCP fast) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted'
+      });
+
+      window.addEventListener('load', function () {
+        try {
+          var consent = localStorage.getItem('cookie-consent');
+          if (consent !== 'accepted') return;
+        } catch (e) {
+          return;
+        }
+
+        var script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-VTHJ3Q66EK';
+        script.async = true;
+        script.onload = function () {
+          gtag('js', new Date());
+          gtag('config', 'G-VTHJ3Q66EK', {
+            anonymize_ip: true,
+            cookie_flags: 'SameSite=None;Secure'
+          });
+        };
+        document.head.appendChild(script);
+      });
+    </script>
+
+    <!-- Structured Data (SEO): LocalBusiness (NL-only) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://vanborg.com/#localbusiness",
+        "name": "Van Borg",
+        "legalName": "Van Borg Limited",
+        "description": "Marketing consultant (marketing consultant / marketing bureau) die lokale bedrijven in Nederland helpt met Google Top 3 ranking (Local SEO/Google Business Profile), Google Ads-campagnes en SEO-websites. Afspraak vereist; online afspraken mogelijk; geen diensten op locatie. Gratis parkeren op straat in de buurt.",
+        "knowsAbout": ["Marketing agency", "Consultant", "Web Designer", "Advertising agency", "Business development service", "Business-to-Business service", "Business management consultant"],
+        "accessibilitySummary": "No wheelchair accessible entrance, restroom, parking, or seating; no assistive listening devices.",
+        "url": "https://vanborg.com/",
+        "logo": "https://vanborg.com/favicon.svg",
+        "image": "https://vanborg.com/og-image.jpg",
+        "foundingDate": "2025-01-09",
+        "telephone": "+31644732266",
+        "email": "info@vanborglimited.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kieler Bocht 104",
+          "postalCode": "9642 CE",
+          "addressLocality": "Veendam",
+          "addressCountry": "NL"
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "Nederland", "identifier": "NL" },
+          { "@type": "Place", "name": "Veendam, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Veendam", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Wildervank, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Wildervank", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Ommelanderwijk, 9644 TH Veendam, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Ommelanderwijk", "postalCode": "9644 TH", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Borgercompagnie, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Borgercompagnie", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Tripscompagnie, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Tripscompagnie", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Zuidbroek, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Zuidbroek", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Muntendam, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Muntendam", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Meeden, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Meeden", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Bareveld, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Bareveld", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Noordbroek, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Noordbroek", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Sappemeer, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Sappemeer", "addressCountry": "NL" } },
+          { "@type": "Place", "name": "Hoogezand, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Hoogezand", "addressCountry": "NL" } }
+        ],
+        "availableLanguage": ["nl-NL"],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61580148003782",
+          "https://x.com/VanBorgLimited",
+          "https://www.linkedin.com/in/van-borg/"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Google Ranking (Top 3 lokaal)",
+            "priceCurrency": "EUR",
+            "price": "1499",
+            "description": "Eenmalig € 1.499 excl. btw + vanaf € 499 p/m excl. btw."
+          },
+          {
+            "@type": "Offer",
+            "name": "Google Ads (retainer per pakket)",
+            "priceCurrency": "EUR",
+            "price": "499",
+            "description": "Voorstarter € 499 p/m, Groei € 899 p/m, Dominant € 1.299 p/m (allemaal excl. btw). Prijs is afhankelijk van het gekozen pakket."
+          },
+          {
+            "@type": "Offer",
+            "name": "SEO Website",
+            "priceCurrency": "EUR",
+            "price": "999",
+            "description": "Vanaf € 999 excl. btw. Hosting & onderhoud: € 99 p/m excl. btw."
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- SEO fallback content (ONLY renders when JS is disabled). Heading hierarchy: h1 → h2 → h3 → h4 for algorithm readability. -->
+    <noscript>
+      <main class="seo-shell" role="main" aria-label="Inhoud Van Borg">
+        <h1>Beste marketingbureau uit Veendam dat zorgt voor een Top 3-ranking op Google voor lokale bedrijven in Nederland | Google Ads-campagnes en SEO- en sales-geoptimaliseerde websites | Van leadgeneratie tot meer omzet | Niet in de top 3? Dan werken we gratis door | Van Borg</h1>
+        <p>
+          Nederlandse specialisten gericht op meetbare groei: hogere Google Maps zichtbaarheid, meer gekwalificeerde aanvragen en betere conversiepercentages.
+          Hoofdlokatie: Veendam. Wij bedienen o.a. bedrijven in Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie, Zuidbroek, Muntendam, Meeden, Bareveld, Noordbroek, Sappemeer en Hoogezand. Werkgebied: heel Nederland. Wij werken uitsluitend met bedrijven in Nederland.
+        </p>
+
+        <h2>Google Ranking – Lokale SEO &amp; Google Business Profile</h2>
+        <p>
+          Verbeter je lokale aanwezigheid op Google Zoeken en Google Maps met een gestructureerde aanpak voor relevantie, nabijheid en vertrouwen.
+          Ontworpen om je in de lokale top 3 te krijgen voor hoog-intentie zoekopdrachten.
+        </p>
+        <h3>Prijzen voor Lokale Google Top 3 Ranking</h3>
+        <h4>Eenmalige setup – Audit &amp; optimalisatie</h4>
+        <p>
+          € 1.499 excl. btw (tot 90 dagen). Vooraf betaald voor al het initiële SEO-werk en Google Business Profile setup.
+          Inbegrepen: volledige SEO &amp; GBP audit &amp; setup, zoekwoordonderzoek &amp; optimalisatie, website-SEO &amp; technische aanpassingen, initiële citatiebouw, GBP content (foto&apos;s, posts, review hulp), wekelijkse updates.
+        </p>
+        <h4>Maandelijks retainer – SEO &amp; beheer</h4>
+        <p>
+          Vanaf € 499 p/m excl. btw. Inbegrepen: content creatie &amp; optimalisatie, linkbuilding, review generatie, GBP posts &amp; updates, foto-updates, maandelijkse rapporten.
+        </p>
+        <p><strong>Betaling:</strong> Ons werk begint zodra de betaling is ontvangen. Bankoverschrijving, creditcard, contant of Bitcoin ($BTC).</p>
+        <h3>Google Business Profile &amp; Local SEO</h3>
+        <p>
+          Categorie- en service-architectuur, beschrijvingen, posts, foto&apos;s, Q&amp;A, citaties (NAP-consistentie) en reputatiestrategie voor meer vertrouwen en conversie.
+        </p>
+
+        <h2>Google Ads – Leadgerichte campagnes</h2>
+        <p>
+          Hoog-intent PPC voor leadkwaliteit: strakke targeting, sterke tracking en landingspagina&apos;s die converteren. Drie pakketten voor elk budget.
+        </p>
+        <h3>Google Ads pakketten – lokale bedrijven</h3>
+        <p>
+          <strong>Betaling:</strong> Zodra betaling is ontvangen. Bankoverschrijving, creditcard, contant of Bitcoin ($BTC).
+          <strong>Let op:</strong> Advertentiebudget staat los van servicekosten. Geen lead- of omzetgaranties.
+        </p>
+        <h4>Voorstarter – Aanwezigheid &amp; eerste leads</h4>
+        <p>€ 499 p/m excl. btw. 1 zoekcampagne, max. 5 zoekwoorden, 1 stad/regio, basis conversietracking, maandelijkse optimalisatie. Geschikt o.a. voor schilders, hoveniers, schoonmaak.</p>
+        <h4>Groei – Structurele leadgeneratie (meest populair)</h4>
+        <p>€ 899 p/m excl. btw. 1–2 campagnes, max. 10 zoekwoorden, zoek- en belads, conversietracking, wekelijkse optimalisatie, maandelijkse rapportage. Geschikt voor de meeste lokale dienstverleners.</p>
+        <h4>Dominant – Lokale markt domineren</h4>
+        <p>€ 1.299 p/m excl. btw. 2–3 campagnes, 15–20 zoekwoorden, call-only, brand protection, wekelijkse deep optimalisatie, prioriteit support. Geschikt o.a. voor loodgieters, elektriciens, dakdekkers.</p>
+
+        <h2>SEO Website – Verkoop geoptimaliseerde websites</h2>
+        <p>
+          Snelle, conversiegerichte websites voor lokale intent: technische SEO, Core Web Vitals, leadcapture en duidelijke CTA&apos;s.
+        </p>
+        <h3>Prijzen SEO &amp; verkoop geoptimaliseerde websites</h3>
+        <h4>Eenmalige bouw – Website ontwikkeling</h4>
+        <p>Vanaf € 999 excl. btw (1–2 maanden). Vooraf betaald. Inbegrepen: mobile-first ontwerp, moderne code (React, TypeScript, Tailwind), SEO-setup, leadcapture &amp; analytics, aangepaste media + 3 revisies, testen &amp; launch.</p>
+        <h4>Maandelijks retainer – Hosting &amp; aanpassingen</h4>
+        <p>€ 99 p/m excl. btw. Premium hosting, 1 grote of 3 kleine aanpassingen per maand, technisch onderhoud.</p>
+        <p><strong>Betaling:</strong> Zodra betaling is ontvangen. Bankoverschrijving, creditcard, contant of Bitcoin ($BTC).</p>
+
+        <h2>Over Van Borg</h2>
+        <p>
+          Wij zijn Nederlandse specialisten die uitsluitend bedrijven in Nederland bedienen. Meetbare resultaten: hogere rankings, meer gekwalificeerde leads, betere conversie. Direct resultaat met Google Ads; bewezen ROI; Local SEO-expertise (verbetering vaak binnen 4–8 weken).
+        </p>
+
+        <h2>Veelgestelde vragen</h2>
+        <p>
+          Vragen over diensten, prijzen en proces? <a href="/contact">Neem contact op</a> of <a href="https://calendly.com/vanborglimited/book-a-call-vbl" target="_blank" rel="noopener noreferrer">boek een gesprek</a> of <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbAT6P9ocdaXFZhqNxdgLOvTUBGpv02TAS9LpT6xJmux7wuw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">vraag een Loom video aan</a>.
+        </p>
+        <h3>Diensten &amp; prijzen</h3>
+        <h4>Hoe lang duurt Local SEO voordat je resultaat ziet?</h4>
+        <p>De meeste klanten zien verbetering in Google Business Profile binnen 2–4 weken, met duidelijke stijging over 2–3 maanden. Local SEO bouwt momentum op in de tijd.</p>
+        <h4>Werken jullie met bedrijven buiten Nederland?</h4>
+        <p>Nee. Wij richten ons uitsluitend op bedrijven in Nederland (Veendam, Kieler Bocht 104, 9642 CE).</p>
+        <h4>Hoe werkt jullie prijsstelling?</h4>
+        <p>Google Ranking: € 1.499 eenmalig + vanaf € 499 p/m. Google Ads: Voorstarter € 499 p/m, Groei € 899 p/m, Dominant € 1.299 p/m (excl. btw; ad spend los). SEO Website: vanaf € 999 eenmalig + € 99 p/m hosting. Bundel: € 6.499 eenmalig + hosting € 99 p/m + Google Ranking vanaf € 499 p/m. Google Ads optioneel.</p>
+        <h4>Wat voor resultaten kan ik verwachten?</h4>
+        <p>Google Ranking: top 3 binnen 90 dagen of we werken gratis door. Google Ads: resultaat vaak in de eerste week, significante ROI binnen 3 maanden. SEO Websites: conversie vanaf dag één.</p>
+        <h4>Heb ik een nieuwe website nodig voor SEO?</h4>
+        <p>Niet per se. Bestaande sites kunnen geoptimaliseerd worden. Bij trage of verouderde sites raden we een nieuwe conversiegerichte site aan.</p>
+
+        <h2>Contact</h2>
+        <p>Neem contact op voor lokale SEO, Google Ads of een SEO Website.</p>
+        <h3>Onze locatie</h3>
+        <p>Van Borg, Kieler Bocht 104, Veendam, 9642 CE, Nederland.</p>
+        <h3>Openingstijden</h3>
+        <p>Open 24 uur, elke dag.</p>
+        <h3>Neem contact op</h3>
+        <p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbAT6P9ocdaXFZhqNxdgLOvTUBGpv02TAS9LpT6xJmux7wuw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Vraag een Loom video aan</a> |
+          <a href="https://calendly.com/vanborglimited/book-a-call-vbl" target="_blank" rel="noopener noreferrer">Plan een 15-min gesprek</a>
+        </p>
+      </main>
+    </noscript>
+  </body>
+</html>

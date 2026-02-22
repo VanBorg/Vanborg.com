@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-neutral-900 antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+}
+
+/* Design tokens */
+:root {
+  --accent-blue: #2563eb;
+  --accent-cyan: #06b6d4;
+  --gradient-cta: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  --section-grey: #f0f0f0;
+  --section-white: #fff;
+  /* Grey only at top/bottom; broad stretch of bright white, short transition in the middle */
+  --gradient-section-1: linear-gradient(to bottom, var(--section-grey) 0%, var(--section-grey) 28%, var(--section-white) 45%, var(--section-white) 100%);
+  --gradient-section-2: linear-gradient(to bottom, var(--section-white) 0%, var(--section-white) 55%, var(--section-grey) 72%, var(--section-grey) 100%);
+}
+
+/* Container – max-width 1200px, horizontal padding */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Section – vertical spacing */
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Section backgrounds – vertical gradient, soft transition in the middle */
+.bg-section-1 {
+  background: var(--gradient-section-1);
+}
+
+.bg-section-2 {
+  background: var(--gradient-section-2);
+}
+
+/* Primary button – gradient, white text, hover scale + shadow */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: white;
+  background: var(--gradient-cta);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.35), 0 8px 10px -6px rgba(37, 99, 235, 0.2);
+}
+
+/* Secondary button – outline, subtle hover fill */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: #171717;
+  background: transparent;
+  border: 2px solid #e5e5e5;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 300ms ease, border-color 300ms ease;
+}
+
+.btn-secondary:hover {
+  background-color: #fafafa;
+  border-color: #d4d4d4;
+}
+
+/* Card hover lift – use with rounded-xl, soft shadow */
+.card-hover {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+/* ========== Image comparison component – herbruikbare stijlen ========== */
+
+:root {
+  --comparison-border-width: 3px;
+  --comparison-border-color: #737373;
+  --comparison-ring-width: 2px;
+  --comparison-ring-color: #a3a3a3;
+  --comparison-ring-offset: 2px;
+  --comparison-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  --comparison-badge-border: 2px solid #e5e5e5;
+  --comparison-badge-bg: #fff;
+  --comparison-badge-text: #262626;
+  --comparison-divider-line-color: #000;
+  --comparison-divider-handle-bg: #171717;
+  --comparison-divider-handle-border: #404040;
+  --comparison-divider-handle-ring: rgba(115, 115, 115, 0.3);
+}
+
+/* Border rond de vergelijkingskaart */
+.comparison-card-border {
+  border: var(--comparison-border-width) solid var(--comparison-border-color);
+  border-radius: 1rem;
+}
+
+/* Schaduw + ring rond de vergelijkingskaart (ring en drop shadow in één) */
+.comparison-card-shadow {
+  box-shadow:
+    0 0 0 var(--comparison-ring-offset) #fff,
+    0 0 0 calc(var(--comparison-ring-offset) + var(--comparison-ring-width)) var(--comparison-ring-color),
+    var(--comparison-shadow);
+}
+
+/* Badge boven de kaart (Voor / Na) */
+.comparison-badge {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--comparison-badge-text);
+  background: var(--comparison-badge-bg);
+  border: var(--comparison-badge-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Dividerlijn (verticale zwarte lijn) */
+.comparison-divider-line {
+  width: 2px;
+  background-color: var(--comparison-divider-line-color);
+  cursor: ew-resize;
+  user-select: none;
+}
+
+/* Divider-handle (ronde knop in het midden) */
+.comparison-divider-handle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--comparison-divider-handle-border);
+  border-radius: 9999px;
+  background: var(--comparison-divider-handle-bg);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1), 0 0 0 2px var(--comparison-divider-handle-ring);
+}
