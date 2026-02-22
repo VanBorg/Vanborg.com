@@ -40,7 +40,7 @@
   --comparison-ring-width: 2px;
   --comparison-ring-color: #a3a3a3;
   --comparison-ring-offset: 2px;
-  --comparison-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  --comparison-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
   --comparison-badge-border: 2px solid #e5e5e5;
   --comparison-badge-bg: #fff;
   --comparison-badge-text: #262626;
