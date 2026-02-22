@@ -6,7 +6,8 @@ interface ImageComparisonProps {
   className?: string
 }
 
-const AUTO_ANIMATION_DURATION_MS = 7000
+/** Duur voor één richting (links→rechts of rechts→links) in ms */
+const AUTO_ANIMATION_DURATION_ONE_WAY_MS = 3500
 const AUTO_ANIMATION_START = 20
 const AUTO_ANIMATION_END = 85
 
@@ -63,17 +64,17 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
 
   useEffect(() => {
     if (userHasInteracted) return
+    const periodMs = AUTO_ANIMATION_DURATION_ONE_WAY_MS * 2
     const step = (timestamp: number) => {
       if (startTimeRef.current == null) startTimeRef.current = timestamp
       const elapsed = timestamp - startTimeRef.current
-      const progress = Math.min(1, elapsed / AUTO_ANIMATION_DURATION_MS)
+      const t = elapsed % periodMs
+      const progress = t < AUTO_ANIMATION_DURATION_ONE_WAY_MS
+        ? t / AUTO_ANIMATION_DURATION_ONE_WAY_MS
+        : (periodMs - t) / AUTO_ANIMATION_DURATION_ONE_WAY_MS
       const pct = AUTO_ANIMATION_START + progress * (AUTO_ANIMATION_END - AUTO_ANIMATION_START)
       setPosition(pct)
-      if (progress < 1) {
-        autoAnimationRef.current = requestAnimationFrame(step)
-      } else {
-        startTimeRef.current = null
-      }
+      autoAnimationRef.current = requestAnimationFrame(step)
     }
     autoAnimationRef.current = requestAnimationFrame(step)
     return () => {
@@ -102,20 +103,24 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
 
   return (
     <div className={`flex w-full flex-col gap-3 ${className}`.trim()}>
-      {/* Badges boven de kaart: links Voor, rechts Na */}
-      <div className="flex items-center justify-between px-1">
-        <span className="comparison-badge" aria-hidden>
-          Toen we begonnen
-        </span>
-        <span className="comparison-badge" aria-hidden>
-          Na 90 dagen
-        </span>
-      </div>
       <div
         ref={containerRef}
         className="comparison-card-border comparison-card-shadow relative w-full overflow-hidden bg-white"
         aria-label="Vergelijking: links toen we begonnen, rechts na 90 dagen"
       >
+        {/* Badges boven op de afbeelding, onderaan: linksonder en rechtsonder */}
+        <span className="comparison-badge comparison-badge-with-icon comparison-badge-corner comparison-badge-bottom-left" aria-hidden>
+          <svg className="comparison-badge-arrow comparison-badge-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Toen we begonnen
+        </span>
+        <span className="comparison-badge comparison-badge-with-icon comparison-badge-corner comparison-badge-bottom-right" aria-hidden>
+          Na 90 dagen
+          <svg className="comparison-badge-arrow comparison-badge-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </span>
         {/* Sizer: bepaalt hoogte van de container op basis van de afbeelding, geen wit vlak meer */}
         <img
           src={before}
@@ -146,7 +151,7 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
         </div>
         {/* Divider: eigen compositorlaag (translateZ(0)), afgeronde positie = solid, geen knipperen */}
         <div
-          className="comparison-divider-line absolute inset-y-0 z-10"
+          className={`comparison-divider-line absolute inset-y-0 z-10 ${!userHasInteracted ? 'comparison-divider-idle' : ''}`.trim()}
           style={{
             left: `${Math.round(position * 100) / 100}%`,
             transform: 'translateX(-50%) translateZ(0)',

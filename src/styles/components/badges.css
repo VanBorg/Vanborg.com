@@ -80,3 +80,89 @@
   color: var(--color-info);
   border-color: var(--color-info);
 }
+
+/*
+  Badge card – herbruikbare stijl (zelfde look als de comparison-badges).
+  Gebruik overal waar je deze badge-look wilt: class="badge badge-card"
+  of met icoon: class="badge badge-card badge-with-icon".
+*/
+.badge-card {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-neutral-800);
+  background: #fff;
+  border: 1px solid var(--color-neutral-400);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.badge-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.badge-arrow {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.badge-arrow-right {
+  margin-left: 0.125rem;
+}
+
+.badge-arrow-left {
+  margin-right: 0.125rem;
+}
+
+/* Comparison badges: zelfde design als .badge-card, met comparison-tokens */
+.comparison-badge {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--comparison-badge-text);
+  background: var(--comparison-badge-bg);
+  border: 1px solid var(--comparison-border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.comparison-badge-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.comparison-badge-arrow {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+  color: var(--comparison-badge-text);
+}
+
+.comparison-badge-arrow-right {
+  margin-left: 0.125rem;
+}
+
+.comparison-badge-arrow-left {
+  margin-right: 0.125rem;
+}
+
+/* Badges boven op de afbeelding, onderaan (linksonder en rechtsonder) */
+.comparison-badge-corner {
+  position: absolute;
+  bottom: 0.75rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.comparison-badge-bottom-left {
+  left: 0.75rem;
+}
+
+.comparison-badge-bottom-right {
+  right: 0.75rem;
+}
