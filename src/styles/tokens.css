@@ -1,0 +1,51 @@
+/* Design tokens – kleuren, gradients, shadows, radii, comparison */
+:root {
+  /* Accent & CTA */
+  --accent-blue: #2563eb;
+  --accent-cyan: #06b6d4;
+  --gradient-cta: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+
+  /* Section backgrounds */
+  --section-grey: #f0f0f0;
+  --section-white: #fff;
+  --gradient-section-1: linear-gradient(to bottom, var(--section-grey) 0%, var(--section-grey) 28%, var(--section-white) 45%, var(--section-white) 100%);
+  --gradient-section-2: linear-gradient(to bottom, var(--section-white) 0%, var(--section-white) 55%, var(--section-grey) 72%, var(--section-grey) 100%);
+
+  /* Radii */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+
+  /* Shadows (for use in shadows.css and elsewhere) */
+  --shadow-soft: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-glow: 0 10px 25px -5px rgba(37, 99, 235, 0.35), 0 8px 10px -6px rgba(37, 99, 235, 0.2);
+  --shadow-glow-blue: 0 10px 25px -5px rgba(37, 99, 235, 0.35), 0 8px 10px -6px rgba(37, 99, 235, 0.2);
+
+  /* Semantic colours for badges etc. */
+  --color-success: #16a34a;
+  --color-warning: #ca8a04;
+  --color-error: #dc2626;
+  --color-info: #2563eb;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+
+  /* Image comparison component */
+  --comparison-border-width: 3px;
+  --comparison-border-color: #737373;
+  --comparison-ring-width: 2px;
+  --comparison-ring-color: #a3a3a3;
+  --comparison-ring-offset: 2px;
+  --comparison-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  --comparison-badge-border: 2px solid #e5e5e5;
+  --comparison-badge-bg: #fff;
+  --comparison-badge-text: #262626;
+  --comparison-divider-line-color: #000;
+  --comparison-divider-handle-bg: #171717;
+  --comparison-divider-handle-border: #404040;
+  --comparison-divider-handle-ring: rgba(115, 115, 115, 0.3);
+}

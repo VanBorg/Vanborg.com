@@ -1,0 +1,43 @@
+/* Cards / dozen – basis en varianten */
+
+.card {
+  padding: 1.5rem;
+  background: white;
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 2rem;
+  }
+}
+
+/* Bordered – duidelijke rand */
+.card-bordered {
+  border: 2px solid var(--color-neutral-200);
+}
+
+/* Elevated – meer schaduw */
+.card-elevated {
+  box-shadow: var(--shadow-card);
+}
+
+/* Flat – geen schaduw, alleen bg (default card is already flat) */
+.card-flat {
+  box-shadow: none;
+}
+
+/* Hover – lift + shadow on hover (legacy class, same as card + hover-lift) */
+.card-hover {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Interactive – cursor pointer for clickable cards */
+.card-interactive {
+  cursor: pointer;
+}

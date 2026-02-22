@@ -1,0 +1,14 @@
+@import './tokens.css';
+@import './base.css';
+/* layout.css wordt in main.tsx na index.css geladen zodat .container niet door Tailwind wordt overschreven */
+@import './components/buttons.css';
+@import './components/badges.css';
+@import './components/cards.css';
+@import './components/shadows.css';
+@import './components/hover-effects.css';
+@import './components/links.css';
+@import './components/image-comparison.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

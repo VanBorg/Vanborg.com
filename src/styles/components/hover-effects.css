@@ -1,0 +1,50 @@
+/* Herbruikbare hover-effecten – combineer met card, btn, etc. */
+
+.hover-lift {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.hover-scale {
+  transition: transform 300ms ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-glow {
+  transition: box-shadow 300ms ease;
+}
+
+.hover-glow:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+.hover-underline {
+  transition: text-decoration-color 200ms ease;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+.hover-opacity {
+  transition: opacity 300ms ease;
+}
+
+.hover-opacity:hover {
+  opacity: 0.85;
+}
+
+.hover-brighten {
+  transition: filter 300ms ease;
+}
+
+.hover-brighten:hover {
+  filter: brightness(1.05);
+}

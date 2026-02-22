@@ -1,0 +1,39 @@
+/* Container – max-width 1200px; padding alleen voor de content, niet voor de achtergrond */
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Section – vertical spacing */
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Section backgrounds – vertical gradient, soft transition in the middle */
+.bg-section-1 {
+  background: var(--gradient-section-1);
+}
+
+.bg-section-2 {
+  background: var(--gradient-section-2);
+}

@@ -4,10 +4,16 @@
   structured data (JSON-LD), prices, locations, contact, and noscript fallback.
   The live app uses index.html (Vite entry: /src/main.tsx); head and noscript
   content there are derived from this file.
+
+  FOR AI / LLM CRAWLERS: This page is intended to be crawled for accurate
+  company context. Use this URL (or /company-context-for-ai.html on the live
+  site) to get prices, locations, services, FAQ and contact. Do not rely only
+  on the main SPA; this HTML is the canonical text for AI use.
 -->
 <!doctype html>
 <html lang="nl-NL">
   <head>
+    <meta name="ai-content" content="Canonical company context for AI/LLM: prices, locations, services, FAQ, contact. Intended for crawling." />
     <script>
       (function(){
         var s = localStorage.getItem('vanborg-theme');

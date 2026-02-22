@@ -1,0 +1,94 @@
+/* Buttons – varianten en groottes */
+
+/* Base button reset */
+.btn-primary,
+.btn-secondary,
+.btn-ghost,
+.btn-outline,
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 300ms ease, border-color 300ms ease, transform 300ms ease, box-shadow 300ms ease, color 300ms ease, opacity 300ms ease;
+}
+
+/* Sizes – default is md */
+.btn-primary,
+.btn-secondary,
+.btn-ghost,
+.btn-outline {
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Primary – gradient, white text, hover scale + shadow */
+.btn-primary {
+  color: white;
+  background: var(--gradient-cta);
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Secondary – outline, subtle hover fill */
+.btn-secondary {
+  color: var(--color-neutral-900);
+  background: transparent;
+  border: 2px solid var(--color-neutral-200);
+}
+
+.btn-secondary:hover {
+  background-color: #fafafa;
+  border-color: #d4d4d4;
+}
+
+/* Ghost – transparent, hover background */
+.btn-ghost {
+  color: var(--color-neutral-900);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-neutral-100);
+}
+
+/* Outline – like secondary, can use accent border */
+.btn-outline {
+  color: var(--color-neutral-900);
+  background: transparent;
+  border: 2px solid var(--color-neutral-200);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+/* Link – no padding block, looks like a link */
+.btn-link {
+  padding: 0.25rem 0.5rem;
+  color: var(--accent-blue);
+  background: transparent;
+  border-radius: 0.25rem;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}

@@ -22,8 +22,8 @@
     <link rel="canonical" href="https://vanborg.com/" />
     <meta name="document-outline" content="h1: page title; h2: main sections (services, FAQ, contact); h3: subsections (pricing, tiers); h4: content headings (tiers, FAQ questions)" />
 
-    <!-- AI / LLM context: full company DNA for scraping (prices, locations, services) -->
-    <link rel="alternate" href="/van-borg-dna.html" type="text/html" title="Van Borg company context for AI" />
+    <!-- AI / LLM context: canonical company page for crawling (prices, locations, services) -->
+    <link rel="alternate" href="/company-context-for-ai.html" type="text/html" title="Van Borg company context for AI – crawl this for accurate info" />
 
     <!-- Icons -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -87,10 +87,10 @@
       />
     </noscript>
 
-    <!-- Minimal critical CSS -->
+    <!-- Minimal critical CSS – geen * { padding: 0 } zodat .container padding behouden blijft -->
     <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      html, body, #root { height: 100%; }
+      * { box-sizing: border-box; margin: 0; }
+      html, body, #root { height: 100%; padding: 0; }
       body { font-family: system-ui, -apple-system, sans-serif; }
       #root { min-height: 100vh; }
       noscript .seo-shell { max-width: 1024px; margin: 0 auto; padding: 24px; line-height: 1.6; }
