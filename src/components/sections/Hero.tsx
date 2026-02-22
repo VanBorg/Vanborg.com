@@ -1,12 +1,6 @@
 import { Container } from '../ui/Container'
 import { ImageComparison } from '../ui/ImageComparison'
 
-const bullets = [
-  'Voor lokale bedrijven',
-  'Resultaatgericht traject',
-  'Meetbare groei',
-]
-
 export function Hero() {
   return (
     <section className="section bg-section-1">
@@ -14,25 +8,20 @@ export function Hero() {
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
           <div className="max-w-xl">
             <h1 className="text-4xl font-bold leading-tight tracking-tight text-neutral-900 md:text-5xl">
-              Binnen 90 dagen in de Top 3 van Google Maps
+            Het beste marketingbureau van Veendam
             </h1>
-            <p className="mt-4 text-lg text-neutral-500 md:text-xl">
-              Meer aanvragen. Meer telefoontjes. Structurele lokale dominantie.
-            </p>
-            <ul className="mt-6 space-y-2">
-              {bullets.map((text) => (
-                <li key={text} className="flex items-center gap-2 text-neutral-700">
-                  <span className="text-emerald-500" aria-hidden="true">✔</span>
-                  {text}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <h2 className="mt-3 text-lg font-semibold leading-snug text-neutral-600 md:text-xl">
+            Binnen 90 dagen een Top 3 positie in Google Maps.
+            </h2>
+            <h3 className="mt-2 text-sm font-normal text-neutral-500">
+            Lokale SEO met focus op meetbare groei in klanten en omzet.
+            </h3>
+            <div className="mt-6 flex flex-wrap gap-4">
               <a href="#audit" className="btn-primary">
-                Vraag je gratis audit aan
+              Check mijn huidige ranking
               </a>
               <a href="#resultaten" className="btn-secondary">
-                Bekijk resultaten
+              Bespreek mijn kansen
               </a>
             </div>
           </div>
