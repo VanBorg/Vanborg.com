@@ -1,0 +1,188 @@
+/* Footer – map + werkgebieden + bedrijfsinfo + pagina's in één grid, legal bar */
+
+.footer {
+  background: var(--section-grey);
+}
+
+.footer .container {
+  max-width: 1024px;
+}
+
+/* ─── Main footer: full-width witte band met divider boven/onder ─── */
+
+.footer__main {
+  width: 100%;
+  background: var(--section-white);
+  border-top: 1px solid var(--color-neutral-200);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+/* Hoofd-grid: map / werkgebieden / bedrijfsinfo / pagina's */
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .footer__top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem 2rem;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__top {
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    align-items: start;
+  }
+
+  /* Dunne verticale dividers tussen de drie tekstkolommen */
+  .footer__top .footer__company-info,
+  .footer__top .footer__pages {
+    border-left: 1px solid var(--color-neutral-200);
+    padding-left: 2rem;
+  }
+}
+
+/* ─── Map ─── */
+
+.footer__map-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 220px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.footer__map-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ─── Werkgebieden (2 kolommen, zeer compact) ─── */
+
+.footer__werkgebieden h3 {
+  margin-bottom: 0.625rem;
+}
+
+.footer__werkgebieden-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 0.2rem 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__werkgebieden-grid li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-neutral-700);
+}
+
+/* ─── Bedrijfsinfo (compact, geen losse headers) ─── */
+
+.footer__company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.footer__company-info .footer__company-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  margin-bottom: 0.25rem;
+}
+
+.footer__company-info p,
+.footer__company-info address {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-neutral-700);
+  font-style: normal;
+  margin: 0;
+}
+
+.footer__company-info a {
+  font-size: 1rem;
+  color: var(--color-neutral-700);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.6;
+}
+
+.footer__company-info a:hover {
+  color: var(--accent-green);
+}
+
+/* ─── Pagina's kolom ─── */
+
+.footer__pages h3 {
+  margin-bottom: 0.625rem;
+}
+
+.footer__pages-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__pages-list li {
+  margin-bottom: 0.25rem;
+}
+
+.footer__pages-list a,
+.footer__pages-list span {
+  font-size: 1rem;
+  color: var(--color-neutral-700);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.6;
+}
+
+.footer__pages-list a:hover {
+  color: var(--accent-green);
+}
+
+/* ─── Legal bar ─── */
+
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 1rem;
+}
+
+.footer__copyright {
+  font-size: 0.8125rem;
+  color: var(--color-neutral-700);
+}
+
+.footer__legal-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer__legal-links span {
+  font-size: 0.8125rem;
+  color: var(--color-neutral-700);
+}
