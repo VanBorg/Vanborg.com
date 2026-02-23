@@ -11,6 +11,7 @@
 @import './components/about-us.css';
 @import './components/problem-outcome.css';
 @import './components/wat-wij-doen.css';
+@import './components/faq.css';
 
 @tailwind base;
 @tailwind components;

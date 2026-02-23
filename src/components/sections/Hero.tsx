@@ -14,7 +14,7 @@ export function Hero() {
               Binnen 90 dagen een Top 3 positie op Google.
             </h2>
             <h3 className="text-section-body mt-2 text-neutral-500">
-              Op de heatmap zie je mijn vestiging in Veendam over een periode van <strong>40 dagen.</strong>
+              Op de heatmap zie je mijn onderneming in Veendam na <strong>40 dagen.</strong>
               <br />
               <strong><span className="text-green-600">Groen</span>= is goed,</strong> zichtbaar in de Top 3.
               <br />
