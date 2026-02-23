@@ -9,6 +9,7 @@
 @import './components/links.css';
 @import './components/image-comparison.css';
 @import './components/about-us.css';
+@import './components/problem-outcome.css';
 
 @tailwind base;
 @tailwind components;

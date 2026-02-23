@@ -41,3 +41,36 @@
 .card-interactive {
   cursor: pointer;
 }
+
+/* Image doos – herbruikbare doos metzelfde border/shadow als Hero/About Us (voor placeholders of afbeeldingen) */
+.image-doos {
+  width: 100%;
+  overflow: hidden;
+  border: var(--comparison-border-width) solid var(--comparison-border-color);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 0 0 var(--comparison-ring-offset) #fff,
+    0 0 0 calc(var(--comparison-ring-offset) + var(--comparison-ring-width)) var(--comparison-ring-color),
+    var(--comparison-shadow);
+  background: #fff;
+}
+
+.image-doos__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.image-doos--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10rem;
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-700);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+}

@@ -1,48 +1,109 @@
 import { Container } from '../ui/Container'
 
-const problemBullets = [
-  'Onzichtbaar in Google Maps',
-  'Concurrenten boven je',
-  'Te weinig reviews',
-  'Geen lokale structuur',
+const problemItems = [
+  'Nauwelijks zichtbaar',
+  'Afhankelijk van mond-tot-mond',
+  'Concurrenten staan boven je',
+  'Onvoorspelbare aanvragen',
 ]
 
-const outcomeBullets = [
-  'Top 3 zichtbaarheid',
-  'Meer calls en leads',
-  'Sterk Google profiel',
-  'Dominantie in jouw regio',
+const outcomeItems = [
+  'Zichtbaar in de Top 3',
+  'Meer lokale telefoontjes',
+  'Constante stroom nieuwe aanvragen',
+  'Voorsprong op concurrentie',
 ]
+
+function IconProblem() {
+  return (
+    <svg className="problem-outcome-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M15 9l-6 6M9 9l6 6" />
+    </svg>
+  )
+}
+
+function IconOutcome() {
+  return (
+    <svg className="problem-outcome-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M20 6L9 17l-5-5" />
+    </svg>
+  )
+}
 
 export function ProblemOutcome() {
   return (
-    <section className="section bg-section-1">
+    <section className="section bg-section-1" aria-labelledby="problem-outcome-title">
       <Container>
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="card-hover rounded-xl bg-white p-8 shadow-[0_1px_3px_0_rgba(0,0,0,0.08),0_4px_12px_rgba(0,0,0,0.05)]">
-            <h2 className="text-xl font-bold text-neutral-900">
-              Waarom je nu geen aanvragen krijgt
-            </h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-neutral-600">
-              {problemBullets.map((text) => (
-                <li key={text}>{text}</li>
-              ))}
-            </ul>
+        <div className="text-center">
+          <h2 id="problem-outcome-title" className="text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
+            Waarom je ons moet kiezen
+          </h2>
+          <p className="mt-3 text-lg text-neutral-600">
+          Van afhankelijk zijn van mond-tot-mond naar bovenaan staan op Google.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-8 md:grid-cols-2">
+          <div className="card card-bordered card-elevated problem-outcome-card">
+            <h3 className="text-base font-bold text-neutral-900 text-center">
+              Zonder ons
+            </h3>
+            <div className="problem-outcome-card__inner">
+              <ul className="problem-outcome-list problem-outcome-list--problem">
+                {problemItems.map((text) => (
+                  <li key={text} className="problem-outcome-list__item">
+                    <IconProblem />
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="problem-outcome-card__media">
+                <div className="image-doos">
+                  <img
+                    src="/Afbeeldingen/winst-tijd-grafiek-negatief.png"
+                    alt="Grafiek: winst daalt over tijd zonder optimalisatie"
+                    className="image-doos__img"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="card-hover rounded-xl bg-white p-8 shadow-[0_1px_3px_0_rgba(0,0,0,0.08),0_4px_12px_rgba(0,0,0,0.05)]">
-            <h2 className="text-xl font-bold text-neutral-900">Wat er verandert</h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-neutral-600">
-              {outcomeBullets.map((text) => (
-                <li key={text}>{text}</li>
-              ))}
-            </ul>
+          <div className="card card-bordered card-elevated problem-outcome-card">
+            <h3 className="text-base font-bold text-neutral-900 text-center">
+              Met ons
+            </h3>
+            <div className="problem-outcome-card__inner">
+              <ul className="problem-outcome-list problem-outcome-list--outcome">
+                {outcomeItems.map((text) => (
+                  <li key={text} className="problem-outcome-list__item">
+                    <IconOutcome />
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="problem-outcome-card__media">
+                <div className="image-doos">
+                  <img
+                    src="/Afbeeldingen/winst-tijd-grafiek.png"
+                    alt="Grafiek: winst groeit over tijd na onze aanpak"
+                    className="image-doos__img"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-10 flex justify-center">
-          <a href="#intake" className="btn-primary">
-            Plan een intake
+        <div className="problem-outcome-cta">
+          <p className="problem-outcome-cta__text">
+          Vul het formulier in en ontvang een gratis bedrijfsscan met je huidige positie.
+          </p>
+          <a href="#audit" className="btn-primary">
+            Gratis bedrijfsscan aanvragen
           </a>
         </div>
       </Container>
