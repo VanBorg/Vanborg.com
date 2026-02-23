@@ -142,23 +142,17 @@ function buildJsonLd(topics: FAQTopic[]) {
 }
 
 export function FAQ() {
+  const [openTopicIdx, setOpenTopicIdx] = useState<number | null>(null)
   const [openQuestionKey, setOpenQuestionKey] = useState<string | null>(null)
 
   const toggleTopic = useCallback((topicIdx: number) => {
-    const hasQuestions = faqData[topicIdx]?.questions.length > 0
-    if (!hasQuestions) {
-      setOpenQuestionKey(null)
-      return
-    }
-
-    const firstQuestionKey = `${topicIdx}-0`
-    setOpenQuestionKey((current) =>
-      current?.startsWith(`${topicIdx}-`) ? null : firstQuestionKey,
-    )
+    setOpenTopicIdx((current) => (current === topicIdx ? null : topicIdx))
+    setOpenQuestionKey(null)
   }, [])
 
   const toggleQuestion = useCallback((topicIdx: number, questionIdx: number) => {
     const key = `${topicIdx}-${questionIdx}`
+    setOpenTopicIdx(topicIdx)
     setOpenQuestionKey((current) => (current === key ? null : key))
   }, [])
 
@@ -177,24 +171,24 @@ export function FAQ() {
         <div className="faq-shell">
           <div className="faq-grid">
             {faqData.map((topic, tIdx) => {
-            const topicOpen = openQuestionKey?.startsWith(`${tIdx}-`) ?? false
+            const topicOpen = openTopicIdx === tIdx
             const topicId = `faq-topic-${tIdx}`
             const panelId = `faq-panel-${tIdx}`
 
             return (
               <div key={topicId} className="card card-bordered faq-topic">
-                <button
-                  type="button"
-                  className="faq-topic__header"
-                  aria-expanded={topicOpen}
-                  aria-controls={panelId}
-                  onClick={() => toggleTopic(tIdx)}
-                >
-                  <h3 id={topicId} className="faq-topic__title heading-sub">
+                <h3 id={topicId} className="faq-topic__title heading-sub">
+                  <button
+                    type="button"
+                    className="faq-topic__header"
+                    aria-expanded={topicOpen}
+                    aria-controls={panelId}
+                    onClick={() => toggleTopic(tIdx)}
+                  >
                     {topic.title}
-                  </h3>
-                  <ChevronIcon open={topicOpen} />
-                </button>
+                    <ChevronIcon open={topicOpen} />
+                  </button>
+                </h3>
 
                 <div
                   id={panelId}
@@ -213,19 +207,19 @@ export function FAQ() {
 
                         return (
                           <div key={qKey} className="faq-question">
-                            <button
-                              type="button"
-                              id={qBtnId}
-                              className="faq-question__trigger"
-                              aria-expanded={qOpen}
-                              aria-controls={qPanelId}
-                              onClick={() => toggleQuestion(tIdx, qIdx)}
-                            >
-                              <h4 id={qHeadingId} className="faq-question__heading">
+                            <h4 id={qHeadingId} className="faq-question__heading">
+                              <button
+                                type="button"
+                                id={qBtnId}
+                                className="faq-question__trigger"
+                                aria-expanded={qOpen}
+                                aria-controls={qPanelId}
+                                onClick={() => toggleQuestion(tIdx, qIdx)}
+                              >
                                 {item.q}
-                              </h4>
-                              <ChevronIcon open={qOpen} />
-                            </button>
+                                <ChevronIcon open={qOpen} />
+                              </button>
+                            </h4>
 
                             <div
                               id={qPanelId}
