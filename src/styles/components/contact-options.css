@@ -1,0 +1,105 @@
+/* Contact options – 2-koloms sectie: bedrijfsscan + afspraak (links naar formulier en Calendly) */
+
+.section--contact.contact-options {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.contact-options__header {
+  text-align: center;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-options__lead {
+  margin-top: 0.5rem;
+}
+
+.contact-options__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .contact-options__grid {
+    grid-template-columns: auto auto;
+    justify-content: center;
+    column-gap: 1.25rem;
+    row-gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+}
+
+/* ─── Contact cards – vullen kolom, geen lege vlek binnen ─── */
+
+.contact-options__card.contact-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+}
+
+.contact-card {
+  padding: 0.875rem 1.125rem;
+  background: var(--section-white);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-neutral-200);
+  box-shadow: var(--shadow-card);
+  min-height: 0;
+}
+
+@media (min-width: 768px) {
+  .contact-card {
+    padding: 1rem 1.25rem;
+  }
+}
+
+.contact-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0;
+}
+
+.contact-card__title {
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.contact-card__list {
+  margin: 0 0 0.75rem;
+  padding-left: 1rem;
+  list-style: disc;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-neutral-700);
+}
+
+.contact-card__list-item {
+  margin-bottom: 0.25rem;
+}
+
+.contact-card__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-card__cta {
+  margin-top: 0.75rem;
+  width: max-content;
+  max-width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.9375rem;
+  text-align: center;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .contact-card__cta {
+    padding: 0.625rem 1.25rem;
+  }
+}

@@ -5,6 +5,7 @@ import { AboutUs } from '../components/sections/AboutUs'
 import { WatWijDoen } from '../components/sections/WatWijDoen'
 import { ProblemOutcome } from '../components/sections/ProblemOutcome'
 import { FAQ } from '../components/sections/FAQ'
+import { ContactOptions } from '../components/sections/ContactOptions'
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
         <WatWijDoen />
         <ProblemOutcome />
         <FAQ />
+        <ContactOptions />
       </main>
       <Footer />
     </>

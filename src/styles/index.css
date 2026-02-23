@@ -12,6 +12,7 @@
 @import './components/problem-outcome.css';
 @import './components/wat-wij-doen.css';
 @import './components/faq.css';
+@import './components/contact-options.css';
 
 @tailwind base;
 @tailwind components;
