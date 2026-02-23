@@ -33,7 +33,7 @@ function IconOutcome() {
 
 export function ProblemOutcome() {
   return (
-    <section className="section bg-section-1" aria-labelledby="problem-outcome-title">
+    <section className="section bg-section-2" aria-labelledby="problem-outcome-title">
       <Container>
         <div className="text-center">
           <h2 id="problem-outcome-title" className="text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
@@ -44,54 +44,60 @@ export function ProblemOutcome() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-8 md:grid-cols-2">
-          <div className="card card-bordered card-elevated problem-outcome-card">
-            <h3 className="text-base font-bold text-neutral-900 text-center">
-              Zonder ons
-            </h3>
-            <div className="problem-outcome-card__inner">
-              <ul className="problem-outcome-list problem-outcome-list--problem">
-                {problemItems.map((text) => (
-                  <li key={text} className="problem-outcome-list__item">
-                    <IconProblem />
-                    <span>{text}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="problem-outcome-card__media">
-                <div className="image-doos">
-                  <img
-                    src="/Afbeeldingen/winst-tijd-grafiek-negatief.png"
-                    alt="Grafiek: winst daalt over tijd zonder optimalisatie"
-                    className="image-doos__img"
-                    loading="lazy"
-                  />
+        <div className="mt-10 problem-outcome-grid">
+          <div className="problem-outcome-column problem-outcome-column--left">
+            <div className="problem-outcome-dot" aria-hidden />
+            <div className="card card-bordered card-elevated problem-outcome-card">
+              <h3 className="text-lg font-bold text-neutral-900 text-center">
+                Zonder ons
+              </h3>
+              <div className="problem-outcome-card__inner">
+                <ul className="problem-outcome-list problem-outcome-list--problem">
+                  {problemItems.map((text) => (
+                    <li key={text} className="problem-outcome-list__item">
+                      <IconProblem />
+                      <span>{text}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="problem-outcome-card__media">
+                  <div className="image-doos">
+                    <img
+                      src="/Afbeeldingen/winst-tijd-grafiek-negatief.png"
+                      alt="Grafiek: winst daalt over tijd zonder optimalisatie"
+                      className="image-doos__img"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="card card-bordered card-elevated problem-outcome-card">
-            <h3 className="text-base font-bold text-neutral-900 text-center">
-              Met ons
-            </h3>
-            <div className="problem-outcome-card__inner">
-              <ul className="problem-outcome-list problem-outcome-list--outcome">
-                {outcomeItems.map((text) => (
-                  <li key={text} className="problem-outcome-list__item">
-                    <IconOutcome />
-                    <span>{text}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="problem-outcome-card__media">
-                <div className="image-doos">
-                  <img
-                    src="/Afbeeldingen/winst-tijd-grafiek.png"
-                    alt="Grafiek: winst groeit over tijd na onze aanpak"
-                    className="image-doos__img"
-                    loading="lazy"
-                  />
+          <div className="problem-outcome-column problem-outcome-column--right">
+            <div className="problem-outcome-dot" aria-hidden />
+            <div className="card card-bordered card-elevated problem-outcome-card">
+              <h3 className="text-lg font-bold text-neutral-900 text-center">
+                Met ons
+              </h3>
+              <div className="problem-outcome-card__inner">
+                <ul className="problem-outcome-list problem-outcome-list--outcome">
+                  {outcomeItems.map((text) => (
+                    <li key={text} className="problem-outcome-list__item">
+                      <IconOutcome />
+                      <span>{text}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="problem-outcome-card__media">
+                  <div className="image-doos">
+                    <img
+                      src="/Afbeeldingen/winst-tijd-grafiek.png"
+                      alt="Grafiek: winst groeit over tijd na onze aanpak"
+                      className="image-doos__img"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

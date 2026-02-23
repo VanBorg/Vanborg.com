@@ -22,27 +22,27 @@ export function AboutUs() {
             </h2>
 
             <div>
-              <h3 className="text-base font-bold text-neutral-900">Over de oprichter</h3>
-              <h4 className="mt-2 text-sm font-semibold text-neutral-800">
+              <h3 className="text-lg font-bold text-neutral-900">Over de oprichter</h3>
+              <p className="mt-2 leading-relaxed">
                 Ik ben Nicolaas Sterenborg, eigenaar van Van Borg, gevestigd in Veendam.
-              </h4>
-              <h4 className="mt-1 text-sm font-semibold text-neutral-800">
+              </p>
+              <p className="mt-1 leading-relaxed">
                 Sinds begin 2025 help ik lokale bedrijven hoger in Google te komen. Persoonlijk, snel en met een focus op resultaat.
-              </h4>
+              </p>
             </div>
 
             <div>
-              <h3 className="text-base font-bold text-neutral-900">Onze aanpak</h3>
+              <h3 className="text-lg font-bold text-neutral-900">Onze aanpak</h3>
               <p className="mt-2 leading-relaxed">
                 Ons doel is eenvoudig: zorgen dat nieuwe klanten je zien.
               </p>
               <p className="mt-1 leading-relaxed">
-                Vrijwel iedereen gebruikt Google. Sta je bovenaan, dan volgen de aanvragen vanzelf. 
+                Vrijwel iedereen gebruikt Google. Sta je bovenaan, dan volgen de aanvragen vanzelf.
               </p>
             </div>
 
             <div>
-              <h3 className="text-base font-bold text-neutral-900">Werkgebied</h3>
+              <h3 className="text-lg font-bold text-neutral-900">Werkgebied</h3>
               <p className="mt-2 leading-relaxed">
                 <strong>Actief in:</strong> Veendam, Meeden, Hoogezand, Muntendam, Sappemeer, Zuidbroek, Noordbroek, Wildervank, Tripscompagnie, Borgercompagnie, Hoogezand-Sappemeer, Bareveld (Nieuwediep) en Ommelanderwijk.
               </p>
