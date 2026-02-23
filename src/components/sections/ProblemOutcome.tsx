@@ -102,7 +102,7 @@ export function ProblemOutcome() {
           <p className="problem-outcome-cta__text">
           Vul het formulier in en ontvang een gratis bedrijfsscan met je huidige positie.
           </p>
-          <a href="#audit" className="btn-primary">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbsa-4CWu9Rh0yBDLrVeXYbtXfHlcBJaxqYOQGWeKPDriaMg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Gratis bedrijfsscan aanvragen
           </a>
         </div>
