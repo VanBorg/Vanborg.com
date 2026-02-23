@@ -36,11 +36,11 @@ export function ProblemOutcome() {
     <section className="section bg-section-2" aria-labelledby="problem-outcome-title">
       <Container>
         <div className="text-center">
-          <h2 id="problem-outcome-title" className="text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
+          <h2 id="problem-outcome-title" className="heading-section">
             Waarom je ons moet kiezen
           </h2>
-          <p className="mt-3 text-lg text-neutral-600">
-          Van afhankelijk zijn van mond-tot-mond naar bovenaan staan op Google.
+          <p className="mt-3 text-section-lead">
+            Van afhankelijk zijn van mond-tot-mond naar bovenaan staan op Google.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export function ProblemOutcome() {
           <div className="problem-outcome-column problem-outcome-column--left">
             <div className="problem-outcome-dot" aria-hidden />
             <div className="card card-bordered card-elevated problem-outcome-card">
-              <h3 className="text-lg font-bold text-neutral-900 text-center">
+              <h3 className="heading-sub text-center">
                 Zonder ons
               </h3>
               <div className="problem-outcome-card__inner">
@@ -77,7 +77,7 @@ export function ProblemOutcome() {
           <div className="problem-outcome-column problem-outcome-column--right">
             <div className="problem-outcome-dot" aria-hidden />
             <div className="card card-bordered card-elevated problem-outcome-card">
-              <h3 className="text-lg font-bold text-neutral-900 text-center">
+              <h3 className="heading-sub text-center">
                 Met ons
               </h3>
               <div className="problem-outcome-card__inner">
@@ -102,15 +102,6 @@ export function ProblemOutcome() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="problem-outcome-cta">
-          <p className="problem-outcome-cta__text">
-          Vul het formulier in en ontvang een gratis bedrijfsscan met je huidige positie.
-          </p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbsa-4CWu9Rh0yBDLrVeXYbtXfHlcBJaxqYOQGWeKPDriaMg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="btn-primary">
-            Gratis bedrijfsscan aanvragen
-          </a>
         </div>
       </Container>
     </section>

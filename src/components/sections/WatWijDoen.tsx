@@ -37,12 +37,12 @@ export function WatWijDoen() {
         <div className="wat-wij-doen-header text-center">
           <h2
             id="wat-wij-doen-title"
-            className="text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl"
+            className="heading-section"
           >
             Wat wij doen
           </h2>
-          <p className="mt-3 text-lg text-neutral-600 max-w-2xl mx-auto">
-            Wij helpen lokale bedrijven zichtbaar te worden met drie pijlers.
+          <p className="mt-3 text-section-lead max-w-2xl mx-auto">
+             Wij helpen lokale ondernemers online opvallen zodat er meer leads binnenkomen.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export function WatWijDoen() {
                         </div>
                       </div>
                       <div className="wat-wij-doen-timeline__content">
-                        <h3 className="wat-wij-doen-timeline__title">{service.title}</h3>
+                        <h3 className="heading-sub wat-wij-doen-timeline__title">{service.title}</h3>
                         <p className="wat-wij-doen-timeline__description">{service.description}</p>
                       </div>
                     </div>
@@ -110,7 +110,7 @@ export function WatWijDoen() {
                         </div>
                       </div>
                       <div className="wat-wij-doen-timeline__content">
-                        <h3 className="wat-wij-doen-timeline__title">{service.title}</h3>
+                        <h3 className="heading-sub wat-wij-doen-timeline__title">{service.title}</h3>
                         <p className="wat-wij-doen-timeline__description">{service.description}</p>
                       </div>
                     </div>

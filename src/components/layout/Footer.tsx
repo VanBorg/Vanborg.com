@@ -37,7 +37,7 @@ export function Footer() {
         <div className="grid gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
           {columns.map((col) => (
             <div key={col.title}>
-              <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-neutral-700">
+              <h3 className="heading-sub mb-3">
                 {col.title}
               </h3>
               <ul className="space-y-2">

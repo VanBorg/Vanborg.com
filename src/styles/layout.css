@@ -29,6 +29,80 @@
   }
 }
 
+/* Globale typografie – headings & body
+   Hero is de bron van waarheid voor H1–H3.
+   Gebruik:
+   - .heading-hero          → H1 (pagina/hero titel)
+   - .heading-section       → H2 sectietitel in content-secties
+   - .heading-hero-subtitle → H2 subtitel direct onder de hero-titel
+   - .heading-sub           → H3/H4 subkoppen (kaarten, blokken, footer-kolomtitels)
+   - .text-section-lead     → korte inleidende tekst onder een sectietitel
+   - .text-section-body     → normale lopende tekst in secties
+*/
+
+.heading-hero {
+  font-size: 2.25rem; /* ~text-4xl */
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-neutral-900);
+}
+
+@media (min-width: 768px) {
+  .heading-hero {
+    font-size: 3rem; /* ~text-5xl */
+  }
+}
+
+.heading-section {
+  font-size: 1.875rem; /* ~text-3xl */
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-neutral-900);
+}
+
+@media (min-width: 768px) {
+  .heading-section {
+    font-size: 2.25rem; /* ~text-4xl */
+  }
+}
+
+.heading-hero-subtitle {
+  font-size: 1.125rem; /* ~text-lg */
+  line-height: 1.4;
+  font-weight: 600; /* semibold */
+  color: var(--color-neutral-600);
+}
+
+@media (min-width: 768px) {
+  .heading-hero-subtitle {
+    font-size: 1.25rem; /* ~text-xl */
+  }
+}
+
+.heading-sub {
+  font-size: 1.125rem; /* ~text-lg */
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-neutral-900);
+}
+
+.text-section-lead {
+  font-size: 1.125rem; /* ~text-lg */
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--color-neutral-600);
+}
+
+.text-section-body {
+  font-size: 1rem; /* ~text-base */
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-neutral-700);
+}
+
 /* Nav logo: Van / Borg op twee regels, tegen elkaar aan */
 .nav-logo {
   display: flex;
