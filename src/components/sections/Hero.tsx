@@ -11,7 +11,7 @@ export function Hero() {
             Het beste marketingbureau van Veendam en omstreken
             </h1>
             <h2 className="mt-3 text-lg font-semibold leading-snug text-neutral-600 md:text-xl">
-            Binnen 90 dagen een Top 3 positie in Google Maps.
+            Binnen 90 dagen een Top 3 positie op Google Maps.
             </h2>
             <h3 className="mt-2 text-sm font-normal text-neutral-500">
             Op de heatmap zie je mijn vestiging in Veendam over een periode van <strong>40 dagen.</strong>
@@ -21,10 +21,10 @@ export function Hero() {
             <strong><span className="text-red-600">Rood</span> = is slecht,</strong> buiten de Top 3 en vrijwel onzichtbaar.
             </h3>
             <div className="mt-6 flex flex-wrap gap-4">
-              <a href="#audit" className="btn-primary">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbsa-4CWu9Rh0yBDLrVeXYbtXfHlcBJaxqYOQGWeKPDriaMg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Check mijn huidige ranking
               </a>
-              <a href="#resultaten" className="btn-secondary">
+              <a href="https://calendly.com/vanborglimited/van_borg_sales_call" target="_blank" rel="noopener noreferrer" className="btn-secondary">
               Bespreek mijn kansen
               </a>
             </div>

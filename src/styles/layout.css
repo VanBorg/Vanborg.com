@@ -29,6 +29,79 @@
   }
 }
 
+/* Nav logo: Van / Borg op twee regels, tegen elkaar aan */
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.nav-logo__line {
+  display: block;
+  line-height: 1;
+}
+
+.nav-logo__line--2 {
+  margin-top: -0.42em;
+}
+
+/* Nav links container: 1 regel, centraal in de navbar */
+.nav-links-center {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .nav-links-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.nav-links-center .nav-link {
+  white-space: nowrap;
+}
+
+/* Nav links: iets groter, hover = zichtbare lijn die snel verschijnt */
+.nav-link {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-neutral-600);
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--accent-green);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-neutral-900);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
 /* Section backgrounds – vertical gradient, soft transition in the middle */
 .bg-section-1 {
   background: var(--gradient-section-1);
@@ -36,4 +109,112 @@
 
 .bg-section-2 {
   background: var(--gradient-section-2);
+}
+
+/* Top bar boven navbar – licht groen, icoontjes + tekst, socials rechts */
+.top-bar {
+  background: var(--section-grey);
+  width: 100%;
+  padding: 0.125rem 1rem;
+  border-bottom: 1px solid rgba(45, 106, 79, 0.08);
+}
+
+.top-bar .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .top-bar .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.top-bar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .top-bar__inner {
+    justify-content: space-between;
+  }
+}
+
+.top-bar__contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-neutral-700);
+}
+
+.top-bar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+/* Icoontjes in de top bar: donkerder groen zodat ze afsteken tegen de tekst */
+.top-bar__item svg {
+  flex-shrink: 0;
+  color: #1b4332;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.top-bar__link {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.25rem 0.375rem;
+  margin: 0 -0.375rem;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  min-height: 32px;
+  min-width: 32px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.top-bar__link:hover {
+  color: #1b4332;
+  background-color: rgba(27, 67, 50, 0.1);
+}
+
+.top-bar__link:hover svg {
+  color: #0d2818;
+  transform: scale(1.08);
+}
+
+.top-bar__link:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.top-bar__socials {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.top-bar__socials a {
+  color: #1b4332;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.top-bar__socials a:hover {
+  color: #0d2818;
+  background-color: rgba(27, 67, 50, 0.12);
+  transform: scale(1.12);
 }

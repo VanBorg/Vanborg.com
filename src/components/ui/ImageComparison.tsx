@@ -121,7 +121,7 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
         <span className="comparison-badge comparison-badge-with-icon comparison-badge-corner comparison-badge-bottom-right" aria-hidden>
           <span className="comparison-badge-bg" aria-hidden />
           <span className="comparison-badge-content">
-            Na 90 dagen
+            Na 40 dagen
             <svg className="comparison-badge-arrow comparison-badge-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>

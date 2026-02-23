@@ -90,8 +90,8 @@
     <!-- Minimal critical CSS – geen * { padding: 0 } zodat .container padding behouden blijft -->
     <style>
       * { box-sizing: border-box; margin: 0; }
-      html, body, #root { height: 100%; padding: 0; }
-      body { font-family: system-ui, -apple-system, sans-serif; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; min-height: 100vh; }
       #root { min-height: 100vh; }
       noscript .seo-shell { max-width: 1024px; margin: 0 auto; padding: 24px; line-height: 1.6; }
       noscript h1 { font-size: 32px; margin-bottom: 12px; }
