@@ -1,7 +1,7 @@
 /* Link-stijlen – primary, muted, underline */
 
 .link-primary {
-  color: var(--accent-blue);
+  color: var(--accent-green);
   text-decoration: none;
   transition: color 200ms ease, text-decoration-color 200ms ease;
 }

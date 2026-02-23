@@ -35,27 +35,30 @@
   font-size: 1.125rem;
 }
 
-/* Primary – gradient, white text, hover scale + shadow */
+/* Primary – gradient, white text, schaduw zoals afbeeldingdoos (ring + drop), hover sterker */
 .btn-primary {
   color: white;
   background: var(--gradient-cta);
+  box-shadow: var(--shadow-button);
 }
 
 .btn-primary:hover {
   transform: scale(1.02);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-button-hover);
 }
 
-/* Secondary – outline, subtle hover fill */
+/* Secondary – outline, schaduw zoals afbeeldingdoos, subtle hover fill */
 .btn-secondary {
   color: var(--color-neutral-900);
-  background: transparent;
+  background: #fff;
   border: 2px solid var(--color-neutral-200);
+  box-shadow: var(--shadow-button);
 }
 
 .btn-secondary:hover {
   background-color: #fafafa;
   border-color: #d4d4d4;
+  box-shadow: var(--shadow-button-hover);
 }
 
 /* Ghost – transparent, hover background */
@@ -76,14 +79,14 @@
 }
 
 .btn-outline:hover {
-  border-color: var(--accent-blue);
-  color: var(--accent-blue);
+  border-color: var(--accent-green);
+  color: var(--accent-green);
 }
 
 /* Link – no padding block, looks like a link */
 .btn-link {
   padding: 0.25rem 0.5rem;
-  color: var(--accent-blue);
+  color: var(--accent-green);
   background: transparent;
   border-radius: 0.25rem;
 }
