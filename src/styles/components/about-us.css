@@ -1,0 +1,30 @@
+/* About Us sectie – foto-doos met dezelfde border en shadow als Hero (ImageComparison) */
+
+.about-us-photo {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  border: var(--comparison-border-width) solid var(--comparison-border-color);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 0 0 var(--comparison-ring-offset) #fff,
+    0 0 0 calc(var(--comparison-ring-offset) + var(--comparison-ring-width)) var(--comparison-ring-color),
+    var(--comparison-shadow);
+  background: #fff;
+}
+
+@media (min-width: 1024px) {
+  .about-us-photo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.about-us-photo__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}

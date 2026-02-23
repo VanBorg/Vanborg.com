@@ -138,7 +138,7 @@ export function Navbar() {
           </div>
         </Container>
       </div>
-      <header className="w-full border-b border-neutral-200/80 bg-white/80 backdrop-blur-md">
+      <header className="w-full border-b border-neutral-200/80 bg-white/70 backdrop-blur-md">
       <Container>
         <nav className="relative flex min-h-[4rem] items-center justify-between">
           <a href="/" className="nav-logo min-w-[100px] text-2xl text-neutral-900 md:min-w-[120px] md:text-3xl">
@@ -162,7 +162,7 @@ export function Navbar() {
           {/* Rechts: CTA (desktop) of hamburger (mobile) */}
           <div className="flex justify-end min-w-[120px] md:min-w-[140px]">
             <a href="#audit" className="btn-primary hidden md:inline-flex">
-              Gratis audit
+              Contact
             </a>
             <button
             type="button"

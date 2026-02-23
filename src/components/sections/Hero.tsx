@@ -11,7 +11,7 @@ export function Hero() {
             Het beste marketingbureau van Veendam en omstreken
             </h1>
             <h2 className="mt-3 text-lg font-semibold leading-snug text-neutral-600 md:text-xl">
-            Binnen 90 dagen een Top 3 positie op Google Maps.
+            Binnen 90 dagen een Top 3 positie op Google.
             </h2>
             <h3 className="mt-2 text-sm font-normal text-neutral-500">
             Op de heatmap zie je mijn vestiging in Veendam over een periode van <strong>40 dagen.</strong>

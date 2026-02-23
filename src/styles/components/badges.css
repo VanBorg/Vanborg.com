@@ -184,3 +184,30 @@
 .comparison-badge-bottom-right {
   right: 0.75rem;
 }
+
+/* About Us – benefits-rij (zelfde look als Hero-knop “Bespreek mijn kansen” / btn-secondary) */
+.about-us-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-us-benefits__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-neutral-900);
+  background: #fff;
+  border: 2px solid var(--color-neutral-200);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-button);
+}

@@ -61,10 +61,23 @@ npm run preview  # Preview van build
 
 ---
 
+## Heading-hiërarchie (SEO & AI-crawlers)
+
+We gebruiken een vaste **heading-structuur (h1 → h2 → h3 → h4)** op alle pagina’s:
+
+- **Eén h1 per pagina** (paginatitel).
+- **h2** voor grote secties, **h3** voor subsecties, **h4** alleen voor sub-subsecties (bijv. “Werkgebied”, “Openingstijden” onder één h3).
+- Geen niveau overslaan; koppen zijn sectietitels, geen extra h4’s “voor SEO”.
+
+Volledige regels en voorbeelden: **[docs/heading-hierarchy.md](docs/heading-hierarchy.md)**. Daar staat ook uitgelegd waarom dit belangrijk is voor zoekmachines en AI-crawlers. Referentie in code: `src/components/sections/AboutUs.tsx`.
+
+---
+
 ## Projectstructuur
 
 - `index.html` – Vite-entry; head en noscript afgeleid van `van-borg-dna.html`
 - `van-borg-dna.html` – Bron van waarheid (SEO, prijzen, locaties, contact)
+- `docs/heading-hierarchy.md` – Regels voor koppen (h1–h4) op alle pagina’s
 - `src/` – React-app (components, pages, styles)
 - `public/` – Statische assets (favicon, etc.)
 

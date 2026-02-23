@@ -16,7 +16,7 @@ const outcomeBullets = [
 
 export function ProblemOutcome() {
   return (
-    <section className="section bg-section-2">
+    <section className="section bg-section-1">
       <Container>
         <div className="grid gap-8 md:grid-cols-2">
           <div className="card-hover rounded-xl bg-white p-8 shadow-[0_1px_3px_0_rgba(0,0,0,0.08),0_4px_12px_rgba(0,0,0,0.05)]">

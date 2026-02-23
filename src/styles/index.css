@@ -8,6 +8,7 @@
 @import './components/hover-effects.css';
 @import './components/links.css';
 @import './components/image-comparison.css';
+@import './components/about-us.css';
 
 @tailwind base;
 @tailwind components;

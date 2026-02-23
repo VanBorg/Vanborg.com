@@ -1,6 +1,7 @@
 import { Navbar } from '../components/layout/Navbar'
 import { Footer } from '../components/layout/Footer'
 import { Hero } from '../components/sections/Hero'
+import { AboutUs } from '../components/sections/AboutUs'
 import { ProblemOutcome } from '../components/sections/ProblemOutcome'
 
 export default function HomePage() {
@@ -9,6 +10,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <AboutUs />
         <ProblemOutcome />
       </main>
       <Footer />
