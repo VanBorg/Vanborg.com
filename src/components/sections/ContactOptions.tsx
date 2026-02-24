@@ -18,6 +18,7 @@ const callBullets = [
 export function ContactOptions() {
   return (
     <section
+      id="contact"
       className="section section--contact bg-section-2 contact-options"
       aria-labelledby="contact-options-title"
     >

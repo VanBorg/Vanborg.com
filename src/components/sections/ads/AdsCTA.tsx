@@ -18,6 +18,7 @@ const callBullets = [
 export function AdsCTA() {
   return (
     <section
+      id="contact"
       className="section section--contact bg-section-1 contact-options"
       aria-labelledby="ads-cta-title"
     >

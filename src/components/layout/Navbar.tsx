@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Container } from '../ui/Container'
+import { useSmoothNav } from '../../hooks/useSmoothNav'
 
 const navLinks = [
   { label: 'Ranking', href: '/ranking' },
@@ -115,6 +116,7 @@ function SocialLinks({ className = '' }: { className?: string }) {
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const handleNavClick = useSmoothNav()
 
   return (
     <div className="sticky top-0 z-50 w-full">
@@ -142,7 +144,7 @@ export function Navbar() {
       <header className="w-full border-b border-neutral-200/50 bg-white/60 backdrop-blur-xl">
       <Container>
         <nav className="relative flex min-h-[4rem] items-center justify-between">
-          <a href="/" className="nav-logo min-w-[100px] text-2xl text-neutral-900 md:min-w-[120px] md:text-3xl">
+          <a href="/" className="nav-logo min-w-[100px] text-2xl text-neutral-900 md:min-w-[120px] md:text-3xl" onClick={(e) => handleNavClick(e, '/')}>
             <span className="nav-logo__line">Van</span>
             <span className="nav-logo__line nav-logo__line--2">Borg</span>
           </a>
@@ -154,6 +156,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className="nav-link"
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.label}
               </a>
@@ -162,7 +165,7 @@ export function Navbar() {
 
           {/* Rechts: CTA (desktop) of hamburger (mobile) */}
           <div className="flex justify-end min-w-[120px] md:min-w-[140px]">
-            <a href="#audit" className="btn-primary hidden md:inline-flex">
+            <a href="#contact" className="btn-primary hidden md:inline-flex" onClick={(e) => handleNavClick(e, '#contact')}>
               Contact
             </a>
             <button
@@ -188,12 +191,12 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => { setMobileOpen(false); handleNavClick(e, link.href) }}
                 >
                   {link.label}
                 </a>
               ))}
-              <a href="#audit" className="btn-primary w-fit" onClick={() => setMobileOpen(false)}>
+              <a href="#contact" className="btn-primary w-fit" onClick={(e) => { setMobileOpen(false); handleNavClick(e, '#contact') }}>
                 Gratis audit
               </a>
             </div>
