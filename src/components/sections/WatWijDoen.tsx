@@ -3,7 +3,7 @@ import { Container } from '../ui/Container'
 const services = [
   {
     id: 'lokale-ranking',
-    title: 'Lokale Ranking',
+    title: 'Lokale Top 3 Ranking',
     description:
       'Wij zorgen dat je bedrijf in de lokale Top 3 van Google verschijnt. Zo vindt je doelgroep je wanneer ze zoeken op diensten in jouw regio.',
     align: 'left' as const,
@@ -12,7 +12,7 @@ const services = [
   },
   {
     id: 'google-ads',
-    title: 'Google Ads',
+    title: 'Google Ads Campagnes',
     description:
       'Met gerichte advertenties sta je direct bovenaan in Google. Ideaal voor snelle zichtbaarheid en campagnes voor specifieke zoektermen.',
     align: 'right' as const,
@@ -21,7 +21,7 @@ const services = [
   },
   {
     id: 'seo-websites',
-    title: 'SEO-websites',
+    title: 'SEO-Website',
     description:
       'Een website die goed gevonden wordt: snel, duidelijk en geoptimaliseerd voor zoekmachines. De basis voor een sterke online aanwezigheid.',
     align: 'left' as const,
@@ -85,7 +85,14 @@ export function WatWijDoen() {
                         </div>
                       </div>
                       <div className="wat-wij-doen-timeline__content">
-                        <h3 className="heading-sub wat-wij-doen-timeline__title">{service.title}</h3>
+                        <h3 className="heading-sub wat-wij-doen-timeline__title">
+                          <a
+                            href={service.id === 'lokale-ranking' ? '/ranking' : service.id === 'google-ads' ? '/ads' : '/website'}
+                            className="text-[var(--accent-green)] underline underline-offset-4"
+                          >
+                            {service.title}
+                          </a>
+                        </h3>
                         <p className="wat-wij-doen-timeline__description">{service.description}</p>
                       </div>
                     </div>
@@ -110,7 +117,14 @@ export function WatWijDoen() {
                         </div>
                       </div>
                       <div className="wat-wij-doen-timeline__content">
-                        <h3 className="heading-sub wat-wij-doen-timeline__title">{service.title}</h3>
+                        <h3 className="heading-sub wat-wij-doen-timeline__title">
+                          <a
+                            href={service.id === 'lokale-ranking' ? '/ranking' : service.id === 'google-ads' ? '/ads' : '/website'}
+                            className="text-[var(--accent-green)] underline underline-offset-4"
+                          >
+                            {service.title}
+                          </a>
+                        </h3>
                         <p className="wat-wij-doen-timeline__description">{service.description}</p>
                       </div>
                     </div>

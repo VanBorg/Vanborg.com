@@ -4,17 +4,17 @@ const stappen = [
   {
     nummer: 1,
     title: 'Analyse & intake',
-    text: 'We brengen je huidige ranking, concurrentie en doelgroep in kaart. Tegelijk bespreken we je wensen en doelen voor de website en bepalen we samen de opzet van je (maximaal 5) pagina’s en eventuele locatiepagina’s.',
+    text: 'We brengen je huidige ranking en doelgroep in kaart. Tegelijk bespreken we je wensen en doelen voor de website en bepalen we samen de opzet.',
   },
   {
     nummer: 2,
     title: 'Bouw & optimalisatie',
-    text: 'We bouwen je SEO-geoptimaliseerde website en optimaliseren tegelijkertijd je Google Business Profile, lokale signalen en technische SEO. Tijdens deze fase verwerken we je feedback en grotere aanpassingen aan de site.',
+    text: 'We bouwen je SEO-geoptimaliseerde website en optimaliseren tegelijkertijd je Google Business Profile, lokale signalen en technische SEO.',
   },
   {
     nummer: 3,
     title: 'Lancering & ranking',
-    text: 'Je website gaat live binnen de afgesproken 90 dagen en de ranking-optimalisatie draait op volle kracht. Je ontvangt wekelijkse heatmaps en updates over de voortgang richting de Top 3.',
+    text: 'Je website gaat snel live en optimaliseert je voor Google kan beginnen. Je ontvangt wekelijkse updates over de voortgang richting de Top 3.',
   },
   {
     nummer: 4,

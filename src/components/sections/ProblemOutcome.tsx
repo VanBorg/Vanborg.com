@@ -4,12 +4,10 @@ const problemItems = [
   'Nauwelijks zichtbaar',
   'Afhankelijk van mond-tot-mond',
   'Concurrenten staan boven je',
-  'Onvoorspelbare aanvragen',
 ]
 
 const outcomeItems = [
   'Zichtbaar in de Top 3',
-  'Meer lokale telefoontjes',
   'Constante stroom nieuwe aanvragen',
   'Voorsprong op concurrentie',
 ]
