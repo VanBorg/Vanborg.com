@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Container } from '../ui/Container'
 import { useSmoothNav } from '../../hooks/useSmoothNav'
 
@@ -116,6 +117,7 @@ function SocialLinks({ className = '' }: { className?: string }) {
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { pathname } = useLocation()
   const handleNavClick = useSmoothNav()
 
   return (
@@ -151,16 +153,19 @@ export function Navbar() {
 
           {/* Desktop: nav links op 1 regel, centraal in de navbar */}
           <div className="nav-links-center">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="nav-link"
-                onClick={(e) => handleNavClick(e, link.href)}
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`nav-link ${isActive ? 'nav-link--active' : ''}`}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                >
+                  {link.label}
+                </a>
+              )
+            })}
           </div>
 
           {/* Rechts: CTA (desktop) of hamburger (mobile) */}

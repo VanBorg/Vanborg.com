@@ -176,6 +176,14 @@
   transform: scaleX(1);
 }
 
+.nav-link--active {
+  color: var(--color-neutral-900);
+}
+
+.nav-link--active::after {
+  transform: scaleX(1);
+}
+
 /* Section backgrounds – vertical gradient, soft transition in the middle */
 .bg-section-1 {
   background: var(--gradient-section-1);
