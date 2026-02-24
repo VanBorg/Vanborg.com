@@ -2,11 +2,13 @@ import { Container } from '../../ui/Container'
 
 const bundelInbegrepen = [
   'Volledige ranking-analyse en optimalisatie voor een Top 3-positie',
-  'SEO-website op maat ontworpen en gebouwd',
+  'SEO-website tot 5 pagina’s, ontworpen en gebouwd op maat',
+  'Servicepagina’s inclusief, locatiepagina’s als extra onderdeel van lokale SEO',
   'Google Business Profile setup en optimalisatie',
-  'Wekelijkse heatmaps en rapportages',
   'Core Web Vitals geoptimaliseerde website',
-  'Persoonlijke begeleiding gedurende het hele traject',
+  'Hosting van de website tijdens het traject',
+  'Tot 3 grotere aanpassingen aan de website (bijvoorbeeld nieuwe secties/pagina’s)',
+  'Daarnaast meerdere kleine wijzigingen en tekstupdates waar nodig',
 ]
 
 const doorlopendInbegrepen = [
@@ -15,7 +17,8 @@ const doorlopendInbegrepen = [
   'Structurele optimalisaties richting de nummer 1-positie',
   'Uitbreiding werkgebied naar omliggende plaatsen',
   'Content-updates op aanvraag',
-  'Maandelijkse rapportage met concrete actiepunten',
+  'Wekelijkse updates en rapportages (o.a. heatmaps)',
+  'Maandelijkse call om resultaten en strategie te bespreken',
 ]
 
 function CheckIcon() {
@@ -50,14 +53,15 @@ function PrijsLijst({ items }: { items: string[] }) {
 
 export function SalePrijs() {
   return (
-    <section className="section bg-section-2" aria-labelledby="sale-prijs-title">
+    <section className="section bg-section-1" aria-labelledby="sale-prijs-title">
       <Container>
         <div className="text-center">
           <h2 id="sale-prijs-title" className="heading-section">
             Bundelaanbieding
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
-            Ranking + Website samen voordeliger. Bespaar &euro;&nbsp;499 op de eenmalige kosten.
+            Website + Top 3 in Google voor &euro;&nbsp;2.999 eenmalig + &euro;&nbsp;499 p/m (excl. btw).
+            In deze bundel komt de website feitelijk neer op ongeveer &euro;&nbsp;1.500.
           </p>
         </div>
 
@@ -66,11 +70,10 @@ export function SalePrijs() {
             <div className="ranking-prijs-badge">Bundel &mdash; eenmalig</div>
 
             <div className="ranking-prijs-bedrag mt-4">
-              &euro;&nbsp;1.999
+              &euro;&nbsp;2.999
             </div>
             <p className="ranking-prijs-subtekst">
-              <span className="line-through text-neutral-400">&euro;&nbsp;2.498</span>
-              {' '}eenmalig &mdash; bespaar &euro;&nbsp;499
+              Eenmalige investering voor Website + Top 3 traject (looptijd 90 dagen).
             </p>
 
             <hr className="ranking-prijs-divider" />
@@ -85,12 +88,11 @@ export function SalePrijs() {
             <div className="ranking-prijs-badge">Bundel &mdash; doorlopend</div>
 
             <div className="ranking-prijs-bedrag ranking-prijs-bedrag--maand mt-4">
-              &euro;&nbsp;549
+              &euro;&nbsp;499
               <span className="ranking-prijs-per-maand"> p/m</span>
             </div>
             <p className="ranking-prijs-subtekst">
-              <span className="line-through text-neutral-400">&euro;&nbsp;598 p/m</span>
-              {' '}ranking + hosting gebundeld
+              Maandelijks voor doorlopend ranking-werk, hosting en begeleiding.
             </p>
 
             <hr className="ranking-prijs-divider" />

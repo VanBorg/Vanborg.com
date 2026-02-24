@@ -31,9 +31,13 @@ function IconOutcome() {
   )
 }
 
-export function ProblemOutcome() {
+export function ProblemOutcome({
+  background = 'bg-section-2',
+}: {
+  background?: 'bg-section-1' | 'bg-section-2'
+}) {
   return (
-    <section className="section bg-section-2" aria-labelledby="problem-outcome-title">
+    <section className={`section ${background}`} aria-labelledby="problem-outcome-title">
       <Container>
         <div className="text-center">
           <h2 id="problem-outcome-title" className="heading-section">

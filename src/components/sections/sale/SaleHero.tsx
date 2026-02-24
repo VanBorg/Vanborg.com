@@ -11,14 +11,14 @@ export function SaleHero() {
       <Container>
         <div className="max-w-2xl text-center mx-auto">
           <h1 className="heading-hero">
-            Ranking + Website Bundel
+            Website + Top 3 Bundel
           </h1>
           <h2 className="heading-hero-subtitle mt-3">
-            Top 3 in Google &eacute;n een website die converteert &mdash; samen voordeliger.
+            Top 3 in Google &eacute;n een SEO-geoptimaliseerde website &mdash; voor een vast pakketbedrag.
           </h2>
           <p className="text-section-body mt-3 text-neutral-500">
-            Combineer onze twee populairste diensten en bespaar. Een volledig pakket
-            voor maximale online zichtbaarheid.
+            Website + Top 3 voor &euro;&nbsp;2.999 eenmalig + &euro;&nbsp;499 p/m (excl. btw),
+            inclusief website tot 5 pagina’s, lokale SEO en 90 dagen begeleiding.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a

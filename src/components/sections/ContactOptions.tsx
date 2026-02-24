@@ -15,11 +15,15 @@ const callBullets = [
   'Bespreking van je huidige positie',
 ]
 
-export function ContactOptions() {
+export function ContactOptions({
+  background = 'bg-section-2',
+}: {
+  background?: 'bg-section-1' | 'bg-section-2'
+}) {
   return (
     <section
       id="contact"
-      className="section section--contact bg-section-2 contact-options"
+      className={`section section--contact ${background} contact-options`}
       aria-labelledby="contact-options-title"
     >
       <Container>

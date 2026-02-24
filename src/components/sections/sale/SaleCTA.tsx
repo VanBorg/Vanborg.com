@@ -19,7 +19,7 @@ export function SaleCTA() {
   return (
     <section
       id="contact"
-      className="section section--contact bg-section-1 contact-options"
+      className="section section--contact bg-section-2 contact-options"
       aria-labelledby="sale-cta-title"
     >
       <Container>

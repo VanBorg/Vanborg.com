@@ -76,8 +76,8 @@ const faqData: FAQTopic[] = [
     title: 'Prijzen & betaling',
     questions: [
       {
-        q: 'Hoe werken jullie prijzen voor Ranking, Ads en Websites?',
-        a: 'Onze prijzen sluiten aan op de officiële context: Google Ranking kost € 1.499 eenmalig (voor de eerste 90 dagen) plus vanaf € 499 p/m voor doorlopend SEO- en beheerwerk. Google Ads-pakketten kosten Voorstarter € 499 p/m, Groei € 899 p/m en Dominant € 1.299 p/m (excl. btw; advertentiebudget staat los van de servicekosten). SEO Websites starten vanaf € 999 eenmalig voor de bouw + € 99 p/m voor hosting en onderhoud.',
+        q: 'Wat houdt de Website + Top 3 aanbieding precies in?',
+        a: 'De Website + Top 3 aanbieding kost € 2.999 eenmalig excl. btw + € 499 p/m. Binnen deze bundel komt de website effectief neer op ongeveer € 1.500. Je krijgt een SEO-geoptimaliseerde website tot 5 pagina’s, inclusief servicepagina’s. Locatiepagina’s vallen niet binnen die 5 en worden als extra ingezet binnen lokale SEO. De looptijd is 90 dagen, hosting is inbegrepen, je krijgt tot 3 grotere websitewijzigingen plus meerdere kleine aanpassingen, met wekelijkse updates en maandelijkse calls.',
       },
       {
         q: 'Hoe kan ik betalen voor Local Ranking, Websites en Ads?',

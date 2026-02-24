@@ -2,6 +2,7 @@ import { Navbar } from '../components/layout/Navbar'
 import { Footer } from '../components/layout/Footer'
 import { Container } from '../components/ui/Container'
 import { ContactOptions } from '../components/sections/ContactOptions'
+import { ProblemOutcome } from '../components/sections/ProblemOutcome'
 
 const CALENDLY_URL = 'https://calendly.com/vanborglimited/van_borg_sales_call'
 
@@ -131,6 +132,7 @@ export default function PrijzenPage() {
             </div>
           </Container>
         </section>
+        <ProblemOutcome background="bg-section-1" />
         <ContactOptions />
       </main>
       <Footer />
