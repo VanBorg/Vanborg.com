@@ -1,9 +1,10 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, type ReactNode } from 'react'
 import { Container } from '../ui/Container'
 
 interface FAQQuestion {
   q: string
   a: string
+  rich?: ReactNode
 }
 
 interface FAQTopic {
@@ -18,14 +19,48 @@ const faqData: FAQTopic[] = [
       {
         q: 'Wat is Google Ranking (Top 3 lokaal)?',
         a: 'Google Ranking is ons Local SEO-traject waarmee we je Google Business Profile en website optimaliseren zodat je lokaal hoger komt in Google Zoeken en Google Maps, met als doel een Top 3-positie voor hoog-intentie zoekopdrachten.',
+        rich: (
+          <>
+            <a href="/ranking" className="text-[var(--accent-green-light)]">
+              Google Ranking
+            </a>{' '}
+            is ons Local SEO-traject waarmee we je Google Business Profile en website optimaliseren zodat je lokaal hoger komt in Google Zoeken en Google Maps, met als doel een Top 3-positie voor hoog-intentie zoekopdrachten.
+          </>
+        ),
       },
       {
         q: 'Wat houden jullie Google Ads pakketten in?',
         a: 'Onze Google Ads-pakketten (Voorstarter, Groei, Dominant) zijn leadgerichte campagnes voor lokale bedrijven, waarbij we zoekwoorden, targeting, tracking en landingspagina’s afstemmen op jouw regio en diensten. De pakketten verschillen in aantal campagnes, zoekwoorden en intensiteit van optimalisatie.',
+        rich: (
+          <>
+            Onze{' '}
+            <a href="/ads" className="text-[var(--accent-green-light)]">
+              Google Ads-pakketten
+            </a>{' '}
+            (Voorstarter, Groei, Dominant) zijn leadgerichte campagnes voor lokale bedrijven, waarbij we zoekwoorden, targeting, tracking en landingspagina’s afstemmen op jouw regio en diensten. De pakketten verschillen in aantal campagnes, zoekwoorden en intensiteit van optimalisatie. Voor een compleet overzicht van de tarieven kun je kijken op de{' '}
+            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+              prijzenpagina
+            </a>
+            .
+          </>
+        ),
       },
       {
         q: 'Wat is een SEO- en verkoopgeoptimaliseerde website bij jullie?',
         a: 'Een SEO Website van Van Borg is een snelle, conversiegerichte site gebouwd met moderne techniek (React, TypeScript, Tailwind) en ingericht op Core Web Vitals, technische SEO, duidelijke CTA’s en leadcapture, zodat bezoekers makkelijker klant worden.',
+        rich: (
+          <>
+            Een{' '}
+            <a href="/website" className="text-[var(--accent-green-light)]">
+              SEO Website
+            </a>{' '}
+            van Van Borg is een snelle, conversiegerichte site gebouwd met moderne techniek (React, TypeScript, Tailwind) en ingericht op Core Web Vitals, technische SEO, duidelijke CTA’s en leadcapture, zodat bezoekers makkelijker klant worden. In onze{' '}
+            <a href="/aanbieding" className="text-[var(--accent-green-light)]">
+              Website + Top 3 aanbieding
+            </a>{' '}
+            combineren we deze website met een lokaal ranking-traject.
+          </>
+        ),
       },
     ],
   },
@@ -35,6 +70,23 @@ const faqData: FAQTopic[] = [
       {
         q: 'Wie is Van Borg en wat doen jullie?',
         a: 'Van Borg (Van Borg Limited) is een marketing consultant / marketingbureau uit Veendam dat lokale bedrijven in Nederland helpt met Google Top 3 ranking, Google Ads-campagnes en SEO- en sales-geoptimaliseerde websites. We richten ons op meetbare groei: hogere rankings, meer gekwalificeerde leads en betere conversie.',
+        rich: (
+          <>
+            Van Borg (Van Borg Limited) is een marketing consultant / marketingbureau uit Veendam dat lokale bedrijven in Nederland helpt met{' '}
+            <a href="/ranking" className="text-[var(--accent-green-light)]">
+              Google Top 3 ranking
+            </a>
+            ,{' '}
+            <a href="/ads" className="text-[var(--accent-green-light)]">
+              Google Ads-campagnes
+            </a>{' '}
+            en{' '}
+            <a href="/website" className="text-[var(--accent-green-light)]">
+              SEO- en sales-geoptimaliseerde websites
+            </a>
+            . We richten ons op meetbare groei: hogere rankings, meer gekwalificeerde leads en betere conversie.
+          </>
+        ),
       },
       {
         q: 'Met wat voor soort bedrijven werken jullie en waar zijn jullie actief?',
@@ -52,10 +104,63 @@ const faqData: FAQTopic[] = [
       {
         q: 'Wat zijn jullie openingstijden en hoe snel reageren jullie?',
         a: 'Officieel staan we als 24/7 geopend (00:00–23:59, alle dagen). In de praktijk plannen we afspraken en calls op momenten die voor beide partijen werken, meestal overdag op werkdagen. We reageren zo snel mogelijk op aanvragen via het formulier, Loom-videoverzoeken en geplande calls.',
+        rich: (
+          <>
+            Officieel staan we als 24/7 geopend (00:00–23:59, alle dagen). In de praktijk plannen we afspraken en calls op momenten die voor beide partijen werken, meestal overdag op werkdagen. We reageren zo snel mogelijk op aanvragen via het{' '}
+            <a href="#contact" className="text-[var(--accent-green-light)]">
+              contactgedeelte op de pagina
+            </a>
+            , Loom-videoverzoeken en geplande calls.
+          </>
+        ),
       },
       {
         q: 'Hoe kan ik het beste contact opnemen of een gesprek plannen?',
         a: 'Je kunt contact opnemen via de contactpagina, een Loom video aanvragen of direct een 15-minuten gesprek boeken via Calendly. De links naar het formulier, Loom en Calendly staan in onze contactsectie zoals beschreven in de company context.',
+        rich: (
+          <>
+            Je kunt contact opnemen via het{' '}
+            <a href="#contact" className="text-[var(--accent-green-light)]">
+              contactgedeelte op deze pagina
+            </a>
+            , een ranking-scan aanvragen via onze{' '}
+            <a
+              href="https://forms.gle/s3cnmZ7PSuxdo4Yp9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--accent-green-light)]"
+            >
+              Google Sheet / formulier
+            </a>{' '}
+            of direct een 15-minuten gesprek boeken via{' '}
+            <a
+              href="https://calendly.com/vanborglimited/van_borg_sales_call"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--accent-green-light)]"
+            >
+              Calendly
+            </a>
+            . De links naar het formulier en Calendly staan ook in onze contactsectie.
+          </>
+        ),
+      },
+      {
+        q: 'Waar vind ik jullie privacybeleid en algemene voorwaarden?',
+        a: 'Ons privacybeleid en de algemene voorwaarden vind je op de gelijknamige pagina\'s. De links staan ook onderaan elke pagina in de footer.',
+        rich: (
+          <>
+            Ons{' '}
+            <a href="/privacy" className="text-[var(--accent-green-light)]">
+              privacybeleid
+            </a>{' '}
+            en de{' '}
+            <a href="/voorwaarden" className="text-[var(--accent-green-light)]">
+              algemene voorwaarden
+            </a>{' '}
+            vind je op de gelijknamige pagina&apos;s. De links staan ook onderaan elke pagina in de footer.
+          </>
+        ),
       },
     ],
   },
@@ -78,10 +183,32 @@ const faqData: FAQTopic[] = [
       {
         q: 'Wat houdt de Website + Top 3 aanbieding precies in?',
         a: 'De Website + Top 3 aanbieding kost € 2.999 eenmalig excl. btw + € 499 p/m. Binnen deze bundel komt de website effectief neer op ongeveer € 1.500. Je krijgt een SEO-geoptimaliseerde website tot 5 pagina’s, inclusief servicepagina’s. Locatiepagina’s vallen niet binnen die 5 en worden als extra ingezet binnen lokale SEO. De looptijd is 90 dagen, hosting is inbegrepen, je krijgt tot 3 grotere websitewijzigingen plus meerdere kleine aanpassingen, met wekelijkse updates en maandelijkse calls.',
+        rich: (
+          <>
+            De{' '}
+            <a href="/aanbieding" className="text-[var(--accent-green-light)]">
+              Website + Top 3 aanbieding
+            </a>{' '}
+            kost € 2.999 eenmalig excl. btw + € 499 p/m. Binnen deze bundel komt de website effectief neer op ongeveer € 1.500. Je krijgt een SEO-geoptimaliseerde website tot 5 pagina’s, inclusief servicepagina’s. Locatiepagina’s vallen niet binnen die 5 en worden als extra ingezet binnen lokale SEO. De looptijd is 90 dagen, hosting is inbegrepen, je krijgt tot 3 grotere websitewijzigingen plus meerdere kleine aanpassingen, met wekelijkse updates en maandelijkse calls. Een overzicht hiervan vind je ook terug op de{' '}
+            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+              prijzenpagina
+            </a>
+            .
+          </>
+        ),
       },
       {
         q: 'Hoe kan ik betalen voor Local Ranking, Websites en Ads?',
         a: 'Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen, zoals met je wordt afgesproken. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Voor Google Ads-pakketten geldt dat de servicefee vooraf wordt betaald en dat het advertentiebudget los staat en óf via Google zelf óf vooraf via jou wordt geregeld.',
+        rich: (
+          <>
+            Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen, zoals met je wordt afgesproken. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Voor Google Ads-pakketten geldt dat de servicefee vooraf wordt betaald en dat het advertentiebudget los staat en óf via Google zelf óf vooraf via jou wordt geregeld. Op de{' '}
+            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+              prijzenpagina
+            </a>{' '}
+            zie je hoe deze pakketten zijn opgebouwd.
+          </>
+        ),
       },
       {
         q: 'Welke betaalmethodes accepteren jullie?',
@@ -95,6 +222,23 @@ const faqData: FAQTopic[] = [
       {
         q: 'Wat voor resultaten kan ik realistisch verwachten?',
         a: 'Voor Google Ranking is het doel om binnen ongeveer 90 dagen in de Top 3 te komen voor lokale zoekopdrachten. Bij Google Ads zien veel klanten al in de eerste week verkeer en een significantere ROI na ongeveer 3 maanden. SEO Websites zijn ontworpen om vanaf dag één beter te converteren zodra er relevant verkeer op komt. Resultaten blijven altijd afhankelijk van markt, concurrentie en budget.',
+        rich: (
+          <>
+            Voor{' '}
+            <a href="/ranking" className="text-[var(--accent-green-light)]">
+              Google Ranking
+            </a>{' '}
+            is het doel om binnen ongeveer 90 dagen in de Top 3 te komen voor lokale zoekopdrachten. Bij{' '}
+            <a href="/ads" className="text-[var(--accent-green-light)]">
+              Google Ads
+            </a>{' '}
+            zien veel klanten al in de eerste week verkeer en een significantere ROI na ongeveer 3 maanden.{' '}
+            <a href="/website" className="text-[var(--accent-green-light)]">
+              SEO Websites
+            </a>{' '}
+            zijn ontworpen om vanaf dag één beter te converteren zodra er relevant verkeer op komt. Resultaten blijven altijd afhankelijk van markt, concurrentie en budget.
+          </>
+        ),
       },
       {
         q: 'Wat betekent “Top 3 binnen 90 dagen of we werken gratis door”?',
@@ -228,7 +372,7 @@ export function FAQ() {
                               className={`faq-question__collapse${qOpen ? ' faq-question__collapse--open' : ''}`}
                             >
                               <div className="faq-question__inner">
-                                <p className="faq-question__answer">{item.a}</p>
+                                <p className="faq-question__answer">{item.rich ?? item.a}</p>
                               </div>
                             </div>
                           </div>

@@ -5,6 +5,8 @@ import AdsPage from './pages/ads'
 import WebsitePage from './pages/website'
 import SalePage from './pages/sale'
 import PrijzenPage from './pages/prijzen'
+import VoorwaardenPage from './pages/voorwaarden'
+import PrivacyPage from './pages/privacy'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Route path="/website" element={<WebsitePage />} />
       <Route path="/aanbieding" element={<SalePage />} />
       <Route path="/prijzen" element={<PrijzenPage />} />
+      <Route path="/voorwaarden" element={<VoorwaardenPage />} />
+      <Route path="/privacy" element={<PrivacyPage />} />
     </Routes>
   )
 }

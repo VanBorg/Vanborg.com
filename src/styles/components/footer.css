@@ -197,6 +197,33 @@
   color: var(--accent-green);
 }
 
+/* Address, opening hours and contact spacing */
+.footer__company-address {
+  margin: 0;
+}
+
+.footer__company-hours {
+  margin: 0.5rem 0 0;
+}
+
+.footer__company-contact {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer__company-email,
+.footer__company-phone {
+  font-weight: 600;
+  color: var(--accent-green-light);
+}
+
+.footer__company-email:hover,
+.footer__company-phone:hover {
+  color: var(--accent-green);
+}
+
 /* ─── Pagina's kolom ─── */
 
 .footer__pages {
@@ -272,7 +299,14 @@
   gap: 1.25rem;
 }
 
+.footer__legal-links a,
 .footer__legal-links span {
   font-size: 0.8125rem;
   color: var(--color-neutral-700);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__legal-links a:hover {
+  color: var(--accent-green);
 }

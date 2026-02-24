@@ -28,7 +28,7 @@ export function Footer() {
             {/* 1. Helemaal links: Van Borg */}
             <div className="footer__company-info">
               <span className="footer__company-name">Van Borg</span>
-              <address>
+              <address className="footer__company-address">
                 <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
                   Kieler Bocht 104
                 </a>
@@ -37,9 +37,15 @@ export function Footer() {
                   9642 CE Veendam
                 </a>
               </address>
-              <p>Ma–Zo 00:00–23:59</p>
-              <a href="mailto:info@vanborglimited.com">info@vanborglimited.com</a>
-              <a href="tel:+31644732266">+31 6 44 73 22 66</a>
+              <p className="footer__company-hours">Ma–Zo 00:00–23:59</p>
+              <div className="footer__company-contact">
+                <a href="mailto:info@vanborglimited.com" className="footer__company-email">
+                  info@vanborglimited.com
+                </a>
+                <a href="tel:+31644732266" className="footer__company-phone">
+                  +31 6 44 73 22 66
+                </a>
+              </div>
             </div>
 
             <FooterDivider />
@@ -86,10 +92,10 @@ export function Footer() {
 
       <Container>
         <div className="footer__legal">
-          <span className="footer__copyright">&copy; Van Borg 2025</span>
+          <span className="footer__copyright">&copy; Van Borg Limited 2025</span>
           <div className="footer__legal-links">
-            <span>Algemene voorwaarden</span>
-            <span>Privacy</span>
+            <a href="/voorwaarden">Algemene voorwaarden</a>
+            <a href="/privacy">Privacy</a>
           </div>
         </div>
       </Container>
