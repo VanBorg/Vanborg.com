@@ -1,0 +1,26 @@
+/* Ranking voordelen-grid – 2x2 kaarten met icoon + titel + tekst */
+
+.ranking-voordelen-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .ranking-voordelen-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ranking-voordelen-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ranking-voordelen__icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--accent-green);
+  flex-shrink: 0;
+}

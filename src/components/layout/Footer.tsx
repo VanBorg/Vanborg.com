@@ -7,12 +7,8 @@ const MAP_EMBED_SRC =
 const MAPS_URL = 'https://maps.google.com/?q=Kieler+Bocht+104+9642+CE+Veendam'
 
 const PAGES = [
-  { label: 'Pagina 1', href: '#' },
-  { label: 'Pagina 2', href: '#' },
-  { label: 'Pagina 3', href: '#' },
-  { label: 'Pagina 4', href: '#' },
-  { label: 'Pagina 5', href: '#' },
-  { label: 'Pagina 6', href: '#' },
+  { label: 'Home', href: '/' },
+  { label: 'Ranking', href: '/ranking' },
 ]
 
 export function Footer() {
@@ -22,57 +18,55 @@ export function Footer() {
       <div className="footer__main">
         <Container>
           <div className="footer__top">
+            {/* Kolom 1: Werkgebieden */}
+            <div className="footer__werkgebieden">
+              <h3 className="heading-sub">Werkgebieden</h3>
+              <ul className="footer__werkgebieden-grid">
+                {WORKGEBIED_LOCATIONS.map((loc) => (
+                  <li key={loc}>{loc}</li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Map */}
-          <div className="footer__map-wrap">
-            <iframe
-              src={MAP_EMBED_SRC}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Kaart: Van Borg, Veendam – provincie Groningen"
-            />
-          </div>
+            {/* Kolom 2: Google Maps embed */}
+            <div className="footer__map-wrap">
+              <iframe
+                src={MAP_EMBED_SRC}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Kaart: Van Borg, Veendam – provincie Groningen"
+              />
+            </div>
 
-          {/* Werkgebieden */}
-          <div className="footer__werkgebieden">
-            <h3 className="heading-sub">Werkgebieden</h3>
-            <ul className="footer__werkgebieden-grid">
-              {WORKGEBIED_LOCATIONS.map((loc) => (
-                <li key={loc}>{loc}</li>
-              ))}
-            </ul>
-          </div>
+            {/* Kolom 3: Van Borg */}
+            <div className="footer__company-info">
+              <span className="footer__company-name">Van Borg</span>
+              <address>
+                <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
+                  Kieler Bocht 104
+                </a>
+                <br />
+                <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
+                  9642 CE Veendam
+                </a>
+              </address>
+              <p>Ma–Zo 00:00–23:59</p>
+              <a href="mailto:info@vanborglimited.com">info@vanborglimited.com</a>
+              <a href="tel:+31644732266">+31 6 44 73 22 66</a>
+            </div>
 
-          {/* Bedrijfsinfo – geen losse headers, alles in één blok */}
-          <div className="footer__company-info">
-            <span className="footer__company-name">Van Borg</span>
-            <address>
-              <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
-                Kieler Bocht 104
-              </a>
-              <br />
-              <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
-                9642 CE Veendam
-              </a>
-            </address>
-            <p>Ma–Zo 00:00–23:59</p>
-            <a href="mailto:info@vanborglimited.com">info@vanborglimited.com</a>
-            <a href="tel:+31644732266">+31 6 44 73 22 66</a>
-          </div>
-
-          {/* Pagina's */}
-          <div className="footer__pages">
-            <h3 className="heading-sub">Pagina&apos;s</h3>
-            <ul className="footer__pages-list">
-              {PAGES.map((page) => (
-                <li key={page.label}>
-                  <span>{page.label}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+            {/* Kolom 4: Pagina's */}
+            <div className="footer__pages">
+              <h3 className="heading-sub">Pagina&apos;s</h3>
+              <ul className="footer__pages-list">
+                {PAGES.map((page) => (
+                  <li key={page.label}>
+                    <a href={page.href}>{page.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Container>
       </div>

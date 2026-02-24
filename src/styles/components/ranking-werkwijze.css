@@ -1,0 +1,21 @@
+/* Ranking werkwijze – genummerde bolletjes bij de stappen */
+
+.ranking-werkwijze-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ranking-werkwijze-nummer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background: var(--accent-green);
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
