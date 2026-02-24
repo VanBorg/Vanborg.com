@@ -24,27 +24,22 @@ export function AboutUs() {
             <div>
               <h3 className="heading-sub">Over de oprichter</h3>
               <p className="mt-2 text-section-body">
-                Ik ben Nicolaas Sterenborg, eigenaar van Van Borg, gevestigd in Veendam.
+                Ik ben Nicolaas P. Sterenborg, eigenaar van Van Borg, gevestigd te Veendam.
               </p>
               <p className="mt-1 text-section-body">
-                Sinds begin 2025 help ik lokale bedrijven hoger in Google te komen. Persoonlijk, snel en met een focus op resultaat.
+                Sinds begin 2025 help ik lokale bedrijven hoger te komen op Google met als doel
+                het binnenhalen van meer opdrachten.
               </p>
-            </div>
-
-            <div>
-              <h3 className="heading-sub">Onze aanpak</h3>
-              <p className="mt-2 text-section-body">
-                Ons doel is eenvoudig: zorgen dat nieuwe klanten je zien.
-              </p>
-              <p className="mt-1 text-section-body">
-                Vrijwel iedereen gebruikt Google. Sta je bovenaan, dan volgen de aanvragen vanzelf.
+              <p className="mt-3 text-section-body">
+                Wat ons kenmerkt is onze persoonlijke aanpak waarbij we elke klant op een unieke
+                manier helpen, met altijd een focus op resultaat.
               </p>
             </div>
 
             <div>
               <h3 className="heading-sub">Werkgebied</h3>
               <p className="mt-2 text-section-body">
-                <strong>Actief in:</strong> Veendam, Meeden, Hoogezand, Muntendam, Sappemeer, Zuidbroek, Noordbroek, Wildervank, Tripscompagnie, Borgercompagnie, Hoogezand-Sappemeer, Bareveld (Nieuwediep) en Ommelanderwijk.
+                <strong>Wij zijn actief in:</strong> Veendam, Meeden, Hoogezand, Muntendam, Sappemeer, Zuidbroek, Noordbroek, Wildervank, Tripscompagnie, Borgercompagnie, Hoogezand-Sappemeer, Bareveld (Nieuwediep) en Ommelanderwijk.
               </p>
             </div>
           </div>

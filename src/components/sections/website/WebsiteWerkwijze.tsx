@@ -3,42 +3,42 @@ import { Container } from '../../ui/Container'
 const stappen = [
   {
     nummer: 1,
-    title: 'Analyse',
-    text: 'We brengen je huidige ranking, concurrentie en zoekwoorden in kaart. Je ontvangt een heatmap die precies laat zien waar je nu staat.',
+    title: 'Intake & strategie',
+    text: 'We bespreken je doelen, doelgroep en concurrentie. Op basis daarvan bepalen we de structuur, content en zoekwoorden voor je website.',
   },
   {
     nummer: 2,
-    title: 'Optimalisatie',
-    text: 'Je Google Business Profile, website en lokale signalen worden geoptimaliseerd voor maximale zichtbaarheid in jouw regio.',
+    title: 'Ontwerp & bouw',
+    text: 'We ontwerpen en bouwen je website met React en Tailwind. Snel, responsief en volledig afgestemd op jouw huisstijl en boodschap.',
   },
   {
     nummer: 3,
-    title: 'Monitoring',
-    text: 'Wekelijkse heatmaps en rapportages zodat je de voortgang ziet. Transparant en meetbaar, geen verrassingen.',
+    title: 'SEO & lancering',
+    text: 'Voordat we live gaan optimaliseren we elke pagina voor zoekmachines: metadata, snelheid, structuur en interne links.',
   },
   {
     nummer: 4,
-    title: 'Doorlopend beheer',
-    text: 'We blijven optimaliseren zodat je positie stabiel blijft. Google verandert continu, wij passen mee aan.',
+    title: 'Hosting & onderhoud',
+    text: 'Na lancering hosten wij je website en zorgen we voor updates, beveiliging en doorlopende optimalisatie.',
   },
 ]
 
-export function RankingWerkwijze() {
+export function WebsiteWerkwijze() {
   return (
-    <section className="section bg-section-1" aria-labelledby="ranking-werkwijze-title">
+    <section className="section bg-section-1" aria-labelledby="website-werkwijze-title">
       <Container>
         <div className="text-center">
-          <h2 id="ranking-werkwijze-title" className="heading-section">
+          <h2 id="website-werkwijze-title" className="heading-section">
             Hoe we het doen
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
-            Een bewezen aanpak in vier stappen. Van analyse tot doorlopend beheer.
+            Een bewezen aanpak in vier stappen. Van intake tot doorlopend onderhoud.
           </p>
         </div>
 
         <div
           className="ranking-werkwijze-timeline"
-          aria-label="Tijdlijn met de vier stappen van onze werkwijze"
+          aria-label="Tijdlijn met de vier stappen van onze website werkwijze"
         >
           <div className="ranking-werkwijze-timeline__line" aria-hidden />
           <div className="ranking-werkwijze-timeline__steps">
@@ -55,7 +55,6 @@ export function RankingWerkwijze() {
             ))}
           </div>
         </div>
-
       </Container>
     </section>
   )

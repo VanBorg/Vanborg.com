@@ -19,3 +19,73 @@
   font-weight: 700;
   flex-shrink: 0;
 }
+
+/* Nieuwe horizontale tijdlijn-layout */
+
+.ranking-werkwijze-timeline {
+  position: relative;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.ranking-werkwijze-timeline__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 118, 110, 0.08),
+    rgba(15, 118, 110, 0.6),
+    rgba(15, 118, 110, 0.08)
+  );
+}
+
+.ranking-werkwijze-timeline__steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.ranking-werkwijze-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.ranking-werkwijze-step__marker-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.ranking-werkwijze-step__card {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .ranking-werkwijze-timeline {
+    padding-top: 0;
+    margin-top: 2rem;
+  }
+
+  .ranking-werkwijze-timeline__line {
+    display: none;
+  }
+
+  .ranking-werkwijze-timeline__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .ranking-werkwijze-step {
+    align-items: flex-start;
+  }
+
+  .ranking-werkwijze-step__marker-wrap {
+    justify-content: flex-start;
+  }
+}

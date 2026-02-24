@@ -1,10 +1,17 @@
 import { Container } from '../../ui/Container'
 
-const inbegrepen = [
-  'Volledige analyse en optimalisatie',
-  'Google Business Profile setup',
-  'Wekelijkse heatmaps en rapportages',
-  'Persoonlijke begeleiding',
+const eenmaligInbegrepen = [
+  'Volledige analyse en optimalisatie voor jouw Top 3-doel',
+  'Google Business Profile setup en optimalisatie',
+  'Technische en lokale SEO-aanpassingen tijdens de eerste 90 dagen',
+  'Wekelijkse heatmaps en rapportages in de opstartfase',
+]
+
+const maandelijksInbegrepen = [
+  'Doorlopend SEO- en beheerwerk om je positie vast te houden',
+  'Structurele optimalisaties om richting de nummer 1-positie te groeien',
+  'Uitbreiding van het werkgebied naar omliggende plaatsen',
+  'Maandelijkse rapportage met concrete actiepunten',
 ]
 
 export function RankingPrijs() {
@@ -20,27 +27,69 @@ export function RankingPrijs() {
           </p>
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="ranking-prijs-grid">
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Google Top 3 Ranking</div>
+            <div className="ranking-prijs-badge">Eenmalige Top 3 ranking</div>
 
             <div className="ranking-prijs-bedrag mt-4">
               &euro;&nbsp;1.499
             </div>
             <p className="ranking-prijs-subtekst">eenmalig &mdash; eerste 90 dagen</p>
 
+            <hr className="ranking-prijs-divider" />
+
+            <h3 className="heading-sub">Wat is inbegrepen</h3>
+            <ul className="ranking-prijs-lijst">
+              {eenmaligInbegrepen.map((item) => (
+                <li key={item} className="ranking-prijs-lijst__item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                    className="ranking-prijs-lijst__icon"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="ranking-prijs-btw">Alle prijzen excl. btw</p>
+          </div>
+
+          <div className="card card-bordered card-elevated ranking-prijs-card">
+            <div className="ranking-prijs-badge">Maandelijks beheer &amp; groei</div>
+
             <div className="ranking-prijs-bedrag ranking-prijs-bedrag--maand mt-4">
-              Vanaf &euro;&nbsp;499<span className="ranking-prijs-per-maand"> p/m</span>
+              Vanaf &euro;&nbsp;499
+              <span className="ranking-prijs-per-maand"> p/m</span>
             </div>
-            <p className="ranking-prijs-subtekst">doorlopend SEO- en beheerwerk</p>
+            <p className="ranking-prijs-subtekst">
+              Voor het behouden van je Top 3-positie, het najagen van nummer 1 en het
+              vergroten van je werkgebied.
+            </p>
 
             <hr className="ranking-prijs-divider" />
 
             <h3 className="heading-sub">Wat is inbegrepen</h3>
             <ul className="ranking-prijs-lijst">
-              {inbegrepen.map((item) => (
+              {maandelijksInbegrepen.map((item) => (
                 <li key={item} className="ranking-prijs-lijst__item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-prijs-lijst__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                    className="ranking-prijs-lijst__icon"
+                  >
                     <path d="M20 6L9 17l-5-5" />
                   </svg>
                   <span>{item}</span>

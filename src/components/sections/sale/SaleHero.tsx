@@ -5,19 +5,20 @@ const SCAN_FORM_URL =
 const CALENDLY_URL =
   'https://calendly.com/vanborglimited/van_borg_sales_call'
 
-export function RankingHero() {
+export function SaleHero() {
   return (
     <section className="section bg-section-1 py-12 lg:py-20">
       <Container>
         <div className="max-w-2xl text-center mx-auto">
           <h1 className="heading-hero">
-            Google Top 3 Ranking
+            Ranking + Website Bundel
           </h1>
           <h2 className="heading-hero-subtitle mt-3">
-            Binnen 90 dagen in de top, of we werken gratis door tot je er bent.
+            Top 3 in Google &eacute;n een website die converteert &mdash; samen voordeliger.
           </h2>
           <p className="text-section-body mt-3 text-neutral-500">
-            Wij zorgen dat je online zichtbaar wordt, want dat is waar de toekomstige klanten zitten.
+            Combineer onze twee populairste diensten en bespaar. Een volledig pakket
+            voor maximale online zichtbaarheid.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a

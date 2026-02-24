@@ -9,6 +9,10 @@ const MAPS_URL = 'https://maps.google.com/?q=Kieler+Bocht+104+9642+CE+Veendam'
 const PAGES = [
   { label: 'Home', href: '/' },
   { label: 'Ranking', href: '/ranking' },
+  { label: 'Google Ads', href: '/ads' },
+  { label: 'Websites', href: '/website' },
+  { label: 'Prijzen', href: '/prijzen' },
+  { label: 'Aanbieding', href: '/aanbieding' },
 ]
 
 function FooterDivider() {

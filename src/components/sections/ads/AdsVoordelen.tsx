@@ -2,36 +2,38 @@ import { Container } from '../../ui/Container'
 
 const voordelen = [
   {
-    title: 'Meer zichtbaarheid',
-    text: 'Bedrijven op positie 4 of lager krijgen minder dan 5% van de kliks. In de Top 3 staan betekent dat het overgrote deel van de zoekers jou ziet — en niet je concurrent.',
+    title: 'Direct zichtbaar',
+    text: 'Met Google Ads sta je direct bovenaan de zoekresultaten. Geen maanden wachten — vanaf dag één zichtbaar voor je doelgroep.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
-        <circle cx="11" cy="11" r="8" />
-        <path d="M21 21l-4.35-4.35" />
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
       </svg>
     ),
   },
   {
-    title: 'Meer telefoontjes en aanvragen',
-    text: 'Wie in de Top 3 van Google Maps staat, wordt direct gebeld of aangevraagd via de bedrijfsvermelding. Zonder tussenkomst van een website — de lead komt rechtstreeks binnen.',
+    title: 'Gericht op leads',
+    text: 'We richten campagnes in op hoog-intentie zoekwoorden in jouw regio. Zo bereik je alleen mensen die daadwerkelijk op zoek zijn naar jouw dienst.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="6" />
+        <circle cx="12" cy="12" r="2" />
       </svg>
     ),
   },
   {
-    title: 'Meer vertrouwen',
-    text: 'Consumenten associëren een hoge Google-positie met betrouwbaarheid. Een Top 3-notering met sterke reviews werkt als sociaal bewijs en verlaagt de drempel om contact op te nemen.',
+    title: 'Schaalbaar budget',
+    text: 'Je bepaalt zelf hoeveel je uitgeeft. Wij zorgen dat elke euro maximaal rendeert door continu te optimaliseren op conversie en kosten per lead.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
       </svg>
     ),
   },
   {
-    title: 'Meetbaar resultaat',
-    text: 'Je ontvangt wekelijks een heatmap die per zoekwoord en locatie laat zien op welke positie je staat. Geen vage beloftes, maar harde data waarmee je precies ziet wat er verbetert.',
+    title: 'Meetbare ROI',
+    text: 'Je ziet precies wat elke campagne oplevert: kliks, conversies, kosten per lead. Geen vage beloftes, maar harde data waarop we bijsturen.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
         <path d="M18 20V10M12 20V4M6 20v-6" />
@@ -40,16 +42,16 @@ const voordelen = [
   },
 ]
 
-export function RankingVoordelen() {
+export function AdsVoordelen() {
   return (
-    <section className="section bg-section-2" aria-labelledby="ranking-voordelen-title">
+    <section className="section bg-section-2" aria-labelledby="ads-voordelen-title">
       <Container>
         <div className="text-center">
-          <h2 id="ranking-voordelen-title" className="heading-section">
-            Waarom een Top 3-positie op Google?
+          <h2 id="ads-voordelen-title" className="heading-section">
+            Waarom Google Ads?
           </h2>
           <p className="mt-3 text-section-lead">
-            Het verschil tussen gevonden worden en onzichtbaar blijven.
+            Snel, gericht en meetbaar — de snelste weg naar meer klanten.
           </p>
         </div>
 

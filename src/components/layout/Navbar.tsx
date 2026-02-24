@@ -3,10 +3,10 @@ import { Container } from '../ui/Container'
 
 const navLinks = [
   { label: 'Ranking', href: '/ranking' },
-  { label: 'Resultaten', href: '/#resultaten' },
-  { label: 'Werkwijze', href: '/#werkwijze' },
-  { label: 'Over Ons', href: '/#over-ons' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Google Ads', href: '/ads' },
+  { label: 'Websites', href: '/website' },
+  { label: 'Prijzen', href: '/prijzen' },
+  { label: 'Aanbieding', href: '/aanbieding' },
 ]
 
 const topBarEmail = 'Info@vanborglimited.com'

@@ -18,9 +18,23 @@
   align-items: flex-start;
 }
 
+.ranking-voordelen-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .ranking-voordelen__icon {
   width: 2rem;
   height: 2rem;
   color: var(--accent-green);
   flex-shrink: 0;
+}
+
+.ranking-voordelen-card__title {
+  margin-top: 0;
+}
+
+.ranking-voordelen-card__text {
+  margin-top: 0.25rem;
 }
