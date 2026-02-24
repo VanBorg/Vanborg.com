@@ -4,7 +4,6 @@ import { Container } from '../components/ui/Container'
 import { ContactOptions } from '../components/sections/ContactOptions'
 import { ProblemOutcome } from '../components/sections/ProblemOutcome'
 
-const CALENDLY_URL = 'https://calendly.com/vanborglimited/van_borg_sales_call'
 
 const diensten = [
   {
@@ -115,21 +114,6 @@ export default function PrijzenPage() {
               </table>
             </div>
 
-            <div className="mt-10 text-center">
-              <p className="text-section-lead">
-                Niet zeker welke dienst bij je past?
-              </p>
-              <div className="mt-4">
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  Plan een gratis adviesgesprek
-                </a>
-              </div>
-            </div>
           </Container>
         </section>
         <ProblemOutcome background="bg-section-1" />

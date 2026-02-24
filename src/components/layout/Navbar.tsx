@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'Google Ads', href: '/ads' },
   { label: 'Websites', href: '/website' },
   { label: 'Prijzen', href: '/prijzen' },
-  { label: 'Aanbieding', href: '/aanbieding' },
+  { label: 'Aanbieding', href: '/aanbieding', badge: 'Tijdelijk' },
 ]
 
 const topBarEmail = 'Info@vanborglimited.com'
@@ -152,21 +152,28 @@ export function Navbar() {
           </a>
 
           {/* Desktop: nav links op 1 regel, centraal in de navbar */}
-          <div className="nav-links-center">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href
-              return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className={`nav-link ${isActive ? 'nav-link--active' : ''}`}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                >
-                  {link.label}
-                </a>
-              )
-            })}
-          </div>
+            <div className="nav-links-center">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href
+                const hasBadge = 'badge' in link && link.badge
+                return (
+                  <div key={link.href} className="relative flex items-center">
+                    {hasBadge && (
+                      <span className="pointer-events-none absolute -top-3 -right-4 inline-flex items-center rounded border border-[var(--accent-green)] bg-[var(--accent-green)]/5 px-1.5 py-0.5 text-[10px] font-semibold leading-[1.1] text-[var(--accent-green)]">
+                        {link.badge}
+                      </span>
+                    )}
+                    <a
+                      href={link.href}
+                      className={`nav-link ${isActive ? 'nav-link--active' : ''}`}
+                      onClick={(e) => handleNavClick(e, link.href)}
+                    >
+                      {link.label}
+                    </a>
+                  </div>
+                )
+              })}
+            </div>
 
           {/* Rechts: CTA (desktop) of hamburger (mobile) */}
           <div className="flex justify-end min-w-[120px] md:min-w-[140px]">
@@ -191,16 +198,28 @@ export function Navbar() {
         {mobileOpen && (
           <div className="border-t border-neutral-200 py-5 md:hidden">
             <div className="flex flex-col gap-5">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
-                  onClick={(e) => { setMobileOpen(false); handleNavClick(e, link.href) }}
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const hasBadge = 'badge' in link && link.badge
+                return (
+                  <div key={link.href} className="flex flex-col gap-1">
+                    {hasBadge && (
+                      <span className="inline-flex w-fit items-center rounded border border-[var(--accent-green)] bg-[var(--accent-green)]/5 px-1.5 py-0.5 text-[10px] font-semibold leading-[1.1] text-[var(--accent-green)]">
+                        {link.badge}
+                      </span>
+                    )}
+                    <a
+                      href={link.href}
+                      className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
+                      onClick={(e) => {
+                        setMobileOpen(false)
+                        handleNavClick(e, link.href)
+                      }}
+                    >
+                      {link.label}
+                    </a>
+                  </div>
+                )
+              })}
               <a href="#contact" className="btn-primary w-fit" onClick={(e) => { setMobileOpen(false); handleNavClick(e, '#contact') }}>
                 Gratis audit
               </a>

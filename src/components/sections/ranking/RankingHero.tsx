@@ -11,7 +11,7 @@ export function RankingHero() {
       <Container>
         <div className="max-w-2xl text-center mx-auto">
           <h1 className="heading-hero">
-            Google Top 3 Ranking
+            Top 3 ranking op Google
           </h1>
           <h2 className="heading-hero-subtitle mt-3">
             Binnen 90 dagen in de top, of we werken gratis door tot je er bent.
