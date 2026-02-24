@@ -11,35 +11,17 @@ const PAGES = [
   { label: 'Ranking', href: '/ranking' },
 ]
 
+function FooterDivider() {
+  return <div className="footer__divider" aria-hidden="true" />
+}
+
 export function Footer() {
   return (
     <footer className="footer" role="contentinfo">
-      {/* Main footer: full-width witte achtergrond */}
       <div className="footer__main">
         <Container>
           <div className="footer__top">
-            {/* Kolom 1: Werkgebieden */}
-            <div className="footer__werkgebieden">
-              <h3 className="heading-sub">Werkgebieden</h3>
-              <ul className="footer__werkgebieden-grid">
-                {WORKGEBIED_LOCATIONS.map((loc) => (
-                  <li key={loc}>{loc}</li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Kolom 2: Google Maps embed */}
-            <div className="footer__map-wrap">
-              <iframe
-                src={MAP_EMBED_SRC}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Kaart: Van Borg, Veendam – provincie Groningen"
-              />
-            </div>
-
-            {/* Kolom 3: Van Borg */}
+            {/* 1. Helemaal links: Van Borg */}
             <div className="footer__company-info">
               <span className="footer__company-name">Van Borg</span>
               <address>
@@ -56,7 +38,34 @@ export function Footer() {
               <a href="tel:+31644732266">+31 6 44 73 22 66</a>
             </div>
 
-            {/* Kolom 4: Pagina's */}
+            <FooterDivider />
+
+            {/* 2. Google Maps embed */}
+            <div className="footer__map-wrap">
+              <iframe
+                src={MAP_EMBED_SRC}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Kaart: Van Borg, Veendam – provincie Groningen"
+              />
+            </div>
+
+            <FooterDivider />
+
+            {/* 3. Werkgebieden */}
+            <div className="footer__werkgebieden">
+              <h3 className="heading-sub">Werkgebieden</h3>
+              <ul className="footer__werkgebieden-grid">
+                {WORKGEBIED_LOCATIONS.map((loc) => (
+                  <li key={loc}>{loc}</li>
+                ))}
+              </ul>
+            </div>
+
+            <FooterDivider />
+
+            {/* 4. Pagina's kolom */}
             <div className="footer__pages">
               <h3 className="heading-sub">Pagina&apos;s</h3>
               <ul className="footer__pages-list">
@@ -72,7 +81,6 @@ export function Footer() {
       </div>
 
       <Container>
-        {/* Legal bar */}
         <div className="footer__legal">
           <span className="footer__copyright">&copy; Van Borg 2025</span>
           <div className="footer__legal-links">

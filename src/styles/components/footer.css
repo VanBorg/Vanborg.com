@@ -47,45 +47,64 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* Hoofd-grid: Werkgebieden | Map embed | Van Borg | Pagina's */
+/* Volgorde: Van Borg | divider | Map | divider | Werkgebieden | divider | Pagina's – alles links */
 .footer__top {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.75rem 0;
   padding-top: 2.5rem;
   padding-bottom: 1.75rem;
 }
 
+/* Divider tussen secties: horizontaal op mobiel, verticaal op desktop */
+.footer__divider {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 1px;
+  min-height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.06) 15%,
+    rgba(0, 0, 0, 0.12) 50%,
+    rgba(0, 0, 0, 0.06) 85%,
+    transparent 100%
+  );
+  margin: 0.25rem 0;
+}
+
 @media (min-width: 640px) {
   .footer__top {
-    grid-template-columns: repeat(2, 1fr);
     gap: 1.75rem 2rem;
-    align-items: start;
   }
 }
 
 @media (min-width: 1024px) {
   .footer__top {
-    grid-template-columns: 1fr minmax(220px, 280px) 1fr 1fr;
-    gap: 2rem;
+    flex-wrap: nowrap;
+    gap: 0;
     padding-top: 3rem;
     padding-bottom: 2rem;
-    align-items: start;
+    align-items: flex-start;
   }
 
-  /* Ruimte links van map (divider staat op werkgebieden::after) */
-  .footer__top .footer__map-wrap {
-    padding-left: 2rem;
-  }
-
-  .footer__top .footer__company-info {
-    border-left: 1px solid var(--color-neutral-200);
-    padding-left: 2rem;
-  }
-
-  .footer__top .footer__pages {
-    border-left: 1px solid var(--color-neutral-200);
-    padding-left: 2rem;
+  /* Verticale divider tussen kolommen */
+  .footer__divider {
+    width: 1px;
+    min-width: 1px;
+    height: auto;
+    min-height: 180px;
+    margin: 0 2rem;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(0, 0, 0, 0.06) 15%,
+      rgba(0, 0, 0, 0.12) 50%,
+      rgba(0, 0, 0, 0.06) 85%,
+      transparent 100%
+    );
   }
 }
 
@@ -93,9 +112,11 @@
 
 .footer__map-wrap {
   position: relative;
+  flex: 0 0 auto;
   width: 100%;
   aspect-ratio: 4 / 3;
   max-height: 220px;
+  max-width: 280px;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -114,27 +135,8 @@
 /* ─── Werkgebieden (2 kolommen, zeer compact) ─── */
 
 .footer__werkgebieden {
-  position: relative;
-}
-
-/* Verticale divider rechts van Werkgebieden (tussen Werkgebieden en map) */
-@media (min-width: 1024px) {
-  .footer__werkgebieden::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -1rem;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(0, 0, 0, 0.06) 15%,
-      rgba(0, 0, 0, 0.12) 50%,
-      rgba(0, 0, 0, 0.06) 85%,
-      transparent 100%
-    );
-  }
+  flex: 0 0 auto;
+  text-align: left;
 }
 
 .footer__werkgebieden h3 {
@@ -157,12 +159,14 @@
   color: var(--color-neutral-700);
 }
 
-/* ─── Bedrijfsinfo (compact, geen losse headers) ─── */
+/* ─── Bedrijfsinfo (compact, geen losse headers) – eerste kolom links ─── */
 
 .footer__company-info {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  text-align: left;
 }
 
 .footer__company-info .footer__company-name {
@@ -194,6 +198,11 @@
 }
 
 /* ─── Pagina's kolom ─── */
+
+.footer__pages {
+  flex: 0 0 auto;
+  text-align: left;
+}
 
 .footer__pages h3 {
   margin-bottom: 0.625rem;
