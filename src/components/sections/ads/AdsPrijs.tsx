@@ -5,6 +5,7 @@ const voorstarterInbegrepen = [
   'Advertentieteksten en extensies',
   'Maandelijkse rapportage',
   'Persoonlijke begeleiding',
+  '~€\u00a010 advertentiebudget per dag (1 maand)',
 ]
 
 const groeiInbegrepen = [
@@ -12,6 +13,7 @@ const groeiInbegrepen = [
   'A/B-tests op advertenties',
   'Conversietracking en optimalisatie',
   'Tweewekelijkse rapportage en bijsturing',
+  '~€\u00a020 advertentiebudget per dag (1 maand)',
 ]
 
 const dominantInbegrepen = [
@@ -19,6 +21,7 @@ const dominantInbegrepen = [
   'Geavanceerde biedstrategieën',
   'Landingspagina-optimalisatie',
   'Wekelijkse rapportage en dedicated accountmanager',
+  '~€\u00a030 advertentiebudget per dag (1 maand)',
 ]
 
 function CheckIcon() {
@@ -60,13 +63,13 @@ export function AdsPrijs() {
             Investering
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
-            Transparante prijzen, geen verborgen kosten. Advertentiebudget staat los van de servicekosten.
+            Transparante prijzen, geen verborgen kosten. Advertentiebudget is inbegrepen.
           </p>
         </div>
 
         <div className="ranking-prijs-grid ranking-prijs-grid--3">
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Voorstarter</div>
+            <div className="ranking-prijs-badge">Google Ads - Klein</div>
 
             <div className="ranking-prijs-bedrag ranking-prijs-bedrag--maand mt-4">
               &euro;&nbsp;499
@@ -83,7 +86,7 @@ export function AdsPrijs() {
           </div>
 
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Groei</div>
+            <div className="ranking-prijs-badge">Google Ads - Middel</div>
 
             <div className="ranking-prijs-bedrag ranking-prijs-bedrag--maand mt-4">
               &euro;&nbsp;899
@@ -100,7 +103,7 @@ export function AdsPrijs() {
           </div>
 
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Dominant</div>
+            <div className="ranking-prijs-badge">Google Ads - Groot</div>
 
             <div className="ranking-prijs-bedrag ranking-prijs-bedrag--maand mt-4">
               &euro;&nbsp;1.299

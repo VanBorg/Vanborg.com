@@ -3,7 +3,7 @@ import { Container } from '../../ui/Container'
 const voordelen = [
   {
     title: 'Direct zichtbaar',
-    text: 'Met Google Ads sta je direct bovenaan de zoekresultaten. Geen maanden wachten — vanaf dag één zichtbaar voor je doelgroep.',
+    text: 'Met Google Ads sta je direct bovenaan de zoekresultaten. Geen maanden wachten, vanaf dag één zichtbaar voor je doelgroep.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
         <circle cx="12" cy="12" r="10" />
@@ -13,7 +13,7 @@ const voordelen = [
   },
   {
     title: 'Gericht op leads',
-    text: 'We richten campagnes in op hoog-intentie zoekwoorden in jouw regio. Zo bereik je alleen mensen die daadwerkelijk op zoek zijn naar jouw dienst.',
+    text: 'We richten campagnes in op hoog-intentie zoekwoorden in jouw regio. Zo bereik je alleen mensen die op zoek zijn naar jouw dienst.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
         <circle cx="12" cy="12" r="10" />
@@ -24,10 +24,10 @@ const voordelen = [
   },
   {
     title: 'Schaalbaar budget',
-    text: 'Je bepaalt zelf hoeveel je uitgeeft. Wij zorgen dat elke euro maximaal rendeert door continu te optimaliseren op conversie en kosten per lead.',
+    text: 'Je bepaalt zelf hoeveel je uitgeeft. Wij zorgen dat elke euro maximaal rendeert door continu te optimaliseren op conversie.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
-        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+        <path d="M17 8a6 6 0 1 0 0 8M2 10h12M2 14h12" />
       </svg>
     ),
   },
@@ -51,7 +51,7 @@ export function AdsVoordelen() {
             Waarom Google Ads?
           </h2>
           <p className="mt-3 text-section-lead">
-            Snel, gericht en meetbaar — de snelste weg naar meer klanten.
+            Snel, gericht en meetbaar. De snelste weg naar meer klanten.
           </p>
         </div>
 
