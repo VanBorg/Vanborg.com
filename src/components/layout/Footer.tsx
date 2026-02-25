@@ -6,15 +6,6 @@ const MAP_EMBED_SRC =
 
 const MAPS_URL = 'https://maps.google.com/?q=Kieler+Bocht+104+9642+CE+Veendam'
 
-const PAGES = [
-  { label: 'Home', href: '/' },
-  { label: 'Ranking', href: '/ranking' },
-  { label: 'Google Ads', href: '/ads' },
-  { label: 'Websites', href: '/website' },
-  { label: 'Prijzen', href: '/prijzen' },
-  { label: 'Aanbieding', href: '/aanbieding' },
-  { label: 'Werkgebieden', href: '/locatie' },
-]
 
 function FooterDivider() {
   return <div className="footer__divider" aria-hidden="true" />
@@ -51,20 +42,7 @@ export function Footer() {
 
             <FooterDivider />
 
-            {/* 2. Google Maps embed */}
-            <div className="footer__map-wrap">
-              <iframe
-                src={MAP_EMBED_SRC}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Kaart: Van Borg, Veendam – provincie Groningen"
-              />
-            </div>
-
-            <FooterDivider />
-
-            {/* 3. Werkgebieden */}
+            {/* 2. Werkgebieden */}
             <div className="footer__werkgebieden">
               <h3 className="heading-sub">Werkgebieden</h3>
               <ul className="footer__werkgebieden-grid">
@@ -78,17 +56,17 @@ export function Footer() {
 
             <FooterDivider />
 
-            {/* 4. Pagina's kolom */}
-            <div className="footer__pages">
-              <h3 className="heading-sub">Pagina&apos;s</h3>
-              <ul className="footer__pages-list">
-                {PAGES.map((page) => (
-                  <li key={page.label}>
-                    <a href={page.href}>{page.label}</a>
-                  </li>
-                ))}
-              </ul>
+            {/* 3. Google Maps embed */}
+            <div className="footer__map-wrap">
+              <iframe
+                src={MAP_EMBED_SRC}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Kaart: Van Borg, Veendam – provincie Groningen"
+              />
             </div>
+
           </div>
         </Container>
       </div>

@@ -122,7 +122,7 @@ export function Navbar() {
   const handleNavClick = useSmoothNav()
 
   return (
-    <div className="sticky top-0 z-50 w-full">
+    <div className="sticky top-0 z-[200] w-full">
       <div className="top-bar">
         <Container>
           <div className="top-bar__inner">

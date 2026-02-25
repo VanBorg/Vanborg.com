@@ -1,5 +1,6 @@
-import { useState, useCallback, type ReactNode } from 'react'
+﻿import { useState, useCallback, type ReactNode } from 'react'
 import { Container } from '../ui/Container'
+import { LOCATION_PAGES } from '../../data/locations'
 
 interface FAQQuestion {
   q: string
@@ -30,18 +31,21 @@ const faqData: FAQTopic[] = [
       },
       {
         q: 'Wat houden jullie Google Ads pakketten in?',
-        a: 'Onze Google Ads-pakketten (Voorstarter, Groei, Dominant) zijn leadgerichte campagnes voor lokale bedrijven, waarbij we zoekwoorden, targeting, tracking en landingspagina’s afstemmen op jouw regio en diensten. De pakketten verschillen in aantal campagnes, zoekwoorden en intensiteit van optimalisatie.',
+        a: 'Onze Google Ads-pakketten zijn er in drie varianten (advertentiebudget inbegrepen): Klein – € 499 p/m (1 campagne), Middel – € 899 p/m (tot 3 campagnes, A/B-tests, conversietracking), Groot – € 1.299 p/m (onbeperkte campagnes, dedicated accountmanager).',
         rich: (
           <>
             Onze{' '}
             <a href="/ads" className="text-[var(--accent-green-light)]">
               Google Ads-pakketten
             </a>{' '}
-            (Voorstarter, Groei, Dominant) zijn leadgerichte campagnes voor lokale bedrijven, waarbij we zoekwoorden, targeting, tracking en landingspagina’s afstemmen op jouw regio en diensten. De pakketten verschillen in aantal campagnes, zoekwoorden en intensiteit van optimalisatie. Voor een compleet overzicht van de tarieven kun je kijken op de{' '}
+            zijn er in drie varianten — advertentiebudget is inbegrepen in de prijs:{' '}
+            <strong>Klein (€ 499 p/m)</strong> voor 1 campagne,{' '}
+            <strong>Middel (€ 899 p/m)</strong> voor tot 3 campagnes met A/B-tests en conversietracking, en{' '}
+            <strong>Groot (€ 1.299 p/m)</strong> voor onbeperkte campagnes met dedicated accountmanager. Zie de{' '}
             <a href="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
-            </a>
-            .
+            </a>{' '}
+            voor het volledige overzicht.
           </>
         ),
       },
@@ -90,7 +94,24 @@ const faqData: FAQTopic[] = [
       },
       {
         q: 'Met wat voor soort bedrijven werken jullie en waar zijn jullie actief?',
-        a: 'Wij bedienen uitsluitend bedrijven in Nederland. De focus ligt op lokale dienstverleners en MKB-bedrijven die via Google Zoeken en Maps gevonden willen worden – onder andere in Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie, Zuidbroek, Muntendam, Meeden, Bareveld, Noordbroek, Sappemeer en Hoogezand.',
+        a: 'Wij bedienen uitsluitend bedrijven in Nederland. De focus ligt op lokale dienstverleners en MKB-bedrijven die via Google Zoeken en Maps gevonden willen worden – onder andere in Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie, Zuidbroek, Muntendam, Meeden, Bareveld, Noordbroek, Sappemeer, Hoogezand, Winschoten, Oude Pekela, Nieuwe-Pekela, Nieuwe Diep, Zuidlaren, Stadskanaal, Gieten, Eext, Annen, Gasselte, Drouwen en Onstwedde.',
+        rich: (
+          <>
+            Wij bedienen uitsluitend bedrijven in Nederland. De focus ligt op lokale dienstverleners en MKB-bedrijven die via Google Zoeken en Maps gevonden willen worden. Bekijk al onze{' '}
+            <a href="/locatie" className="text-[var(--accent-green-light)]">
+              werkgebieden
+            </a>
+            , waaronder{' '}
+            {LOCATION_PAGES.slice(0, 5).map((loc, i) => (
+              <span key={loc.slug}>
+                <a href={`/locatie/${loc.slug}`} className="text-[var(--accent-green-light)]">
+                  {loc.name}
+                </a>
+                {i < 4 ? ', ' : ' en meer.'}
+              </span>
+            ))}
+          </>
+        ),
       },
       {
         q: 'Hoe toegankelijk is jullie locatie en hoe zit het met parkeren?',
@@ -168,8 +189,26 @@ const faqData: FAQTopic[] = [
     title: 'Werkgebieden',
     questions: [
       {
-        q: 'In welke plaatsen en regio’s werken jullie?',
-        a: 'Wij werken met bedrijven in heel Nederland. In onze officiële context noemen we onder andere Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie, Zuidbroek, Muntendam, Meeden, Bareveld, Noordbroek, Sappemeer en Hoogezand, maar we helpen bedrijven in elke Nederlandse stad of regio.',
+        q: 'In welke plaatsen en regio\u2019s werken jullie?',
+        a: 'Wij werken met bedrijven in heel Nederland. Vaste werkgebieden zijn onder andere Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie, Zuidbroek, Muntendam, Meeden, Bareveld, Noordbroek, Sappemeer, Hoogezand, Winschoten, Oude Pekela, Nieuwe-Pekela, Nieuwe Diep, Zuidlaren, Stadskanaal, Gieten, Eext, Annen, Gasselte, Drouwen en Onstwedde.',
+        rich: (
+          <>
+            Wij werken met bedrijven in heel Nederland. Onze vaste werkgebieden zijn:{' '}
+            {LOCATION_PAGES.map((loc, i) => (
+              <span key={loc.slug}>
+                <a href={`/locatie/${loc.slug}`} className="text-[var(--accent-green-light)]">
+                  {loc.name}
+                </a>
+                {i < LOCATION_PAGES.length - 1 ? ', ' : '. '}
+              </span>
+            ))}
+            Bekijk alle{' '}
+            <a href="/locatie" className="text-[var(--accent-green-light)]">
+              werkgebieden
+            </a>
+            .
+          </>
+        ),
       },
       {
         q: 'Werken jullie ook met bedrijven buiten Nederland?',
@@ -182,14 +221,14 @@ const faqData: FAQTopic[] = [
     questions: [
       {
         q: 'Wat houdt de Website + Top 3 aanbieding precies in?',
-        a: 'De Website + Top 3 aanbieding kost € 2.999 eenmalig excl. btw + € 499 p/m. Binnen deze bundel komt de website effectief neer op ongeveer € 1.500. Je krijgt een SEO-geoptimaliseerde website tot 5 pagina’s, inclusief servicepagina’s. Locatiepagina’s vallen niet binnen die 5 en worden als extra ingezet binnen lokale SEO. De looptijd is 90 dagen, hosting is inbegrepen, je krijgt tot 3 grotere websitewijzigingen plus meerdere kleine aanpassingen, met wekelijkse updates en maandelijkse calls.',
+        a: 'De Website + Top 3 aanbieding kost € 2.999 eenmalig excl. btw + € 499 p/m. Je krijgt een SEO-geoptimaliseerde website (max. 5 pagina’s) + tot 7 locatiepagina’s, Google Business Profile setup, hosting via Netlify, tot 3 grotere of 5 kleine websitewijzigingen, wekelijkse heatmap-rapportages en maandelijkse calls. Looptijd 90 dagen.',
         rich: (
           <>
             De{' '}
             <a href="/aanbieding" className="text-[var(--accent-green-light)]">
               Website + Top 3 aanbieding
             </a>{' '}
-            kost € 2.999 eenmalig excl. btw + € 499 p/m. Binnen deze bundel komt de website effectief neer op ongeveer € 1.500. Je krijgt een SEO-geoptimaliseerde website tot 5 pagina’s, inclusief servicepagina’s. Locatiepagina’s vallen niet binnen die 5 en worden als extra ingezet binnen lokale SEO. De looptijd is 90 dagen, hosting is inbegrepen, je krijgt tot 3 grotere websitewijzigingen plus meerdere kleine aanpassingen, met wekelijkse updates en maandelijkse calls. Een overzicht hiervan vind je ook terug op de{' '}
+            kost € 2.999 eenmalig excl. btw + € 499 p/m. Je krijgt een SEO-geoptimaliseerde website (max. 5 pagina’s) inclusief tot 7 locatiepagina’s, Google Business Profile setup en optimalisatie, hosting via Netlify, tot 3 grotere of 5 kleine wijzigingen, wekelijkse heatmap-rapportages en maandelijkse calls – alles in 90 dagen parallel. Zie{' '}
             <a href="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
             </a>
@@ -199,14 +238,10 @@ const faqData: FAQTopic[] = [
       },
       {
         q: 'Hoe kan ik betalen voor Local Ranking, Websites en Ads?',
-        a: 'Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen, zoals met je wordt afgesproken. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Voor Google Ads-pakketten geldt dat de servicefee vooraf wordt betaald en dat het advertentiebudget los staat en óf via Google zelf óf vooraf via jou wordt geregeld.',
+        a: 'Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Voor Google Ads-pakketten is het advertentiebudget inbegrepen in de maandelijkse servicefee.',
         rich: (
           <>
-            Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen, zoals met je wordt afgesproken. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Voor Google Ads-pakketten geldt dat de servicefee vooraf wordt betaald en dat het advertentiebudget los staat en óf via Google zelf óf vooraf via jou wordt geregeld. Op de{' '}
-            <a href="/prijzen" className="text-[var(--accent-green-light)]">
-              prijzenpagina
-            </a>{' '}
-            zie je hoe deze pakketten zijn opgebouwd.
+            Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Voor Google Ads-pakketten is het advertentiebudget inbegrepen in de maandelijkse servicefee. Op de{' '}             <a href="/prijzen" className="text-[var(--accent-green-light)]">               prijzenpagina             </a>{' '}             zie je hoe alle pakketten zijn opgebouwd.
           </>
         ),
       },
