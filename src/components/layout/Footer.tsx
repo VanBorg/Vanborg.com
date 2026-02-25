@@ -1,5 +1,5 @@
 import { Container } from '../ui/Container'
-import { WORKGEBIED_LOCATIONS } from '../../data/locations'
+import { LOCATION_PAGES } from '../../data/locations'
 
 const MAP_EMBED_SRC =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76000!2d6.8674621999999985!3d53.098799899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7d7e71e51e1bb%3A0xbfc74e0471be7bfb!2sVan%20Borg!5e0!3m2!1snl!2suk!4v1771866305559!5m2!1snl!2suk'
@@ -13,6 +13,7 @@ const PAGES = [
   { label: 'Websites', href: '/website' },
   { label: 'Prijzen', href: '/prijzen' },
   { label: 'Aanbieding', href: '/aanbieding' },
+  { label: 'Werkgebieden', href: '/locatie' },
 ]
 
 function FooterDivider() {
@@ -67,8 +68,10 @@ export function Footer() {
             <div className="footer__werkgebieden">
               <h3 className="heading-sub">Werkgebieden</h3>
               <ul className="footer__werkgebieden-grid">
-                {WORKGEBIED_LOCATIONS.map((loc) => (
-                  <li key={loc}>{loc}</li>
+                {LOCATION_PAGES.map((loc) => (
+                  <li key={loc.slug}>
+                    <a href={`/locatie/${loc.slug}`}>{loc.name}</a>
+                  </li>
                 ))}
               </ul>
             </div>

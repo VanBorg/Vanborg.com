@@ -156,7 +156,16 @@
 .footer__werkgebieden-grid li {
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.footer__werkgebieden-grid a {
   color: var(--color-neutral-700);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__werkgebieden-grid a:hover {
+  color: var(--accent-green);
 }
 
 /* ─── Bedrijfsinfo (compact, geen losse headers) – eerste kolom links ─── */

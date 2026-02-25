@@ -5,13 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/sync-dna-to-public.mjs && tsc && vite build",
+    "build": "node scripts/sync-dna-to-public.mjs && node scripts/generate-sitemap.mjs && tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/leaflet": "^1.9.21",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.5",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^7.13.1"
   },
   "devDependencies": {

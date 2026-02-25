@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Google Ads', href: '/ads' },
   { label: 'Websites', href: '/website' },
   { label: 'Prijzen', href: '/prijzen' },
+  { label: 'Werkgebieden', href: '/locatie' },
   { label: 'Aanbieding', href: '/aanbieding', badge: 'Tijdelijk' },
 ]
 

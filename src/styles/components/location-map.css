@@ -1,0 +1,50 @@
+.location-map {
+  width: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f8fafc;
+  box-shadow: var(--shadow-card);
+}
+
+.location-map__canvas {
+  width: 100%;
+  min-height: inherit;
+}
+
+.location-map__marker {
+  background: transparent;
+  border: 0;
+}
+
+.location-map__marker-dot {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: var(--accent-green);
+  border: 2px solid #ffffff;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.22);
+}
+
+.location-map__marker--active .location-map__marker-dot {
+  background: #1d4ed8;
+  transform: scale(1.08);
+}
+
+.location-map__marker--home .location-map__marker-dot {
+  background: #d4a017;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px #d4a017, 0 4px 10px rgba(212, 160, 23, 0.45);
+  transform: scale(1.15);
+}
+
+.location-map__tooltip {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.location-map .leaflet-control-attribution {
+  font-size: 0.65rem;
+}
