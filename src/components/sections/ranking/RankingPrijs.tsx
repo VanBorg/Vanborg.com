@@ -1,18 +1,74 @@
 import { Container } from '../../ui/Container'
 
-const eenmaligInbegrepen = [
-  'Volledige analyse en optimalisatie voor jouw Top 3-doel',
-  'Google Business Profile setup en optimalisatie',
-  'Technische en lokale SEO-aanpassingen tijdens de eerste 90 dagen',
-  'Wekelijkse heatmaps en rapportages in de opstartfase',
+const eenmaligGroepen = [
+  {
+    titel: 'Wat we doen',
+    items: [
+      'Volledige nulmeting en concurrentieanalyse',
+      'Optimalisatie van je Google Business Profile',
+      'Website- en on-page SEO voor dienst + plaats',
+      'Technische fixes en lokale autoriteit opbouwen',
+      'Inrichting van services- en locatiepagina\'s waar nodig',
+    ],
+  },
+  {
+    titel: 'Monitoring',
+    items: [
+      'Wekelijkse heatmaps tijdens de opstart',
+      'Voortgangsrapportages met concrete acties',
+    ],
+  },
 ]
 
-const maandelijksInbegrepen = [
-  'Doorlopend SEO- en beheerwerk om je positie vast te houden',
-  'Structurele optimalisaties om richting de nummer 1-positie te groeien',
-  'Uitbreiding van het werkgebied naar omliggende plaatsen',
-  'Maandelijkse rapportage met concrete actiepunten',
+const maandelijksGroepen = [
+  {
+    titel: 'Wat we doen',
+    items: [
+      'Doorlopende lokale SEO-optimalisatie',
+      'Positiebehoud en bescherming tegen concurrenten',
+      'Uitbreiding naar nieuwe plaatsen en werkgebieden',
+      'Verdere content- en pagina-uitbouw',
+      'Autoriteit en reviews blijven opbouwen',
+    ],
+  },
+  {
+    titel: 'Inzicht',
+    items: [
+      'Maandelijkse rapportage met acties en groei',
+      'Doorlopende heatmap-tracking per regio',
+    ],
+  },
 ]
+
+function CheckIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className="ranking-prijs-lijst__icon"
+    >
+      <path d="M20 6L9 17l-5-5" />
+    </svg>
+  )
+}
+
+function PrijsLijst({ items }: { items: string[] }) {
+  return (
+    <ul className="ranking-prijs-lijst">
+      {items.map((item) => (
+        <li key={item} className="ranking-prijs-lijst__item">
+          <CheckIcon />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 export function RankingPrijs() {
   return (
@@ -29,73 +85,44 @@ export function RankingPrijs() {
 
         <div className="ranking-prijs-grid">
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Eenmalige Top 3 ranking</div>
+            <div className="ranking-prijs-badge">Lokale Top 3 Ranking</div>
 
             <div className="ranking-prijs-bedrag mt-4">
               &euro;&nbsp;1.499
             </div>
-            <p className="ranking-prijs-subtekst">eenmalig &mdash; eerste 90 dagen</p>
+            <p className="ranking-prijs-subtekst">Eenmalig. Looptijd: eerste 90 dagen</p>
 
             <hr className="ranking-prijs-divider" />
 
-            <h3 className="heading-sub">Wat is inbegrepen</h3>
-            <ul className="ranking-prijs-lijst">
-              {eenmaligInbegrepen.map((item) => (
-                <li key={item} className="ranking-prijs-lijst__item">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden
-                    className="ranking-prijs-lijst__icon"
-                  >
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            {eenmaligGroepen.map((groep) => (
+              <div key={groep.titel} className="mt-4">
+                <h3 className="heading-sub">{groep.titel}</h3>
+                <PrijsLijst items={groep.items} />
+              </div>
+            ))}
 
             <p className="ranking-prijs-btw">Alle prijzen excl. btw</p>
           </div>
 
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Maandelijks beheer &amp; groei</div>
+            <div className="ranking-prijs-badge">Behoud &amp; doorgroei</div>
 
             <div className="ranking-prijs-bedrag ranking-prijs-bedrag--maand mt-4">
               Vanaf &euro;&nbsp;499
               <span className="ranking-prijs-per-maand"> p/m</span>
             </div>
             <p className="ranking-prijs-subtekst">
-              Voor het behouden van je Top 3-positie, het najagen van nummer 1 en het
-              vergroten van je werkgebied.
+              Voor het vasthouden van je Top 3-positie en doorgroeien naar #1
             </p>
 
             <hr className="ranking-prijs-divider" />
 
-            <h3 className="heading-sub">Wat is inbegrepen</h3>
-            <ul className="ranking-prijs-lijst">
-              {maandelijksInbegrepen.map((item) => (
-                <li key={item} className="ranking-prijs-lijst__item">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden
-                    className="ranking-prijs-lijst__icon"
-                  >
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            {maandelijksGroepen.map((groep) => (
+              <div key={groep.titel} className="mt-4">
+                <h3 className="heading-sub">{groep.titel}</h3>
+                <PrijsLijst items={groep.items} />
+              </div>
+            ))}
 
             <p className="ranking-prijs-btw">Alle prijzen excl. btw</p>
           </div>
