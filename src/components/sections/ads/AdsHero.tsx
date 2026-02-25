@@ -18,7 +18,6 @@ export function AdsHero() {
           </h2>
           <p className="text-section-body mt-3 text-neutral-500">
             Ideaal voor snelle zichtbaarheid en campagnes voor specifieke zoektermen.
-            Leadgerichte campagnes afgestemd op jouw regio en diensten.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a

@@ -1,0 +1,10 @@
+/* Legal pages (algemene voorwaarden, privacy) – gecentreerde, smalle tekstblokken */
+.legal-content {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.legal-content .legal-section__header {
+  text-align: center;
+}

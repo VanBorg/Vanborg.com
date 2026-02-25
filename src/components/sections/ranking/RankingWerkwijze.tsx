@@ -4,7 +4,7 @@ const stappen = [
   {
     nummer: 1,
     title: 'Analyse',
-    text: 'We brengen je huidige ranking, concurrentie en zoekwoorden in kaart. Je ontvangt een heatmap die precies laat zien waar je nu staat.',
+    text: 'We brengen je huidige ranking, concurrentie en zoekwoorden in kaart. Je ontvangt een heatmap die laat zien waar je nu staat.',
   },
   {
     nummer: 2,
@@ -19,7 +19,7 @@ const stappen = [
   {
     nummer: 4,
     title: 'Doorlopend beheer',
-    text: 'We blijven optimaliseren zodat je positie stabiel blijft. Google verandert continu, wij passen mee aan.',
+    text: 'We blijven optimaliseren zodat je positie stabiel blijft. Google verandert continu, wij passen ons aan om voor te blijven.',
   },
 ]
 

@@ -3,7 +3,7 @@ import { Container } from '../../ui/Container'
 const voordelen = [
   {
     title: 'SEO-geoptimaliseerd',
-    text: 'Elke pagina is technisch en inhoudelijk geoptimaliseerd voor zoekmachines. Van metadata tot interne linkstructuur — alles klopt.',
+    text: 'Elke pagina is technisch en inhoudelijk geoptimaliseerd voor zoekmachines. Van metadata tot interne linkstructuur, alles klopt.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
         <circle cx="11" cy="11" r="8" />
@@ -13,7 +13,7 @@ const voordelen = [
   },
   {
     title: 'Conversiegerichte opzet',
-    text: 'Duidelijke CTA\u2019s, logische navigatie en leadcapture op de juiste plekken. Je website is ingericht om bezoekers om te zetten in klanten.',
+    text: 'Duidelijke CTA\u2019s, logische navigatie en leadcapture op de juiste plekken. Je website is ingericht voor maximale conversie.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
         <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
@@ -32,7 +32,7 @@ const voordelen = [
   },
   {
     title: 'Toekomstbestendig',
-    text: 'Moderne technieken (React, TypeScript, Tailwind) zorgen ervoor dat je website jarenlang meegaat, makkelijk uit te breiden is en altijd up-to-date blijft.',
+    text: 'Moderne technieken (React, TypeScript, Tailwind, CSS) zorgen ervoor dat je website jarenlang meegaat en makkelijk uit te breiden is.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="ranking-voordelen__icon">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />

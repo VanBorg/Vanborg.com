@@ -13,12 +13,12 @@ const stappen = [
   },
   {
     nummer: 3,
-    title: 'Optimalisatie & A/B-tests',
+    title: 'A/B-tests',
     text: 'Continu testen we varianten van advertenties en biedstrategieën. Zo verlagen we de kosten per lead en verhogen we de conversie.',
   },
   {
     nummer: 4,
-    title: 'Rapportage & bijsturing',
+    title: 'Rapportage',
     text: 'Maandelijks ontvang je een helder rapport met resultaten, inzichten en concrete acties die we ondernemen om je ROI te verbeteren.',
   },
 ]

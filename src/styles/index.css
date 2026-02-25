@@ -18,6 +18,7 @@
 @import './components/ranking-werkwijze.css';
 @import './components/ranking-prijs.css';
 @import './components/prijzen-tabel.css';
+@import './components/legal-content.css';
 
 @tailwind base;
 @tailwind components;

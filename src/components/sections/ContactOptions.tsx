@@ -17,8 +17,12 @@ const callBullets = [
 
 export function ContactOptions({
   background = 'bg-section-2',
+  title = 'Gratis bedrijfsscan of direct een afspraak',
+  lead = 'Ontdek je huidige Google-positie, zie waar kansen liggen en kies hoe je wilt starten.',
 }: {
   background?: 'bg-section-1' | 'bg-section-2'
+  title?: string
+  lead?: string
 }) {
   return (
     <section
@@ -29,10 +33,10 @@ export function ContactOptions({
       <Container>
         <div className="contact-options__header">
           <h2 id="contact-options-title" className="heading-section">
-            Gratis bedrijfsscan of direct een afspraak
+            {title}
           </h2>
           <p className="contact-options__lead text-section-lead">
-            Ontdek je huidige Google-positie, zie waar kansen liggen en kies hoe je wilt starten.
+            {lead}
           </p>
         </div>
 
