@@ -5,37 +5,45 @@
   box-shadow: var(--shadow-card);
   border: 1px solid var(--color-neutral-200);
   background: #fff;
+  max-width: 48rem;
+  margin-inline: auto;
 }
 
 .prijzen-tabel {
   width: 100%;
   border-collapse: collapse;
-  min-width: 640px;
 }
 
+/* ── Header ── */
+
 .prijzen-tabel__th {
-  padding: 1rem 1.25rem;
-  font-size: 0.8125rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: left;
-  color: var(--color-neutral-700);
-  background: var(--color-neutral-100);
-  border-bottom: 2px solid var(--color-neutral-200);
+  color: var(--accent-green);
+  background: #eef2ee;
+  border-bottom: 2px solid rgba(45, 106, 79, 0.15);
 }
 
 .prijzen-tabel__th--prijs {
   text-align: right;
   white-space: nowrap;
+  width: 7rem;
 }
 
 .prijzen-tabel__th--actie {
-  width: 7.5rem;
+  width: 7rem;
 }
+
+/* ── Rows ── */
 
 .prijzen-tabel__row {
   transition: background-color 0.15s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
 .prijzen-tabel__row:not(:last-child) .prijzen-tabel__td {
@@ -43,7 +51,11 @@
 }
 
 .prijzen-tabel__row:hover {
-  background: rgba(45, 106, 79, 0.03);
+  background: rgba(45, 106, 79, 0.04);
+}
+
+.prijzen-tabel__row--highlight .prijzen-tabel__naam {
+  color: var(--accent-green);
 }
 
 .prijzen-tabel__row--highlight {
@@ -54,13 +66,20 @@
   background: rgba(45, 106, 79, 0.08);
 }
 
-.prijzen-tabel__row--highlight .prijzen-tabel__naam {
+.prijzen-tabel__row--selected {
+  background: rgba(45, 106, 79, 0.09) !important;
+  box-shadow: inset 3px 0 0 var(--accent-green);
+}
+
+.prijzen-tabel__row--selected .prijzen-tabel__naam {
   color: var(--accent-green);
 }
 
+/* ── Cells ── */
+
 .prijzen-tabel__td {
-  padding: 1rem 1.25rem;
-  vertical-align: top;
+  padding: 0.625rem 1rem;
+  vertical-align: middle;
 }
 
 .prijzen-tabel__td--prijs {
@@ -69,11 +88,13 @@
   font-weight: 600;
   font-size: 0.9375rem;
   color: var(--color-neutral-900);
+  width: 7rem;
 }
 
 .prijzen-tabel__td--actie {
-  text-align: center;
+  text-align: right;
   vertical-align: middle;
+  width: 7rem;
 }
 
 .prijzen-tabel__naam {
@@ -84,15 +105,54 @@
   line-height: 1.3;
 }
 
-.prijzen-tabel__beschrijving {
-  display: block;
-  margin-top: 0.25rem;
-  font-size: 0.8125rem;
-  color: var(--color-neutral-700);
-  line-height: 1.4;
-}
-
 .prijzen-tabel__link {
   font-size: 0.8125rem;
-  padding: 0.375rem 0.875rem;
+  padding: 0.25rem 0.75rem;
+  white-space: nowrap;
+}
+
+.prijzen-tabel__nvt {
+  font-size: 0.8125rem;
+  color: var(--color-neutral-400, #a3a3a3);
+  font-weight: 400;
+}
+
+/* ── Totaal rij ── */
+
+.prijzen-tabel__tfoot-row {
+  background: var(--gradient-cta);
+}
+
+.prijzen-tabel__tfoot-td {
+  padding: 0.875rem 1rem;
+  vertical-align: middle;
+}
+
+.prijzen-tabel__tfoot-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  white-space: nowrap;
+}
+
+.prijzen-tabel__tfoot-bedrag {
+  text-align: right;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.prijzen-tabel__tfoot-pm {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.prijzen-tabel__tfoot-hint {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-style: italic;
 }
