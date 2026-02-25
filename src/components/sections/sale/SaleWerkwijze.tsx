@@ -19,7 +19,7 @@ const stappen = [
   {
     nummer: 4,
     title: 'Doorlopend beheer',
-    text: 'We hosten je website, houden je positie stabiel en blijven optimaliseren. Je krijgt wekelijks inzicht in de cijfers en één keer per maand een vaste call om resultaten en vervolgstappen te bespreken.',
+    text: 'We hosten je website en blijven optimaliseren. Je krijgt wekelijks inzicht in de cijfers en één keer per maand een vaste call om even bij te praten.',
   },
 ]
 

@@ -67,6 +67,24 @@ export default function PrijzenPage() {
                 Alle prijzen zijn exclusief btw. Advertentiebudget voor Google Ads staat
                 los van de servicekosten.
               </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-4">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfbsa-4CWu9Rh0yBDLrVeXYbtXfHlcBJaxqYOQGWeKPDriaMg/viewform?usp=publish-editor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Check mijn huidige ranking
+                </a>
+                <a
+                  href="https://calendly.com/vanborglimited/van_borg_sales_call"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  Bespreek mijn kansen
+                </a>
+              </div>
             </div>
           </Container>
         </section>

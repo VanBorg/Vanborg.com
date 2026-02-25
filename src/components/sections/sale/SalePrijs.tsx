@@ -1,24 +1,25 @@
 import { Container } from '../../ui/Container'
 
 const bundelInbegrepen = [
-  'Volledige ranking-analyse en optimalisatie voor een Top 3-positie',
-  'SEO-website tot 5 pagina’s, ontworpen en gebouwd op maat',
-  'Servicepagina’s inclusief, locatiepagina’s als extra onderdeel van lokale SEO',
+  'Ranking-analyse en optimalisatie gericht op Top 3',
+  'Maatwerk SEO-website (max. 5 pagina\u2019s), schone geoptimaliseerde code',
+  'Core Web Vitals geoptimaliseerd + moderne code-standaarden',
+  'Hosting via Netlify gedurende het traject',
   'Google Business Profile setup en optimalisatie',
-  'Core Web Vitals geoptimaliseerde website',
-  'Hosting van de website tijdens het traject',
-  'Tot 3 grotere aanpassingen aan de website (bijvoorbeeld nieuwe secties/pagina’s)',
-  'Daarnaast meerdere kleine wijzigingen en tekstupdates waar nodig',
+  'Tot 7 locatiepagina\u2019s inbegrepen (los van de 5 standaard)',
+  'Voorstel ter goedkeuring v\u00f3\u00f3r uitvoering van aanpassingen',
+  'Tot 3 grotere of 5 kleine wijzigingen na goedkeuring',
+  'Doorlooptijd: 90 dagen | websitebouw + lokale SEO parallel',
 ]
 
 const doorlopendInbegrepen = [
-  'Doorlopend SEO- en beheerwerk voor je ranking',
-  'Website hosting, beveiliging en updates',
-  'Structurele optimalisaties richting de nummer 1-positie',
-  'Uitbreiding werkgebied naar omliggende plaatsen',
+  'Doorlopend SEO-werk voor behoud van Top 3-posities',
+  'Verdere optimalisatie richting #1',
+  'Uitbreiding naar omliggende werkgebieden',
   'Content-updates op aanvraag',
-  'Wekelijkse updates en rapportages (o.a. heatmaps)',
-  'Maandelijkse call om resultaten en strategie te bespreken',
+  'Hosting, beveiliging en technische updates van de website',
+  'Wekelijkse rapportages (o.a. heatmaps en positie-tracking)',
+  'Maandelijkse call voor resultaten en strategie',
 ]
 
 function CheckIcon() {
@@ -51,23 +52,23 @@ function PrijsLijst({ items }: { items: string[] }) {
   )
 }
 
+
 export function SalePrijs() {
   return (
     <section className="section bg-section-1" aria-labelledby="sale-prijs-title">
       <Container>
         <div className="text-center">
           <h2 id="sale-prijs-title" className="heading-section">
-            Bundelaanbieding
+            Top Aanbieding
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
-            Website + Top 3 in Google voor &euro;&nbsp;2.999 eenmalig + &euro;&nbsp;499 p/m (excl. btw).
-            In deze bundel komt de website feitelijk neer op ongeveer &euro;&nbsp;1.500.
+           Deze aanbieding is voor bedrijven die klaar willen zijn voor de toekomst.
           </p>
         </div>
 
         <div className="ranking-prijs-grid">
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Bundel &mdash; eenmalig</div>
+            <div className="ranking-prijs-badge">Eenmalig</div>
 
             <div className="ranking-prijs-bedrag mt-4">
               &euro;&nbsp;2.999
@@ -78,21 +79,21 @@ export function SalePrijs() {
 
             <hr className="ranking-prijs-divider" />
 
-            <h3 className="heading-sub">Wat is inbegrepen</h3>
+            <h3 className="heading-sub">Wat je krijgt</h3>
             <PrijsLijst items={bundelInbegrepen} />
 
             <p className="ranking-prijs-btw">Alle prijzen excl. btw</p>
           </div>
 
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Bundel &mdash; doorlopend</div>
+            <div className="ranking-prijs-badge">Doorlopend</div>
 
             <div className="ranking-prijs-bedrag ranking-prijs-bedrag--maand mt-4">
               &euro;&nbsp;499
               <span className="ranking-prijs-per-maand"> p/m</span>
             </div>
             <p className="ranking-prijs-subtekst">
-              Maandelijks voor doorlopend ranking-werk, hosting en begeleiding.
+              Maandelijks voor behoud, groei en beheer na het 90-dagen traject.
             </p>
 
             <hr className="ranking-prijs-divider" />

@@ -11,7 +11,7 @@ export function SaleHero() {
       <Container>
         <div className="max-w-2xl text-center mx-auto">
           <h1 className="heading-hero">
-            Tijdelijke aanbieding
+            Top Aanbieding
           </h1>
           <h2 className="heading-hero-subtitle mt-3">
           Website + ranking: de combinatie voor een toppositie in Google.
