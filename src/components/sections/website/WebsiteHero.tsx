@@ -11,14 +11,14 @@ export function WebsiteHero() {
       <Container>
         <div className="max-w-2xl text-center mx-auto">
           <h1 className="heading-hero">
-            SEO-websites
+            SEO-Websites
           </h1>
           <h2 className="heading-hero-subtitle mt-3">
             Een website die gevonden wordt en bezoekers omzet in klanten.
           </h2>
           <p className="text-section-body mt-3 text-neutral-500">
             Snel, duidelijk en geoptimaliseerd voor zoekmachines. Gebouwd met moderne
-            techniek, ingericht op Core Web Vitals en conversie.
+            technieken.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a

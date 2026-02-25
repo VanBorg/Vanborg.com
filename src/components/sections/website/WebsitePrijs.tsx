@@ -1,17 +1,44 @@
 import { Container } from '../../ui/Container'
 
-const bouwInbegrepen = [
-  'Volledig op maat ontworpen en gebouwd',
-  'SEO-geoptimaliseerde structuur en content',
-  'Responsief design voor mobiel en desktop',
-  'Core Web Vitals geoptimaliseerd',
+const bouwGroepen = [
+  {
+    titel: 'Wat we bouwen',
+    items: [
+      'Maatwerk websites en landingspagina\'s',
+      'Services- en locatiepagina\'s voor lokale vindbaarheid',
+    ],
+  },
+  {
+    titel: 'SEO inbegrepen',
+    items: [
+      'Lokale SEO (dienst + plaats combinaties)',
+      'Titels, H1/H2, meta-teksten en technische basis',
+    ],
+  },
+  {
+    titel: 'Technisch',
+    items: [
+      'Responsief op mobiel, tablet en desktop',
+      'Integraties: maps, formulieren, reviews en meer',
+    ],
+  },
 ]
 
-const hostingInbegrepen = [
-  'Snelle en betrouwbare hosting',
-  'Beveiligingsupdates en monitoring',
-  'Content-updates op aanvraag',
-  'Doorlopende SEO-optimalisatie',
+const hostingGroepen = [
+  {
+    titel: 'Hosting & beheer',
+    items: [
+      'Snelle, betrouwbare hosting',
+      'Beveiligingsupdates en monitoring',
+    ],
+  },
+  {
+    titel: 'Onderhoud & groei',
+    items: [
+      '1 grote of 2 kleine wijzigingen per maand inbegrepen',
+      'Doorlopende SEO-optimalisatie',
+    ],
+  },
 ]
 
 function CheckIcon() {
@@ -59,7 +86,7 @@ export function WebsitePrijs() {
 
         <div className="ranking-prijs-grid">
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Website bouw</div>
+            <div className="ranking-prijs-badge">Website</div>
 
             <div className="ranking-prijs-bedrag mt-4">
               Vanaf &euro;&nbsp;999
@@ -68,8 +95,12 @@ export function WebsitePrijs() {
 
             <hr className="ranking-prijs-divider" />
 
-            <h3 className="heading-sub">Wat is inbegrepen</h3>
-            <PrijsLijst items={bouwInbegrepen} />
+            {bouwGroepen.map((groep) => (
+              <div key={groep.titel} className="mt-4">
+                <h3 className="heading-sub">{groep.titel}</h3>
+                <PrijsLijst items={groep.items} />
+              </div>
+            ))}
 
             <p className="ranking-prijs-btw">Alle prijzen excl. btw</p>
           </div>
@@ -85,8 +116,12 @@ export function WebsitePrijs() {
 
             <hr className="ranking-prijs-divider" />
 
-            <h3 className="heading-sub">Wat is inbegrepen</h3>
-            <PrijsLijst items={hostingInbegrepen} />
+            {hostingGroepen.map((groep) => (
+              <div key={groep.titel} className="mt-4">
+                <h3 className="heading-sub">{groep.titel}</h3>
+                <PrijsLijst items={groep.items} />
+              </div>
+            ))}
 
             <p className="ranking-prijs-btw">Alle prijzen excl. btw</p>
           </div>

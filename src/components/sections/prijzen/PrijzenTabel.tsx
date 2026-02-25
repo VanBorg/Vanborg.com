@@ -11,8 +11,8 @@ interface Dienst {
   highlight?: boolean
 }
 
-const ADS_NAMEN = ['Google Ads \u2014 Klein', 'Google Ads \u2014 Middel', 'Google Ads \u2014 Groot']
-const BUNDEL_NAAM = 'Aanbieding'
+const ADS_NAMEN = ['Google Ads - Klein', 'Google Ads - Middel', 'Google Ads - Groot']
+const BUNDEL_NAAM = 'Top Aanbieding'
 const RANKING_NAAM = 'Lokale Top 3 Ranking'
 const WEBSITE_NAAM = 'SEO-website'
 
@@ -34,7 +34,7 @@ const diensten: Dienst[] = [
     link: '/website',
   },
   {
-    naam: 'Aanbieding',
+    naam: 'Top Aanbieding',
     eenmaligLabel: '€\u00a02.999',
     maandelijksLabel: '€\u00a0499 p/m',
     eenmaligNum: 2999,
@@ -43,7 +43,7 @@ const diensten: Dienst[] = [
     highlight: true,
   },
   {
-    naam: 'Google Ads \u2014 Klein',
+    naam: 'Google Ads - Klein',
     eenmaligLabel: null,
     maandelijksLabel: '€\u00a0499 p/m',
     eenmaligNum: 0,
@@ -51,7 +51,7 @@ const diensten: Dienst[] = [
     link: '/ads',
   },
   {
-    naam: 'Google Ads \u2014 Middel',
+    naam: 'Google Ads - Middel',
     eenmaligLabel: null,
     maandelijksLabel: '€\u00a0899 p/m',
     eenmaligNum: 0,
@@ -59,7 +59,7 @@ const diensten: Dienst[] = [
     link: '/ads',
   },
   {
-    naam: 'Google Ads \u2014 Groot',
+    naam: 'Google Ads - Groot',
     eenmaligLabel: null,
     maandelijksLabel: '€\u00a01.299 p/m',
     eenmaligNum: 0,

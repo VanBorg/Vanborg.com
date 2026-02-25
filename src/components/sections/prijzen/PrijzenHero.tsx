@@ -11,11 +11,10 @@ export function PrijzenHero() {
         <div className="max-w-2xl text-center mx-auto">
           <h1 className="heading-hero">Prijzen</h1>
           <h2 className="heading-hero-subtitle mt-3">
-            Transparant overzicht van al onze diensten.
+            Totaal overzicht van al onze diensten & prijzen.
           </h2>
           <p className="text-section-body mt-3 text-neutral-500">
-            Alle prijzen zijn exclusief btw. Advertentiebudget voor Google Ads staat
-            los van de servicekosten.
+            Advertentiebudget voor Google Ads is inbegrepen in de prijs. Alle prijzen zijn <strong>exclusief btw</strong>.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a

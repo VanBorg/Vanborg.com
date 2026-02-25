@@ -4,12 +4,12 @@ const stappen = [
   {
     nummer: 1,
     title: 'Intake & strategie',
-    text: 'We bespreken je doelen, doelgroep en concurrentie. Op basis daarvan bepalen we de structuur, content en zoekwoorden voor je website.',
+    text: 'We bespreken je doelen. Op basis daarvan bepalen we de structuur, content en zoekwoorden voor je website.',
   },
   {
     nummer: 2,
     title: 'Ontwerp & bouw',
-    text: 'We ontwerpen en bouwen je website met React en Tailwind. Snel, responsief en volledig afgestemd op jouw huisstijl en boodschap.',
+    text: 'We ontwerpen en bouwen je website met React en Tailwind. Snel, responsief en volledig afgestemd op jouw doelen.',
   },
   {
     nummer: 3,
@@ -19,7 +19,7 @@ const stappen = [
   {
     nummer: 4,
     title: 'Hosting & onderhoud',
-    text: 'Na lancering hosten wij je website en zorgen we voor updates, beveiliging en doorlopende optimalisatie.',
+    text: 'Na lancering hosten wij je website en zorgen we voor updates, beveiliging, doorlopende optimalisatie, en aanpassingen.',
   },
 ]
 
