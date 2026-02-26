@@ -44,7 +44,7 @@ function LocatieContent({ location }: { location: LocationPage }) {
         {/* Hero */}
         <section className="section bg-section-1 py-12 lg:py-20">
           <Container>
-            <div className="max-w-2xl">
+            <div className="max-w-2xl text-center mx-auto">
               <h1 className="heading-hero">Marketing in {location.name}</h1>
               <h2 className="heading-hero-subtitle mt-3">
                 Van Borg werkt hier actief met lokale ondernemers aan zichtbaarheid, aanvragen en omzet.
@@ -52,7 +52,7 @@ function LocatieContent({ location }: { location: LocationPage }) {
               <p className="text-section-body mt-3 text-neutral-500">
                 {location.shortDescription}
               </p>
-              <div className="mt-6 flex flex-wrap gap-4">
+              <div className="mt-6 flex flex-wrap justify-center gap-4">
                 <a
                   href={SCAN_FORM_URL}
                   target="_blank"

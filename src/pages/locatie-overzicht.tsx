@@ -34,16 +34,15 @@ export default function LocatieOverzichtPage() {
       </Helmet>
       <Navbar />
       <main>
-        <section className="section bg-section-1 py-12 lg:py-16">
+        <section className="section bg-section-1 py-12 lg:py-20">
           <Container>
-            <div className="max-w-3xl">
+            <div className="max-w-2xl text-center mx-auto">
               <h1 className="heading-hero">Werkgebieden in Oost-Groningen</h1>
               <h2 className="heading-hero-subtitle mt-3">
-                Wij werken in alle genoemde plaatsen uit onze footer. Klik op de kaart of op een locatie om direct naar de bijbehorende pagina te gaan.
+                Klik op de kaart om direct naar de bijbehorende pagina te gaan.
               </h2>
-              <p className="text-section-body mt-4 text-neutral-600">
+              <p className="text-section-body mt-3 text-neutral-600">
                 Van Borg is gevestigd in Veendam en helpt ondernemers in de regio met Google Top 3 ranking, Google Ads en SEO-websites.
-                Alle locatiepagina&apos;s zijn onderling verbonden zodat bezoekers snel kunnen doorklikken naar omliggende werkgebieden.
               </p>
             </div>
           </Container>
@@ -54,22 +53,37 @@ export default function LocatieOverzichtPage() {
             <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
               <div>
                 <h2 id="waar-wij-werken" className="heading-section">
-                  Waar wij werken
+                  Actief in jouw regio
                 </h2>
                 <p className="mt-3 text-section-body">
-                  Gebruik de interactieve kaart om direct te navigeren naar een locatiepagina.
-                  Elke pagina bevat lokale context, diensten en links naar nabijgelegen plaatsen.
+                  Van Borg werkt lokaal met kennis van de regio.
+                  Klik op een locatie op de kaart om direct door te gaan naar de bijbehorende pagina.
                 </p>
-                <h3 className="heading-sub mt-6">Snel naar populaire locaties</h3>
+                <h3 className="heading-sub mt-6">Wat wij doen in elke locatie</h3>
                 <ul className="mt-3 flex flex-wrap gap-3">
-                  {LOCATION_PAGES.slice(0, 6).map((loc) => (
-                    <li key={loc.slug}>
-                      <Link to={`/locatie/${loc.slug}`} className="btn-secondary btn-sm">
-                        {loc.name}
-                      </Link>
-                    </li>
-                  ))}
+                  <li>
+                    <Link to="/ranking" className="btn-secondary btn-sm">Google Top 3 ranking</Link>
+                  </li>
+                  <li>
+                    <Link to="/ads" className="btn-secondary btn-sm">Google Ads</Link>
+                  </li>
+                  <li>
+                    <Link to="/website" className="btn-secondary btn-sm">SEO-websites</Link>
+                  </li>
                 </ul>
+                <div className="mt-5">
+                  <span className="heading-sub">Actief in</span>
+                  <p className="mt-2 text-section-body text-neutral-500">
+                    {LOCATION_PAGES.map((loc, i) => (
+                      <span key={loc.slug}>
+                        <Link to={`/locatie/${loc.slug}`} className="link-primary">
+                          {loc.name}
+                        </Link>
+                        {i < LOCATION_PAGES.length - 1 && ', '}
+                      </span>
+                    ))}
+                  </p>
+                </div>
               </div>
               <LocationNetworkMap locations={LOCATION_PAGES} minHeight={420} fitMode="bounds" maxAutoZoom={12} />
             </div>

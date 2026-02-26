@@ -1,5 +1,6 @@
 import { Container } from '../ui/Container'
 import { LOCATION_PAGES } from '../../data/locations'
+import { useSmoothNav } from '../../hooks/useSmoothNav'
 
 const MAP_EMBED_SRC =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76000!2d6.8674621999999985!3d53.098799899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7d7e71e51e1bb%3A0xbfc74e0471be7bfb!2sVan%20Borg!5e0!3m2!1snl!2suk!4v1771866305559!5m2!1snl!2suk'
@@ -22,6 +23,8 @@ const navPages = [
 ]
 
 export function Footer() {
+  const handleNavClick = useSmoothNav()
+
   return (
     <footer className="footer" role="contentinfo">
       <div className="footer__main">
@@ -29,7 +32,7 @@ export function Footer() {
           <div className="footer__top">
             {/* 1. Helemaal links: Van Borg */}
             <div className="footer__company-info">
-              <a href="/" className="footer__logo" aria-label="Van Borg – terug naar home">
+              <a href="/" className="footer__logo" aria-label="Van Borg – terug naar home" onClick={(e) => handleNavClick(e, '/')}>
                 <span className="footer__logo-line">Van</span>
                 <span className="footer__logo-line footer__logo-line--2">Borg</span>
               </a>
