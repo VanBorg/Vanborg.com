@@ -1,21 +1,16 @@
-/**
- * Generates public/sitemap.xml from static paths and location slugs.
- * Keep locationSlugs in sync with src/data/locations.ts LOCATION_PAGES.
- */
-import { readFileSync, writeFileSync } from 'fs'
+import { writeFileSync } from 'fs'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
+import { getBaseUrl, getLocationSlugs, getStaticPaths } from './route-manifest.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
-const pathsFile = join(root, 'scripts', 'sitemap-paths.json')
 const dest = join(root, 'public', 'sitemap.xml')
 
-const { baseUrl, staticPaths, locationSlugs } = JSON.parse(
-  readFileSync(pathsFile, 'utf-8')
-)
-
 const today = new Date().toISOString().split('T')[0]
+const baseUrl = getBaseUrl()
+const staticPaths = getStaticPaths()
+const locationSlugs = getLocationSlugs()
 
 const urls = [
   ...staticPaths.map((path) => ({

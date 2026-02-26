@@ -9,6 +9,7 @@ import VoorwaardenPage from './pages/voorwaarden'
 import PrivacyPage from './pages/privacy'
 import LocatieOverzichtPage from './pages/locatie-overzicht'
 import LocatiePage from './pages/locatie'
+import NotFoundPage from './pages/not-found'
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       <Route path="/privacy" element={<PrivacyPage />} />
       <Route path="/locatie" element={<LocatieOverzichtPage />} />
       <Route path="/locatie/:slug" element={<LocatiePage />} />
+      <Route path="/404" element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )
 }

@@ -11,6 +11,16 @@ function FooterDivider() {
   return <div className="footer__divider" aria-hidden="true" />
 }
 
+const navPages = [
+  { label: 'Home', href: '/' },
+  { label: 'Google Ranking', href: '/ranking' },
+  { label: 'Google Ads', href: '/ads' },
+  { label: 'Websites', href: '/website' },
+  { label: 'Prijzen', href: '/prijzen' },
+  { label: 'Aanbieding', href: '/aanbieding' },
+  { label: 'Werkgebieden', href: '/locatie' },
+]
+
 export function Footer() {
   return (
     <footer className="footer" role="contentinfo">
@@ -19,7 +29,11 @@ export function Footer() {
           <div className="footer__top">
             {/* 1. Helemaal links: Van Borg */}
             <div className="footer__company-info">
-              <span className="footer__company-name">Van Borg</span>
+              <a href="/" className="footer__logo" aria-label="Van Borg – terug naar home">
+                <span className="footer__logo-line">Van</span>
+                <span className="footer__logo-line footer__logo-line--2">Borg</span>
+              </a>
+              <span className="footer__company-name">Van Borg Limited</span>
               <address className="footer__company-address">
                 <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
                   Kieler Bocht 104
@@ -70,6 +84,16 @@ export function Footer() {
           </div>
         </Container>
       </div>
+
+      <Container>
+        <nav className="footer__pages-bar" aria-label="Sitepagina's">
+          {navPages.map((page) => (
+            <a key={page.href} href={page.href} className="footer__pages-bar-link">
+              {page.label}
+            </a>
+          ))}
+        </nav>
+      </Container>
 
       <Container>
         <div className="footer__legal">

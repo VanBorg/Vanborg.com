@@ -142,6 +142,11 @@ function LocatieContent({ location }: { location: LocationPage }) {
 function LocatieNotFound() {
   return (
     <>
+      <Helmet>
+        <title>Pagina niet gevonden | Van Borg</title>
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href={`${BASE_URL}/404`} />
+      </Helmet>
       <Navbar />
       <main>
         <section className="section bg-section-1 py-20">
