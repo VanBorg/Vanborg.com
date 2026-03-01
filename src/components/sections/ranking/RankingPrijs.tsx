@@ -115,7 +115,7 @@ export function RankingPrijs() {
               ]} />
             </div>
 
-            <p className="ranking-prijs-btw" style={{ marginTop: '1.5rem', textAlign: 'center' }}>Alle prijzen excl. btw</p>
+
           </div>
         </div>
       </Container>
