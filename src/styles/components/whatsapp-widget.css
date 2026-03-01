@@ -1,0 +1,55 @@
+/* WhatsApp floating widget – bottom-right corner */
+.whatsapp-widget {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  background: var(--accent-green);
+  color: #fff;
+  border-radius: 50rem;
+  padding: 0.75rem 1.25rem 0.75rem 0.875rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), 0 1px 4px rgba(0, 0, 0, 0.1);
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-widget:hover,
+.whatsapp-widget:focus-visible {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.12);
+  color: #fff;
+  text-decoration: none;
+}
+
+.whatsapp-widget svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+}
+
+.whatsapp-widget__label {
+  line-height: 1;
+}
+
+/* On very small screens collapse to icon-only */
+@media (max-width: 360px) {
+  .whatsapp-widget {
+    padding: 0.875rem;
+    border-radius: 50%;
+  }
+
+  .whatsapp-widget__label {
+    display: none;
+  }
+}
