@@ -18,34 +18,58 @@ const faqData: FAQTopic[] = [
     title: 'Services',
     questions: [
       {
-        q: 'Wat is Google Ranking (Top 3 lokaal)?',
-        a: 'Google Ranking is ons Local SEO-traject waarmee we je Google Business Profile en website optimaliseren zodat je lokaal hoger komt in Google Zoeken en Google Maps, met als doel een Top 3-positie voor hoog-intentie zoekopdrachten.',
+        q: 'Wat is Lokale SEO bij Van Borg?',
+        a: 'Met Lokale SEO zorgen we dat je bedrijf beter zichtbaar wordt in Google Maps en lokale zoekresultaten. We optimaliseren je Google Business Profiel en website zodat klanten uit jouw regio je sneller vinden.',
         rich: (
           <>
             <a href="/ranking" className="text-[var(--accent-green-light)]">
-              Google Ranking
+              Lokale SEO
             </a>{' '}
-            is ons Local SEO-traject waarmee we je Google Business Profile en website optimaliseren zodat je lokaal hoger komt in Google Zoeken en Google Maps, met als doel een Top 3-positie voor hoog-intentie zoekopdrachten.
+            is onze aanpak om je zichtbaarheid in Google Maps en lokale zoekresultaten te vergroten. We optimaliseren je Google Business Profiel en website zodat klanten uit jouw regio je sneller vinden.
           </>
         ),
       },
       {
         q: 'Wat houden jullie Google Ads pakketten in?',
-        a: 'Onze Google Ads-pakketten zijn er in drie varianten: Klein – € 499 p/m (1 campagne), Middel – € 899 p/m (tot 3 campagnes, A/B-tests, conversietracking), Groot – € 1.299 p/m (grotere schaal met prioriteit). Het advertentiebudget staat los van de servicefee.',
+        a: 'Google Ads start vanaf € 499. We beheren campagnes volledig: van zoekwoorden en advertentieteksten tot doorlopende optimalisatie. Je betaalt per klik aan Google; advertentiebudget staat los van de servicefee.',
         rich: (
           <>
             Onze{' '}
             <a href="/ads" className="text-[var(--accent-green-light)]">
-              Google Ads-pakketten
+              Google Ads service
             </a>{' '}
-            zijn er in drie varianten:{' '}
-            <strong>Klein (€ 499 p/m)</strong> voor 1 campagne,{' '}
-            <strong>Middel (€ 899 p/m)</strong> voor tot 3 campagnes met A/B-tests en conversietracking, en{' '}
-            <strong>Groot (€ 1.299 p/m)</strong> voor grotere schaal met prioriteit. Het advertentiebudget staat los van de servicefee. Zie de{' '}
+            start <strong>vanaf € 499</strong>. We beheren campagnes volledig van zoekwoorden en advertentieteksten tot doorlopende optimalisatie. Het advertentiebudget staat los van de servicefee. Zie de{' '}
             <a href="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
             </a>{' '}
             voor het volledige overzicht.
+          </>
+        ),
+      },
+      {
+        q: 'Wat houdt Online Marketing Strategie in?',
+        a: 'Online Marketing Strategie is een adviesdienst waarin we jouw huidige situatie analyseren en een concreet plan maken: welke kanalen je inzet, welke aanpak je volgt en welk budget daarbij past.',
+        rich: (
+          <>
+            Bij <strong>Online Marketing Strategie</strong> analyseren we je huidige situatie en vertalen dat naar een concreet plan met kanalen, aanpak en budget. Zo weet je precies waar je moet beginnen en waarop je moet sturen.
+          </>
+        ),
+      },
+      {
+        q: 'Wat krijg ik bij een SEO Audit?',
+        a: 'Bij een SEO Audit analyseren we je volledige website op SEO-fouten, technische problemen en gemiste kansen. Je ontvangt een rapport met duidelijke verbeterpunten.',
+        rich: (
+          <>
+            Een <strong>SEO Audit</strong> geeft je een helder rapport met exacte verbeterpunten voor techniek, content en structuur, zodat je website beter kan presteren in Google.
+          </>
+        ),
+      },
+      {
+        q: 'Waarom is Zoekwoordenonderzoek belangrijk?',
+        a: 'Met Zoekwoordenonderzoek bepalen we op welke termen jouw ideale klanten zoeken in Google. Dat helpt je om content en pagina’s te maken die meer relevante bezoekers en aanvragen opleveren.',
+        rich: (
+          <>
+            <strong>Zoekwoordenonderzoek</strong> laat zien welke termen je doelgroep gebruikt. Daarmee kun je gericht content en pagina&apos;s optimaliseren voor meer zichtbaarheid en aanvragen.
           </>
         ),
       },
@@ -73,12 +97,12 @@ const faqData: FAQTopic[] = [
     questions: [
       {
         q: 'Wie is Van Borg en wat doen jullie?',
-        a: 'Van Borg (Van Borg Limited) is een marketing consultant / marketingbureau uit Veendam dat lokale bedrijven in Nederland helpt met Google Top 3 ranking, Google Ads-campagnes en SEO- en sales-geoptimaliseerde websites. We richten ons op meetbare groei: hogere rankings, meer gekwalificeerde leads en betere conversie.',
+        a: 'Van Borg (Van Borg Limited) is een internetmarketing bedrijf uit Veendam met Marketingconsultant als extra categorie. We helpen bedrijven in Nederland met Lokale SEO, Google Ads, SEO Website, Online Marketing Strategie, SEO Audit en Zoekwoordenonderzoek.',
         rich: (
           <>
-            Van Borg (Van Borg Limited) is een marketing consultant / marketingbureau uit Veendam dat lokale bedrijven in Nederland helpt met{' '}
+            Van Borg (Van Borg Limited) is een internetmarketing bedrijf uit Veendam met Marketingconsultant als extra categorie. We helpen bedrijven in Nederland met{' '}
             <a href="/ranking" className="text-[var(--accent-green-light)]">
-              Google Top 3 ranking
+              Lokale SEO
             </a>
             ,{' '}
             <a href="/ads" className="text-[var(--accent-green-light)]">
@@ -86,9 +110,9 @@ const faqData: FAQTopic[] = [
             </a>{' '}
             en{' '}
             <a href="/website" className="text-[var(--accent-green-light)]">
-              SEO- en sales-geoptimaliseerde websites
+              SEO Website
             </a>
-            . We richten ons op meetbare groei: hogere rankings, meer gekwalificeerde leads en betere conversie.
+            , plus Online Marketing Strategie, SEO Audit en Zoekwoordenonderzoek.
           </>
         ),
       },
@@ -220,15 +244,15 @@ const faqData: FAQTopic[] = [
     title: 'Prijzen & betaling',
     questions: [
       {
-        q: 'Wat houdt de Website + Top 3 aanbieding precies in?',
-        a: 'De Website + Top 3 aanbieding kost € 2.999 eenmalig excl. btw + € 499 p/m. Je krijgt een SEO-geoptimaliseerde website (max. 5 pagina’s) + tot 7 locatiepagina’s, Google Business Profile setup, hosting via Netlify, tot 3 grotere of 5 kleine websitewijzigingen, wekelijkse heatmap-rapportages en maandelijkse calls. Looptijd 90 dagen.',
+        q: 'Wat houdt de Aanbieding (Lokale SEO + SEO Website) precies in?',
+        a: 'De aanbieding kost € 2.999 eenmalig excl. btw en combineert Lokale SEO met een SEO Website in één traject.',
         rich: (
           <>
             De{' '}
             <a href="/aanbieding" className="text-[var(--accent-green-light)]">
-              Website + Top 3 aanbieding
+              Aanbieding (Lokale SEO + SEO Website)
             </a>{' '}
-            kost € 2.999 eenmalig excl. btw + € 499 p/m. Je krijgt een SEO-geoptimaliseerde website (max. 5 pagina’s) inclusief tot 7 locatiepagina’s, Google Business Profile setup en optimalisatie, hosting via Netlify, tot 3 grotere of 5 kleine wijzigingen, wekelijkse heatmap-rapportages en maandelijkse calls – alles in 90 dagen parallel. Zie{' '}
+            kost € 2.999 eenmalig excl. btw en combineert Lokale SEO met een SEO Website in één traject. Zie{' '}
             <a href="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
             </a>
@@ -237,17 +261,21 @@ const faqData: FAQTopic[] = [
         ),
       },
       {
-        q: 'Hoe kan ik betalen voor Local Ranking, Websites en Ads?',
-        a: 'Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Bij Google Ads staat het advertentiebudget los van de maandelijkse servicefee.',
+        q: 'Hoe kan ik betalen voor Lokale SEO, SEO Website en Ads?',
+        a: 'Lokale SEO kost € 1.499, Google Ads start vanaf € 499, SEO Website vanaf € 999 en de combinatie-aanbieding kost € 2.999 (allemaal excl. btw). Bij Google Ads staat het advertentiebudget los van de servicefee.',
         rich: (
           <>
-            Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Bij Google Ads staat het advertentiebudget los van de maandelijkse servicefee. Op de{' '}
+            Lokale SEO kost € 1.499, Google Ads start vanaf € 499, SEO Website vanaf € 999 en de combinatie-aanbieding kost € 2.999 (allemaal excl. btw). Bij Google Ads staat het advertentiebudget los van de servicefee. Op de{' '}
             <a href="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
             </a>{' '}
-            zie je hoe alle pakketten zijn opgebouwd.
+            zie je het complete overzicht.
           </>
         ),
+      },
+      {
+        q: 'Welke diensten vallen onder Marketingconsultant?',
+        a: 'Onder de extra categorie Marketingconsultant vallen bij ons: Online Marketing Strategie, SEO Audit en Zoekwoordenonderzoek.',
       },
       {
         q: 'Welke betaalmethodes accepteren jullie?',

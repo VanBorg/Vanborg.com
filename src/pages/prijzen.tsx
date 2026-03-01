@@ -12,10 +12,10 @@ export default function PrijzenPage() {
   return (
     <>
       <Helmet>
-        <title>Prijzen marketingdiensten | Van Borg – SEO, Google Ads en websites</title>
+        <title>Prijzen internetmarketing diensten | Van Borg</title>
         <meta
           name="description"
-          content="Bekijk de prijzen van Van Borg voor Google Top 3 ranking, Google Ads beheer en SEO-websites. Duidelijke pakketten voor lokale bedrijven in Nederland."
+          content="Bekijk de services en prijzen die aansluiten op ons Google Bedrijfsprofiel: Lokale SEO, Google Ads, SEO Website en de combinatie-aanbieding. Extra categorie: Marketingconsultant."
         />
         <link rel="canonical" href={CANONICAL} />
         <meta property="og:url" content={CANONICAL} />
@@ -25,7 +25,7 @@ export default function PrijzenPage() {
         />
         <meta
           property="og:description"
-          content="Transparante tarieven voor lokale SEO, Google Ads en conversiegerichte websites."
+          content="Services en tarieven volgens ons Google Bedrijfsprofiel, met Internetmarketing als primaire categorie."
         />
         <meta
           name="document-outline"

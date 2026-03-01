@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Websites', href: '/website' },
   { label: 'Prijzen', href: '/prijzen' },
   { label: 'Werkgebieden', href: '/locatie' },
+  { label: 'Contact', href: '/contact' },
   { label: 'Aanbieding', href: '/aanbieding', badge: 'Tijdelijk' },
 ]
 
@@ -178,7 +179,7 @@ export function Navbar() {
 
           {/* Rechts: CTA (desktop) of hamburger (mobile) */}
           <div className="flex justify-end min-w-[120px] md:min-w-[140px]">
-            <a href="#contact" className="btn-primary hidden md:inline-flex" onClick={(e) => handleNavClick(e, '#contact')}>
+            <a href="/contact" className="btn-primary hidden md:inline-flex" onClick={(e) => handleNavClick(e, '/contact')}>
               Contact
             </a>
             <button
@@ -221,7 +222,7 @@ export function Navbar() {
                   </div>
                 )
               })}
-              <a href="#contact" className="btn-primary w-fit" onClick={(e) => { setMobileOpen(false); handleNavClick(e, '#contact') }}>
+              <a href="/contact" className="btn-primary w-fit" onClick={(e) => { setMobileOpen(false); handleNavClick(e, '/contact') }}>
                 Gratis audit
               </a>
             </div>

@@ -3,27 +3,27 @@ import { Container } from '../ui/Container'
 const services = [
   {
     id: 'lokale-ranking',
-    title: 'Lokale Top 3 Ranking',
+    title: 'Lokale SEO',
     description:
-      'Wij zorgen dat je bedrijf in de lokale Top 3 van Google verschijnt. Zo vindt je doelgroep je wanneer ze zoeken op diensten in jouw regio.',
+      'Kom in de top 3 van Google Maps en lokale zoekresultaten. We optimaliseren je Google Business Profiel en website voor meer zichtbaarheid en klanten.',
     align: 'left' as const,
     image: '/Afbeeldingen/top-3-google-ranking.png',
     imageAlt: 'Lokale vindbaarheid in Google – Top 3 Google ranking',
   },
   {
     id: 'google-ads',
-    title: 'Google Ads Campagnes',
+    title: 'Google Ads',
     description:
-      'Met gerichte advertenties sta je direct bovenaan in Google. Ideaal voor snelle zichtbaarheid en campagnes voor specifieke zoektermen.',
+      'Direct bovenaan Google met gerichte advertenties. We beheren je campagne volledig: van zoekwoorden tot advertentieteksten.',
     align: 'right' as const,
     image: '/Afbeeldingen/top-google-ads-campaigns.png',
     imageAlt: 'Top Google Ads campagnes',
   },
   {
     id: 'seo-websites',
-    title: 'SEO-Website',
+    title: 'SEO Website',
     description:
-      'Een website die goed gevonden wordt: snel, duidelijk en geoptimaliseerd voor zoekmachines. De basis voor een sterke online aanwezigheid.',
+      'Een professionele website die technisch geoptimaliseerd is, snel laadt en structureel bezoekers uit Google aantrekt.',
     align: 'left' as const,
     image: '/Afbeeldingen/seo-sales-websites.png',
     imageAlt: 'SEO + Sales websites',
@@ -42,7 +42,7 @@ export function WatWijDoen() {
             Wat wij doen
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
-             Wij helpen lokale ondernemers online opvallen zodat er meer leads binnenkomen.
+            Primaire focus: internetmarketing. Aanvullend bieden we als marketingconsultant ook Online Marketing Strategie, SEO Audit en Zoekwoordenonderzoek.
           </p>
         </div>
 

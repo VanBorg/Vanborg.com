@@ -23,10 +23,6 @@ export default function GoogleBedrijfsprofielVeendamPage() {
           property="og:description"
           content="Optimalisatie van je Google Bedrijfsprofiel voor meer zichtbaarheid en aanvragen uit Veendam en omgeving."
         />
-        <meta
-          name="document-outline"
-          content="h1: google bedrijfsprofiel veendam; h2: optimalisatiepunten; h3: bewijs en vervolgstappen"
-        />
       </Helmet>
       <Navbar />
       <main>
@@ -38,7 +34,7 @@ export default function GoogleBedrijfsprofielVeendamPage() {
                 Laat je bedrijf beter opvallen in Google Maps en lokale zoekresultaten.
               </h2>
               <p className="text-section-body mt-3 text-neutral-500">
-                Een sterk bedrijfsprofiel helpt niet alleen ranking, maar ook vertrouwen en conversie.
+                We optimaliseren je profiel op inhoud, relevantie en lokale signalen zodat je meer kliks en aanvragen krijgt.
               </p>
             </div>
           </Container>
@@ -47,24 +43,39 @@ export default function GoogleBedrijfsprofielVeendamPage() {
         <section className="section bg-section-2 py-10 lg:py-14">
           <Container>
             <h2 className="heading-section">Wat we optimaliseren</h2>
-            <ul className="mt-3 space-y-2 text-section-body">
-              <li>Categorieen, services en bedrijfsomschrijving met lokale relevantie.</li>
-              <li>Foto&apos;s, updates en posts voor actualiteit en betrokkenheid.</li>
-              <li>Review-aanpak en NAP-consistentie voor sterkere lokale signalen.</li>
-            </ul>
-
-            <h3 className="heading-sub mt-8">Situation → Action → Result</h3>
-            <div className="mt-3 space-y-4 text-section-body">
-              <p><strong>Situation:</strong> profiel staat online maar genereert weinig zichtbaarheid of kliks.</p>
-              <p><strong>Action:</strong> profielstructuur, content, reviews en lokale signalen worden aangescherpt.</p>
-              <p><strong>Result:</strong> betere zichtbaarheid in Maps, meer profielinteracties en meer aanvragen.</p>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <article className="card card-bordered p-5">
+                <h3 className="heading-sub">Categorieën en services</h3>
+                <p className="mt-2 text-section-body">
+                  We zorgen dat je categorieën en services exact kloppen en aansluiten op je doelgroep.
+                </p>
+              </article>
+              <article className="card card-bordered p-5">
+                <h3 className="heading-sub">Profielinhoud</h3>
+                <p className="mt-2 text-section-body">
+                  Bedrijfsomschrijving, updates, foto&apos;s en posts worden geoptimaliseerd voor lokale relevantie.
+                </p>
+              </article>
+              <article className="card card-bordered p-5">
+                <h3 className="heading-sub">Reviews en vertrouwen</h3>
+                <p className="mt-2 text-section-body">
+                  We helpen met review-aanpak en consistentie voor sterkere lokale signalen.
+                </p>
+              </article>
+              <article className="card card-bordered p-5">
+                <h3 className="heading-sub">Conversie-focus</h3>
+                <p className="mt-2 text-section-body">
+                  Doel is niet alleen zichtbaarheid, maar vooral meer telefoontjes, berichten en aanvragen.
+                </p>
+              </article>
             </div>
 
-            <h3 className="heading-sub mt-8">Aanvullende pagina&apos;s</h3>
+            <h3 className="heading-sub mt-10">Aanvullende pagina&apos;s</h3>
             <ul className="mt-3 space-y-2 text-section-body">
-              <li><Link to="/seo-veendam" className="link-primary">SEO Veendam</Link></li>
-              <li><Link to="/marketingbureau-veendam" className="link-primary">Marketingbureau Veendam</Link></li>
               <li><Link to="/locatie/veendam" className="link-primary">Werkgebied Veendam</Link></li>
+              <li><Link to="/marketingbureau-veendam" className="link-primary">Marketingbureau Veendam</Link></li>
+              <li><Link to="/prijzen" className="link-primary">Prijzenoverzicht</Link></li>
+              <li><Link to="/contact" className="link-primary">Contact</Link></li>
             </ul>
           </Container>
         </section>

@@ -1,6 +1,6 @@
 import { Container } from '../../ui/Container'
 
-const bouwGroepen = [
+const websiteGroepen = [
   {
     titel: 'Wat we bouwen',
     items: [
@@ -20,23 +20,6 @@ const bouwGroepen = [
     items: [
       'Responsief op mobiel, tablet en desktop',
       'Integraties: maps, formulieren, reviews en meer',
-    ],
-  },
-]
-
-const hostingGroepen = [
-  {
-    titel: 'Hosting & beheer',
-    items: [
-      'Snelle, betrouwbare hosting',
-      'Beveiligingsupdates en monitoring',
-    ],
-  },
-  {
-    titel: 'Onderhoud & groei',
-    items: [
-      '1 grote of 2 kleine wijzigingen per maand inbegrepen',
-      'Doorlopende SEO-optimalisatie',
     ],
   },
 ]
@@ -84,9 +67,9 @@ export function WebsitePrijs() {
           </p>
         </div>
 
-        <div className="ranking-prijs-grid">
+        <div className="ranking-prijs-grid !grid-cols-1">
           <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Website</div>
+            <div className="ranking-prijs-badge">SEO Website</div>
 
             <div className="ranking-prijs-bedrag mt-4">
               Vanaf &euro;&nbsp;999
@@ -95,28 +78,7 @@ export function WebsitePrijs() {
 
             <hr className="ranking-prijs-divider" />
 
-            {bouwGroepen.map((groep) => (
-              <div key={groep.titel} className="mt-4">
-                <h3 className="heading-sub">{groep.titel}</h3>
-                <PrijsLijst items={groep.items} />
-              </div>
-            ))}
-
-            <p className="ranking-prijs-btw">Alle prijzen excl. btw</p>
-          </div>
-
-          <div className="card card-bordered card-elevated ranking-prijs-card">
-            <div className="ranking-prijs-badge">Hosting &amp; onderhoud</div>
-
-            <div className="ranking-prijs-bedrag ranking-prijs-bedrag--maand mt-4">
-              &euro;&nbsp;99
-              <span className="ranking-prijs-per-maand"> p/m</span>
-            </div>
-            <p className="ranking-prijs-subtekst">doorlopend</p>
-
-            <hr className="ranking-prijs-divider" />
-
-            {hostingGroepen.map((groep) => (
+            {websiteGroepen.map((groep) => (
               <div key={groep.titel} className="mt-4">
                 <h3 className="heading-sub">{groep.titel}</h3>
                 <PrijsLijst items={groep.items} />

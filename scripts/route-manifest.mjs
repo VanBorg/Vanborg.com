@@ -15,11 +15,11 @@ const STATIC_PATHS = [
   '/website',
   '/aanbieding',
   '/prijzen',
+  '/contact',
   '/voorwaarden',
   '/privacy',
   '/locatie',
   '/marketingbureau-veendam',
-  '/seo-veendam',
   '/google-bedrijfsprofiel-veendam',
 ]
 

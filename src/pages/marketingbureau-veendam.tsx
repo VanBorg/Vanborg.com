@@ -11,21 +11,17 @@ export default function MarketingbureauVeendamPage() {
   return (
     <>
       <Helmet>
-        <title>Marketingbureau Veendam | Van Borg</title>
+        <title>Internetmarketing Veendam | Van Borg</title>
         <meta
           name="description"
-          content="Van Borg is een marketingbureau uit Veendam voor lokale bedrijven. Wij helpen met Google Top 3 ranking, Google Ads en SEO-websites die meer aanvragen opleveren."
+          content="Van Borg helpt bedrijven in Veendam met internetmarketing: Lokale SEO, Google Ads en SEO Website. Focus op zichtbaarheid, leads en groei."
         />
         <link rel="canonical" href={CANONICAL} />
         <meta property="og:url" content={CANONICAL} />
-        <meta property="og:title" content="Marketingbureau Veendam | Van Borg" />
+        <meta property="og:title" content="Internetmarketing Veendam | Van Borg" />
         <meta
           property="og:description"
-          content="Lokaal marketingbureau in Veendam voor meetbare groei: ranking, advertenties en websites."
-        />
-        <meta
-          name="document-outline"
-          content="h1: marketingbureau veendam; h2: voor wie en aanpak; h3: bewijs en veelgestelde vragen"
+          content="Internetmarketing in Veendam met focus op Lokale SEO, Google Ads en SEO Website."
         />
       </Helmet>
       <Navbar />
@@ -33,13 +29,12 @@ export default function MarketingbureauVeendamPage() {
         <section className="section bg-section-1 py-12 lg:py-20">
           <Container>
             <div className="max-w-2xl text-center mx-auto">
-              <h1 className="heading-hero">Marketingbureau in Veendam</h1>
+              <h1 className="heading-hero">Internetmarketing in Veendam</h1>
               <h2 className="heading-hero-subtitle mt-3">
-                Voor lokale ondernemers die zichtbaar willen zijn op het moment dat klanten zoeken.
+                Voor bedrijven die beter zichtbaar willen worden op Google.
               </h2>
               <p className="text-section-body mt-3 text-neutral-500">
-                Van Borg werkt vanuit Veendam en focust op drie dingen: lokale vindbaarheid, kwalitatieve leads en
-                conversie op je website.
+                Van Borg werkt vanuit Veendam met als primaire categorie <strong>Internetmarketing</strong> en als extra categorie <strong>Marketingconsultant</strong>.
               </p>
             </div>
           </Container>
@@ -47,25 +42,36 @@ export default function MarketingbureauVeendamPage() {
 
         <section className="section bg-section-2 py-10 lg:py-14">
           <Container>
-            <h2 className="heading-section">Voor wie wij werken</h2>
-            <p className="mt-3 text-section-body">
-              Wij werken vooral met lokale dienstverleners en mkb-bedrijven in Veendam en omgeving. Of je nu meer
-              telefoontjes wilt, meer offerte-aanvragen of betere online zichtbaarheid: de aanpak is gericht op
-              meetbaar resultaat.
-            </p>
-
-            <h3 className="heading-sub mt-8">Bewijsgerichte aanpak</h3>
-            <div className="mt-3 space-y-4 text-section-body">
-              <p><strong>Situatie:</strong> te weinig lokale zichtbaarheid in Maps en organisch.</p>
-              <p><strong>Actie:</strong> combinatie van Local SEO, Google Ads en conversiegerichte pagina&apos;s.</p>
-              <p><strong>Resultaat:</strong> hogere posities, meer relevante aanvragen en betere ROI-sturing.</p>
+            <h2 className="heading-section">Onze diensten in Veendam</h2>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <article className="card card-bordered p-5">
+                <h3 className="heading-sub">Lokale SEO</h3>
+                <p className="mt-2 text-section-body">Top 3 zichtbaarheid in Google Maps en lokale zoekresultaten.</p>
+                <p className="mt-2 text-section-body"><strong>Prijs:</strong> € 1.499</p>
+              </article>
+              <article className="card card-bordered p-5">
+                <h3 className="heading-sub">Google Ads</h3>
+                <p className="mt-2 text-section-body">Gerichte advertenties voor directe zichtbaarheid.</p>
+                <p className="mt-2 text-section-body"><strong>Prijs:</strong> Vanaf € 499</p>
+              </article>
+              <article className="card card-bordered p-5">
+                <h3 className="heading-sub">SEO Website</h3>
+                <p className="mt-2 text-section-body">Technisch sterke website die beter scoort in Google.</p>
+                <p className="mt-2 text-section-body"><strong>Prijs:</strong> Vanaf € 999</p>
+              </article>
+              <article className="card card-bordered p-5">
+                <h3 className="heading-sub">Aanbieding</h3>
+                <p className="mt-2 text-section-body">Lokale SEO + SEO Website in één gecombineerd traject.</p>
+                <p className="mt-2 text-section-body"><strong>Prijs:</strong> € 2.999</p>
+              </article>
             </div>
 
-            <h3 className="heading-sub mt-8">Directe routes</h3>
+            <h3 className="heading-sub mt-10">Directe routes</h3>
             <ul className="mt-3 space-y-2 text-section-body">
-              <li><Link to="/seo-veendam" className="link-primary">SEO Veendam</Link></li>
-              <li><Link to="/google-bedrijfsprofiel-veendam" className="link-primary">Google Bedrijfsprofiel Veendam</Link></li>
               <li><Link to="/locatie/veendam" className="link-primary">Locatiepagina Veendam</Link></li>
+              <li><Link to="/google-bedrijfsprofiel-veendam" className="link-primary">Google Bedrijfsprofiel Veendam</Link></li>
+              <li><Link to="/prijzen" className="link-primary">Prijzenoverzicht</Link></li>
+              <li><Link to="/contact" className="link-primary">Contact</Link></li>
             </ul>
           </Container>
         </section>

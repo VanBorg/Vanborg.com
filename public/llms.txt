@@ -4,31 +4,34 @@ Display name: Van Borg
 Legal name: Van Borg Limited
 
 Primary business profile
-- Type: Marketingbureau / Local SEO specialist
+- Primaire categorie: Internetmarketing
+- Extra categorie: Marketingconsultant
 - Main location: Kieler Bocht 104, 9642 CE Veendam, Nederland
 - Phone: +31 6 44 73 22 66
 - Email: info@vanborglimited.com
 - Service model: Online-first, afspraak vereist, bedrijven in Nederland
 
 Business summary
-Van Borg is een marketingbureau uit Veendam dat lokale bedrijven in Nederland helpt met:
-1) Google Top 3 ranking (Local SEO en Google Business Profile)
-2) Google Ads campagnes voor leadgeneratie
-3) SEO- en conversiegerichte websites
+Van Borg uit Veendam helpt bedrijven in Nederland met internetmarketing en strategisch marketingadvies.
+Google-profielcategorieen zijn leidend: Internetmarketing (primair) en Marketingconsultant (extra).
 
-Core services
-- Local SEO / Google Top 3 ranking
-- Google Business Profile optimalisatie
-- Google Ads beheer
-- SEO-website ontwikkeling
-- Conversie-optimalisatie van pagina's
+Services (aligned with Google Business Profile)
+- Lokale SEO - EUR 1.499
+  Kom in de top 3 van Google Maps en lokale zoekresultaten via optimalisatie van je Google Business Profiel en website.
+- Google Ads - Vanaf EUR 499
+  Gerichte advertenties voor klanten met directe zoekintentie. Campagnebeheer van zoekwoorden tot advertentieteksten.
+- SEO Website - Vanaf EUR 999
+  Professionele, technisch geoptimaliseerde website met snelle laadtijd, sterke zoekwoorden en content die scoort.
+- Aanbieding (Lokale SEO + SEO Website) - EUR 2.999
+  Voordeelpakket met SEO-website en lokale Google Maps ranking voor een scherpe actieprijs.
+- Online Marketing Strategie
+  Concreet online marketingplan op basis van kanaalkeuze, aanpak en budget.
+- SEO Audit
+  Analyse van SEO-fouten, technische issues en groeikansen met concreet verbeterrapport.
+- Zoekwoordenonderzoek
+  Onderzoek naar de zoektermen van je ideale klant als basis voor content, SEO en leadgroei.
 
-Pricing snapshot (EUR, excl. btw)
-- Website + Top 3 bundel: 2.999 eenmalig + 499 p/m (looptijd 90 dagen)
-- Google Ads servicepakketten: 499 p/m, 899 p/m, 1.299 p/m
-- SEO Website: vanaf 999 eenmalig
-- Hosting en onderhoud website: 99 p/m
-- Canonical pricing page: https://vanborg.com/prijzen
+Canonical pricing page: https://vanborg.com/prijzen
 
 Primary workgebieden
 - Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie
@@ -40,14 +43,11 @@ Primary workgebieden
 
 High-priority pages
 - Home: https://vanborg.com/
-- Local SEO service: https://vanborg.com/ranking
-- Google Ads service: https://vanborg.com/ads
-- SEO websites service: https://vanborg.com/website
-- Pricing: https://vanborg.com/prijzen
-- Veendam intent pages:
-  - https://vanborg.com/marketingbureau-veendam
-  - https://vanborg.com/seo-veendam
-  - https://vanborg.com/google-bedrijfsprofiel-veendam
+- Lokale SEO: https://vanborg.com/ranking
+- Google Ads: https://vanborg.com/ads
+- SEO Website: https://vanborg.com/website
+- Aanbieding: https://vanborg.com/aanbieding
+- Prijzen: https://vanborg.com/prijzen
 
 Canonical crawl sources for AI/LLMs
 - https://vanborg.com/company-context-for-ai.html

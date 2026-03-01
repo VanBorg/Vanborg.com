@@ -1,4 +1,5 @@
 import { Container } from '../ui/Container'
+import { WORKGEBIED_LOCATIONS } from '../../data/locations'
 
 export function AboutUs() {
   return (
@@ -39,7 +40,7 @@ export function AboutUs() {
             <div>
               <h3 className="heading-sub">Werkgebied</h3>
               <p className="mt-2 text-section-body">
-                <strong>Wij zijn actief in:</strong> Veendam, Meeden, Hoogezand, Muntendam, Sappemeer, Zuidbroek, Noordbroek, Wildervank, Tripscompagnie, Borgercompagnie, Hoogezand-Sappemeer, Bareveld (Nieuwediep) en Ommelanderwijk.
+                <strong>Wij zijn actief in:</strong> {WORKGEBIED_LOCATIONS.join(', ')}.
               </p>
             </div>
           </div>

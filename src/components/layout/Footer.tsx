@@ -18,10 +18,10 @@ const navPages = [
   { label: 'Google Ads', href: '/ads' },
   { label: 'Websites', href: '/website' },
   { label: 'Prijzen', href: '/prijzen' },
+  { label: 'Contact', href: '/contact' },
   { label: 'Aanbieding', href: '/aanbieding' },
   { label: 'Werkgebieden', href: '/locatie' },
   { label: 'Marketingbureau Veendam', href: '/marketingbureau-veendam' },
-  { label: 'SEO Veendam', href: '/seo-veendam' },
   { label: 'Google Bedrijfsprofiel Veendam', href: '/google-bedrijfsprofiel-veendam' },
 ]
 
