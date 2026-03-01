@@ -115,32 +115,33 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
             <svg className="comparison-badge-arrow comparison-badge-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            Toen we begonnen
+            Na 3 maanden
           </span>
         </span>
         <span className="comparison-badge comparison-badge-with-icon comparison-badge-corner comparison-badge-bottom-right" aria-hidden>
           <span className="comparison-badge-bg" aria-hidden />
           <span className="comparison-badge-content">
-            Na 40 dagen
+            Toen we begonnen
             <svg className="comparison-badge-arrow comparison-badge-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </span>
         </span>
-        {/* Sizer: bepaalt hoogte van de container op basis van de afbeelding, geen wit vlak meer */}
+        {/* Sizer: bepaalt hoogte van de container; max-h zodat het naast de tekst past */}
         <img
           src={before}
           alt=""
           className="block w-full h-auto pointer-events-none invisible"
+          style={{ maxHeight: '480px', objectFit: 'cover' }}
           aria-hidden
         />
-        {/* Bottom layer: before (heatmap-1) – zelfde doos, zelfde uitlijning als after */}
+        {/* Bottom layer: before */}
         <img
           src={before}
           alt="Heatmap weergave 1"
-          className="absolute inset-0 h-full w-full object-contain object-left-top"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        {/* Top layer: after (heatmap-2), clipped by position – identiek gepositioneerd; z-[1] onder de divider */}
+        {/* Top layer: after, clipped by position */}
         <div
           className="absolute inset-y-0 left-0 z-[1] overflow-hidden"
           style={{ width: `${position}%` }}
@@ -148,7 +149,7 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
           <img
             src={after}
             alt="Heatmap weergave 2"
-            className="h-full w-full object-contain object-left-top"
+            className="h-full object-cover object-center"
             style={{
               width: position > 0 ? `${(100 / position) * 100}%` : '100%',
               maxWidth: 'none',

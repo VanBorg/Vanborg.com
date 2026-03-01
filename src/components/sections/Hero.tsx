@@ -8,17 +8,13 @@ export function Hero() {
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
           <div className="max-w-xl">
             <h1 className="heading-hero">
-              Het beste marketingbureau van Veendam en omstreken
+            Het nummer één internetmarketingbureau van Veendam en e.o.
             </h1>
             <h2 className="heading-hero-subtitle mt-3">
               Binnen 90 dagen een Top 3 positie op Google.
             </h2>
-            <h3 className="text-section-body mt-2 text-neutral-500">
-              Op de heatmap zie je mijn onderneming in Veendam na <strong>40 dagen.</strong>
-              <br />
-              <strong><span className="text-green-600">Groen</span>= is goed,</strong> zichtbaar in de Top 3.
-              <br />
-              <strong><span className="text-red-600">Rood</span> = is slecht,</strong> buiten de Top 3 en vrijwel onzichtbaar.
+            <h3 className="text-section-body mt-2" style={{ color: 'var(--color-neutral-700)' }}>
+              Op de kaart zie je mijn eigen onderneming. Links hoe het was toen ik begon, rechts hoe het nu staat. Dit duurte amper 3 maanden.
             </h3>
             <div className="mt-6 flex flex-wrap gap-4">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbsa-4CWu9Rh0yBDLrVeXYbtXfHlcBJaxqYOQGWeKPDriaMg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -30,10 +26,10 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="shrink-0 lg:w-[560px]">
+          <div className="shrink-0 lg:w-[480px]" style={{ maxHeight: '480px' }}>
             <ImageComparison
-              before="/Afbeeldingen/heatmap-1.png"
-              after="/Afbeeldingen/heatmap-2.png"
+              before="/Afbeeldingen/heatmap-2.png"
+              after="/Afbeeldingen/heatmap-1.png"
             />
           </div>
         </div>
