@@ -9,7 +9,6 @@ const navLinks = [
   { label: 'Websites', href: '/website' },
   { label: 'Prijzen', href: '/prijzen' },
   { label: 'Werkgebieden', href: '/locatie' },
-  { label: 'Contact', href: '/contact' },
   { label: 'Aanbieding', href: '/aanbieding', badge: 'Tijdelijk' },
 ]
 

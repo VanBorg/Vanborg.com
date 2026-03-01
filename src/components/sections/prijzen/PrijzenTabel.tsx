@@ -107,7 +107,6 @@ export function PrijzenTabel() {
   const eenmaligGeselecteerd = geselecteerdeDiensten.filter((d) => !d.isMonthly)
   const maandelijksGeselecteerd = geselecteerdeDiensten.filter((d) => d.isMonthly)
 
-  const eenmaligVanaf = eenmaligGeselecteerd.some((d) => d.vanaf)
   const eenmaligNum = eenmaligGeselecteerd.reduce((som, d) => som + d.prijsNum, 0)
 
   const maandelijksVanaf = maandelijksGeselecteerd.some((d) => d.vanaf)
