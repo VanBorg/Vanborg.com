@@ -3,7 +3,7 @@ import { LOCATION_PAGES } from '../../data/locations'
 import { useSmoothNav } from '../../hooks/useSmoothNav'
 
 const MAP_EMBED_SRC =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76000!2d6.8674621999999985!3d53.098799899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7d7e71e51e1bb%3A0xbfc74e0471be7bfb!2sVan%20Borg!5e0!3m2!1snl!2suk!4v1771866305559!5m2!1snl!2suk'
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76000!2d6.8674621999999985!3d53.098799899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7d7e71e51e1bb%3A0xbfc74e0471be7bfb!2sVan%20Borg!5e0!3m2!1snl!2snl!4v1771866305559!5m2!1snl!2snl'
 
 const MAPS_URL = 'https://maps.google.com/?q=Kieler+Bocht+104+9642+CE+Veendam'
 
@@ -20,6 +20,9 @@ const navPages = [
   { label: 'Prijzen', href: '/prijzen' },
   { label: 'Aanbieding', href: '/aanbieding' },
   { label: 'Werkgebieden', href: '/locatie' },
+  { label: 'Marketingbureau Veendam', href: '/marketingbureau-veendam' },
+  { label: 'SEO Veendam', href: '/seo-veendam' },
+  { label: 'Google Bedrijfsprofiel Veendam', href: '/google-bedrijfsprofiel-veendam' },
 ]
 
 export function Footer() {

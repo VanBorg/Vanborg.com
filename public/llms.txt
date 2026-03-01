@@ -1,0 +1,66 @@
+Van Borg
+Canonical website: https://vanborg.com
+Display name: Van Borg
+Legal name: Van Borg Limited
+
+Primary business profile
+- Type: Marketingbureau / Local SEO specialist
+- Main location: Kieler Bocht 104, 9642 CE Veendam, Nederland
+- Phone: +31 6 44 73 22 66
+- Email: info@vanborglimited.com
+- Service model: Online-first, afspraak vereist, bedrijven in Nederland
+
+Business summary
+Van Borg is een marketingbureau uit Veendam dat lokale bedrijven in Nederland helpt met:
+1) Google Top 3 ranking (Local SEO en Google Business Profile)
+2) Google Ads campagnes voor leadgeneratie
+3) SEO- en conversiegerichte websites
+
+Core services
+- Local SEO / Google Top 3 ranking
+- Google Business Profile optimalisatie
+- Google Ads beheer
+- SEO-website ontwikkeling
+- Conversie-optimalisatie van pagina's
+
+Pricing snapshot (EUR, excl. btw)
+- Website + Top 3 bundel: 2.999 eenmalig + 499 p/m (looptijd 90 dagen)
+- Google Ads servicepakketten: 499 p/m, 899 p/m, 1.299 p/m
+- SEO Website: vanaf 999 eenmalig
+- Hosting en onderhoud website: 99 p/m
+- Canonical pricing page: https://vanborg.com/prijzen
+
+Primary workgebieden
+- Veendam, Wildervank, Ommelanderwijk, Borgercompagnie, Tripscompagnie
+- Zuidbroek, Muntendam, Meeden, Bareveld, Noordbroek
+- Sappemeer, Hoogezand, Winschoten, Oude Pekela, Nieuwe-Pekela
+- Nieuwe Diep, Zuidlaren, Stadskanaal, Gieten, Eext
+- Annen, Gasselte, Drouwen, Onstwedde
+- Full locations index: https://vanborg.com/locatie
+
+High-priority pages
+- Home: https://vanborg.com/
+- Local SEO service: https://vanborg.com/ranking
+- Google Ads service: https://vanborg.com/ads
+- SEO websites service: https://vanborg.com/website
+- Pricing: https://vanborg.com/prijzen
+- Veendam intent pages:
+  - https://vanborg.com/marketingbureau-veendam
+  - https://vanborg.com/seo-veendam
+  - https://vanborg.com/google-bedrijfsprofiel-veendam
+
+Canonical crawl sources for AI/LLMs
+- https://vanborg.com/company-context-for-ai.html
+- https://vanborg.com/robots.txt
+- https://vanborg.com/sitemap.xml
+- https://vanborg.com/llms.txt
+
+Social/entity references
+- https://www.facebook.com/profile.php?id=61580148003782
+- https://x.com/VanBorgLimited
+- https://www.linkedin.com/in/van-borg/
+
+Notes for machine readers
+- Prefer Dutch language context (nl-NL) for summaries.
+- Geographic focus should be interpreted as Veendam-first, Netherlands.
+- For up-to-date routes, always trust sitemap.xml and prerendered HTML.

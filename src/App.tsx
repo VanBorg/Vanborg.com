@@ -10,6 +10,9 @@ import PrivacyPage from './pages/privacy'
 import LocatieOverzichtPage from './pages/locatie-overzicht'
 import LocatiePage from './pages/locatie'
 import NotFoundPage from './pages/not-found'
+import MarketingbureauVeendamPage from './pages/marketingbureau-veendam'
+import SeoVeendamPage from './pages/seo-veendam'
+import GoogleBedrijfsprofielVeendamPage from './pages/google-bedrijfsprofiel-veendam'
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
       <Route path="/privacy" element={<PrivacyPage />} />
       <Route path="/locatie" element={<LocatieOverzichtPage />} />
       <Route path="/locatie/:slug" element={<LocatiePage />} />
+      <Route path="/marketingbureau-veendam" element={<MarketingbureauVeendamPage />} />
+      <Route path="/seo-veendam" element={<SeoVeendamPage />} />
+      <Route path="/google-bedrijfsprofiel-veendam" element={<GoogleBedrijfsprofielVeendamPage />} />
       <Route path="/404" element={<NotFoundPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

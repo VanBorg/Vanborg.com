@@ -1,0 +1,11 @@
+{
+  "name": "Van Borg",
+  "short_name": "Van Borg",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2d6a4f",
+  "lang": "nl-NL",
+  "description": "Van Borg - marketingbureau uit Veendam voor Local SEO, Google Ads en SEO-websites."
+}

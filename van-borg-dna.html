@@ -41,8 +41,8 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Platform colours -->
-    <meta name="theme-color" content="#0ea5e9" />
-    <meta name="msapplication-TileColor" content="#0ea5e9" />
+    <meta name="theme-color" content="#2d6a4f" />
+    <meta name="msapplication-TileColor" content="#2d6a4f" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -159,80 +159,137 @@
       });
     </script>
 
-    <!-- Structured Data (SEO): LocalBusiness (NL-only) -->
+    <!-- Structured Data (SEO): Organization + WebSite + LocalBusiness -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": "https://vanborg.com/#localbusiness",
-        "name": "Van Borg",
-        "legalName": "Van Borg Limited",
-        "description": "Marketing consultant (marketing consultant / marketing bureau) die lokale bedrijven in Nederland helpt met Google Top 3 ranking (Local SEO/Google Business Profile), Google Ads-campagnes en SEO-websites. Afspraak vereist; online afspraken mogelijk; geen diensten op locatie. Gratis parkeren op straat in de buurt.",
-        "knowsAbout": ["Marketing agency", "Consultant", "Web Designer", "Advertising agency", "Business development service", "Business-to-Business service", "Business management consultant"],
-        "accessibilitySummary": "No wheelchair accessible entrance, restroom, parking, or seating; no assistive listening devices.",
-        "url": "https://vanborg.com/",
-        "logo": "https://vanborg.com/favicon.svg",
-        "image": "https://vanborg.com/og-image.jpg",
-        "foundingDate": "2025-01-09",
-        "telephone": "+31644732266",
-        "email": "info@vanborglimited.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Kieler Bocht 104",
-          "postalCode": "9642 CE",
-          "addressLocality": "Veendam",
-          "addressCountry": "NL"
-        },
-        "areaServed": [
-          { "@type": "Country", "name": "Nederland", "identifier": "NL" },
-          { "@type": "Place", "name": "Veendam, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Veendam", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Wildervank, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Wildervank", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Ommelanderwijk, 9644 TH Veendam, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Ommelanderwijk", "postalCode": "9644 TH", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Borgercompagnie, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Borgercompagnie", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Tripscompagnie, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Tripscompagnie", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Zuidbroek, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Zuidbroek", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Muntendam, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Muntendam", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Meeden, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Meeden", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Bareveld, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Bareveld", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Noordbroek, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Noordbroek", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Sappemeer, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Sappemeer", "addressCountry": "NL" } },
-          { "@type": "Place", "name": "Hoogezand, Netherlands", "address": { "@type": "PostalAddress", "addressLocality": "Hoogezand", "addressCountry": "NL" } }
-        ],
-        "availableLanguage": ["nl-NL"],
-        "openingHoursSpecification": [
+        "@graph": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "00:00",
-            "closes": "23:59"
-          }
-        ],
-        "sameAs": [
-          "https://www.facebook.com/profile.php?id=61580148003782",
-          "https://x.com/VanBorgLimited",
-          "https://www.linkedin.com/in/van-borg/"
-        ],
-        "makesOffer": [
-          {
-            "@type": "Offer",
-            "name": "Website + Top 3 bundel",
-            "priceCurrency": "EUR",
-            "price": "2999",
-            "description": "Eenmalig € 2.999 excl. btw + € 499 p/m excl. btw. Looptijd: 90 dagen, inclusief hosting, wekelijkse updates en maandelijkse calls."
+            "@type": "Organization",
+            "@id": "https://vanborg.com/#organization",
+            "name": "Van Borg",
+            "legalName": "Van Borg Limited",
+            "url": "https://vanborg.com/",
+            "logo": "https://vanborg.com/favicon.svg",
+            "image": "https://vanborg.com/og-image.jpg",
+            "telephone": "+31644732266",
+            "email": "info@vanborglimited.com",
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=61580148003782",
+              "https://x.com/VanBorgLimited",
+              "https://www.linkedin.com/in/van-borg/"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Kieler Bocht 104",
+              "postalCode": "9642 CE",
+              "addressLocality": "Veendam",
+              "addressCountry": "NL"
+            }
           },
           {
-            "@type": "Offer",
-            "name": "Google Ads (retainer per pakket)",
-            "priceCurrency": "EUR",
-            "price": "499",
-            "description": "Voorstarter € 499 p/m, Groei € 899 p/m, Dominant € 1.299 p/m (allemaal excl. btw). Prijs is afhankelijk van het gekozen pakket."
+            "@type": "WebSite",
+            "@id": "https://vanborg.com/#website",
+            "url": "https://vanborg.com/",
+            "name": "Van Borg",
+            "publisher": {
+              "@id": "https://vanborg.com/#organization"
+            },
+            "inLanguage": "nl-NL"
           },
           {
-            "@type": "Offer",
-            "name": "SEO Website",
-            "priceCurrency": "EUR",
-            "price": "999",
-            "description": "Vanaf € 999 excl. btw. Hosting & onderhoud: € 99 p/m excl. btw."
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://vanborg.com/#localbusiness",
+            "name": "Van Borg",
+            "legalName": "Van Borg Limited",
+            "description": "Marketing consultant / marketingbureau uit Veendam dat lokale bedrijven in Nederland helpt met Google Top 3 ranking (Local SEO/Google Business Profile), Google Ads-campagnes en SEO-websites.",
+            "url": "https://vanborg.com/",
+            "mainEntityOfPage": {
+              "@id": "https://vanborg.com/#website"
+            },
+            "parentOrganization": {
+              "@id": "https://vanborg.com/#organization"
+            },
+            "logo": "https://vanborg.com/favicon.svg",
+            "image": "https://vanborg.com/og-image.jpg",
+            "foundingDate": "2025-01-09",
+            "telephone": "+31644732266",
+            "email": "info@vanborglimited.com",
+            "hasMap": "https://maps.google.com/?q=Kieler+Bocht+104+9642+CE+Veendam",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 53.0987999,
+              "longitude": 6.8674622
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Kieler Bocht 104",
+              "postalCode": "9642 CE",
+              "addressLocality": "Veendam",
+              "addressCountry": "NL"
+            },
+            "areaServed": [
+              { "@type": "Country", "name": "Nederland", "identifier": "NL" },
+              { "@type": "Place", "name": "Veendam, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Veendam", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Wildervank, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Wildervank", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Ommelanderwijk, 9644 TH Veendam, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Ommelanderwijk", "postalCode": "9644 TH", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Borgercompagnie, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Borgercompagnie", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Tripscompagnie, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Tripscompagnie", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Zuidbroek, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Zuidbroek", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Muntendam, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Muntendam", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Meeden, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Meeden", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Bareveld, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Bareveld", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Noordbroek, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Noordbroek", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Sappemeer, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Sappemeer", "addressCountry": "NL" } },
+              { "@type": "Place", "name": "Hoogezand, Nederland", "address": { "@type": "PostalAddress", "addressLocality": "Hoogezand", "addressCountry": "NL" } }
+            ],
+            "availableLanguage": ["nl-NL"],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "telephone": "+31644732266",
+                "email": "info@vanborglimited.com",
+                "areaServed": "NL",
+                "availableLanguage": ["nl"]
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=61580148003782",
+              "https://x.com/VanBorgLimited",
+              "https://www.linkedin.com/in/van-borg/"
+            ],
+            "makesOffer": [
+              {
+                "@type": "Offer",
+                "name": "Website + Top 3 bundel",
+                "priceCurrency": "EUR",
+                "price": "2999",
+                "description": "Eenmalig € 2.999 excl. btw + € 499 p/m excl. btw. Looptijd: 90 dagen, inclusief hosting, wekelijkse updates en maandelijkse calls."
+              },
+              {
+                "@type": "Offer",
+                "name": "Google Ads (retainer per pakket)",
+                "priceCurrency": "EUR",
+                "price": "499",
+                "description": "Voorstarter € 499 p/m, Groei € 899 p/m, Dominant € 1.299 p/m (allemaal excl. btw). Prijs is afhankelijk van het gekozen pakket."
+              },
+              {
+                "@type": "Offer",
+                "name": "SEO Website",
+                "priceCurrency": "EUR",
+                "price": "999",
+                "description": "Vanaf € 999 excl. btw. Hosting & onderhoud: € 99 p/m excl. btw."
+              }
+            ]
           }
         ]
       }

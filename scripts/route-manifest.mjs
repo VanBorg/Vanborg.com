@@ -18,6 +18,9 @@ const STATIC_PATHS = [
   '/voorwaarden',
   '/privacy',
   '/locatie',
+  '/marketingbureau-veendam',
+  '/seo-veendam',
+  '/google-bedrijfsprofiel-veendam',
 ]
 
 export function getBaseUrl() {

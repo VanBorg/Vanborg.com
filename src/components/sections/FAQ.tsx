@@ -1,4 +1,4 @@
-﻿import { useState, useCallback, type ReactNode } from 'react'
+import { useState, useCallback, type ReactNode } from 'react'
 import { Container } from '../ui/Container'
 import { LOCATION_PAGES } from '../../data/locations'
 
@@ -31,17 +31,17 @@ const faqData: FAQTopic[] = [
       },
       {
         q: 'Wat houden jullie Google Ads pakketten in?',
-        a: 'Onze Google Ads-pakketten zijn er in drie varianten (advertentiebudget inbegrepen): Klein – € 499 p/m (1 campagne), Middel – € 899 p/m (tot 3 campagnes, A/B-tests, conversietracking), Groot – € 1.299 p/m (onbeperkte campagnes, dedicated accountmanager).',
+        a: 'Onze Google Ads-pakketten zijn er in drie varianten: Klein – € 499 p/m (1 campagne), Middel – € 899 p/m (tot 3 campagnes, A/B-tests, conversietracking), Groot – € 1.299 p/m (grotere schaal met prioriteit). Het advertentiebudget staat los van de servicefee.',
         rich: (
           <>
             Onze{' '}
             <a href="/ads" className="text-[var(--accent-green-light)]">
               Google Ads-pakketten
             </a>{' '}
-            zijn er in drie varianten — advertentiebudget is inbegrepen in de prijs:{' '}
+            zijn er in drie varianten:{' '}
             <strong>Klein (€ 499 p/m)</strong> voor 1 campagne,{' '}
             <strong>Middel (€ 899 p/m)</strong> voor tot 3 campagnes met A/B-tests en conversietracking, en{' '}
-            <strong>Groot (€ 1.299 p/m)</strong> voor onbeperkte campagnes met dedicated accountmanager. Zie de{' '}
+            <strong>Groot (€ 1.299 p/m)</strong> voor grotere schaal met prioriteit. Het advertentiebudget staat los van de servicefee. Zie de{' '}
             <a href="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
             </a>{' '}
@@ -238,10 +238,14 @@ const faqData: FAQTopic[] = [
       },
       {
         q: 'Hoe kan ik betalen voor Local Ranking, Websites en Ads?',
-        a: 'Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Voor Google Ads-pakketten is het advertentiebudget inbegrepen in de maandelijkse servicefee.',
+        a: 'Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Bij Google Ads staat het advertentiebudget los van de maandelijkse servicefee.',
         rich: (
           <>
-            Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Voor Google Ads-pakketten is het advertentiebudget inbegrepen in de maandelijkse servicefee. Op de{' '}             <a href="/prijzen" className="text-[var(--accent-green-light)]">               prijzenpagina             </a>{' '}             zie je hoe alle pakketten zijn opgebouwd.
+            Voor Local Ranking en SEO Websites kun je het eenmalige bedrag in één keer of in drie termijnen betalen. De maandelijkse retainers (bijv. vanaf € 499 p/m voor Ranking en € 99 p/m hosting) worden maandelijks voldaan. Bij Google Ads staat het advertentiebudget los van de maandelijkse servicefee. Op de{' '}
+            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+              prijzenpagina
+            </a>{' '}
+            zie je hoe alle pakketten zijn opgebouwd.
           </>
         ),
       },
