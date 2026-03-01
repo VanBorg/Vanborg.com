@@ -4,34 +4,31 @@ import { Container } from '../../ui/Container'
 interface Dienst {
   naam: string
   prijsLabel: string
+  subtekst: string
   vanaf: boolean
   prijsNum: number
   link: string
   highlight?: boolean
+  isMonthly?: boolean
 }
 
 const BUNDEL_NAAM = 'Aanbieding (Lokale SEO + SEO Website)'
 const LOKALE_SEO_NAAM = 'Lokale SEO'
 const SEO_WEBSITE_NAAM = 'SEO Website'
 
-const diensten: Dienst[] = [
+const eenmaligeDiensten: Dienst[] = [
   {
     naam: LOKALE_SEO_NAAM,
     prijsLabel: '€ 1.499',
+    subtekst: 'Eenmalig excl. btw',
     vanaf: false,
     prijsNum: 1499,
     link: '/ranking',
   },
   {
-    naam: 'Google Ads',
-    prijsLabel: 'Vanaf € 499',
-    vanaf: true,
-    prijsNum: 499,
-    link: '/ads',
-  },
-  {
     naam: SEO_WEBSITE_NAAM,
     prijsLabel: 'Vanaf € 999',
+    subtekst: 'Eenmalig excl. btw',
     vanaf: true,
     prijsNum: 999,
     link: '/website',
@@ -39,12 +36,27 @@ const diensten: Dienst[] = [
   {
     naam: BUNDEL_NAAM,
     prijsLabel: '€ 2.999',
+    subtekst: 'Eenmalig excl. btw · bespaar € 499',
     vanaf: false,
     prijsNum: 2999,
     link: '/aanbieding',
     highlight: true,
   },
 ]
+
+const maandelijkseDiensten: Dienst[] = [
+  {
+    naam: 'Google Ads',
+    prijsLabel: 'Vanaf € 499',
+    subtekst: 'Per maand excl. btw · incl. advertentiebudget',
+    vanaf: true,
+    prijsNum: 499,
+    link: '/ads',
+    isMonthly: true,
+  },
+]
+
+const alleDiensten = [...eenmaligeDiensten, ...maandelijkseDiensten]
 
 function formatBedrag(bedrag: number) {
   return '€ ' + bedrag.toLocaleString('nl-NL')
@@ -91,10 +103,57 @@ export function PrijzenTabel() {
     })
   }
 
-  const geselecteerdeDiensten = diensten.filter((d) => geselecteerd.has(d.naam))
-  const totaalVanaf = geselecteerdeDiensten.some((d) => d.vanaf)
-  const totaalNum = geselecteerdeDiensten.reduce((som, d) => som + d.prijsNum, 0)
+  const geselecteerdeDiensten = alleDiensten.filter((d) => geselecteerd.has(d.naam))
+  const eenmaligGeselecteerd = geselecteerdeDiensten.filter((d) => !d.isMonthly)
+  const maandelijksGeselecteerd = geselecteerdeDiensten.filter((d) => d.isMonthly)
+
+  const eenmaligVanaf = eenmaligGeselecteerd.some((d) => d.vanaf)
+  const eenmaligNum = eenmaligGeselecteerd.reduce((som, d) => som + d.prijsNum, 0)
+
+  const maandelijksVanaf = maandelijksGeselecteerd.some((d) => d.vanaf)
+  const maandelijksNum = maandelijksGeselecteerd.reduce((som, d) => som + d.prijsNum, 0)
+
   const heeftSelectie = geselecteerd.size > 0
+  const heeftEenmalig = eenmaligGeselecteerd.length > 0
+  const heeftMaandelijks = maandelijksGeselecteerd.length > 0
+
+  function DienstRijen({ diensten }: { diensten: Dienst[] }) {
+    return (
+      <>
+        {diensten.map((d) => {
+          const actief = geselecteerd.has(d.naam)
+          return (
+            <tr
+              key={d.naam}
+              onClick={() => toggleRij(d.naam)}
+              className={[
+                'prijzen-tabel__row',
+                d.highlight ? 'prijzen-tabel__row--highlight' : '',
+                actief ? 'prijzen-tabel__row--selected' : '',
+              ]
+                .filter(Boolean)
+                .join(' ')}
+            >
+              <td className="prijzen-tabel__td">
+                <span className="prijzen-tabel__naam">{d.naam}</span>
+                <span className="prijzen-tabel__subtekst">{d.subtekst}</span>
+              </td>
+              <td className="prijzen-tabel__td prijzen-tabel__td--prijs">{d.prijsLabel}</td>
+              <td className="prijzen-tabel__td prijzen-tabel__td--actie">
+                <a
+                  href={d.link}
+                  className="btn-secondary prijzen-tabel__link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Meer info
+                </a>
+              </td>
+            </tr>
+          )
+        })}
+      </>
+    )
+  }
 
   return (
     <section className="section bg-section-2" aria-labelledby="prijzen-tabel-title">
@@ -113,53 +172,47 @@ export function PrijzenTabel() {
               </tr>
             </thead>
             <tbody>
-              {diensten.map((d) => {
-                const actief = geselecteerd.has(d.naam)
-                return (
-                  <tr
-                    key={d.naam}
-                    onClick={() => toggleRij(d.naam)}
-                    className={[
-                      'prijzen-tabel__row',
-                      d.highlight ? 'prijzen-tabel__row--highlight' : '',
-                      actief ? 'prijzen-tabel__row--selected' : '',
-                    ]
-                      .filter(Boolean)
-                      .join(' ')}
-                  >
-                    <td className="prijzen-tabel__td">
-                      <span className="prijzen-tabel__naam">{d.naam}</span>
-                    </td>
-                    <td className="prijzen-tabel__td prijzen-tabel__td--prijs">{d.prijsLabel}</td>
-                    <td className="prijzen-tabel__td prijzen-tabel__td--actie">
-                      <a
-                        href={d.link}
-                        className="btn-secondary prijzen-tabel__link"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        Meer info
-                      </a>
-                    </td>
-                  </tr>
-                )
-              })}
+              {/* Eenmalige diensten */}
+              <tr className="prijzen-tabel__groep-header">
+                <td colSpan={3} className="prijzen-tabel__groep-label">Eenmalig</td>
+              </tr>
+              <DienstRijen diensten={eenmaligeDiensten} />
+
+              {/* Maandelijkse diensten */}
+              <tr className="prijzen-tabel__groep-header">
+                <td colSpan={3} className="prijzen-tabel__groep-label">Per maand</td>
+              </tr>
+              <DienstRijen diensten={maandelijkseDiensten} />
             </tbody>
             <tfoot>
-              <tr className="prijzen-tabel__tfoot-row">
-                <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-label">Totaal</td>
-                {heeftSelectie ? (
-                  <>
-                    <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-bedrag">
-                      {totaalVanaf ? `Vanaf ${formatBedrag(totaalNum)}` : formatBedrag(totaalNum)}
-                    </td>
-                    <td className="prijzen-tabel__tfoot-td" />
-                  </>
-                ) : (
-                  <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-hint" colSpan={2}>
+              {heeftSelectie ? (
+                <>
+                  {heeftEenmalig && (
+                    <tr className="prijzen-tabel__tfoot-row">
+                      <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-label">Eenmalig totaal</td>
+                      <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-bedrag">
+                        {`${formatBedrag(eenmaligNum)} +`}
+                      </td>
+                      <td className="prijzen-tabel__tfoot-td" />
+                    </tr>
+                  )}
+                  {heeftMaandelijks && (
+                    <tr className="prijzen-tabel__tfoot-row prijzen-tabel__tfoot-row--maand">
+                      <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-label">Per maand totaal</td>
+                      <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-bedrag">
+                        {maandelijksVanaf ? `${formatBedrag(maandelijksNum)} +` : formatBedrag(maandelijksNum)}
+                      </td>
+                      <td className="prijzen-tabel__tfoot-td" />
+                    </tr>
+                  )}
+                </>
+              ) : (
+                <tr className="prijzen-tabel__tfoot-row">
+                  <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-hint" colSpan={3}>
                     Klik op een rij om diensten te selecteren
                   </td>
-                )}
-              </tr>
+                </tr>
+              )}
             </tfoot>
           </table>
         </div>
