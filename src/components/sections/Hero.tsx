@@ -5,8 +5,8 @@ export function Hero() {
   return (
     <section className="section bg-section-1">
       <Container>
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
-          <div className="max-w-xl">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-center lg:gap-12">
+          <div className="max-w-lg">
             <h1 className="heading-hero">
             Het nummer één internetmarketingbureau van Veendam en e.o.
             </h1>
@@ -26,7 +26,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="shrink-0 lg:w-[480px]" style={{ maxHeight: '480px' }}>
+          <div className="shrink-0 lg:w-[400px]" style={{ maxHeight: '380px' }}>
             <ImageComparison
               before="/Afbeeldingen/heatmap-2.png"
               after="/Afbeeldingen/heatmap-1.png"

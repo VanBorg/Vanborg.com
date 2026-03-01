@@ -115,13 +115,13 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
             <svg className="comparison-badge-arrow comparison-badge-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            Na 3 maanden
+            Toen we begonnen
           </span>
         </span>
         <span className="comparison-badge comparison-badge-with-icon comparison-badge-corner comparison-badge-bottom-right" aria-hidden>
           <span className="comparison-badge-bg" aria-hidden />
           <span className="comparison-badge-content">
-            Toen we begonnen
+            Na 3 maanden
             <svg className="comparison-badge-arrow comparison-badge-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
@@ -132,7 +132,7 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
           src={before}
           alt=""
           className="block w-full h-auto pointer-events-none invisible"
-          style={{ maxHeight: '480px', objectFit: 'cover' }}
+          style={{ maxHeight: '380px', objectFit: 'cover' }}
           aria-hidden
         />
         {/* Bottom layer: before */}
