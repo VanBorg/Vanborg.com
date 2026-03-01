@@ -42,7 +42,7 @@ export function WatWijDoen() {
             Wat wij doen
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
-            Primaire focus: internetmarketing. Aanvullend bieden we als marketingconsultant ook Online Marketing Strategie, SEO Audit en Zoekwoordenonderzoek.
+            Professionals in lokale zichtbaarheid op Google.
           </p>
         </div>
 

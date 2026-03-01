@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { WhatsAppWidget } from './components/ui/WhatsAppWidget'
+import { AanbiedingPopup } from './components/ui/AanbiedingPopup'
 import HomePage from './pages/index'
 import RankingPage from './pages/ranking'
 import AdsPage from './pages/ads'
@@ -36,6 +37,7 @@ function App() {
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
     <WhatsAppWidget />
+    <AanbiedingPopup />
     </>
   )
 }
