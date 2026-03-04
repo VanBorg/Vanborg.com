@@ -96,7 +96,12 @@ export function LocationNetworkMap({
               key={location.slug}
               position={[location.lat, location.lng]}
               icon={markerIcon(isActive, isHome)}
-              eventHandlers={{ click: () => navigate(`/locatie/${location.slug}`) }}
+              eventHandlers={{
+                click: () =>
+                  navigate(`/locatie/${location.slug}`, {
+                    state: { preventScrollTop: true },
+                  }),
+              }}
             >
               <Tooltip direction="top" offset={[0, -8]} opacity={1}>
                 <span className="location-map__tooltip">
