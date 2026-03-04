@@ -1,4 +1,5 @@
 import { Container } from '../ui/Container'
+import { FadeUpSection } from '../ui/FadeUpSection'
 
 const services = [
   {
@@ -32,7 +33,7 @@ const services = [
 
 export function WatWijDoen() {
   return (
-    <section className="section bg-section-1" aria-labelledby="wat-wij-doen-title">
+    <FadeUpSection className="bg-section-1" aria-labelledby="wat-wij-doen-title">
       <Container>
         <div className="wat-wij-doen-header text-center">
           <h2
@@ -135,6 +136,6 @@ export function WatWijDoen() {
           ))}
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

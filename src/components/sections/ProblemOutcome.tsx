@@ -1,4 +1,5 @@
 import { Container } from '../ui/Container'
+import { FadeUpSection } from '../ui/FadeUpSection'
 
 const problemItems = [
   'Nauwelijks zichtbaar',
@@ -35,7 +36,7 @@ export function ProblemOutcome({
   background?: 'bg-section-1' | 'bg-section-2'
 }) {
   return (
-    <section className={`section ${background}`} aria-labelledby="problem-outcome-title">
+    <FadeUpSection className={background} aria-labelledby="problem-outcome-title">
       <Container>
         <div className="text-center">
           <h2 id="problem-outcome-title" className="heading-section">
@@ -106,6 +107,6 @@ export function ProblemOutcome({
           </div>
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

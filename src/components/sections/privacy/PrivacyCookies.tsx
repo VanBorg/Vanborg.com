@@ -1,8 +1,9 @@
 import { Container } from '../../ui/Container'
+import { FadeUpSection } from '../../ui/FadeUpSection'
 
 export function PrivacyCookies() {
   return (
-    <section className="section bg-section-2" aria-labelledby="privacy-cookies-title">
+    <FadeUpSection className="bg-section-2" aria-labelledby="privacy-cookies-title">
       <Container>
         <div className="legal-content">
           <div className="legal-section__header">
@@ -40,6 +41,6 @@ export function PrivacyCookies() {
           </div>
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

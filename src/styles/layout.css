@@ -29,6 +29,30 @@
   }
 }
 
+/* Fade-up content – simple lazy-in effect on scroll (backgrounds stay static) */
+.fade-up-content {
+  opacity: 0;
+  transform: translateY(24px);
+  transition-property: opacity, transform;
+  transition-duration: 600ms;
+  transition-timing-function: ease-out;
+  transition-delay: var(--fade-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.fade-up-content--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up-content {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Globale typografie – headings & body
    Hero is de bron van waarheid voor H1–H3.
    Gebruik:

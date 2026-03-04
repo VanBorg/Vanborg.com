@@ -1,4 +1,5 @@
 import { Container } from '../../ui/Container'
+import { FadeUpSection } from '../../ui/FadeUpSection'
 
 const voordelen = [
   {
@@ -42,7 +43,7 @@ const voordelen = [
 
 export function RankingVoordelen() {
   return (
-    <section className="section bg-section-2" aria-labelledby="ranking-voordelen-title">
+    <FadeUpSection className="bg-section-2" aria-labelledby="ranking-voordelen-title">
       <Container>
         <div className="text-center">
           <h2 id="ranking-voordelen-title" className="heading-section">
@@ -68,6 +69,6 @@ export function RankingVoordelen() {
           ))}
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

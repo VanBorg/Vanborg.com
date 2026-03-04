@@ -1,4 +1,5 @@
 import { Container } from '../../ui/Container'
+import { FadeUpSection } from '../../ui/FadeUpSection'
 
 function CheckIcon() {
   return (
@@ -63,7 +64,7 @@ function ToegangsLijst({ items }: { items: string[] }) {
 
 export function WebsitePrijs() {
   return (
-    <section className="section bg-section-2" aria-labelledby="website-prijs-title">
+    <FadeUpSection className="bg-section-2" aria-labelledby="website-prijs-title">
       <Container>
         <div className="text-center">
           <h2 id="website-prijs-title" className="heading-section">
@@ -145,6 +146,6 @@ export function WebsitePrijs() {
           </div>
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

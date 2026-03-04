@@ -1,9 +1,10 @@
 import { Container } from '../ui/Container'
+import { FadeUpSection } from '../ui/FadeUpSection'
 import { WORKGEBIED_LOCATIONS } from '../../data/locations'
 
 export function AboutUs() {
   return (
-    <section className="section bg-section-2" aria-labelledby="about-us-title">
+    <FadeUpSection className="bg-section-2" aria-labelledby="about-us-title">
       <Container>
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(220px,320px)_1fr] lg:gap-14">
           <div>
@@ -46,6 +47,6 @@ export function AboutUs() {
           </div>
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

@@ -1,4 +1,5 @@
 import { Container } from '../ui/Container'
+import { FadeUpSection } from '../ui/FadeUpSection'
 
 const SCAN_FORM_URL = 'https://forms.gle/s3cnmZ7PSuxdo4Yp9'
 const CALENDLY_URL = 'https://calendly.com/vanborglimited/van_borg_sales_call'
@@ -25,9 +26,9 @@ export function ContactOptions({
   lead?: string
 }) {
   return (
-    <section
+    <FadeUpSection
       id="contact"
-      className={`section section--contact ${background} contact-options`}
+      className={`section--contact ${background} contact-options`}
       aria-labelledby="contact-options-title"
     >
       <Container>
@@ -88,6 +89,6 @@ export function ContactOptions({
           </div>
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

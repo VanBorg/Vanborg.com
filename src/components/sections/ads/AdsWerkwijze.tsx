@@ -1,4 +1,5 @@
 import { Container } from '../../ui/Container'
+import { FadeUpSection } from '../../ui/FadeUpSection'
 
 const stappen = [
   {
@@ -25,7 +26,7 @@ const stappen = [
 
 export function AdsWerkwijze() {
   return (
-    <section className="section bg-section-1" aria-labelledby="ads-werkwijze-title">
+    <FadeUpSection className="bg-section-1" aria-labelledby="ads-werkwijze-title">
       <Container>
         <div className="text-center">
           <h2 id="ads-werkwijze-title" className="heading-section">
@@ -56,6 +57,6 @@ export function AdsWerkwijze() {
           </div>
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

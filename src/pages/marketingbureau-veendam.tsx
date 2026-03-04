@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Navbar } from '../components/layout/Navbar'
 import { Footer } from '../components/layout/Footer'
 import { Container } from '../components/ui/Container'
+import { FadeUpSection } from '../components/ui/FadeUpSection'
 import { ContactOptions } from '../components/sections/ContactOptions'
 import {
   buildBreadcrumbSchema,
@@ -105,7 +106,7 @@ export default function MarketingbureauVeendamPage() {
         </section>
 
         {/* Waarom een marketingbureau in Veendam? */}
-        <section className="section bg-section-2 py-10 lg:py-14">
+        <FadeUpSection className="bg-section-2 py-10 lg:py-14">
           <Container>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="heading-section">Waarom een marketingbureau in Veendam?</h2>
@@ -124,10 +125,10 @@ export default function MarketingbureauVeendamPage() {
               </p>
             </div>
           </Container>
-        </section>
+        </FadeUpSection>
 
         {/* Onze diensten in Veendam */}
-        <section className="section bg-section-1 py-10 lg:py-14">
+        <FadeUpSection className="bg-section-1 py-10 lg:py-14">
           <Container>
             <h2 className="heading-section">Onze diensten in Veendam</h2>
             <p className="mt-3 text-section-body max-w-2xl">
@@ -232,10 +233,10 @@ export default function MarketingbureauVeendamPage() {
               </li>
             </ul>
           </Container>
-        </section>
+        </FadeUpSection>
 
         {/* Werkwijze */}
-        <section className="section bg-section-2 py-10 lg:py-14">
+        <FadeUpSection className="bg-section-2 py-10 lg:py-14">
           <Container>
             <h2 className="heading-section">Werkwijze voor bedrijven in Veendam</h2>
             <div className="mt-6 grid gap-6 md:grid-cols-4">
@@ -265,10 +266,10 @@ export default function MarketingbureauVeendamPage() {
               </div>
             </div>
           </Container>
-        </section>
+        </FadeUpSection>
 
         {/* FAQ */}
-        <section className="section bg-section-1 py-10 lg:py-14">
+        <FadeUpSection className="bg-section-1 py-10 lg:py-14">
           <Container>
             <h2 className="heading-section">Veelgestelde vragen over internetmarketing in Veendam</h2>
             <div className="mt-6 space-y-6 max-w-3xl">
@@ -296,7 +297,7 @@ export default function MarketingbureauVeendamPage() {
               </div>
             </div>
           </Container>
-        </section>
+        </FadeUpSection>
 
         <ContactOptions
           background="bg-section-1"

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Navbar } from '../components/layout/Navbar'
 import { Footer } from '../components/layout/Footer'
 import { Container } from '../components/ui/Container'
+import { FadeUpSection } from '../components/ui/FadeUpSection'
 import { ContactOptions } from '../components/sections/ContactOptions'
 import {
   buildBreadcrumbSchema,
@@ -104,7 +105,7 @@ export default function GoogleBedrijfsprofielVeendamPage() {
         </section>
 
         {/* Wat we optimaliseren */}
-        <section className="section bg-section-2 py-10 lg:py-14">
+        <FadeUpSection className="bg-section-2 py-10 lg:py-14">
           <Container>
             <h2 className="heading-section">Wat we optimaliseren</h2>
             <p className="mt-3 text-section-body max-w-2xl">
@@ -182,10 +183,10 @@ export default function GoogleBedrijfsprofielVeendamPage() {
               </li>
             </ul>
           </Container>
-        </section>
+        </FadeUpSection>
 
         {/* Traject */}
-        <section className="section bg-section-1 py-10 lg:py-14">
+        <FadeUpSection className="bg-section-1 py-10 lg:py-14">
           <Container>
             <h2 className="heading-section">Hoe verloopt een GBP-traject?</h2>
             <div className="mt-6 grid gap-6 md:grid-cols-4">
@@ -215,10 +216,10 @@ export default function GoogleBedrijfsprofielVeendamPage() {
               </div>
             </div>
           </Container>
-        </section>
+        </FadeUpSection>
 
         {/* GBP + website + lokale SEO */}
-        <section className="section bg-section-2 py-10 lg:py-14">
+        <FadeUpSection className="bg-section-2 py-10 lg:py-14">
           <Container>
             <h2 className="heading-section">GBP, website en lokale SEO werken samen</h2>
             <div className="mt-4 grid gap-8 lg:grid-cols-2 lg:items-start">
@@ -255,10 +256,10 @@ export default function GoogleBedrijfsprofielVeendamPage() {
               </div>
             </div>
           </Container>
-        </section>
+        </FadeUpSection>
 
         {/* FAQ */}
-        <section className="section bg-section-1 py-10 lg:py-14">
+        <FadeUpSection className="bg-section-1 py-10 lg:py-14">
           <Container>
             <h2 className="heading-section">Veelgestelde vragen over GBP in Veendam</h2>
             <div className="mt-6 space-y-6 max-w-3xl">
@@ -286,7 +287,7 @@ export default function GoogleBedrijfsprofielVeendamPage() {
               </div>
             </div>
           </Container>
-        </section>
+        </FadeUpSection>
 
         <ContactOptions
           background="bg-section-1"

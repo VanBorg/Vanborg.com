@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { Navbar } from '../components/layout/Navbar'
 import { Footer } from '../components/layout/Footer'
 import { Container } from '../components/ui/Container'
+import { FadeUpSection } from '../components/ui/FadeUpSection'
 import { ContactOptions } from '../components/sections/ContactOptions'
 import {
   getLocationBySlug,
@@ -70,7 +71,7 @@ function LocatieContent({ location }: { location: LocationPage }) {
         </section>
 
         {/* Tekst + kaart */}
-        <section className="section bg-section-2 py-10 lg:py-14" aria-labelledby="diensten-title">
+        <FadeUpSection className="bg-section-2 py-10 lg:py-14" aria-labelledby="diensten-title">
           <Container>
             <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
               {/* Linker kolom: diensten */}
@@ -126,7 +127,7 @@ function LocatieContent({ location }: { location: LocationPage }) {
               </div>
             </div>
           </Container>
-        </section>
+        </FadeUpSection>
 
         <ContactOptions
           background="bg-section-1"

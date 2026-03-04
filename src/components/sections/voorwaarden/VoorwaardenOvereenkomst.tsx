@@ -1,8 +1,9 @@
 import { Container } from '../../ui/Container'
+import { FadeUpSection } from '../../ui/FadeUpSection'
 
 export function VoorwaardenOvereenkomst() {
   return (
-    <section className="section bg-section-1" aria-labelledby="voorwaarden-overeenkomst-title">
+    <FadeUpSection className="bg-section-1" aria-labelledby="voorwaarden-overeenkomst-title">
       <Container>
         <div className="legal-content">
           <div className="legal-section__header">
@@ -45,6 +46,6 @@ export function VoorwaardenOvereenkomst() {
         </div>
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

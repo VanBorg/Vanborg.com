@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Container } from '../../ui/Container'
+import { FadeUpSection } from '../../ui/FadeUpSection'
 
 interface Dienst {
   naam: string
@@ -155,7 +156,7 @@ export function PrijzenTabel() {
   }
 
   return (
-    <section className="section bg-section-2" aria-labelledby="prijzen-tabel-title">
+    <FadeUpSection className="bg-section-2" aria-labelledby="prijzen-tabel-title">
       <Container>
         <h2 id="prijzen-tabel-title" className="sr-only">
           Prijsoverzicht
@@ -216,6 +217,6 @@ export function PrijzenTabel() {
           </table>
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

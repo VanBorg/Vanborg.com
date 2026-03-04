@@ -1,4 +1,5 @@
 import { Container } from '../../ui/Container'
+import { FadeUpSection } from '../../ui/FadeUpSection'
 
 const SCAN_FORM_URL = 'https://forms.gle/s3cnmZ7PSuxdo4Yp9'
 const CALENDLY_URL = 'https://calendly.com/vanborglimited/van_borg_sales_call'
@@ -17,9 +18,9 @@ const callBullets = [
 
 export function AdsCTA() {
   return (
-    <section
+    <FadeUpSection
       id="contact"
-      className="section section--contact bg-section-1 contact-options"
+      className="section--contact bg-section-1 contact-options"
       aria-labelledby="ads-cta-title"
     >
       <Container>
@@ -80,6 +81,6 @@ export function AdsCTA() {
           </div>
         </div>
       </Container>
-    </section>
+    </FadeUpSection>
   )
 }

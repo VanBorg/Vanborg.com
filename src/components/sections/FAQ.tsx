@@ -1,5 +1,6 @@
 import { useState, useCallback, type ReactNode } from 'react'
 import { Container } from '../ui/Container'
+import { FadeUpSection } from '../ui/FadeUpSection'
 import { LOCATION_PAGES } from '../../data/locations'
 
 interface FAQQuestion {
@@ -368,7 +369,7 @@ export function FAQ() {
   }, [])
 
   return (
-    <section className="section bg-section-1" aria-labelledby="faq-title">
+    <FadeUpSection className="bg-section-1" aria-labelledby="faq-title">
       <Container>
         <div className="text-center">
           <h2 id="faq-title" className="heading-section">
@@ -459,6 +460,6 @@ export function FAQ() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd(faqData)) }}
       />
-    </section>
+    </FadeUpSection>
   )
 }
