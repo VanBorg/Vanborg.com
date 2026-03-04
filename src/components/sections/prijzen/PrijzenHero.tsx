@@ -6,7 +6,7 @@ const CALENDLY_URL = 'https://calendly.com/vanborglimited/van_borg_sales_call'
 
 export function PrijzenHero() {
   return (
-    <section className="section bg-section-1 py-12 lg:py-20">
+    <section id="page-hero" className="section bg-section-1 py-12 lg:py-20">
       <Container>
         <div className="max-w-2xl text-center mx-auto">
           <h1 className="heading-hero">Prijzen</h1>

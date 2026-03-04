@@ -69,7 +69,7 @@ export default function GoogleBedrijfsprofielVeendamPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="section bg-section-1 py-12 lg:py-20">
+        <section id="page-hero" className="section bg-section-1 py-12 lg:py-20">
           <Container>
             <div className="max-w-2xl text-center mx-auto">
               <h1 className="heading-hero">Google Bedrijfsprofiel in Veendam</h1>

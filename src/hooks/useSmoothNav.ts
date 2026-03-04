@@ -26,7 +26,9 @@ export function useSmoothNav() {
       } else if (!isHash) {
         e.preventDefault()
         navigate(href)
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        // On cross-page navigation, jump directly to top to avoid
+        // playing scroll-based animations while the viewport scrolls up.
+        window.scrollTo({ top: 0, behavior: 'auto' })
       }
     },
     [pathname, navigate],

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { useFadeUpContext } from '../components/ui/FadeUpProvider'
 
 interface UseInViewOptions {
   offset?: number
@@ -18,6 +19,7 @@ export function useInView<T extends Element = Element>(
 ): UseInViewResult<T> {
   const [isInView, setIsInView] = useState(false)
   const nodeRef = useRef<T | null>(null)
+  const { resetToken } = useFadeUpContext()
 
   const checkInView = useCallback(() => {
     const node = nodeRef.current
@@ -43,10 +45,6 @@ export function useInView<T extends Element = Element>(
   const ref = useCallback(
     (node: T | null) => {
       nodeRef.current = node
-
-      if (node) {
-        checkInView()
-      }
     },
     [checkInView],
   )
@@ -67,15 +65,18 @@ export function useInView<T extends Element = Element>(
 
     window.addEventListener('scroll', handler, { passive: true })
     window.addEventListener('resize', handler)
-
-    // Initial check on mount
-    handler()
-
     return () => {
       window.removeEventListener('scroll', handler)
       window.removeEventListener('resize', handler)
     }
   }, [checkInView, isInView])
+
+  useEffect(() => {
+    // When the hero triggers a global reset, mark this section as not in view again.
+    if (isInView) {
+      setIsInView(false)
+    }
+  }, [resetToken])
 
   return { ref, isInView }
 }

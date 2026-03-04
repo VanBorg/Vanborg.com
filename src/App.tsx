@@ -3,6 +3,9 @@ import { Routes, Route } from 'react-router-dom'
 import { WhatsAppWidget } from './components/ui/WhatsAppWidget'
 import { AanbiedingPopup } from './components/ui/AanbiedingPopup'
 import { CookieBanner } from './components/ui/CookieBanner'
+import { ScrollToTop } from './components/ui/ScrollToTop'
+import { FadeUpProvider } from './components/ui/FadeUpProvider'
+import { HeroResetWatcher } from './components/ui/HeroResetWatcher'
 
 const HomePage = lazy(() => import('./pages/index'))
 const RankingPage = lazy(() => import('./pages/ranking'))
@@ -27,29 +30,33 @@ function App() {
   return (
     <>
       <Suspense fallback={null}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/ranking" element={<RankingPage />} />
-          <Route path="/ads" element={<AdsPage />} />
-          <Route path="/website" element={<WebsitePage />} />
-          <Route path="/aanbieding" element={<SalePage />} />
-          <Route path="/prijzen" element={<PrijzenPage />} />
-          <Route path="/voorwaarden" element={<VoorwaardenPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/locatie" element={<LocatieOverzichtPage />} />
-          <Route path="/locatie/:slug" element={<LocatiePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route
-            path="/marketingbureau-veendam"
-            element={<MarketingbureauVeendamPage />}
-          />
-          <Route
-            path="/google-bedrijfsprofiel-veendam"
-            element={<GoogleBedrijfsprofielVeendamPage />}
-          />
-          <Route path="/404" element={<NotFoundPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <FadeUpProvider>
+          <ScrollToTop />
+          <HeroResetWatcher />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/ranking" element={<RankingPage />} />
+            <Route path="/ads" element={<AdsPage />} />
+            <Route path="/website" element={<WebsitePage />} />
+            <Route path="/aanbieding" element={<SalePage />} />
+            <Route path="/prijzen" element={<PrijzenPage />} />
+            <Route path="/voorwaarden" element={<VoorwaardenPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/locatie" element={<LocatieOverzichtPage />} />
+            <Route path="/locatie/:slug" element={<LocatiePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route
+              path="/marketingbureau-veendam"
+              element={<MarketingbureauVeendamPage />}
+            />
+            <Route
+              path="/google-bedrijfsprofiel-veendam"
+              element={<GoogleBedrijfsprofielVeendamPage />}
+            />
+            <Route path="/404" element={<NotFoundPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </FadeUpProvider>
       </Suspense>
     <WhatsAppWidget />
     <AanbiedingPopup />
