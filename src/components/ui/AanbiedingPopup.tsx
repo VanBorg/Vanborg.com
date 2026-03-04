@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const STORAGE_KEY = 'aanbieding-popup-v2'
-const DELAY_MS = 3_000
+const DELAY_MS = 7_000
 const DISMISS_HOURS = 24
 
 export function AanbiedingPopup() {
