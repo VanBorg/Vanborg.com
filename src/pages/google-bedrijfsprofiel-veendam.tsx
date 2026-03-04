@@ -4,12 +4,39 @@ import { Navbar } from '../components/layout/Navbar'
 import { Footer } from '../components/layout/Footer'
 import { Container } from '../components/ui/Container'
 import { ContactOptions } from '../components/sections/ContactOptions'
+import {
+  buildBreadcrumbSchema,
+  buildServiceSchema,
+  stringifySchema,
+} from '../data/schema'
 
+const BASE_URL = 'https://vanborg.com'
 const CANONICAL = 'https://vanborg.com/google-bedrijfsprofiel-veendam'
 const SCAN_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSdbAT6P9ocdaXFZhqNxdgLOvTUBGpv02TAS9LpT6xJmux7wuw/viewform?usp=dialog'
+const ORG_ID = 'https://vanborg.com/#organization'
+const PAGE_SERVICE_ID = `${CANONICAL}#service`
+const BREADCRUMB_ID = `${CANONICAL}#breadcrumb`
 
 export default function GoogleBedrijfsprofielVeendamPage() {
+  const serviceSchema = buildServiceSchema({
+    id: PAGE_SERVICE_ID,
+    name: 'Google Bedrijfsprofiel optimalisatie in Veendam',
+    description:
+      'Optimalisatie van Google Bedrijfsprofielen voor bedrijven in Veendam met focus op zichtbaarheid in Google Maps en meer aanvragen.',
+    url: CANONICAL,
+    providerId: ORG_ID,
+    areaServed: ['Veendam', 'Wildervank', 'Hoogezand', 'Winschoten'],
+  })
+
+  const breadcrumbSchema = buildBreadcrumbSchema({
+    id: BREADCRUMB_ID,
+    items: [
+      { name: 'Home', item: BASE_URL },
+      { name: 'Google Bedrijfsprofiel Veendam', item: CANONICAL },
+    ],
+  })
+
   return (
     <>
       <Helmet>
@@ -30,6 +57,14 @@ export default function GoogleBedrijfsprofielVeendamPage() {
           content="h1: Google Bedrijfsprofiel in Veendam; h2: Wat we optimaliseren, Hoe verloopt een GBP-traject, GBP + website + lokale SEO, Veelgestelde vragen"
         />
       </Helmet>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: stringifySchema(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: stringifySchema(breadcrumbSchema) }}
+      />
       <Navbar />
       <main>
         {/* Hero */}

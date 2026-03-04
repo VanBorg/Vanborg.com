@@ -8,7 +8,7 @@ export function Hero() {
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-center lg:gap-12">
           <div className="max-w-lg">
             <h1 className="heading-hero">
-            Het nummer één internetmarketing bureau van Veendam en e.o.
+            Het nummer één in internetmarketing in Veendam en e.o.
             </h1>
             <h2 className="heading-hero-subtitle mt-3">
               Binnen 90 dagen een Top 3 positie op Google.
