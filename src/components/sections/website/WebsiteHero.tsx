@@ -1,7 +1,6 @@
+import { Link } from 'react-router-dom'
 import { Container } from '../../ui/Container'
 
-const SCAN_FORM_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLSfbsa-4CWu9Rh0yBDLrVeXYbtXfHlcBJaxqYOQGWeKPDriaMg/viewform?usp=publish-editor'
 const CALENDLY_URL =
   'https://calendly.com/vanborglimited/van_borg_sales_call'
 
@@ -11,32 +10,26 @@ export function WebsiteHero() {
       <Container>
         <div className="max-w-2xl text-center mx-auto">
           <h1 className="heading-hero">
-            SEO-Websites
+            Website op maat
           </h1>
           <h2 className="heading-hero-subtitle mt-3">
-            Een website die gevonden wordt en bezoekers omzet in klanten.
+          Volledig custom gebouwd. Geen templates, geen pagebuilders.
           </h2>
           <p className="text-section-body mt-3 text-neutral-500">
-            Snel, duidelijk en geoptimaliseerd voor zoekmachines. Gebouwd met moderne
-            technieken.
+            Snelle, moderne code die precies doet wat jij nodig hebt.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <a
-              href={SCAN_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              Check mijn huidige ranking
-            </a>
             <a
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary"
+              className="btn-primary"
             >
-              Bespreek mijn kansen
+              Bespreek mijn project
             </a>
+            <Link to="/prijzen#prijzen-tabel" className="btn-secondary">
+              Bekijk prijzen
+            </Link>
           </div>
         </div>
       </Container>

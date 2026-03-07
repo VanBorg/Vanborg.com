@@ -20,7 +20,7 @@ export function WebsiteCTA() {
   return (
     <FadeUpSection
       id="contact"
-      className="section--contact bg-section-1 contact-options"
+      className="section--contact bg-section-2 contact-options"
       aria-labelledby="website-cta-title"
     >
       <Container>

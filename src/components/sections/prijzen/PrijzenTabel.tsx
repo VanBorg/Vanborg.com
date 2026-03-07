@@ -156,7 +156,7 @@ export function PrijzenTabel() {
   }
 
   return (
-    <FadeUpSection className="bg-section-2" aria-labelledby="prijzen-tabel-title">
+    <FadeUpSection id="prijzen-tabel" className="bg-section-2" aria-labelledby="prijzen-tabel-title">
       <Container>
         <h2 id="prijzen-tabel-title" className="sr-only">
           Prijsoverzicht

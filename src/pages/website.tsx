@@ -2,9 +2,10 @@ import { Helmet } from 'react-helmet-async'
 import { Navbar } from '../components/layout/Navbar'
 import { Footer } from '../components/layout/Footer'
 import { WebsiteHero } from '../components/sections/website/WebsiteHero'
-import { WebsiteVoordelen } from '../components/sections/website/WebsiteVoordelen'
-import { WebsiteWerkwijze } from '../components/sections/website/WebsiteWerkwijze'
-import { WebsitePrijs } from '../components/sections/website/WebsitePrijs'
+import { WebsiteInfoBlock } from '../components/sections/website/WebsiteInfoBlock'
+import { WebsiteSeoProduct } from '../components/sections/website/WebsiteSeoProduct'
+import { WebsiteAndereTypes } from '../components/sections/website/WebsiteAndereTypes'
+import { WebsiteIntegraties } from '../components/sections/website/WebsiteIntegraties'
 import { WebsiteCTA } from '../components/sections/website/WebsiteCTA'
 
 const CANONICAL = 'https://vanborg.com/website'
@@ -13,32 +14,29 @@ export default function WebsitePage() {
   return (
     <>
       <Helmet>
-        <title>SEO-website laten maken | Van Borg – Snelle websites die converteren</title>
+        <title>Website laten maken | Van Borg – Custom websites voor elk doel</title>
         <meta
           name="description"
-          content="Van Borg bouwt SEO- en sales-geoptimaliseerde websites voor lokale bedrijven in Nederland. Focus op snelheid, vertrouwen en meer aanvragen via je website."
+          content="Van Borg bouwt volledig custom websites: van SEO-websites en webshops tot portfolio's en maatwerk. Gebouwd met React, TypeScript en Tailwind."
         />
         <link rel="canonical" href={CANONICAL} />
         <meta property="og:url" content={CANONICAL} />
         <meta
           property="og:title"
-          content="SEO-website laten maken | Van Borg"
+          content="Website laten maken | Van Borg"
         />
         <meta
           property="og:description"
-          content="Conversiegerichte websites met sterke technische SEO en heldere call-to-actions."
-        />
-        <meta
-          name="document-outline"
-          content="h1: SEO-website; h2: voordelen en proces; h3: oplevering en prijzen"
+          content="Custom websites gebouwd met de nieuwste technologie. SEO-websites, webshops, portfolio's en meer."
         />
       </Helmet>
       <Navbar />
       <main>
         <WebsiteHero />
-        <WebsiteVoordelen />
-        <WebsiteWerkwijze />
-        <WebsitePrijs />
+        <WebsiteInfoBlock />
+        <WebsiteSeoProduct />
+        <WebsiteAndereTypes />
+        <WebsiteIntegraties />
         <WebsiteCTA />
       </main>
       <Footer />
