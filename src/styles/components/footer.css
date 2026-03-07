@@ -181,6 +181,14 @@
   color: var(--accent-green);
 }
 
+/* On mobile: hide Werkgebieden list to save space; full list on /locatie */
+@media (max-width: 767px) {
+  .footer__werkgebieden,
+  .footer__werkgebieden + .footer__divider {
+    display: none;
+  }
+}
+
 /* ─── Footer logo (zelfde stijl als nav-logo) ─── */
 
 .footer__logo {

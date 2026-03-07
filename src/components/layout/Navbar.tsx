@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Container } from '../ui/Container'
 import { useSmoothNav } from '../../hooks/useSmoothNav'
+
+const TOP_BAR_SCROLL_THRESHOLD = 60
 
 const navLinks = [
   { label: 'Ranking', href: '/ranking' },
@@ -118,12 +120,22 @@ function SocialLinks({ className = '' }: { className?: string }) {
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [topBarVisible, setTopBarVisible] = useState(true)
   const { pathname } = useLocation()
   const handleNavClick = useSmoothNav()
 
+  useEffect(() => {
+    const onScroll = () => {
+      setTopBarVisible(window.scrollY <= TOP_BAR_SCROLL_THRESHOLD)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
-    <div className="sticky top-0 z-[200] w-full">
-      <div className="top-bar">
+    <div className="sticky top-0 z-[200] w-full bg-white/60 backdrop-blur-xl">
+      <div className={`top-bar ${!topBarVisible ? 'top-bar--collapsed' : ''}`}>
         <Container>
           <div className="top-bar__inner">
             <div className="top-bar__contact">

@@ -24,6 +24,15 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Mobile: position clearly in corner, not too far out */
+@media (max-width: 767px) {
+  .whatsapp-widget {
+    bottom: 1rem;
+    right: 1rem;
+    max-width: calc(100vw - 2rem);
+  }
+}
+
 .whatsapp-widget:hover,
 .whatsapp-widget:focus-visible {
   transform: translateY(-3px) scale(1.03);
