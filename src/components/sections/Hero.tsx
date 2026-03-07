@@ -26,7 +26,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="shrink-0 lg:w-[400px]" style={{ maxHeight: '380px' }}>
+          <div className="w-full min-w-0 max-w-full shrink-0 lg:w-[400px]" style={{ maxHeight: '380px' }}>
             <ImageComparison
               before="/Afbeeldingen/heatmap-2.png"
               after="/Afbeeldingen/heatmap-1.png"

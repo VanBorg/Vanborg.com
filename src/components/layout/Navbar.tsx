@@ -183,7 +183,7 @@ export function Navbar() {
             </a>
             <button
             type="button"
-            className="flex flex-col gap-1.5 p-2 md:hidden"
+            className="flex flex-col gap-1.5 p-2 min-w-[44px] min-h-[44px] justify-center md:hidden"
             onClick={() => setMobileOpen((o) => !o)}
             aria-expanded={mobileOpen}
             aria-label="Menu openen"
@@ -210,7 +210,7 @@ export function Navbar() {
                     )}
                     <a
                       href={link.href}
-                      className="text-sm font-medium text-neutral-600 hover:text-neutral-900"
+                      className="nav-mobile-link text-sm font-medium text-neutral-600 hover:text-neutral-900"
                       onClick={(e) => {
                         setMobileOpen(false)
                         handleNavClick(e, link.href)

@@ -73,7 +73,7 @@ export function WebsiteInfoBlock() {
             Wat wij bouwen
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
-            Elke website die wij opleveren is volledig custom. Gebouwd met de beste tools en technieken, klaar voor de toekomst.
+          Van SEO-website tot crypto website, alles volledig custom.
           </p>
         </div>
 

@@ -104,6 +104,10 @@
 
 /* Mobiel: dot links, card rechts (één rij) */
 @media (max-width: 767px) {
+  .wat-wij-doen-timeline {
+    gap: 1.5rem;
+  }
+
   .wat-wij-doen-timeline__item {
     grid-template-columns: auto 1fr;
     gap: 0 1rem;
@@ -147,6 +151,8 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .wat-wij-doen-timeline__item--left .wat-wij-doen-timeline__card-inner {
@@ -165,6 +171,7 @@
 .wat-wij-doen-timeline__media .image-doos__img {
   aspect-ratio: 16 / 10;
   max-height: 180px;
+  max-width: 100%;
   object-fit: cover;
 }
 

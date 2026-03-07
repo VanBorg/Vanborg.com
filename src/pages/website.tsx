@@ -31,7 +31,7 @@ export default function WebsitePage() {
         />
       </Helmet>
       <Navbar />
-      <main>
+      <main className="page-website">
         <WebsiteHero />
         <WebsiteInfoBlock />
         <WebsiteSeoProduct />

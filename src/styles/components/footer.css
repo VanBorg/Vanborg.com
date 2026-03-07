@@ -56,6 +56,13 @@
   gap: 1.75rem 0;
   padding-top: 2.5rem;
   padding-bottom: 1.75rem;
+  min-width: 0;
+}
+
+@media (max-width: 639px) {
+  .footer__top {
+    gap: 2rem 0;
+  }
 }
 
 /* Divider tussen secties: horizontaal op mobiel, verticaal op desktop */
@@ -114,13 +121,19 @@
   position: relative;
   flex: 0 0 auto;
   width: 100%;
+  max-width: 100%;
   aspect-ratio: 4 / 3;
   max-height: 320px;
-  max-width: 380px;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--color-neutral-200);
+}
+
+@media (min-width: 400px) {
+  .footer__map-wrap {
+    max-width: 380px;
+  }
 }
 
 .footer__map-wrap iframe {
@@ -295,6 +308,15 @@
   text-decoration: none;
   transition: color 0.2s ease;
   line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .footer__pages-list a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem 0;
+  }
 }
 
 .footer__pages-list a:hover {
