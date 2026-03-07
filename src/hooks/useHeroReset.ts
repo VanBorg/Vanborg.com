@@ -5,13 +5,17 @@ import { useFadeUpContext } from '../components/ui/FadeUpProvider'
 /**
  * Observe the hero section (#page-hero) and trigger a global fade-up reset
  * when the hero is (re)entered in the viewport.
+ * Navigation with state.preventFadeReset skips the reset (e.g. map clicks).
  */
 export function useHeroReset() {
-  const { pathname } = useLocation()
+  const { pathname, state } = useLocation()
   const { triggerReset } = useFadeUpContext()
   const hasResetForPath = useRef<string | null>(null)
 
   useEffect(() => {
+    const preventFadeReset = (state as Record<string, unknown> | null)?.preventFadeReset === true
+    if (preventFadeReset) return
+
     const hero = document.getElementById('page-hero')
     if (!hero) {
       return
@@ -47,6 +51,6 @@ export function useHeroReset() {
     return () => {
       observer.disconnect()
     }
-  }, [pathname, triggerReset])
+  }, [pathname, state, triggerReset])
 }
 

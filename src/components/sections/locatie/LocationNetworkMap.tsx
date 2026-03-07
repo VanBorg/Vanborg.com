@@ -99,7 +99,7 @@ export function LocationNetworkMap({
               eventHandlers={{
                 click: () =>
                   navigate(`/locatie/${location.slug}`, {
-                    state: { preventScrollTop: true },
+                    state: { preventScrollTop: true, preventFadeReset: true },
                   }),
               }}
             >
