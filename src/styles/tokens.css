@@ -7,12 +7,12 @@
   --accent-cyan: #06b6d4;
   --gradient-cta: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-light) 100%);
 
-  /* Section backgrounds: wit zo wit mogelijk (#ffffff), grijs met hele lichte groene tint */
-  --section-grey: #eef2ee;
+  /* Section backgrounds: wit zo wit mogelijk (#ffffff), licht grijs met lichte groene tint */
+  --section-grey: #EDF7F2;
   --section-white: #ffffff;
-  /* Zachte overgang: brede blend tussen grijs en wit, geen harde lijn */
-  --gradient-section-1: linear-gradient(to bottom, var(--section-grey) 0%, var(--section-grey) 12%, #ffffff 42%, #ffffff 100%);
-  --gradient-section-2: linear-gradient(to bottom, #ffffff 0%, #ffffff 58%, var(--section-grey) 88%, var(--section-grey) 100%);
+  /* Zachte overgang: blend gecentreerd in het midden van de sectie */
+  --gradient-section-1: linear-gradient(to bottom, var(--section-grey) 0%, var(--section-grey) 35%, #ffffff 65%, #ffffff 100%);
+  --gradient-section-2: linear-gradient(to bottom, #ffffff 0%, #ffffff 35%, var(--section-grey) 65%, var(--section-grey) 100%);
 
   /* Radii */
   --radius-sm: 0.5rem;
