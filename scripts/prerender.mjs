@@ -82,6 +82,12 @@ function buildNetlifyRedirects() {
 }
 
 async function prerender() {
+  // Write _redirects before the Puppeteer loop so a crash mid-render cannot
+  // leave the public/ catch-all in dist/, which would make every URL serve
+  // the homepage HTML (and the same canonical) to Google.
+  writeFileSync(join(distDir, '_redirects'), buildNetlifyRedirects(), 'utf-8')
+  console.log('prerender: pre-wrote dist/_redirects')
+
   const server = await createStaticServer()
   const browser = await puppeteer.launch({ headless: true })
   const page = await browser.newPage()
