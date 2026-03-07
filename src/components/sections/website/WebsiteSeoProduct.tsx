@@ -19,12 +19,14 @@ function CheckIcon() {
 }
 
 const features = [
-  'Lokale SEO-optimalisatie: dienst + plaatscombinaties die jouw klanten zoeken',
-  'Gebouwd met React & Tailwind voor razendsnelle laadtijden',
-  'Conversiegerichte indeling met duidelijke CTA\'s en leadcapture',
-  'Technische SEO-basis: sitemap, metadata, canonical tags en interne links',
-  'Hogere Google-posities voor lokale zoekopdrachten in jouw regio',
-  'Geschikt voor: loodgieters, kappers, aannemers, therapeuten, coaches en andere lokale dienstverleners',
+  'Lokale SEO-optimalisatie op dienst + plaatscombinaties die jouw klanten dagelijks zoeken',
+  'Gebouwd met React & Tailwind voor razendsnelle laadtijden en hoge PageSpeed-scores',
+  'Conversiegerichte indeling met duidelijke CTA\'s, trustsignalen en leadcapture',
+  'Volledige technische SEO-basis: sitemap, metadata, canonical tags en interne linkstructuur',
+  'Hogere Google-posities voor lokale zoekopdrachten in jouw regio én omliggende plaatsen',
+  'Mobiel geoptimaliseerd: meer dan 70% van jouw klanten zoekt via smartphone',
+  'Geschikt voor loodgieters, kappers, aannemers, therapeuten, coaches en andere lokale dienstverleners',
+  'Inclusief oplevering met instructies zodat je zelf eenvoudig tekst kunt aanpassen',
 ]
 
 export function WebsiteSeoProduct() {
@@ -36,17 +38,40 @@ export function WebsiteSeoProduct() {
           <div style={{ textAlign: 'center' }}>
             <div className="card card-bordered card-elevated ranking-prijs-card" style={{ maxWidth: '100%', textAlign: 'center' }}>
               <div className="ranking-prijs-badge">SEO Website</div>
+
               <div className="ranking-prijs-bedrag mt-4">
                 Vanaf &euro;&nbsp;1.499
               </div>
               <p className="ranking-prijs-subtekst">Eenmalig &middot; excl. btw</p>
-              <p className="text-section-body mt-4" style={{ fontSize: '0.9375rem' }}>
-                Ons vlaggenschip: een website die gevonden wordt én bezoekers omzet in klanten.
+
+              <p className="text-section-body mt-5" style={{ fontSize: '0.9375rem' }}>
+                <strong>Ons vlaggenschip:</strong> website die gevonden wordt én klanen genereert.
               </p>
-              <p className="text-section-body mt-3" style={{ fontSize: '0.9375rem' }}>
-                Inclusief homepage, tot 4 servicepagina's en locatiepagina's voor jouw werkgebied.
-                Extra pagina's vanaf €250 per pagina.
-              </p>
+
+              <div className="mt-5" style={{ textAlign: 'left', fontSize: '0.9rem', lineHeight: '1.7' }}>
+                <p><strong>Wat zit er standaard in?</strong></p>
+                <ul style={{ marginTop: '0.5rem', paddingLeft: '1rem', listStyle: 'disc' }}>
+                  <li>Homepage met sterke propositie en CTA</li>
+                  <li>Tot 3 servicepagina's geoptimaliseerd op zoekopdrachten</li>
+                  <li>Locatiepagina's voor jouw werkgebied</li>
+                  <li>Contactpagina met leadformulier</li>
+                </ul>
+              </div>
+
+              <div className="mt-5" style={{ textAlign: 'left', fontSize: '0.9rem', lineHeight: '1.7' }}>
+                <p><strong>Uitbreiden?</strong></p>
+                <p style={{ marginTop: '0.25rem' }}>Extra pagina's zijn beschikbaar <strong>vanaf €250 per pagina</strong>.</p>
+              </div>
+
+              <div className="mt-5" style={{
+                background: 'rgba(0,0,0,0.04)',
+                borderRadius: '0.5rem',
+                padding: '0.75rem 1rem',
+                fontSize: '0.875rem',
+                textAlign: 'left',
+              }}>
+                <strong>Gemiddeld resultaat:</strong> klanten zien binnen <strong>60–90 dagen</strong> een merkbare stijging in organisch verkeer vanuit Google.
+              </div>
             </div>
           </div>
 
@@ -56,7 +81,7 @@ export function WebsiteSeoProduct() {
               SEO Website
             </h2>
             <p className="mt-3 text-section-body">
-              Onze SEO-website is speciaal gebouwd voor lokale bedrijven die gevonden willen worden in Google. Elke pagina is geoptimaliseerd op de zoekcombinaties die jouw klanten gebruiken, zoals &quot;loodgieter Amsterdam&quot; of &quot;kapper Utrecht centrum&quot;. Inclusief technische SEO, conversiegerichte opzet en razendsnelle laadtijden.
+              Onze SEO-website is speciaal gebouwd voor lokale bedrijven die gevonden willen worden in Google. Elke pagina is geoptimaliseerd op de zoekcombinaties die jouw klanten gebruiken, zoals <strong>&quot;loodgieter Amsterdam&quot;</strong> of <strong>&quot;kapper Utrecht centrum&quot;</strong>. Inclusief technische SEO, conversiegerichte opzet en razendsnelle laadtijden.
             </p>
 
             <ul className="ranking-prijs-lijst mt-6">

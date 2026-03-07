@@ -1,3 +1,8 @@
+/* Scroll-anchor: ruimte boven sectie zodat de hele tabel zichtbaar is (o.a. vanaf website-pagina "Bekijk prijzen") */
+#prijzen-tabel {
+  scroll-margin-top: 5.5rem;
+}
+
 .prijzen-tabel-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
