@@ -70,7 +70,7 @@ export function WebsiteSeoProduct() {
                 fontSize: '0.875rem',
                 textAlign: 'left',
               }}>
-                <strong>Gemiddeld resultaat:</strong> klanten zien binnen <strong>60–90 dagen</strong> een merkbare stijging in organisch verkeer vanuit Google.
+                <strong>Gemiddeld resultaat:</strong> klanten zien binnen <strong>30–60 dagen</strong> een merkbare stijging in organisch verkeer vanuit Google.
               </div>
             </div>
           </div>

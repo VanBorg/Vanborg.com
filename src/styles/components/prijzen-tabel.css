@@ -118,6 +118,31 @@
   margin-top: 0.1rem;
 }
 
+/* Inline dropdown inside a table row */
+.prijzen-tabel__select {
+  display: block;
+  margin-top: 0.25rem;
+  margin-bottom: 0.1rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-neutral-800);
+  background: #fff;
+  border: 1px solid var(--color-neutral-300, #d4d4d4);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  max-width: 18rem;
+  outline-offset: 2px;
+}
+
+.prijzen-tabel__select:focus {
+  outline: 2px solid var(--accent-green);
+}
+
+.prijzen-tabel__row--selected .prijzen-tabel__select {
+  border-color: var(--accent-green);
+}
+
 /* ── Groepheaders ── */
 
 .prijzen-tabel__groep-header {
