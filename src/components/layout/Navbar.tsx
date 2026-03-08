@@ -130,6 +130,7 @@ export function Navbar() {
   const mobileToggleRef = useRef<HTMLButtonElement>(null)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
   const topBarVisibleRef = useRef(true)
+  const lastScrollYRef = useRef(0)
 
   const closeMobileMenu = useCallback(() => {
     setMobileOpen(false)
@@ -141,7 +142,22 @@ export function Navbar() {
 
     const updateTopBar = () => {
       ticking = false
-      const nextVisible = window.scrollY <= TOP_BAR_SCROLL_THRESHOLD
+      const scrollY = window.scrollY
+      const lastScrollY = lastScrollYRef.current
+      const delta = scrollY - lastScrollY
+      lastScrollYRef.current = scrollY
+
+      let nextVisible = topBarVisibleRef.current
+      if (scrollY <= TOP_BAR_AT_TOP_THRESHOLD) {
+        nextVisible = true
+      } else if (Math.abs(delta) >= SCROLL_DIRECTION_THRESHOLD) {
+        if (delta > 0) {
+          nextVisible = false
+        } else {
+          nextVisible = true
+        }
+      }
+
       if (topBarVisibleRef.current !== nextVisible) {
         topBarVisibleRef.current = nextVisible
         setTopBarVisible(nextVisible)
@@ -154,6 +170,7 @@ export function Navbar() {
       rafId = window.requestAnimationFrame(updateTopBar)
     }
 
+    lastScrollYRef.current = window.scrollY
     updateTopBar()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => {
