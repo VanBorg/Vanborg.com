@@ -25,6 +25,7 @@ const MarketingbureauVeendamPage = lazy(
 const GoogleBedrijfsprofielVeendamPage = lazy(
   () => import('./pages/google-bedrijfsprofiel-veendam'),
 )
+const JobsPage = lazy(() => import('./pages/jobs'))
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path="/locatie" element={<LocatieOverzichtPage />} />
             <Route path="/locatie/:slug" element={<LocatiePage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/jobs" element={<JobsPage />} />
             <Route
               path="/marketingbureau-veendam"
               element={<MarketingbureauVeendamPage />}

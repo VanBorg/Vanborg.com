@@ -24,7 +24,6 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Mobile: position clearly in corner, not too far out */
 @media (max-width: 767px) {
   .whatsapp-widget {
     bottom: 1rem;
@@ -51,7 +50,6 @@
   line-height: 1;
 }
 
-/* On very small screens collapse to icon-only */
 @media (max-width: 360px) {
   .whatsapp-widget {
     padding: 0.875rem;

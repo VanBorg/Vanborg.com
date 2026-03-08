@@ -4,10 +4,10 @@ import { Container } from '../ui/Container'
 import { ThemeToggle } from '../ui/ThemeToggle'
 import { useSmoothNav } from '../../hooks/useSmoothNav'
 
-/** Show top bar when at top of page (scrollY below this) */
-const TOP_BAR_AT_TOP_THRESHOLD = 80
-/** Min scroll delta to consider direction (avoid jitter) */
-const SCROLL_DIRECTION_THRESHOLD = 5
+/** Show top bar when at top of page (scrollY below this). Generous zone to avoid jitter. */
+const TOP_BAR_AT_TOP_THRESHOLD = 120
+/** Min scroll delta to consider direction (avoid jitter when scrolling near threshold). */
+const SCROLL_DIRECTION_THRESHOLD = 18
 
 const navLinks = [
   { label: 'Ranking', href: '/ranking' },
@@ -16,11 +16,25 @@ const navLinks = [
   { label: 'Prijzen', href: '/prijzen' },
   { label: 'Werkgebieden', href: '/locatie' },
   { label: 'Aanbieding', href: '/aanbieding', badge: 'Tijdelijk' },
+  { label: 'Vacatures', href: '/jobs' },
 ]
 
 const topBarEmail = 'Info@vanborglimited.com'
 const topBarPhone = '+31 644732266'
 const topBarTelHref = 'tel:+31644732266'
+/** Gmail compose in new tab – meest gebruikte webmail, opent met Aan: vooringevuld. */
+const topBarMailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(topBarEmail)}`
+
+/** Open tel: by simulating a link click so the OS opens the dialer. */
+function openProtocolLink(href: string) {
+  const a = document.createElement('a')
+  a.href = href
+  a.rel = 'noopener noreferrer'
+  a.style.display = 'none'
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+}
 
 /** Google Business Profile / Google profile share link – gebruik deze overal waar naar het Google-profiel gelinkt wordt */
 export const GOOGLE_PROFILE_URL = 'https://share.google/Eeexwb2nlD1chcOAo'
@@ -250,11 +264,25 @@ export function Navbar() {
                 <IconClock />
                 <span>24/7 Bereikbaar</span>
               </span>
-              <a href={`mailto:${topBarEmail}`} className="top-bar__item top-bar__link">
+              <a
+                href={topBarMailComposeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="top-bar__item top-bar__link"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <IconMail />
                 <span>{topBarEmail}</span>
               </a>
-              <a href={topBarTelHref} className="top-bar__item top-bar__link">
+              <a
+                href={topBarTelHref}
+                className="top-bar__item top-bar__link"
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  openProtocolLink(topBarTelHref)
+                }}
+              >
                 <IconPhone />
                 <span>{topBarPhone}</span>
               </a>
@@ -373,11 +401,25 @@ export function Navbar() {
                     <IconClock />
                     <span>24/7 Bereikbaar</span>
                   </span>
-                  <a href={`mailto:${topBarEmail}`} className="inline-flex items-center gap-2 hover:text-[var(--text-primary)]">
+                  <a
+                    href={topBarMailComposeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 hover:text-[var(--text-primary)]"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <IconMail />
                     <span>{topBarEmail}</span>
                   </a>
-                  <a href={topBarTelHref} className="inline-flex items-center gap-2 hover:text-[var(--text-primary)]">
+                  <a
+                    href={topBarTelHref}
+                    className="inline-flex items-center gap-2 hover:text-[var(--text-primary)]"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      openProtocolLink(topBarTelHref)
+                    }}
+                  >
                     <IconPhone />
                     <span>{topBarPhone}</span>
                   </a>

@@ -13,9 +13,10 @@ interface UseInViewResult<T extends Element> {
 /**
  * IntersectionObserver-based in-view detection.
  * Sections start hidden and fade up once they enter the viewport.
+ * offset=0 uses full viewport so sections trigger reliably on refresh and scroll.
  */
 export function useInView<T extends Element = Element>(
-  { offset = 0.3 }: UseInViewOptions = {},
+  { offset = 0 }: UseInViewOptions = {},
 ): UseInViewResult<T> {
   const [isInView, setIsInView] = useState(false)
   const nodeRef = useRef<T | null>(null)
@@ -36,7 +37,7 @@ export function useInView<T extends Element = Element>(
       return
     }
 
-    const rootMargin = `0px 0px -${Math.round(offset * 100)}% 0px`
+    const rootMargin = offset > 0 ? `0px 0px -${Math.round(offset * 100)}% 0px` : '0px'
 
     observerRef.current = new IntersectionObserver(
       ([entry]) => {

@@ -23,6 +23,7 @@ const navPages = [
   { label: 'Werkgebieden', href: '/locatie' },
   { label: 'Marketingbureau Veendam', href: '/marketingbureau-veendam' },
   { label: 'Google Bedrijfsprofiel Veendam', href: '/google-bedrijfsprofiel-veendam' },
+  { label: 'Vacatures', href: '/jobs' },
 ]
 
 export function Footer() {
