@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import { Container } from '../../ui/Container'
 import { FadeUpSection } from '../../ui/FadeUpSection'
-
 interface WebsiteType {
   naam: string
   prijsLabel: string
   prijsNum: number
   isSeoWebsite: boolean
 }
-
 const websiteTypes: WebsiteType[] = [
   { naam: 'SEO Website',             prijsLabel: 'Vanaf € 1.499', prijsNum: 1499, isSeoWebsite: true  },
   { naam: 'Webshop',                 prijsLabel: 'Vanaf € 1.999', prijsNum: 1999, isSeoWebsite: false },
@@ -20,14 +18,12 @@ const websiteTypes: WebsiteType[] = [
   { naam: 'Crypto & Web3',           prijsLabel: 'Vanaf € 1.999', prijsNum: 1999, isSeoWebsite: false },
   { naam: 'Maatwerk & Portalen',     prijsLabel: 'Prijs op aanvraag', prijsNum: 0, isSeoWebsite: false },
 ]
-
 interface AdsTier {
   label: string
   dagBudget: string
   prijsLabel: string
   prijsNum: number
 }
-
 const adsTiers: AdsTier[] = [
   { label: 'Starten',     dagBudget: '€10/dag', prijsLabel: '€ 549',   prijsNum: 549  },
   { label: 'Groeien',     dagBudget: '€20/dag', prijsLabel: '€ 899',   prijsNum: 899  },
@@ -35,132 +31,130 @@ const adsTiers: AdsTier[] = [
   { label: 'Domineren',   dagBudget: '€40/dag', prijsLabel: '€ 1.599', prijsNum: 1599 },
   { label: 'Marktleider', dagBudget: '€50/dag', prijsLabel: '€ 1.949', prijsNum: 1949 },
 ]
-
-const LOKALE_SEO = 'Lokale Top 3 Ranking'
-const WEBSITE    = 'Website'
-const SEO_ADD_ON = 'Lokale SEO toevoegen'
-const BUNDEL     = 'Aanbieding (Ranking + SEO Website)'
-const RETAINER   = 'Lokale SEO Retainer'
-const ADS        = 'Google Ads'
-
-const uitbreidingen = [
-  { naam: 'API & Webhookkoppeling',       prijsLabel: 'Vanaf € 150', prijsNum: 150 },
-  { naam: 'Maatwerk calculator',          prijsLabel: 'Vanaf € 300', prijsNum: 300 },
-  { naam: 'Boekings- / afsprakensysteem', prijsLabel: 'Vanaf € 200', prijsNum: 200 },
-  { naam: 'Betaalintegratie',             prijsLabel: 'Vanaf € 150', prijsNum: 150 },
-  { naam: 'CRM-koppeling',                prijsLabel: 'Vanaf € 200', prijsNum: 200 },
-  { naam: 'Ledenportaal / loginomgeving', prijsLabel: 'Vanaf € 600', prijsNum: 600 },
+const K = {
+  LOKALE_SEO: 'LOKALE_SEO',
+  WEBSITE:    'WEBSITE',
+  SEO_ADD_ON: 'SEO_ADD_ON',
+  BUNDEL:     'BUNDEL',
+  RETAINER:   'RETAINER',
+  ADS:        'ADS',
+} as const
+const uitbreidingen: Array<{ key: string; naam: string; prijsLabel: string; prijsNum: number }> = [
+  { key: 'api',     naam: 'API & Webhookkoppeling',       prijsLabel: 'Vanaf € 150', prijsNum: 150 },
+  { key: 'calc',    naam: 'Maatwerk calculator',          prijsLabel: 'Vanaf € 300', prijsNum: 300 },
+  { key: 'boeking', naam: 'Boekings- / afsprakensysteem', prijsLabel: 'Vanaf € 200', prijsNum: 200 },
+  { key: 'betaal',  naam: 'Betaalintegratie',             prijsLabel: 'Vanaf € 150', prijsNum: 150 },
+  { key: 'crm',     naam: 'CRM-koppeling',               prijsLabel: 'Vanaf € 200', prijsNum: 200 },
+  { key: 'portaal', naam: 'Ledenportaal / loginomgeving', prijsLabel: 'Vanaf € 600', prijsNum: 600 },
 ]
-
-function formatBedrag(bedrag: number) {
-  return '€ ' + bedrag.toLocaleString('nl-NL')
+function formatBedrag(n: number) {
+  return '€ ' + n.toLocaleString('nl-NL')
 }
-
 export function PrijzenTabel() {
-  const [geselecteerd, setGeselecteerd] = useState<Set<string>>(new Set())
-  const [websiteTypeIdx, setWebsiteTypeIdx] = useState(0)
-  const [adsTierIdx, setAdsTierIdx] = useState(2)
-
-  const selectedWebsite = websiteTypes[websiteTypeIdx]
-  const selectedAds = adsTiers[adsTierIdx]
-  const isSeoWebsiteGekozen = selectedWebsite.isSeoWebsite
-  const bundelActief = geselecteerd.has(BUNDEL)
-
-  const lokaleSeoDimmed = bundelActief
-  const websiteDimmed   = bundelActief
-  const addOnDimmed     = bundelActief || isSeoWebsiteGekozen
-
-  function toggle(naam: string, disabled: boolean) {
-    if (disabled) return
-    setGeselecteerd((prev) => {
+  const [selected, setSelected]     = useState<Set<string>>(new Set())
+  const [websiteIdx, setWebsiteIdx] = useState(0)
+  const [adsIdx, setAdsIdx]         = useState(2)
+  const website   = websiteTypes[websiteIdx]
+  const ads       = adsTiers[adsIdx]
+  const isSeoSite = website.isSeoWebsite
+  const bundelAan = selected.has(K.BUNDEL)
+  const addOnDimmed = bundelAan || isSeoSite
+  function isOn(key: string) {
+    return selected.has(key)
+  }
+  function toggle(key: string) {
+    setSelected((prev) => {
       const next = new Set(prev)
-      if (next.has(naam)) {
-        next.delete(naam)
-        if (naam === BUNDEL) {
-          next.delete(LOKALE_SEO)
-          next.delete(WEBSITE)
+      if (next.has(key)) {
+        next.delete(key)
+        if (key === K.BUNDEL) {
+          next.delete(K.LOKALE_SEO)
+          next.delete(K.WEBSITE)
         }
         return next
       }
-      if (naam === BUNDEL) {
-        next.delete(LOKALE_SEO)
-        next.delete(WEBSITE)
-        next.delete(SEO_ADD_ON)
+      if (key === K.BUNDEL) {
+        next.delete(K.LOKALE_SEO)
+        next.delete(K.WEBSITE)
+        next.delete(K.SEO_ADD_ON)
+        next.add(K.BUNDEL)
+        return next
       }
-      if ((naam === LOKALE_SEO || naam === WEBSITE) && next.has(BUNDEL)) {
-        next.delete(BUNDEL)
+      if (key === K.LOKALE_SEO || key === K.WEBSITE) {
+        next.delete(K.BUNDEL)
       }
-      next.add(naam)
-      if (
-        (naam === LOKALE_SEO && next.has(WEBSITE) && isSeoWebsiteGekozen) ||
-        (naam === WEBSITE && isSeoWebsiteGekozen && next.has(LOKALE_SEO))
-      ) {
-        next.delete(LOKALE_SEO)
-        next.delete(WEBSITE)
-        next.delete(SEO_ADD_ON)
-        next.add(BUNDEL)
+      next.add(key)
+      if (isSeoSite && next.has(K.LOKALE_SEO) && next.has(K.WEBSITE)) {
+        next.delete(K.LOKALE_SEO)
+        next.delete(K.WEBSITE)
+        next.delete(K.SEO_ADD_ON)
+        next.add(K.BUNDEL)
       }
       return next
     })
+    if (key === K.BUNDEL && !selected.has(K.BUNDEL)) {
+      setWebsiteIdx(0)
+    }
   }
-
-  // Price calc
-  const eenmaligItems: Array<{ naam: string; prijsNum: number; vanaf: boolean }> = []
-
-  if (bundelActief) {
-    eenmaligItems.push({ naam: BUNDEL, prijsNum: 2999, vanaf: false })
+  function handleWebsiteChange(newIdx: number) {
+    setWebsiteIdx(newIdx)
+    if (bundelAan && !websiteTypes[newIdx].isSeoWebsite) {
+      setSelected((prev) => {
+        const next = new Set(prev)
+        next.delete(K.BUNDEL)
+        return next
+      })
+    }
+    if (selected.has(K.WEBSITE) && selected.has(K.LOKALE_SEO) && websiteTypes[newIdx].isSeoWebsite) {
+      setSelected((prev) => {
+        const next = new Set(prev)
+        next.delete(K.LOKALE_SEO)
+        next.delete(K.WEBSITE)
+        next.delete(K.SEO_ADD_ON)
+        next.add(K.BUNDEL)
+        return next
+      })
+    }
+  }
+  const eenmalig: Array<{ naam: string; num: number; vanaf: boolean }> = []
+  if (bundelAan) {
+    eenmalig.push({ naam: 'Aanbieding', num: 2999, vanaf: false })
   } else {
-    if (geselecteerd.has(LOKALE_SEO)) eenmaligItems.push({ naam: LOKALE_SEO, prijsNum: 1499, vanaf: false })
-    if (geselecteerd.has(WEBSITE))    eenmaligItems.push({ naam: selectedWebsite.naam, prijsNum: selectedWebsite.prijsNum, vanaf: selectedWebsite.prijsNum > 0 })
-    if (geselecteerd.has(SEO_ADD_ON) && !addOnDimmed) eenmaligItems.push({ naam: SEO_ADD_ON, prijsNum: 650, vanaf: false })
+    if (isOn(K.LOKALE_SEO)) eenmalig.push({ naam: 'Lokale Top 3 Ranking', num: 1499, vanaf: false })
+    if (isOn(K.WEBSITE))    eenmalig.push({ naam: website.naam, num: website.prijsNum, vanaf: website.prijsNum > 0 })
+    if (isOn(K.SEO_ADD_ON) && !addOnDimmed) eenmalig.push({ naam: 'Lokale SEO toevoegen', num: 650, vanaf: false })
   }
   for (const u of uitbreidingen) {
-    if (geselecteerd.has(u.naam)) eenmaligItems.push({ naam: u.naam, prijsNum: u.prijsNum, vanaf: true })
+    if (isOn(u.key)) eenmalig.push({ naam: u.naam, num: u.prijsNum, vanaf: true })
   }
-
-  const maandelijksItems: Array<{ naam: string; prijsNum: number }> = []
-  if (geselecteerd.has(RETAINER)) maandelijksItems.push({ naam: RETAINER, prijsNum: 499 })
-  if (geselecteerd.has(ADS))      maandelijksItems.push({ naam: ADS,      prijsNum: selectedAds.prijsNum })
-
-  const eenmaligNum   = eenmaligItems.reduce((s, d) => s + d.prijsNum, 0)
-  const eenmaligVanaf = eenmaligItems.some((d) => d.vanaf)
-  const maandNum      = maandelijksItems.reduce((s, d) => s + d.prijsNum, 0)
-
-  const heeftSelectie    = geselecteerd.size > 0
-  const heeftEenmalig    = eenmaligItems.length > 0
-  const heeftMaandelijks = maandelijksItems.length > 0
-
+  const maandelijks: Array<{ naam: string; num: number }> = []
+  if (isOn(K.RETAINER)) maandelijks.push({ naam: 'Retainer', num: 499 })
+  if (isOn(K.ADS))      maandelijks.push({ naam: 'Google Ads', num: ads.prijsNum })
+  const eenmaligTotaal = eenmalig.reduce((s, i) => s + i.num, 0)
+  const eenmaligVanaf  = eenmalig.some((i) => i.vanaf)
+  const maandTotaal    = maandelijks.reduce((s, i) => s + i.num, 0)
+  const heeftSelectie  = selected.size > 0
+  const heeftEenmalig  = eenmalig.length > 0
+  const heeftMaand     = maandelijks.length > 0
   function Rij({
-    naam,
-    prijsLabel,
-    link,
-    highlight,
-    dimmed,
-    dimmedReden,
-    children,
+    rowKey, naam, prijsLabel, link, dimmed = false, dimmedReden,
   }: {
+    rowKey: string
     naam: string
     prijsLabel: string
     link?: string
-    highlight?: boolean
     dimmed?: boolean
     dimmedReden?: string
-    children?: React.ReactNode
   }) {
-    const actief = geselecteerd.has(naam)
+    const actief = isOn(rowKey)
     return (
       <tr
-        onClick={() => toggle(naam, !!dimmed)}
-        className={[
-          'prijzen-tabel__row',
-          highlight ? 'prijzen-tabel__row--highlight' : '',
-          actief    ? 'prijzen-tabel__row--selected'  : '',
-        ].filter(Boolean).join(' ')}
-        style={{ opacity: dimmed ? 0.4 : 1, cursor: dimmed ? 'default' : 'pointer' }}
+        onClick={() => { if (!dimmed) toggle(rowKey) }}
+        className={['prijzen-tabel__row', actief ? 'prijzen-tabel__row--selected' : ''].filter(Boolean).join(' ')}
+        style={{ opacity: dimmed ? 0.35 : 1, cursor: dimmed ? 'default' : 'pointer', pointerEvents: dimmed ? 'none' : 'auto' }}
       >
         <td className="prijzen-tabel__td">
           <span className="prijzen-tabel__naam">{naam}</span>
-          {children}
           {dimmed && dimmedReden && (
             <span className="prijzen-tabel__subtekst">{dimmedReden}</span>
           )}
@@ -176,12 +170,10 @@ export function PrijzenTabel() {
       </tr>
     )
   }
-
   return (
     <FadeUpSection id="prijzen-tabel" className="bg-section-2" aria-labelledby="prijzen-tabel-title">
       <Container>
         <h2 id="prijzen-tabel-title" className="sr-only">Prijsoverzicht</h2>
-
         <div className="prijzen-tabel-wrap">
           <table className="prijzen-tabel">
             <thead>
@@ -191,126 +183,128 @@ export function PrijzenTabel() {
                 <th className="prijzen-tabel__th prijzen-tabel__th--actie" />
               </tr>
             </thead>
-
             <tbody>
-
-              {/* ── Eenmalig ── */}
               <tr className="prijzen-tabel__groep-header">
                 <td colSpan={3} className="prijzen-tabel__groep-label">Eenmalig</td>
               </tr>
-
               <Rij
-                naam={LOKALE_SEO}
+                rowKey={K.LOKALE_SEO}
+                naam="Lokale Top 3 Ranking"
                 prijsLabel="€ 1.499"
-                link="/ranking#ranking-prijs-title"
-                dimmed={lokaleSeoDimmed}
-                dimmedReden="Inbegrepen in de aanbieding"
+                link="/ranking"
               />
-
-              {/* Website met dropdown */}
               <tr
-                onClick={() => toggle(WEBSITE, websiteDimmed)}
-                className={['prijzen-tabel__row', geselecteerd.has(WEBSITE) ? 'prijzen-tabel__row--selected' : ''].filter(Boolean).join(' ')}
-                style={{ opacity: websiteDimmed ? 0.4 : 1, cursor: websiteDimmed ? 'default' : 'pointer' }}
+                onClick={() => toggle(K.WEBSITE)}
+                className={['prijzen-tabel__row', isOn(K.WEBSITE) ? 'prijzen-tabel__row--selected' : ''].filter(Boolean).join(' ')}
+                style={{ cursor: 'pointer', pointerEvents: 'auto' }}
               >
                 <td className="prijzen-tabel__td">
                   <span className="prijzen-tabel__naam">Website</span>
                   <select
-                    value={websiteTypeIdx}
-                    disabled={websiteDimmed}
+                    value={websiteIdx}
                     onClick={(e) => e.stopPropagation()}
-                    onChange={(e) => setWebsiteTypeIdx(Number(e.target.value))}
+                    onChange={(e) => { e.stopPropagation(); handleWebsiteChange(Number(e.target.value)) }}
                     className="prijzen-tabel__select"
                   >
-                    {websiteTypes.map((type, idx) => (
-                      <option key={type.naam} value={idx}>{type.naam}</option>
+                    {websiteTypes.map((t, i) => (
+                      <option key={t.naam} value={i}>{t.naam}</option>
                     ))}
                   </select>
-                  {websiteDimmed && (
-                    <span className="prijzen-tabel__subtekst">Inbegrepen in de aanbieding</span>
-                  )}
                 </td>
-                <td className="prijzen-tabel__td prijzen-tabel__td--prijs">{selectedWebsite.prijsLabel}</td>
+                <td className="prijzen-tabel__td prijzen-tabel__td--prijs">{website.prijsLabel}</td>
                 <td className="prijzen-tabel__td prijzen-tabel__td--actie">
-                  {!websiteDimmed && (
-                    <a
-                      href={isSeoWebsiteGekozen ? '/website#website-seo-title' : '/website#website-andere-title'}
-                      className="btn-secondary prijzen-tabel__link"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Meer info
-                    </a>
-                  )}
+                  <a
+                    href={isSeoSite ? '/website#website-seo-title' : '/website#website-andere-title'}
+                    className="btn-secondary prijzen-tabel__link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Meer info
+                  </a>
                 </td>
               </tr>
-
               <Rij
-                naam={SEO_ADD_ON}
+                rowKey={K.SEO_ADD_ON}
+                naam="Lokale SEO toevoegen aan website"
                 prijsLabel="€ 650"
                 link="/website#website-andere-title"
                 dimmed={addOnDimmed}
-                dimmedReden={bundelActief ? 'Inbegrepen in de aanbieding' : 'Niet nodig bij SEO Website'}
+                dimmedReden={bundelAan ? 'Inbegrepen in de aanbieding' : 'Niet nodig bij SEO Website'}
               />
-
-              <Rij
-                naam={BUNDEL}
-                prijsLabel="€ 2.999"
-                link="/aanbieding#sale-prijs-title"
-                highlight
-              />
-
-              {/* ── Uitbreidingen ── */}
+              <tr className="prijzen-tabel__groep-header">
+                <td colSpan={3} className="prijzen-tabel__groep-label">Aanbieding</td>
+              </tr>
+              <tr
+                onClick={() => toggle(K.BUNDEL)}
+                className={['prijzen-tabel__row', isOn(K.BUNDEL) ? 'prijzen-tabel__row--selected' : ''].filter(Boolean).join(' ')}
+                style={{ cursor: 'pointer', pointerEvents: 'auto' }}
+              >
+                <td className="prijzen-tabel__td">
+                  <span className="prijzen-tabel__naam">Ranking + SEO Website</span>
+                  <span className="prijzen-tabel__subtekst">
+                    {isOn(K.BUNDEL)
+                      ? 'Geselecteerd'
+                      : 'Selecteer Lokale Top 3 Ranking en SEO Website om automatisch te activeren'}
+                  </span>
+                </td>
+                <td className="prijzen-tabel__td prijzen-tabel__td--prijs">
+                  € 2.999
+                  <span style={{ display: 'block', fontSize: '0.75rem', color: 'var(--accent-green)', fontWeight: 500 }}>
+                    bespaar € 499
+                  </span>
+                </td>
+                <td className="prijzen-tabel__td prijzen-tabel__td--actie">
+                  <a href="/aanbieding" className="btn-secondary prijzen-tabel__link" onClick={(e) => e.stopPropagation()}>
+                    Meer info
+                  </a>
+                </td>
+              </tr>
               <tr className="prijzen-tabel__groep-header">
                 <td colSpan={3} className="prijzen-tabel__groep-label">Uitbreidingen & koppelingen</td>
               </tr>
-
               {uitbreidingen.map((u) => (
                 <Rij
-                  key={u.naam}
+                  key={u.key}
+                  rowKey={u.key}
                   naam={u.naam}
                   prijsLabel={u.prijsLabel}
                   link="/website#website-integraties-title"
                 />
               ))}
-
-              {/* ── Per maand ── */}
               <tr className="prijzen-tabel__groep-header">
                 <td colSpan={3} className="prijzen-tabel__groep-label">Per maand</td>
               </tr>
-
               <Rij
-                naam={RETAINER}
+                rowKey={K.RETAINER}
+                naam="Lokale SEO Retainer"
                 prijsLabel="€ 499"
-                link="/ranking#ranking-prijs-title"
+                link="/ranking"
               />
-
               <tr
-                onClick={() => toggle(ADS, false)}
-                className={['prijzen-tabel__row', geselecteerd.has(ADS) ? 'prijzen-tabel__row--selected' : ''].filter(Boolean).join(' ')}
+                onClick={() => toggle(K.ADS)}
+                className={['prijzen-tabel__row', isOn(K.ADS) ? 'prijzen-tabel__row--selected' : ''].filter(Boolean).join(' ')}
+                style={{ cursor: 'pointer', pointerEvents: 'auto' }}
               >
                 <td className="prijzen-tabel__td">
                   <span className="prijzen-tabel__naam">Google Ads</span>
                   <select
-                    value={adsTierIdx}
+                    value={adsIdx}
                     onClick={(e) => e.stopPropagation()}
-                    onChange={(e) => setAdsTierIdx(Number(e.target.value))}
+                    onChange={(e) => { e.stopPropagation(); setAdsIdx(Number(e.target.value)) }}
                     className="prijzen-tabel__select"
                   >
-                    {adsTiers.map((tier, idx) => (
-                      <option key={tier.label} value={idx}>{tier.label} · {tier.dagBudget}</option>
+                    {adsTiers.map((t, i) => (
+                      <option key={t.label} value={i}>{t.label} · {t.dagBudget}</option>
                     ))}
                   </select>
                 </td>
-                <td className="prijzen-tabel__td prijzen-tabel__td--prijs">{selectedAds.prijsLabel}</td>
+                <td className="prijzen-tabel__td prijzen-tabel__td--prijs">{ads.prijsLabel}</td>
                 <td className="prijzen-tabel__td prijzen-tabel__td--actie">
-                  <a href="/ads#ads-prijs-title" className="btn-secondary prijzen-tabel__link" onClick={(e) => e.stopPropagation()}>
-                      Meer info
-                    </a>
+                  <a href="/ads" className="btn-secondary prijzen-tabel__link" onClick={(e) => e.stopPropagation()}>
+                    Meer info
+                  </a>
                 </td>
               </tr>
-
             </tbody>
-
             <tfoot>
               <tr>
                 <td colSpan={3} style={{
@@ -323,32 +317,29 @@ export function PrijzenTabel() {
                   Alle prijzen excl. btw
                 </td>
               </tr>
-              {heeftSelectie ? (
-                <>
-                  {heeftEenmalig && (
-                    <tr className="prijzen-tabel__tfoot-row">
-                      <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-label">Eenmalig totaal</td>
-                      <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-bedrag">
-                        {eenmaligVanaf ? `${formatBedrag(eenmaligNum)} +` : formatBedrag(eenmaligNum)}
-                      </td>
-                      <td className="prijzen-tabel__tfoot-td" />
-                    </tr>
-                  )}
-                  {heeftMaandelijks && (
-                    <tr className="prijzen-tabel__tfoot-row prijzen-tabel__tfoot-row--maand">
-                      <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-label">Per maand totaal</td>
-                      <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-bedrag">{formatBedrag(maandNum)}</td>
-                      <td className="prijzen-tabel__tfoot-td" />
-                    </tr>
-                  )}
-                </>
-              ) : (
-                <tr className="prijzen-tabel__tfoot-row">
-                  <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-hint" colSpan={3}>
-                    Klik op een rij om diensten te selecteren
-                  </td>
-                </tr>
-              )}
+              <tr className="prijzen-tabel__tfoot-row">
+                <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-label">Eenmalig totaal</td>
+                <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-bedrag">
+                  {heeftEenmalig ? (eenmaligVanaf ? `${formatBedrag(eenmaligTotaal)} +` : formatBedrag(eenmaligTotaal)) : '—'}
+                </td>
+                <td className="prijzen-tabel__tfoot-td" />
+              </tr>
+              <tr className="prijzen-tabel__tfoot-row prijzen-tabel__tfoot-row--maand">
+                <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-label">Per maand totaal</td>
+                <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-bedrag">
+                  {heeftMaand ? `${formatBedrag(maandTotaal)} +` : '—'}
+                </td>
+                <td className="prijzen-tabel__tfoot-td" />
+              </tr>
+              <tr className="prijzen-tabel__tfoot-row prijzen-tabel__tfoot-row--totaal">
+                <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-label">Totaal</td>
+                <td className="prijzen-tabel__tfoot-td prijzen-tabel__tfoot-bedrag">
+                  {(heeftEenmalig || heeftMaand)
+                    ? `${formatBedrag(eenmaligTotaal + maandTotaal)}${(heeftMaand || eenmaligVanaf) ? ' +' : ''}`
+                    : '—'}
+                </td>
+                <td className="prijzen-tabel__tfoot-td" />
+              </tr>
             </tfoot>
           </table>
         </div>

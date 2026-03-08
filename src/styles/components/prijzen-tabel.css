@@ -59,25 +59,87 @@
   background: rgba(45, 106, 79, 0.04);
 }
 
-.prijzen-tabel__row--highlight .prijzen-tabel__naam {
-  color: var(--accent-green);
-}
 
-.prijzen-tabel__row--highlight {
-  background: rgba(45, 106, 79, 0.05);
-}
-
-.prijzen-tabel__row--highlight:hover {
-  background: rgba(45, 106, 79, 0.08);
-}
-
+/* Geselecteerde rij: duidelijke groene balk en achtergrond */
 .prijzen-tabel__row--selected {
-  background: rgba(45, 106, 79, 0.09) !important;
-  box-shadow: inset 3px 0 0 var(--accent-green);
+  background: rgba(45, 106, 79, 0.14) !important;
+  box-shadow: inset 4px 0 0 var(--accent-green);
 }
 
 .prijzen-tabel__row--selected .prijzen-tabel__naam {
   color: var(--accent-green);
+  font-weight: 700;
+}
+
+/* Aanbieding-rij: vol blok, donkergroen, wit, geen gewone rij-look */
+.prijzen-tabel__row--aanbieding {
+  background: var(--accent-green) !important;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: none !important;
+  vertical-align: middle;
+}
+
+.prijzen-tabel__row--aanbieding .prijzen-tabel__td {
+  border-bottom: none !important;
+  padding: 0.875rem 1rem;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.prijzen-tabel__row--aanbieding .prijzen-tabel__naam {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.prijzen-tabel__row--aanbieding .prijzen-tabel__td--prijs {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.0625rem;
+}
+
+.prijzen-tabel__row--aanbieding:hover {
+  background: rgba(35, 85, 64, 1) !important;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.prijzen-tabel__row--aanbieding.prijzen-tabel__row--selected {
+  background: rgba(35, 85, 64, 1) !important;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--accent-green);
+}
+
+.prijzen-tabel__aanbieding-badge {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.2rem;
+}
+
+.prijzen-tabel__row--aanbieding .prijzen-tabel__link {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+.prijzen-tabel__row--aanbieding .prijzen-tabel__link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  color: #fff;
+}
+
+.prijzen-tabel__bespaar {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.15rem;
+  color: var(--accent-green);
+}
+
+.prijzen-tabel__row--aanbieding .prijzen-tabel__bespaar {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ── Cells ── */
