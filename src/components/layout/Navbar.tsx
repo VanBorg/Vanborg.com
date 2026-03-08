@@ -4,7 +4,10 @@ import { Container } from '../ui/Container'
 import { ThemeToggle } from '../ui/ThemeToggle'
 import { useSmoothNav } from '../../hooks/useSmoothNav'
 
-const TOP_BAR_SCROLL_THRESHOLD = 60
+/** Show top bar when at top of page (scrollY below this) */
+const TOP_BAR_AT_TOP_THRESHOLD = 80
+/** Min scroll delta to consider direction (avoid jitter) */
+const SCROLL_DIRECTION_THRESHOLD = 5
 
 const navLinks = [
   { label: 'Ranking', href: '/ranking' },
@@ -126,18 +129,39 @@ export function Navbar() {
   const handleNavClick = useSmoothNav()
   const mobileToggleRef = useRef<HTMLButtonElement>(null)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const topBarVisibleRef = useRef(true)
 
   const closeMobileMenu = useCallback(() => {
     setMobileOpen(false)
   }, [])
 
   useEffect(() => {
-    const onScroll = () => {
-      setTopBarVisible(window.scrollY <= TOP_BAR_SCROLL_THRESHOLD)
+    let ticking = false
+    let rafId: number | null = null
+
+    const updateTopBar = () => {
+      ticking = false
+      const nextVisible = window.scrollY <= TOP_BAR_SCROLL_THRESHOLD
+      if (topBarVisibleRef.current !== nextVisible) {
+        topBarVisibleRef.current = nextVisible
+        setTopBarVisible(nextVisible)
+      }
     }
-    onScroll()
+
+    const onScroll = () => {
+      if (ticking) return
+      ticking = true
+      rafId = window.requestAnimationFrame(updateTopBar)
+    }
+
+    updateTopBar()
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      if (rafId != null) {
+        window.cancelAnimationFrame(rafId)
+      }
+    }
   }, [])
 
   useEffect(() => {

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Container } from '../../ui/Container'
 import { FadeUpSection } from '../../ui/FadeUpSection'
+import { Link } from 'react-router-dom'
 interface WebsiteType {
   naam: string
   prijsLabel: string
@@ -161,9 +162,9 @@ export function PrijzenTabel() {
         <td className="prijzen-tabel__td prijzen-tabel__td--prijs">{prijsLabel}</td>
         <td className="prijzen-tabel__td prijzen-tabel__td--actie">
           {link && !dimmed && (
-            <a href={link} className="btn-secondary prijzen-tabel__link" onClick={(e) => e.stopPropagation()}>
+            <Link to={link} className="btn-secondary prijzen-tabel__link" onClick={(e) => e.stopPropagation()}>
               Meer info
-            </a>
+            </Link>
           )}
         </td>
       </tr>
@@ -212,13 +213,13 @@ export function PrijzenTabel() {
                 </td>
                 <td className="prijzen-tabel__td prijzen-tabel__td--prijs">{website.prijsLabel}</td>
                 <td className="prijzen-tabel__td prijzen-tabel__td--actie">
-                  <a
-                    href={isSeoSite ? '/website#website-seo-title' : '/website#website-andere-title'}
+                  <Link
+                    to={isSeoSite ? '/website#website-seo-title' : '/website#website-andere-title'}
                     className="btn-secondary prijzen-tabel__link"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Meer info
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <Rij
@@ -252,9 +253,9 @@ export function PrijzenTabel() {
                   </span>
                 </td>
                 <td className="prijzen-tabel__td prijzen-tabel__td--actie">
-                  <a href="/aanbieding" className="btn-secondary prijzen-tabel__link" onClick={(e) => e.stopPropagation()}>
+                  <Link to="/aanbieding" className="btn-secondary prijzen-tabel__link" onClick={(e) => e.stopPropagation()}>
                     Meer info
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <tr className="prijzen-tabel__groep-header">
@@ -298,9 +299,9 @@ export function PrijzenTabel() {
                 </td>
                 <td className="prijzen-tabel__td prijzen-tabel__td--prijs">{ads.prijsLabel}</td>
                 <td className="prijzen-tabel__td prijzen-tabel__td--actie">
-                  <a href="/ads" className="btn-secondary prijzen-tabel__link" onClick={(e) => e.stopPropagation()}>
+                  <Link to="/ads" className="btn-secondary prijzen-tabel__link" onClick={(e) => e.stopPropagation()}>
                     Meer info
-                  </a>
+                  </Link>
                 </td>
               </tr>
             </tbody>

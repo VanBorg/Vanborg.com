@@ -11,7 +11,7 @@ interface UseInViewResult<T extends Element> {
 }
 
 /**
- * Simple scroll-based in-view detection without IntersectionObserver.
+ * IntersectionObserver-based in-view detection.
  * Sections start hidden and fade up once they enter the viewport.
  */
 export function useInView<T extends Element = Element>(
@@ -19,65 +19,58 @@ export function useInView<T extends Element = Element>(
 ): UseInViewResult<T> {
   const [isInView, setIsInView] = useState(false)
   const nodeRef = useRef<T | null>(null)
+  const observerRef = useRef<IntersectionObserver | null>(null)
   const { resetToken } = useFadeUpContext()
 
-  const checkInView = useCallback(() => {
+  const observe = useCallback(() => {
+    if (observerRef.current) {
+      observerRef.current.disconnect()
+      observerRef.current = null
+    }
+
     const node = nodeRef.current
     if (!node) return
 
-    if (typeof window === 'undefined' || !node.getBoundingClientRect) {
+    if (typeof IntersectionObserver === 'undefined') {
       setIsInView(true)
       return
     }
 
-    const rect = node.getBoundingClientRect()
-    const viewportHeight =
-      window.innerHeight || document.documentElement.clientHeight || 0
+    const rootMargin = `0px 0px -${Math.round(offset * 100)}% 0px`
 
-    const threshold = viewportHeight * (1 - offset)
-    const isVisible = rect.top < threshold && rect.bottom > 0
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true)
+          observerRef.current?.disconnect()
+          observerRef.current = null
+        }
+      },
+      { rootMargin, threshold: 0 },
+    )
 
-    if (isVisible !== isInView) {
-      setIsInView(isVisible)
-    }
-  }, [isInView, offset])
+    observerRef.current.observe(node)
+  }, [offset])
 
   const ref = useCallback(
     (node: T | null) => {
       nodeRef.current = node
+      observe()
     },
-    [checkInView],
+    [observe],
   )
 
   useEffect(() => {
-    if (isInView) {
-      return
-    }
-
-    if (typeof window === 'undefined') {
-      setIsInView(true)
-      return
-    }
-
-    const handler = () => {
-      checkInView()
-    }
-
-    window.addEventListener('scroll', handler, { passive: true })
-    window.addEventListener('resize', handler)
     return () => {
-      window.removeEventListener('scroll', handler)
-      window.removeEventListener('resize', handler)
+      observerRef.current?.disconnect()
     }
-  }, [checkInView, isInView])
+  }, [])
 
   useEffect(() => {
-    // When the hero triggers a global reset, mark this section as not in view again.
-    if (isInView) {
-      setIsInView(false)
-    }
-  }, [resetToken])
+    if (resetToken === 0) return
+    setIsInView(false)
+    observe()
+  }, [resetToken, observe])
 
   return { ref, isInView }
 }
-

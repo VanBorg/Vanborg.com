@@ -1,6 +1,6 @@
 import { Container } from '../ui/Container'
 import { LOCATION_PAGES } from '../../data/locations'
-import { useSmoothNav } from '../../hooks/useSmoothNav'
+import { Link } from 'react-router-dom'
 
 const MAP_EMBED_SRC =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76000!2d6.8674621999999985!3d53.098799899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7d7e71e51e1bb%3A0xbfc74e0471be7bfb!2sVan%20Borg!5e0!3m2!1snl!2snl!4v1771866305559!5m2!1snl!2snl'
@@ -26,8 +26,6 @@ const navPages = [
 ]
 
 export function Footer() {
-  const handleNavClick = useSmoothNav()
-
   return (
     <footer className="footer" role="contentinfo">
       <div className="footer__main">
@@ -35,10 +33,10 @@ export function Footer() {
           <div className="footer__top">
             {/* 1. Helemaal links: Van Borg */}
             <div className="footer__company-info">
-              <a href="/" className="footer__logo" aria-label="Van Borg – terug naar home" onClick={(e) => handleNavClick(e, '/')}>
+              <Link to="/" className="footer__logo" aria-label="Van Borg – terug naar home">
                 <span className="footer__logo-line">Van</span>
                 <span className="footer__logo-line footer__logo-line--2">Borg</span>
-              </a>
+              </Link>
               <span className="footer__company-name">Van Borg Limited</span>
               <address className="footer__company-address">
                 <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
@@ -68,7 +66,7 @@ export function Footer() {
               <ul className="footer__werkgebieden-grid">
                 {LOCATION_PAGES.map((loc) => (
                   <li key={loc.slug}>
-                    <a href={`/locatie/${loc.slug}`}>{loc.name}</a>
+                    <Link to={`/locatie/${loc.slug}`}>{loc.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -94,9 +92,9 @@ export function Footer() {
       <Container>
         <nav className="footer__pages-bar" aria-label="Sitepagina's">
           {navPages.map((page) => (
-            <a key={page.href} href={page.href} className="footer__pages-bar-link">
+            <Link key={page.href} to={page.href} className="footer__pages-bar-link">
               {page.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </Container>
@@ -105,8 +103,8 @@ export function Footer() {
         <div className="footer__legal">
           <span className="footer__copyright">&copy; Van Borg Limited 2025</span>
           <div className="footer__legal-links">
-            <a href="/voorwaarden">Algemene voorwaarden</a>
-            <a href="/privacy">Privacy</a>
+            <Link to="/voorwaarden">Algemene voorwaarden</Link>
+            <Link to="/privacy">Privacy</Link>
           </div>
         </div>
       </Container>

@@ -9,6 +9,7 @@ const services = [
       'Kom bovenaan in Google Maps en lokale zoekresultaten voor jouw stad. We optimaliseren je Google Business Profiel, bouwen autoriteit op met citations en zorgen dat jouw bedrijf verschijnt op het moment dat klanten zoeken.',
     align: 'left' as const,
     image: '/Afbeeldingen/top-3-google-ranking.png',
+    imageWebp: '/Afbeeldingen/top-3-google-ranking.webp',
     imageAlt: 'Lokale vindbaarheid in Google – Top 3 Google ranking',
     href: '/ranking',
   },
@@ -19,6 +20,7 @@ const services = [
       'Direct bovenaan Google, nog voordat organische resultaten beginnen. We beheren je campagne volledig: van zoekwoorden en biedstrategie tot advertentieteksten die klikken omzetten in klanten.',
     align: 'right' as const,
     image: '/Afbeeldingen/top-google-ads-campaigns.png',
+    imageWebp: '/Afbeeldingen/top-google-ads-campaigns.webp',
     imageAlt: 'Top Google Ads campagnes',
     href: '/ads',
   },
@@ -29,6 +31,7 @@ const services = [
       'Maatwerk websites gebouwd in Cursor met schone, snelle code. Geen templates, geen pagebuilders. Elke website is technisch geoptimaliseerd voor Google en ontworpen om bezoekers om te zetten in opdrachten.',
     align: 'left' as const,
     image: '/Afbeeldingen/seo-sales-websites.png',
+    imageWebp: '/Afbeeldingen/seo-sales-websites.webp',
     imageAlt: 'SEO + Sales websites',
     href: '/website',
   },
@@ -76,12 +79,15 @@ export function WatWijDoen() {
                     <div className="wat-wij-doen-timeline__card-inner">
                       <div className="wat-wij-doen-timeline__media">
                         <div className="image-doos">
-                          <img
-                            src={service.image}
-                            alt={service.imageAlt}
-                            className="image-doos__img"
-                            loading="lazy"
-                          />
+                          <picture>
+                            <source srcSet={service.imageWebp} type="image/webp" />
+                            <img
+                              src={service.image}
+                              alt={service.imageAlt}
+                              className="image-doos__img"
+                              loading="lazy"
+                            />
+                          </picture>
                         </div>
                       </div>
                       <div className="wat-wij-doen-timeline__content">
@@ -105,12 +111,15 @@ export function WatWijDoen() {
                     <div className="wat-wij-doen-timeline__card-inner">
                       <div className="wat-wij-doen-timeline__media">
                         <div className="image-doos">
-                          <img
-                            src={service.image}
-                            alt={service.imageAlt}
-                            className="image-doos__img"
-                            loading="lazy"
-                          />
+                          <picture>
+                            <source srcSet={service.imageWebp} type="image/webp" />
+                            <img
+                              src={service.image}
+                              alt={service.imageAlt}
+                              className="image-doos__img"
+                              loading="lazy"
+                            />
+                          </picture>
                         </div>
                       </div>
                       <div className="wat-wij-doen-timeline__content">

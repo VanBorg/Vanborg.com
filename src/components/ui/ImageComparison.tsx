@@ -3,6 +3,8 @@ import { useState, useRef, useCallback, useEffect } from 'react'
 interface ImageComparisonProps {
   before: string
   after: string
+  beforeWebp?: string
+  afterWebp?: string
   className?: string
 }
 
@@ -11,10 +13,11 @@ const AUTO_ANIMATION_DURATION_ONE_WAY_MS = 3500
 const AUTO_ANIMATION_START = 20
 const AUTO_ANIMATION_END = 85
 
-export function ImageComparison({ before, after, className = '' }: ImageComparisonProps) {
+export function ImageComparison({ before, after, beforeWebp, afterWebp, className = '' }: ImageComparisonProps) {
   const [position, setPosition] = useState(AUTO_ANIMATION_START)
   const [isDragging, setIsDragging] = useState(false)
   const [userHasInteracted, setUserHasInteracted] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const containerRef = useRef<HTMLDivElement>(null)
   const autoAnimationRef = useRef<ReturnType<typeof requestAnimationFrame> | null>(null)
   const startTimeRef = useRef<number | null>(null)
@@ -64,7 +67,11 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
   )
 
   useEffect(() => {
-    if (userHasInteracted) return
+    if (userHasInteracted || !isVisible) {
+      stopAutoAnimation()
+      return
+    }
+
     const periodMs = AUTO_ANIMATION_DURATION_ONE_WAY_MS * 2
     const step = (timestamp: number) => {
       if (startTimeRef.current == null) startTimeRef.current = timestamp
@@ -81,7 +88,22 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
     return () => {
       if (autoAnimationRef.current != null) cancelAnimationFrame(autoAnimationRef.current)
     }
-  }, [userHasInteracted])
+  }, [isVisible, stopAutoAnimation, userHasInteracted])
+
+  useEffect(() => {
+    const node = containerRef.current
+    if (!node || typeof IntersectionObserver === 'undefined') return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting)
+      },
+      { threshold: 0.05 },
+    )
+
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     if (!isDragging) return
@@ -131,33 +153,44 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
           </span>
         </span>
         {/* Sizer: bepaalt hoogte van de container; max-h zodat het naast de tekst past */}
-        <img
-          src={before}
-          alt=""
-          className="block w-full h-auto pointer-events-none invisible"
-          style={{ maxHeight: '380px', objectFit: 'cover' }}
-          aria-hidden
-        />
+        <picture>
+          {beforeWebp && <source srcSet={beforeWebp} type="image/webp" />}
+          <img
+            src={before}
+            alt=""
+            className="block w-full h-auto pointer-events-none invisible"
+            style={{ maxHeight: '380px', objectFit: 'cover' }}
+            aria-hidden
+          />
+        </picture>
         {/* Bottom layer: before */}
-        <img
-          src={before}
-          alt="Heatmap weergave 1"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
+        <picture>
+          {beforeWebp && <source srcSet={beforeWebp} type="image/webp" />}
+          <img
+            src={before}
+            alt="Heatmap weergave 1"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            fetchPriority="high"
+          />
+        </picture>
         {/* Top layer: after, clipped by position */}
         <div
           className="absolute inset-y-0 left-0 z-[1] overflow-hidden"
           style={{ width: `${position}%` }}
         >
-          <img
-            src={after}
-            alt="Heatmap weergave 2"
-            className="h-full object-cover object-center"
-            style={{
-              width: position > 0 ? `${(100 / position) * 100}%` : '100%',
-              maxWidth: 'none',
-            }}
-          />
+          <picture>
+            {afterWebp && <source srcSet={afterWebp} type="image/webp" />}
+            <img
+              src={after}
+              alt="Heatmap weergave 2"
+              className="h-full object-cover object-center"
+              fetchPriority="high"
+              style={{
+                width: position > 0 ? `${(100 / position) * 100}%` : '100%',
+                maxWidth: 'none',
+              }}
+            />
+          </picture>
         </div>
         {/* Divider: eigen compositorlaag (translateZ(0)), afgeronde positie = solid, geen knipperen */}
         <div

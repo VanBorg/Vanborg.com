@@ -2,6 +2,7 @@ import { useState, useCallback, type ReactNode } from 'react'
 import { Container } from '../ui/Container'
 import { FadeUpSection } from '../ui/FadeUpSection'
 import { LOCATION_PAGES } from '../../data/locations'
+import { Link } from 'react-router-dom'
 
 interface FAQQuestion {
   q: string
@@ -23,9 +24,9 @@ const faqData: FAQTopic[] = [
         a: 'Met Lokale SEO zorgen we dat je bedrijf beter zichtbaar wordt in Google Maps en lokale zoekresultaten. We optimaliseren je Google Business Profiel en website zodat klanten uit jouw regio je sneller vinden.',
         rich: (
           <>
-            <a href="/ranking" className="text-[var(--accent-green-light)]">
+            <Link to="/ranking" className="text-[var(--accent-green-light)]">
               Lokale SEO
-            </a>{' '}
+            </Link>{' '}
             is onze aanpak om je zichtbaarheid in Google Maps en lokale zoekresultaten te vergroten. We optimaliseren je Google Business Profiel en website zodat klanten uit jouw regio je sneller vinden.
           </>
         ),
@@ -36,13 +37,13 @@ const faqData: FAQTopic[] = [
         rich: (
           <>
             Onze{' '}
-            <a href="/ads" className="text-[var(--accent-green-light)]">
+            <Link to="/ads" className="text-[var(--accent-green-light)]">
               Google Ads service
-            </a>{' '}
+            </Link>{' '}
             start <strong>vanaf € 549 per maand</strong> (€ 10/dag advertentiebudget + € 249 servicefee). We hebben vijf pakketten: van <strong>Starten</strong> (€ 549/mnd) tot <strong>Marktleider</strong> (€ 1.949/mnd). We beheren campagnes volledig van zoekwoorden en advertentieteksten tot doorlopende optimalisatie. Geen opstartkosten en geen minimale looptijd. Bekijk alle pakketten op de{' '}
-            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+            <Link to="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
-            </a>
+            </Link>
             .
           </>
         ),
@@ -80,13 +81,13 @@ const faqData: FAQTopic[] = [
         rich: (
           <>
             Een{' '}
-            <a href="/website" className="text-[var(--accent-green-light)]">
+            <Link to="/website" className="text-[var(--accent-green-light)]">
               SEO Website
-            </a>{' '}
+            </Link>{' '}
             van Van Borg is een snelle, conversiegerichte site gebouwd met moderne techniek (React, TypeScript, Tailwind) en ingericht op Core Web Vitals, technische SEO, duidelijke CTA’s en leadcapture, zodat bezoekers makkelijker klant worden. In onze{' '}
-            <a href="/aanbieding" className="text-[var(--accent-green-light)]">
+            <Link to="/aanbieding" className="text-[var(--accent-green-light)]">
               Website + Top 3 aanbieding
-            </a>{' '}
+            </Link>{' '}
             combineren we deze website met een lokaal ranking-traject.
           </>
         ),
@@ -102,17 +103,17 @@ const faqData: FAQTopic[] = [
         rich: (
           <>
             Van Borg (Van Borg Limited) is een internetmarketing bedrijf uit Veendam met Marketingconsultant als extra categorie. We helpen bedrijven in Nederland met{' '}
-            <a href="/ranking" className="text-[var(--accent-green-light)]">
+            <Link to="/ranking" className="text-[var(--accent-green-light)]">
               Lokale SEO
-            </a>
+            </Link>
             ,{' '}
-            <a href="/ads" className="text-[var(--accent-green-light)]">
+            <Link to="/ads" className="text-[var(--accent-green-light)]">
               Google Ads-campagnes
-            </a>{' '}
+            </Link>{' '}
             en{' '}
-            <a href="/website" className="text-[var(--accent-green-light)]">
+            <Link to="/website" className="text-[var(--accent-green-light)]">
               SEO Website
-            </a>
+            </Link>
             , plus Online Marketing Strategie, SEO Audit en Zoekwoordenonderzoek.
           </>
         ),
@@ -123,15 +124,15 @@ const faqData: FAQTopic[] = [
         rich: (
           <>
             Wij bedienen uitsluitend bedrijven in Nederland. De focus ligt op lokale dienstverleners en MKB-bedrijven die via Google Zoeken en Maps gevonden willen worden. Bekijk al onze{' '}
-            <a href="/locatie" className="text-[var(--accent-green-light)]">
+            <Link to="/locatie" className="text-[var(--accent-green-light)]">
               werkgebieden
-            </a>
+            </Link>
             , waaronder{' '}
             {LOCATION_PAGES.slice(0, 5).map((loc, i) => (
               <span key={loc.slug}>
-                <a href={`/locatie/${loc.slug}`} className="text-[var(--accent-green-light)]">
+                <Link to={`/locatie/${loc.slug}`} className="text-[var(--accent-green-light)]">
                   {loc.name}
-                </a>
+                </Link>
                 {i < 4 ? ', ' : ' en meer.'}
               </span>
             ))}
@@ -197,13 +198,13 @@ const faqData: FAQTopic[] = [
         rich: (
           <>
             Ons{' '}
-            <a href="/privacy" className="text-[var(--accent-green-light)]">
+            <Link to="/privacy" className="text-[var(--accent-green-light)]">
               privacybeleid
-            </a>{' '}
+            </Link>{' '}
             en de{' '}
-            <a href="/voorwaarden" className="text-[var(--accent-green-light)]">
+            <Link to="/voorwaarden" className="text-[var(--accent-green-light)]">
               algemene voorwaarden
-            </a>{' '}
+            </Link>{' '}
             vind je op de gelijknamige pagina&apos;s. De links staan ook onderaan elke pagina in de footer.
           </>
         ),
@@ -221,16 +222,16 @@ const faqData: FAQTopic[] = [
             Wij werken met bedrijven in heel Nederland. Onze vaste werkgebieden zijn:{' '}
             {LOCATION_PAGES.map((loc, i) => (
               <span key={loc.slug}>
-                <a href={`/locatie/${loc.slug}`} className="text-[var(--accent-green-light)]">
+                <Link to={`/locatie/${loc.slug}`} className="text-[var(--accent-green-light)]">
                   {loc.name}
-                </a>
+                </Link>
                 {i < LOCATION_PAGES.length - 1 ? ', ' : '. '}
               </span>
             ))}
             Bekijk alle{' '}
-            <a href="/locatie" className="text-[var(--accent-green-light)]">
+            <Link to="/locatie" className="text-[var(--accent-green-light)]">
               werkgebieden
-            </a>
+            </Link>
             .
           </>
         ),
@@ -250,13 +251,13 @@ const faqData: FAQTopic[] = [
         rich: (
           <>
             De{' '}
-            <a href="/aanbieding" className="text-[var(--accent-green-light)]">
+            <Link to="/aanbieding" className="text-[var(--accent-green-light)]">
               Aanbieding (Lokale Top 3 + SEO Website)
-            </a>{' '}
+            </Link>{' '}
             combineert ranking en website voor <strong>€ 2.999 eenmalig</strong> excl. btw (normaal € 3.498, bespaar <strong>€ 499</strong>). Inbegrepen: homepage, 3 dienstenpagina&apos;s, contactpagina en locatiepagina&apos;s. De website wordt op maat gebouwd, inclusief GBP-optimalisatie, wekelijkse posts, citations en lokale SEO. Extra pagina&apos;s vanaf € 200 p.p. Bekijk de details op de{' '}
-            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+            <Link to="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
-            </a>
+            </Link>
             .
           </>
         ),
@@ -266,25 +267,25 @@ const faqData: FAQTopic[] = [
         a: 'Lokale Top 3 Ranking kost € 1.499 eenmalig, met een optionele retainer van € 499/mnd om je positie te behouden. Google Ads start vanaf € 549 per maand (budget + servicefee). Een SEO Website begint vanaf € 1.499 eenmalig, andere websitetypes vanaf € 799. De combinatie-aanbieding (Ranking + SEO Website) kost € 2.999 eenmalig. Alle prijzen excl. btw. Bekijk het volledige overzicht op de prijzenpagina.',
         rich: (
           <>
-            <a href="/ranking" className="text-[var(--accent-green-light)]">
+            <Link to="/ranking" className="text-[var(--accent-green-light)]">
               Lokale Top 3 Ranking
-            </a>{' '}
+            </Link>{' '}
             kost <strong>€ 1.499 eenmalig</strong>, met een optionele retainer van € 499/mnd.{' '}
-            <a href="/ads" className="text-[var(--accent-green-light)]">
+            <Link to="/ads" className="text-[var(--accent-green-light)]">
               Google Ads
-            </a>{' '}
+            </Link>{' '}
             start <strong>vanaf € 549 per maand</strong> (budget + servicefee). Een{' '}
-            <a href="/website" className="text-[var(--accent-green-light)]">
+            <Link to="/website" className="text-[var(--accent-green-light)]">
               SEO Website
-            </a>{' '}
+            </Link>{' '}
             begint <strong>vanaf € 1.499 eenmalig</strong>, andere websitetypes vanaf € 799. De{' '}
-            <a href="/aanbieding" className="text-[var(--accent-green-light)]">
+            <Link to="/aanbieding" className="text-[var(--accent-green-light)]">
               combinatie-aanbieding
-            </a>{' '}
+            </Link>{' '}
             kost <strong>€ 2.999 eenmalig</strong>. Alle prijzen excl. btw. Bekijk het volledige overzicht op de{' '}
-            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+            <Link to="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
-            </a>
+            </Link>
             .
           </>
         ),
@@ -303,13 +304,13 @@ const faqData: FAQTopic[] = [
         rich: (
           <>
             Wij bouwen diverse soorten websites, allemaal volledig op maat. Prijzen (eenmalig, excl. btw): <strong>SEO Website</strong> vanaf € 1.499, <strong>Webshop</strong> vanaf € 1.999, <strong>Boeking &amp; Afspraken</strong> vanaf € 1.299, <strong>Horeca</strong> vanaf € 1.299, <strong>Portfolio</strong> vanaf € 799, <strong>Vastgoed</strong> vanaf € 1.999, <strong>Zorg &amp; Medisch</strong> vanaf € 1.499 en <strong>Crypto &amp; Web3</strong> vanaf € 1.999. Extra pagina&apos;s kosten € 200–300 p.p. Lokale SEO add-on voor niet-SEO websites: € 650. Bekijk alle details op de{' '}
-            <a href="/website" className="text-[var(--accent-green-light)]">
+            <Link to="/website" className="text-[var(--accent-green-light)]">
               websitepagina
-            </a>{' '}
+            </Link>{' '}
             of de{' '}
-            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+            <Link to="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
-            </a>
+            </Link>
             .
           </>
         ),
@@ -320,13 +321,13 @@ const faqData: FAQTopic[] = [
         rich: (
           <>
             Na de eenmalige opzet (Fase 1, € 1.499) kun je kiezen voor een maandelijkse{' '}
-            <a href="/ranking" className="text-[var(--accent-green-light)]">
+            <Link to="/ranking" className="text-[var(--accent-green-light)]">
               retainer van € 499/mnd
-            </a>{' '}
+            </Link>{' '}
             (Fase 2). Daarmee houden we je GBP actief met wekelijkse posts en foto&apos;s, reageren we op algoritme-updates, voegen we nieuwe zoekwoorden en locaties toe en ontvang je maandelijks een heatmap met rankings. Bekijk het volledige overzicht op de{' '}
-            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+            <Link to="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
-            </a>
+            </Link>
             .
           </>
         ),
@@ -342,17 +343,17 @@ const faqData: FAQTopic[] = [
         rich: (
           <>
             Voor{' '}
-            <a href="/ranking" className="text-[var(--accent-green-light)]">
+            <Link to="/ranking" className="text-[var(--accent-green-light)]">
               Google Ranking
-            </a>{' '}
+            </Link>{' '}
             is het doel om binnen ongeveer 90 dagen in de Top 3 te komen voor lokale zoekopdrachten. Bij{' '}
-            <a href="/ads" className="text-[var(--accent-green-light)]">
+            <Link to="/ads" className="text-[var(--accent-green-light)]">
               Google Ads
-            </a>{' '}
+            </Link>{' '}
             zien veel klanten al in de eerste week verkeer en een significantere ROI na ongeveer 3 maanden.{' '}
-            <a href="/website" className="text-[var(--accent-green-light)]">
+            <Link to="/website" className="text-[var(--accent-green-light)]">
               SEO Websites
-            </a>{' '}
+            </Link>{' '}
             zijn ontworpen om vanaf dag één beter te converteren zodra er relevant verkeer op komt. Resultaten blijven altijd afhankelijk van markt, concurrentie en budget.
           </>
         ),

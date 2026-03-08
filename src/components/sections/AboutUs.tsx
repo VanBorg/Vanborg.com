@@ -1,6 +1,7 @@
 import { Container } from '../ui/Container'
 import { FadeUpSection } from '../ui/FadeUpSection'
 import { LOCATION_PAGES } from '../../data/locations'
+import { Link } from 'react-router-dom'
 
 export function AboutUs() {
   return (
@@ -11,12 +12,15 @@ export function AboutUs() {
 
           <div>
             <div className="about-us-photo">
-              <img
-                src="/Afbeeldingen/wie-wij-zijn-profielfoto.png"
-                alt="Portretfoto van de oprichter van Van Borg"
-                className="about-us-photo__img"
-                loading="lazy"
-              />
+              <picture>
+                <source srcSet="/Afbeeldingen/wie-wij-zijn-profielfoto.webp" type="image/webp" />
+                <img
+                  src="/Afbeeldingen/wie-wij-zijn-profielfoto.png"
+                  alt="Portretfoto van de oprichter van Van Borg"
+                  className="about-us-photo__img"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
 
@@ -57,24 +61,24 @@ export function AboutUs() {
         {/* Werkgebied: volle breedte onder de twee kolommen, links naar locatiepagina's */}
         <div className="mt-12 pt-10" style={{ borderTop: '1px solid var(--color-neutral-200)' }}>
           <h3 className="heading-sub text-center" style={{ marginBottom: '0.75rem' }}>
-            <a href="/locatie" className="about-us-werkgebied-title">
+            <Link to="/locatie" className="about-us-werkgebied-title">
               Werkgebied
-            </a>
+            </Link>
           </h3>
           <p className="text-section-body text-center">
             We zijn actief door heel Nederland maar werken veel voor bedrijven in:{' '}
             {LOCATION_PAGES.map((loc, i) => (
               <span key={loc.slug}>
-                <a href={`/locatie/${loc.slug}`} className="about-us-locatie-link">
+                <Link to={`/locatie/${loc.slug}`} className="about-us-locatie-link">
                   {loc.name}
-                </a>
+                </Link>
                 {i < LOCATION_PAGES.length - 1 ? ', ' : ''}
               </span>
             ))}
             .{' '}
-            <a href="/locatie" className="about-us-locatie-link about-us-locatie-link--alle">
+            <Link to="/locatie" className="about-us-locatie-link about-us-locatie-link--alle">
               Alle locaties
-            </a>
+            </Link>
           </p>
         </div>
       </Container>

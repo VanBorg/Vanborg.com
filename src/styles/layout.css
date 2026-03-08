@@ -71,6 +71,7 @@
 .fade-up-content--visible {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -254,6 +255,16 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .navbar-shell,
+  .navbar-shell > header,
+  .nav-mobile-panel,
+  .top-bar {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
 
 .nav-mobile-backdrop {

@@ -2,6 +2,7 @@ import { useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { divIcon, latLngBounds, type LatLngExpression } from 'leaflet'
 import { MapContainer, Marker, TileLayer, Tooltip, useMap } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'
 import type { LocationPage } from '../../../data/locations'
 
 interface LocationNetworkMapProps {
@@ -30,7 +31,13 @@ function getMapCenter(locations: LocationPage[]): LatLngExpression {
   return [sums.lat / locations.length, sums.lng / locations.length]
 }
 
+const markerIconCache = new Map<string, ReturnType<typeof divIcon>>()
+
 function markerIcon(isActive: boolean, isHome: boolean) {
+  const key = `${+isActive}:${+isHome}`
+  let icon = markerIconCache.get(key)
+  if (icon) return icon
+
   const className = [
     'location-map__marker',
     isActive ? 'location-map__marker--active' : '',
@@ -38,12 +45,14 @@ function markerIcon(isActive: boolean, isHome: boolean) {
   ]
     .filter(Boolean)
     .join(' ')
-  return divIcon({
+  icon = divIcon({
     className,
     html: '<span class="location-map__marker-dot" aria-hidden="true"></span>',
     iconSize: [22, 22],
     iconAnchor: [11, 11],
   })
+  markerIconCache.set(key, icon)
+  return icon
 }
 
 function FitBoundsController({

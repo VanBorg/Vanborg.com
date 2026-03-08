@@ -41,6 +41,8 @@ export function Hero() {
             <ImageComparison
               before="/Afbeeldingen/heatmap-2.png"
               after="/Afbeeldingen/heatmap-1.png"
+              beforeWebp="/Afbeeldingen/heatmap-2.webp"
+              afterWebp="/Afbeeldingen/heatmap-1.webp"
             />
           </div>
 

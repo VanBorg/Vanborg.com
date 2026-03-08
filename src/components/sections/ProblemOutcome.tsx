@@ -65,12 +65,15 @@ export function ProblemOutcome({
                 </ul>
                 <div className="problem-outcome-card__media">
                   <div className="image-doos">
-                    <img
-                      src="/Afbeeldingen/winst-tijd-grafiek-negatief.png"
-                      alt="Grafiek: winst daalt over tijd zonder optimalisatie"
-                      className="image-doos__img"
-                      loading="lazy"
-                    />
+                    <picture>
+                      <source srcSet="/Afbeeldingen/winst-tijd-grafiek-negatief.webp" type="image/webp" />
+                      <img
+                        src="/Afbeeldingen/winst-tijd-grafiek-negatief.png"
+                        alt="Grafiek: winst daalt over tijd zonder optimalisatie"
+                        className="image-doos__img"
+                        loading="lazy"
+                      />
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -94,12 +97,15 @@ export function ProblemOutcome({
                 </ul>
                 <div className="problem-outcome-card__media">
                   <div className="image-doos">
-                    <img
-                      src="/Afbeeldingen/winst-tijd-grafiek.png"
-                      alt="Grafiek: winst groeit over tijd na onze aanpak"
-                      className="image-doos__img"
-                      loading="lazy"
-                    />
+                    <picture>
+                      <source srcSet="/Afbeeldingen/winst-tijd-grafiek.webp" type="image/webp" />
+                      <img
+                        src="/Afbeeldingen/winst-tijd-grafiek.png"
+                        alt="Grafiek: winst groeit over tijd na onze aanpak"
+                        className="image-doos__img"
+                        loading="lazy"
+                      />
+                    </picture>
                   </div>
                 </div>
               </div>
