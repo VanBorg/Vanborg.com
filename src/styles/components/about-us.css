@@ -28,3 +28,27 @@
   aspect-ratio: 3 / 4;
   object-fit: cover;
 }
+
+/* Werkgebied: titel en locatielinks naar /locatie en /locatie/:slug */
+.about-us-werkgebied-title {
+  color: var(--color-neutral-900);
+  text-decoration: none;
+}
+
+.about-us-werkgebied-title:hover {
+  color: var(--accent-green);
+}
+
+.about-us-locatie-link {
+  color: var(--accent-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-us-locatie-link:hover {
+  text-decoration: underline;
+}
+
+.about-us-locatie-link--alle {
+  white-space: nowrap;
+}

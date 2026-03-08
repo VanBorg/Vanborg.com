@@ -4,30 +4,33 @@ import { FadeUpSection } from '../ui/FadeUpSection'
 const services = [
   {
     id: 'lokale-ranking',
-    title: 'Lokale SEO',
+    title: 'Lokale Top 3 Google Ranking',
     description:
-      'Kom in de top 3 van Google Maps en lokale zoekresultaten. We optimaliseren je Google Business Profiel en website voor meer zichtbaarheid en klanten.',
+      'Kom bovenaan in Google Maps en lokale zoekresultaten voor jouw stad. We optimaliseren je Google Business Profiel, bouwen autoriteit op met citations en zorgen dat jouw bedrijf verschijnt op het moment dat klanten zoeken.',
     align: 'left' as const,
     image: '/Afbeeldingen/top-3-google-ranking.png',
     imageAlt: 'Lokale vindbaarheid in Google – Top 3 Google ranking',
+    href: '/ranking',
   },
   {
     id: 'google-ads',
     title: 'Google Ads',
     description:
-      'Direct bovenaan Google met gerichte advertenties. We beheren je campagne volledig: van zoekwoorden tot advertentieteksten.',
+      'Direct bovenaan Google, nog voordat organische resultaten beginnen. We beheren je campagne volledig: van zoekwoorden en biedstrategie tot advertentieteksten die klikken omzetten in klanten.',
     align: 'right' as const,
     image: '/Afbeeldingen/top-google-ads-campaigns.png',
     imageAlt: 'Top Google Ads campagnes',
+    href: '/ads',
   },
   {
     id: 'seo-websites',
-    title: 'SEO Website',
+    title: 'Websites',
     description:
-      'Een professionele website die technisch geoptimaliseerd is, snel laadt en structureel bezoekers uit Google aantrekt.',
+      'Maatwerk websites gebouwd in Cursor met schone, snelle code. Geen templates, geen pagebuilders. Elke website is technisch geoptimaliseerd voor Google en ontworpen om bezoekers om te zetten in opdrachten.',
     align: 'left' as const,
     image: '/Afbeeldingen/seo-sales-websites.png',
     imageAlt: 'SEO + Sales websites',
+    href: '/website',
   },
 ]
 
@@ -36,10 +39,7 @@ export function WatWijDoen() {
     <FadeUpSection className="bg-section-1" aria-labelledby="wat-wij-doen-title">
       <Container>
         <div className="wat-wij-doen-header text-center">
-          <h2
-            id="wat-wij-doen-title"
-            className="heading-section"
-          >
+          <h2 id="wat-wij-doen-title" className="heading-section">
             Wat wij doen
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
@@ -48,7 +48,6 @@ export function WatWijDoen() {
         </div>
 
         <div className="wat-wij-doen-timeline">
-          {/* Zigzag line (SVG) – visible on desktop */}
           <div className="wat-wij-doen-timeline__line" aria-hidden>
             <svg
               className="wat-wij-doen-timeline__svg"
@@ -87,10 +86,7 @@ export function WatWijDoen() {
                       </div>
                       <div className="wat-wij-doen-timeline__content">
                         <h3 className="heading-sub wat-wij-doen-timeline__title">
-                          <a
-                            href={service.id === 'lokale-ranking' ? '/ranking' : service.id === 'google-ads' ? '/ads' : '/website'}
-                            className="text-[var(--accent-green)] underline underline-offset-4"
-                          >
+                          <a href={service.href} className="text-[var(--accent-green)] underline underline-offset-4">
                             {service.title}
                           </a>
                         </h3>
@@ -119,10 +115,7 @@ export function WatWijDoen() {
                       </div>
                       <div className="wat-wij-doen-timeline__content">
                         <h3 className="heading-sub wat-wij-doen-timeline__title">
-                          <a
-                            href={service.id === 'lokale-ranking' ? '/ranking' : service.id === 'google-ads' ? '/ads' : '/website'}
-                            className="text-[var(--accent-green)] underline underline-offset-4"
-                          >
+                          <a href={service.href} className="text-[var(--accent-green)] underline underline-offset-4">
                             {service.title}
                           </a>
                         </h3>

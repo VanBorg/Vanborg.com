@@ -29,6 +29,34 @@
   }
 }
 
+/* Hero (home): mobile-first, korte leesbare tekst */
+.section--hero {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .section--hero {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.hero__text {
+  min-width: 0;
+}
+
+.hero__lead {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .hero__lead {
+    font-size: 1rem;
+  }
+}
+
 /* Fade-up content – simple lazy-in effect on scroll (backgrounds stay static) */
 .fade-up-content {
   opacity: 0;
