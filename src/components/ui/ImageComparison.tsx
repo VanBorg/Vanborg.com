@@ -55,6 +55,7 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
 
   const handleTouchStart = useCallback(
     (e: React.TouchEvent) => {
+      e.preventDefault()
       handleUserInteraction()
       setIsDragging(true)
       if (e.touches[0]) updatePosition(e.touches[0].clientX)
@@ -86,12 +87,13 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
     if (!isDragging) return
     const onMove = (e: MouseEvent) => updatePosition(e.clientX)
     const onTouchMove = (e: TouchEvent) => {
+      e.preventDefault()
       if (e.touches[0]) updatePosition(e.touches[0].clientX)
     }
     const onEnd = () => setIsDragging(false)
     window.addEventListener('mousemove', onMove)
     window.addEventListener('mouseup', onEnd)
-    window.addEventListener('touchmove', onTouchMove, { passive: true })
+    window.addEventListener('touchmove', onTouchMove, { passive: false })
     window.addEventListener('touchend', onEnd)
     return () => {
       window.removeEventListener('mousemove', onMove)
@@ -107,6 +109,7 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
         ref={containerRef}
         className="comparison-card-border comparison-card-shadow relative w-full overflow-hidden bg-white"
         aria-label="Vergelijking: links toen we begonnen, rechts na 90 dagen"
+        style={{ touchAction: 'pan-y' }}
       >
         {/* Badges boven op de afbeelding, onderaan: linksonder en rechtsonder; gradient via aparte laag */}
         <span className="comparison-badge comparison-badge-with-icon comparison-badge-corner comparison-badge-bottom-left" aria-hidden>
@@ -162,6 +165,7 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
           style={{
             left: `${Math.round(position * 100) / 100}%`,
             transform: 'translateX(-50%) translateZ(0)',
+            touchAction: 'none',
           }}
           aria-label="Vergelijk afbeeldingen, sleep om de tweede afbeelding te tonen"
           role="slider"
@@ -172,15 +176,15 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
           onMouseDown={handleMouseDown}
           onTouchStart={handleTouchStart}
           onKeyDown={(e) => {
-          handleUserInteraction()
-          if (e.key === 'ArrowLeft') {
-            e.preventDefault()
-            setPosition((p) => Math.max(0, p - 5))
-          } else if (e.key === 'ArrowRight') {
-            e.preventDefault()
-            setPosition((p) => Math.min(100, p + 5))
-          }
-        }}
+            handleUserInteraction()
+            if (e.key === 'ArrowLeft') {
+              e.preventDefault()
+              setPosition((p) => Math.max(0, p - 5))
+            } else if (e.key === 'ArrowRight') {
+              e.preventDefault()
+              setPosition((p) => Math.min(100, p + 5))
+            }
+          }}
         >
           <div className="comparison-divider-handle">
             <svg

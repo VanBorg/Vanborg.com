@@ -245,6 +245,31 @@
   padding-bottom: 0.75rem;
 }
 
+.nav-mobile-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.nav-mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  background: rgba(12, 16, 14, 0.35);
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .navbar-shell {
+    z-index: 11000 !important;
+  }
+}
+
 /* Section backgrounds – vertical gradient, soft transition in the middle */
 .bg-section-1 {
   background: var(--gradient-section-1);

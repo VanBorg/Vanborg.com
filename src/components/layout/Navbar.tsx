@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Container } from '../ui/Container'
 import { useSmoothNav } from '../../hooks/useSmoothNav'
@@ -123,6 +123,12 @@ export function Navbar() {
   const [topBarVisible, setTopBarVisible] = useState(true)
   const { pathname } = useLocation()
   const handleNavClick = useSmoothNav()
+  const mobileToggleRef = useRef<HTMLButtonElement>(null)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+
+  const closeMobileMenu = useCallback(() => {
+    setMobileOpen(false)
+  }, [])
 
   useEffect(() => {
     const onScroll = () => {
@@ -133,8 +139,67 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    closeMobileMenu()
+  }, [pathname, closeMobileMenu])
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) closeMobileMenu()
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [closeMobileMenu])
+
+  useEffect(() => {
+    if (!mobileOpen) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [mobileOpen])
+
+  useEffect(() => {
+    if (!mobileOpen) return
+    const firstFocusable = mobileMenuRef.current?.querySelector<HTMLElement>('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    firstFocusable?.focus()
+  }, [mobileOpen])
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (!mobileOpen) return
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        closeMobileMenu()
+        mobileToggleRef.current?.focus()
+        return
+      }
+
+      if (event.key !== 'Tab' || !mobileMenuRef.current) return
+
+      const focusable = mobileMenuRef.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+      if (focusable.length === 0) return
+
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      const active = document.activeElement
+
+      if (event.shiftKey && active === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault()
+        first.focus()
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [mobileOpen, closeMobileMenu])
+
   return (
-    <div className="sticky top-0 z-[200] w-full bg-white/60 backdrop-blur-xl">
+    <div className="navbar-shell sticky top-0 z-[200] w-full bg-white/60 backdrop-blur-xl">
       <div className={`top-bar ${!topBarVisible ? 'top-bar--collapsed' : ''}`}>
         <Container>
           <div className="top-bar__inner">
@@ -194,23 +259,42 @@ export function Navbar() {
               Contact
             </a>
             <button
-            type="button"
-            className="flex flex-col gap-1.5 p-2 min-w-[44px] min-h-[44px] justify-center md:hidden"
-            onClick={() => setMobileOpen((o) => !o)}
-            aria-expanded={mobileOpen}
-            aria-label="Menu openen"
-          >
-            <span className="block h-0.5 w-6 bg-neutral-700" />
-            <span className="block h-0.5 w-6 bg-neutral-700" />
-            <span className="block h-0.5 w-6 bg-neutral-700" />
-          </button>
+              ref={mobileToggleRef}
+              type="button"
+              className="flex flex-col gap-1.5 p-2 min-w-[44px] min-h-[44px] justify-center md:hidden"
+              onClick={() => setMobileOpen((o) => !o)}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-nav-panel"
+              aria-label={mobileOpen ? 'Menu sluiten' : 'Menu openen'}
+            >
+              <span className="block h-0.5 w-6 bg-neutral-700" />
+              <span className="block h-0.5 w-6 bg-neutral-700" />
+              <span className="block h-0.5 w-6 bg-neutral-700" />
+            </button>
           </div>
         </nav>
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="border-t border-neutral-200 py-5 md:hidden">
-            <div className="flex flex-col gap-5">
+          <>
+            <button
+              type="button"
+              className="nav-mobile-backdrop md:hidden"
+              aria-label="Sluit menu"
+              onClick={() => {
+                closeMobileMenu()
+                mobileToggleRef.current?.focus()
+              }}
+            />
+            <div
+              id="mobile-nav-panel"
+              ref={mobileMenuRef}
+              className="nav-mobile-panel border-t border-neutral-200 py-5 md:hidden"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mobiel navigatiemenu"
+            >
+              <div className="flex flex-col gap-5">
               {navLinks.map((link) => {
                 const hasBadge = 'badge' in link && link.badge
                 return (
@@ -224,7 +308,7 @@ export function Navbar() {
                       href={link.href}
                       className="nav-mobile-link text-sm font-medium text-neutral-600 hover:text-neutral-900"
                       onClick={(e) => {
-                        setMobileOpen(false)
+                        closeMobileMenu()
                         handleNavClick(e, link.href)
                       }}
                     >
@@ -233,11 +317,12 @@ export function Navbar() {
                   </div>
                 )
               })}
-              <a href="/contact" className="btn-primary w-fit" onClick={(e) => { setMobileOpen(false); handleNavClick(e, '/contact') }}>
-                Gratis audit
-              </a>
+                <a href="/contact" className="btn-primary w-fit" onClick={(e) => { closeMobileMenu(); handleNavClick(e, '/contact') }}>
+                  Gratis audit
+                </a>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </Container>
     </header>

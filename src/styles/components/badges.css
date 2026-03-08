@@ -185,6 +185,12 @@
   right: 0.75rem;
 }
 
+@media (max-width: 374px) {
+  .comparison-badge-corner {
+    display: none;
+  }
+}
+
 /* About Us – benefits-rij (zelfde look als Hero-knop “Bespreek mijn kansen” / btn-secondary) */
 .about-us-benefits {
   display: flex;

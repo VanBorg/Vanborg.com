@@ -32,18 +32,18 @@ const faqData: FAQTopic[] = [
       },
       {
         q: 'Wat houden jullie Google Ads pakketten in?',
-        a: 'Google Ads start vanaf € 499. We beheren campagnes volledig: van zoekwoorden en advertentieteksten tot doorlopende optimalisatie. Je betaalt per klik aan Google; advertentiebudget staat los van de servicefee.',
+        a: 'Google Ads start vanaf € 549 per maand (€ 10/dag budget + € 249 servicefee). We hebben vijf pakketten: Starten (€ 549/mnd), Groeien (€ 899/mnd), Schalen (€ 1.249/mnd), Domineren (€ 1.599/mnd) en Marktleider (€ 1.949/mnd). We beheren campagnes volledig: van zoekwoorden en advertentieteksten tot doorlopende optimalisatie. Alle prijzen excl. btw, geen opstartkosten en geen minimale looptijd.',
         rich: (
           <>
             Onze{' '}
             <a href="/ads" className="text-[var(--accent-green-light)]">
               Google Ads service
             </a>{' '}
-            start <strong>vanaf € 499</strong>. We beheren campagnes volledig van zoekwoorden en advertentieteksten tot doorlopende optimalisatie. Het advertentiebudget staat los van de servicefee. Zie de{' '}
+            start <strong>vanaf € 549 per maand</strong> (€ 10/dag advertentiebudget + € 249 servicefee). We hebben vijf pakketten: van <strong>Starten</strong> (€ 549/mnd) tot <strong>Marktleider</strong> (€ 1.949/mnd). We beheren campagnes volledig van zoekwoorden en advertentieteksten tot doorlopende optimalisatie. Geen opstartkosten en geen minimale looptijd. Bekijk alle pakketten op de{' '}
             <a href="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
-            </a>{' '}
-            voor het volledige overzicht.
+            </a>
+            .
           </>
         ),
       },
@@ -246,14 +246,14 @@ const faqData: FAQTopic[] = [
     questions: [
       {
         q: 'Wat houdt de Aanbieding (Lokale SEO + SEO Website) precies in?',
-        a: 'De aanbieding kost € 2.999 eenmalig excl. btw en combineert Lokale SEO met een SEO Website in één traject.',
+        a: 'De aanbieding combineert Lokale Top 3 Ranking met een SEO Website voor € 2.999 eenmalig excl. btw (normaal € 3.498, bespaar € 499). Inbegrepen: homepage, 3 dienstenpagina\'s, contactpagina en locatiepagina\'s. De website wordt volledig op maat gebouwd, inclusief Google Business Profiel-optimalisatie, wekelijkse posts, citations en lokale SEO. Extra pagina\'s zijn beschikbaar vanaf € 200 per stuk.',
         rich: (
           <>
             De{' '}
             <a href="/aanbieding" className="text-[var(--accent-green-light)]">
-              Aanbieding (Lokale SEO + SEO Website)
+              Aanbieding (Lokale Top 3 + SEO Website)
             </a>{' '}
-            kost € 2.999 eenmalig excl. btw en combineert Lokale SEO met een SEO Website in één traject. Zie{' '}
+            combineert ranking en website voor <strong>€ 2.999 eenmalig</strong> excl. btw (normaal € 3.498, bespaar <strong>€ 499</strong>). Inbegrepen: homepage, 3 dienstenpagina&apos;s, contactpagina en locatiepagina&apos;s. De website wordt op maat gebouwd, inclusief GBP-optimalisatie, wekelijkse posts, citations en lokale SEO. Extra pagina&apos;s vanaf € 200 p.p. Bekijk de details op de{' '}
             <a href="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
             </a>
@@ -262,15 +262,30 @@ const faqData: FAQTopic[] = [
         ),
       },
       {
-        q: 'Hoe kan ik betalen voor Lokale SEO, SEO Website en Ads?',
-        a: 'Lokale SEO kost € 1.499, Google Ads start vanaf € 499, SEO Website vanaf € 999 en de combinatie-aanbieding kost € 2.999 (allemaal excl. btw). Bij Google Ads staat het advertentiebudget los van de servicefee.',
+        q: 'Wat kosten jullie diensten?',
+        a: 'Lokale Top 3 Ranking kost € 1.499 eenmalig, met een optionele retainer van € 499/mnd om je positie te behouden. Google Ads start vanaf € 549 per maand (budget + servicefee). Een SEO Website begint vanaf € 1.499 eenmalig, andere websitetypes vanaf € 799. De combinatie-aanbieding (Ranking + SEO Website) kost € 2.999 eenmalig. Alle prijzen excl. btw. Bekijk het volledige overzicht op de prijzenpagina.',
         rich: (
           <>
-            Lokale SEO kost € 1.499, Google Ads start vanaf € 499, SEO Website vanaf € 999 en de combinatie-aanbieding kost € 2.999 (allemaal excl. btw). Bij Google Ads staat het advertentiebudget los van de servicefee. Op de{' '}
+            <a href="/ranking" className="text-[var(--accent-green-light)]">
+              Lokale Top 3 Ranking
+            </a>{' '}
+            kost <strong>€ 1.499 eenmalig</strong>, met een optionele retainer van € 499/mnd.{' '}
+            <a href="/ads" className="text-[var(--accent-green-light)]">
+              Google Ads
+            </a>{' '}
+            start <strong>vanaf € 549 per maand</strong> (budget + servicefee). Een{' '}
+            <a href="/website" className="text-[var(--accent-green-light)]">
+              SEO Website
+            </a>{' '}
+            begint <strong>vanaf € 1.499 eenmalig</strong>, andere websitetypes vanaf € 799. De{' '}
+            <a href="/aanbieding" className="text-[var(--accent-green-light)]">
+              combinatie-aanbieding
+            </a>{' '}
+            kost <strong>€ 2.999 eenmalig</strong>. Alle prijzen excl. btw. Bekijk het volledige overzicht op de{' '}
             <a href="/prijzen" className="text-[var(--accent-green-light)]">
               prijzenpagina
-            </a>{' '}
-            zie je het complete overzicht.
+            </a>
+            .
           </>
         ),
       },
@@ -281,6 +296,40 @@ const faqData: FAQTopic[] = [
       {
         q: 'Welke betaalmethodes accepteren jullie?',
         a: 'Ons werk start zodra de betaling is ontvangen. Je kunt betalen via bankoverschrijving, creditcard, contant of Bitcoin ($BTC), in lijn met wat in onze company context is vastgelegd.',
+      },
+      {
+        q: 'Welke soorten websites bouwen jullie en wat kosten ze?',
+        a: 'Wij bouwen diverse soorten websites, allemaal volledig op maat. SEO Website vanaf € 1.499, Webshop vanaf € 1.999, Boeking & Afspraken vanaf € 1.299, Horeca & Restaurants vanaf € 1.299, Portfolio & Presentatie vanaf € 799, Vastgoed & Makelaars vanaf € 1.999, Zorg & Medisch vanaf € 1.499 en Crypto & Web3 vanaf € 1.999. Extra pagina\'s kosten € 200 tot € 300 per stuk. Wil je lokale SEO toevoegen aan een niet-SEO website? Dat kan als add-on voor € 650 eenmalig. Alle prijzen excl. btw.',
+        rich: (
+          <>
+            Wij bouwen diverse soorten websites, allemaal volledig op maat. Prijzen (eenmalig, excl. btw): <strong>SEO Website</strong> vanaf € 1.499, <strong>Webshop</strong> vanaf € 1.999, <strong>Boeking &amp; Afspraken</strong> vanaf € 1.299, <strong>Horeca</strong> vanaf € 1.299, <strong>Portfolio</strong> vanaf € 799, <strong>Vastgoed</strong> vanaf € 1.999, <strong>Zorg &amp; Medisch</strong> vanaf € 1.499 en <strong>Crypto &amp; Web3</strong> vanaf € 1.999. Extra pagina&apos;s kosten € 200–300 p.p. Lokale SEO add-on voor niet-SEO websites: € 650. Bekijk alle details op de{' '}
+            <a href="/website" className="text-[var(--accent-green-light)]">
+              websitepagina
+            </a>{' '}
+            of de{' '}
+            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+              prijzenpagina
+            </a>
+            .
+          </>
+        ),
+      },
+      {
+        q: 'Wat kost doorlopend SEO-beheer (retainer)?',
+        a: 'Na de eenmalige opzet (Fase 1, € 1.499) kun je kiezen voor een maandelijkse retainer van € 499/mnd (Fase 2). Daarmee houden we je Google Business Profiel actief met wekelijkse posts en foto\'s, reageren we op algoritme-updates, voegen we nieuwe zoekwoorden en locaties toe en ontvang je maandelijks een heatmap met rankings per zoekterm en locatie. Alle prijzen excl. btw.',
+        rich: (
+          <>
+            Na de eenmalige opzet (Fase 1, € 1.499) kun je kiezen voor een maandelijkse{' '}
+            <a href="/ranking" className="text-[var(--accent-green-light)]">
+              retainer van € 499/mnd
+            </a>{' '}
+            (Fase 2). Daarmee houden we je GBP actief met wekelijkse posts en foto&apos;s, reageren we op algoritme-updates, voegen we nieuwe zoekwoorden en locaties toe en ontvang je maandelijks een heatmap met rankings. Bekijk het volledige overzicht op de{' '}
+            <a href="/prijzen" className="text-[var(--accent-green-light)]">
+              prijzenpagina
+            </a>
+            .
+          </>
+        ),
       },
     ],
   },
