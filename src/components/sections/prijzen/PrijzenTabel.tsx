@@ -133,7 +133,6 @@ export function PrijzenTabel() {
   const eenmaligTotaal = eenmalig.reduce((s, i) => s + i.num, 0)
   const eenmaligVanaf  = eenmalig.some((i) => i.vanaf)
   const maandTotaal    = maandelijks.reduce((s, i) => s + i.num, 0)
-  const heeftSelectie  = selected.size > 0
   const heeftEenmalig  = eenmalig.length > 0
   const heeftMaand     = maandelijks.length > 0
   function Rij({

@@ -18,24 +18,6 @@ function CheckIcon() {
   )
 }
 
-function KeyIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-      style={{ width: '1.125rem', height: '1.125rem', flexShrink: 0, color: 'var(--accent-green)', marginTop: '0.15rem' }}
-    >
-      <circle cx="7.5" cy="15.5" r="5.5"/>
-      <path d="M21 2l-9.6 9.6M15.5 7.5l2 2"/>
-    </svg>
-  )
-}
-
 function PrijsLijst({ items }: { items: string[] }) {
   return (
     <ul className="ranking-prijs-lijst">
@@ -49,55 +31,67 @@ function PrijsLijst({ items }: { items: string[] }) {
   )
 }
 
-function ToegangsLijst({ items }: { items: string[] }) {
-  return (
-    <ul className="ranking-prijs-lijst">
-      {items.map((item) => (
-        <li key={item} className="ranking-prijs-lijst__item">
-          <KeyIcon />
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-  )
-}
-
 export function SalePrijs() {
   return (
     <FadeUpSection className="bg-section-1" aria-labelledby="sale-prijs-title">
       <Container>
+
         <div className="text-center">
           <h2 id="sale-prijs-title" className="heading-section">
-            Top Aanbieding
+            Gevonden worden én bezoekers omzetten
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
-            Deze aanbieding is voor bedrijven die klaar willen zijn voor de toekomst.
+            Eén pakket. Lokale SEO én een website die scoort in Google.
+            Alles op elkaar afgestemd, door één partij uitgevoerd.
           </p>
         </div>
 
-        <div className="ranking-prijs-grid !grid-cols-1" style={{ maxWidth: '560px', marginLeft: 'auto', marginRight: 'auto' }}>
+        <div className="ranking-prijs-grid !grid-cols-1" style={{ maxWidth: '580px', marginLeft: 'auto', marginRight: 'auto' }}>
           <div className="card card-bordered card-elevated ranking-prijs-card" style={{ maxWidth: '100%', textAlign: 'left' }}>
 
             {/* Header */}
             <div style={{ textAlign: 'center' }}>
-              <div className="ranking-prijs-badge">Actieprijs</div>
+              <div className="ranking-prijs-badge">Beperkt beschikbaar</div>
               <div className="ranking-prijs-bedrag mt-4">
-                &euro;&nbsp;2.999 <span style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--color-neutral-700)' }}>excl. btw</span>
+                <span style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--color-neutral-500)', verticalAlign: 'middle', marginRight: '0.25rem' }}>Vanaf</span>
+                &euro;&nbsp;2.999
+                <span style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--color-neutral-700)' }}> excl. btw</span>
               </div>
-              <p className="ranking-prijs-subtekst">Eenmalig · bespaar <strong style={{ color: 'var(--accent-green)' }}>€ 499</strong> ten opzichte van losse diensten</p>
+              <p className="ranking-prijs-subtekst">
+                Eenmalig &middot; normaal <s style={{ color: 'var(--color-neutral-400)' }}>&euro; 3.498</s> &middot; bespaar{' '}
+                <strong style={{ color: 'var(--accent-green)' }}>&euro; 499</strong>
+              </p>
+              <div style={{ marginTop: '1rem', fontSize: '0.875rem', textAlign: 'left', border: '1px solid var(--color-neutral-200)', borderRadius: '0.5rem', overflow: 'hidden' }}>
+                <div style={{ padding: '0.625rem 0.875rem', background: 'var(--color-neutral-50)' }}>
+                  <p style={{ fontWeight: 600, color: 'var(--color-neutral-700)', marginBottom: '0.375rem', fontSize: '0.8125rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Inbegrepen pagina&apos;s</p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.375rem' }}>
+                    {['Homepage', '3 dienstenpagina\'s', 'Contactpagina', 'Locatiepagina\'s'].map((p) => (
+                      <span key={p} style={{ background: 'var(--color-neutral-100)', border: '1px solid var(--color-neutral-200)', borderRadius: '999px', padding: '0.2rem 0.625rem', color: 'var(--color-neutral-700)', fontSize: '0.8125rem', fontWeight: 500 }}>{p}</span>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ borderTop: '1px solid var(--color-neutral-200)', padding: '0.625rem 0.875rem', background: 'white' }}>
+                  <p style={{ color: 'var(--color-neutral-500)', fontSize: '0.8125rem', margin: 0 }}>
+                    Meer pagina&apos;s nodig? Elke extra pagina is beschikbaar <strong style={{ color: 'var(--color-neutral-700)' }}>vanaf &euro; 200</strong> p.p.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <hr className="ranking-prijs-divider" />
 
             {/* Lokale SEO */}
             <div className="mt-2">
-              <h3 className="heading-sub" style={{ marginBottom: '0.25rem' }}>Lokale SEO</h3>
+              <h3 className="heading-sub" style={{ marginBottom: '0.25rem' }}>Lokale Top 3 Ranking</h3>
+              <p className="text-section-body" style={{ marginBottom: '0.75rem', fontSize: '0.9375rem' }}>
+                Jouw bedrijf bovenaan in Google Maps en lokale zoekresultaten, voor de zoekopdrachten die klanten in jouw stad intypen.
+              </p>
               <PrijsLijst items={[
-                'Volledig optimaliseren van je Google Business Profiel',
-                'Wekelijkse posts en foto\'s op je Google-profiel',
-                'Locatie- en servicepagina\'s voor lokale zoektermen',
-                'Opbouwen van online vermeldingen (citations) voor meer autoriteit',
-                'Zichtbaarheid in Google Maps en lokale zoekresultaten',
+                'Google Business Profiel volledig geoptimaliseerd',
+                'Wekelijkse posts en foto\'s voor meer zichtbaarheid',
+                'Locatie- en servicepagina\'s gericht op lokale zoektermen',
+                'Opbouwen van citations voor meer domeinautoriteit',
+                'Zichtbaar in Google Maps en de lokale 3-pack',
               ]} />
             </div>
 
@@ -106,48 +100,47 @@ export function SalePrijs() {
             {/* SEO Website */}
             <div className="mt-2">
               <h3 className="heading-sub" style={{ marginBottom: '0.25rem' }}>SEO Website</h3>
-              <PrijsLijst items={[
-                'Maatwerk website of landingspagina op maat van jouw bedrijf',
-                'Lokale SEO verwerkt in titels, H1/H2-koppen en meta-beschrijvingen',
-                'Volledig responsief op mobiel, tablet en desktop',
-                'Integraties: Google Maps, contactformulieren en reviewblokken',
-                'Snel ladende pagina\'s voor betere Google-ranking en gebruikerservaring',
-              ]} />
-            </div>
-
-            <hr className="ranking-prijs-divider" />
-
-            {/* Voordeel bundel */}
-            <div className="mt-2">
-              <h3 className="heading-sub" style={{ marginBottom: '0.25rem' }}>Voordeel van de bundel</h3>
-              <PrijsLijst items={[
-                'Één aanspreekpunt voor beide trajecten, geen gedoe met meerdere partijen',
-                'Website en SEO zijn op elkaar afgestemd voor maximaal resultaat',
-                'Snellere uitvoering door gecombineerde aanpak',
-                'Scherpe prijs door bundeling: bespaar € 499 ten opzichte van los',
-              ]} />
-            </div>
-
-            <hr className="ranking-prijs-divider" />
-
-            {/* Wat wij nodig hebben */}
-            <div className="mt-2">
-              <h3 className="heading-sub" style={{ marginBottom: '0.25rem' }}>Wat wij van jou nodig hebben</h3>
               <p className="text-section-body" style={{ marginBottom: '0.75rem', fontSize: '0.9375rem' }}>
-                Om direct van start te gaan hebben we het volgende nodig:
+                Geen template, geen pagebuilder. Elke website bouwen we op maat in Cursor met schone, snelle code. Gebouwd om te ranken en te converteren.
               </p>
-              <ToegangsLijst items={[
-                'Toegang tot je Google Business Profiel (beheerder)',
-                'Jouw wensen, diensten en doelgebied (via een kort intakegesprek)',
-                'Eventueel logo, huisstijlkleuren of bestaand materiaal',
-                'Toegang tot je huidige domein of hostingomgeving (indien van toepassing)',
+              <PrijsLijst items={[
+                'Maatwerk ontwerp afgestemd op jouw bedrijf en doelgroep',
+                'Schone code gebouwd in Cursor, geen bloat, geen onnodige scripts',
+                'SEO verwerkt in structuur, koppen en meta-beschrijvingen',
+                'Volledig responsief op mobiel, tablet en desktop',
+                'Google Maps, contactformulieren en reviewintegraties',
+                'Snel ladend voor hogere ranking en minder wegklickers',
               ]} />
             </div>
 
-            <p className="ranking-prijs-btw" style={{ marginTop: '1.5rem' }}>Alle prijzen excl. btw · Eenmalige investering, geen doorlopende kosten</p>
+            <hr className="ranking-prijs-divider" />
+
+            {/* Waarom bundel */}
+            <div className="mt-2">
+              <h3 className="heading-sub" style={{ marginBottom: '0.25rem' }}>Waarom dit samen werkt</h3>
+              <PrijsLijst items={[
+                'Website en SEO zijn op elkaar afgestemd vanaf dag één',
+                'Resultaat sneller zichtbaar doordat beide gelijktijdig live gaan',
+                'Één aanspreekpunt, geen gedoe met meerdere bureaus',
+                'Eenmalige investering, geen verborgen maandelijkse kosten',
+              ]} />
+            </div>
+
+            <hr className="ranking-prijs-divider" />
+
+            {/* CTA */}
+            <div style={{ textAlign: 'center', marginTop: '0.5rem' }}>
+              <a href="/contact" className="btn-primary" style={{ display: 'inline-block', width: '100%' }}>
+                Aanbieding aanvragen
+              </a>
+              <p style={{ marginTop: '0.875rem', fontSize: '0.875rem', color: 'var(--color-neutral-500)' }}>
+                Geen verplichtingen &middot; Wij nemen binnen 1 werkdag contact op
+              </p>
+            </div>
 
           </div>
         </div>
+
       </Container>
     </FadeUpSection>
   )
