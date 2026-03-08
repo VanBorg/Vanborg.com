@@ -107,7 +107,7 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
     <div className={`flex w-full flex-col gap-3 ${className}`.trim()}>
       <div
         ref={containerRef}
-        className="comparison-card-border comparison-card-shadow relative w-full overflow-hidden bg-white"
+        className="comparison-card-border comparison-card-shadow relative w-full overflow-hidden bg-[var(--bg-surface)]"
         aria-label="Vergelijking: links toen we begonnen, rechts na 90 dagen"
         style={{ touchAction: 'pan-y' }}
       >
@@ -121,7 +121,7 @@ export function ImageComparison({ before, after, className = '' }: ImageComparis
             Toen we begonnen
           </span>
         </span>
-        <span className="comparison-badge comparison-badge-with-icon comparison-badge-corner comparison-badge-bottom-right" aria-hidden>
+        <span className="comparison-badge comparison-badge-with-icon comparison-badge-corner comparison-badge-top-right" aria-hidden>
           <span className="comparison-badge-bg" aria-hidden />
           <span className="comparison-badge-content">
             Na 3 maanden

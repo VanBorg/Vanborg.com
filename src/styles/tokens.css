@@ -7,36 +7,53 @@
   --accent-cyan: #06b6d4;
   --gradient-cta: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-light) 100%);
 
-  /* Section backgrounds: wit zo wit mogelijk (#ffffff), licht grijs met lichte groene tint */
+  /* Semantic surface & text colours */
+  --bg-body: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #fafafa;
+  --text-primary: #171717;
+  --text-secondary: #404040;
+  --text-muted: #525252;
+  --border-color: #e5e5e5;
+  --bg-backdrop: rgba(255, 255, 255, 0.60);
+  --bg-backdrop-strong: rgba(255, 255, 255, 0.98);
+  --bg-topbar: rgba(238, 242, 238, 0.65);
+  --divider-color: rgba(0, 0, 0, 0.06);
+  --divider-color-strong: rgba(0, 0, 0, 0.12);
+
+  /* Section backgrounds */
   --section-grey: #EDF7F2;
   --section-white: #ffffff;
-  /* Zachte overgang: blend gecentreerd in het midden van de sectie */
-  --gradient-section-1: linear-gradient(to bottom, var(--section-grey) 0%, var(--section-grey) 35%, #ffffff 65%, #ffffff 100%);
-  --gradient-section-2: linear-gradient(to bottom, #ffffff 0%, #ffffff 35%, var(--section-grey) 65%, var(--section-grey) 100%);
+  --gradient-section-1: linear-gradient(to bottom, var(--section-grey) 0%, var(--section-grey) 35%, var(--section-white) 65%, var(--section-white) 100%);
+  --gradient-section-2: linear-gradient(to bottom, var(--section-white) 0%, var(--section-white) 35%, var(--section-grey) 65%, var(--section-grey) 100%);
 
   /* Radii */
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
 
-  /* Shadows (for use in shadows.css and elsewhere) */
+  /* Shadows */
   --shadow-soft: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
   --shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
   --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --shadow-glow: 0 10px 25px -5px rgba(45, 106, 79, 0.35), 0 8px 10px -6px rgba(45, 106, 79, 0.2);
   --shadow-glow-blue: 0 10px 25px -5px rgba(37, 99, 235, 0.35), 0 8px 10px -6px rgba(37, 99, 235, 0.2);
 
-  /* Button shadow – licht standaard, donkerder bij hover */
-  --shadow-button: 0 0 0 1px #fff, 0 0 0 2px var(--comparison-ring-color), 0 4px 12px -2px rgba(0, 0, 0, 0.1), 0 2px 6px -2px rgba(0, 0, 0, 0.06);
-  --shadow-button-hover: 0 0 0 1px #fff, 0 0 0 2px var(--comparison-ring-color), 0 8px 20px -4px rgba(0, 0, 0, 0.2), 0 4px 10px -4px rgba(0, 0, 0, 0.12);
+  /* Button shadow */
+  --shadow-button: 0 0 0 1px var(--bg-body), 0 0 0 2px var(--comparison-ring-color), 0 4px 12px -2px rgba(0, 0, 0, 0.1), 0 2px 6px -2px rgba(0, 0, 0, 0.06);
+  --shadow-button-hover: 0 0 0 1px var(--bg-body), 0 0 0 2px var(--comparison-ring-color), 0 8px 20px -4px rgba(0, 0, 0, 0.2), 0 4px 10px -4px rgba(0, 0, 0, 0.12);
 
   /* Semantic colours for badges etc. */
   --color-success: #16a34a;
   --color-warning: #ca8a04;
   --color-error: #dc2626;
   --color-info: #2563eb;
+  --color-neutral-50: #fafafa;
   --color-neutral-100: #f5f5f5;
   --color-neutral-200: #e5e5e5;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
   --color-neutral-700: #404040;
   --color-neutral-800: #262626;
   --color-neutral-900: #171717;
@@ -48,11 +65,53 @@
   --comparison-ring-color: #a3a3a3;
   --comparison-ring-offset: 2px;
   --comparison-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
-  --comparison-badge-border: 2px solid #e5e5e5;
-  --comparison-badge-bg: #fff;
-  --comparison-badge-text: #262626;
+  --comparison-badge-border: 2px solid var(--border-color);
+  --comparison-badge-bg: var(--bg-surface);
+  --comparison-badge-text: var(--text-primary);
   --comparison-divider-line-color: #000;
   --comparison-divider-handle-bg: #171717;
   --comparison-divider-handle-border: #404040;
   --comparison-divider-handle-ring: rgba(115, 115, 115, 0.3);
+}
+
+/* ─── Dark mode ─── */
+html.dark {
+  --accent-green: #40916c;
+  --accent-green-light: #52b788;
+  --gradient-cta: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
+
+  --bg-body: #0f1210;
+  --bg-surface: #1a1f1c;
+  --bg-surface-elevated: #222926;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b0b0b0;
+  --text-muted: #808080;
+  --border-color: #2a3530;
+  --bg-backdrop: rgba(26, 31, 28, 0.80);
+  --bg-backdrop-strong: rgba(26, 31, 28, 0.98);
+  --bg-topbar: rgba(20, 26, 22, 0.75);
+  --divider-color: rgba(255, 255, 255, 0.06);
+  --divider-color-strong: rgba(255, 255, 255, 0.12);
+
+  --section-grey: #141a16;
+  --section-white: #0f1210;
+
+  --shadow-soft: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+
+  --color-neutral-50: #1a1f1c;
+  --color-neutral-100: #222926;
+  --color-neutral-200: #2a3530;
+  --color-neutral-400: #5a6560;
+  --color-neutral-500: #808080;
+  --color-neutral-600: #b0b0b0;
+  --color-neutral-700: #b0b0b0;
+  --color-neutral-800: #d4d4d4;
+  --color-neutral-900: #f0f0f0;
+
+  --comparison-badge-bg: var(--bg-surface);
+  --comparison-badge-text: var(--text-primary);
+  --comparison-divider-handle-bg: #f0f0f0;
+  --comparison-divider-handle-border: #b0b0b0;
 }

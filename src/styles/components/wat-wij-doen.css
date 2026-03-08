@@ -156,7 +156,7 @@
   padding: 1.25rem;
   background: var(--section-white);
   border-radius: var(--radius-lg);
-  border: 2px solid var(--color-neutral-200);
+  border: 2px solid var(--border-color);
   box-shadow: var(--shadow-card);
 }
 

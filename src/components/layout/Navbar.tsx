@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Container } from '../ui/Container'
+import { ThemeToggle } from '../ui/ThemeToggle'
 import { useSmoothNav } from '../../hooks/useSmoothNav'
 
 const TOP_BAR_SCROLL_THRESHOLD = 60
@@ -108,7 +109,7 @@ function SocialLinks({ className = '' }: { className?: string }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={ariaLabel}
-            className="text-neutral-600 transition-colors hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-green)] focus-visible:ring-offset-2 rounded p-1 min-w-[44px] min-h-[44px] flex items-center justify-center md:min-w-[36px] md:min-h-[36px]"
+            className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-green)] focus-visible:ring-offset-2 rounded p-1 min-w-[44px] min-h-[44px] flex items-center justify-center md:min-w-[36px] md:min-h-[36px]"
           >
             {Icon && <Icon />}
           </a>
@@ -199,7 +200,7 @@ export function Navbar() {
   }, [mobileOpen, closeMobileMenu])
 
   return (
-    <div className="navbar-shell sticky top-0 z-[200] w-full bg-white/60 backdrop-blur-xl">
+    <div className="navbar-shell sticky top-0 z-[200] w-full bg-[var(--bg-backdrop)] backdrop-blur-xl">
       <div className={`top-bar ${!topBarVisible ? 'top-bar--collapsed' : ''}`}>
         <Container>
           <div className="top-bar__inner">
@@ -221,10 +222,10 @@ export function Navbar() {
           </div>
         </Container>
       </div>
-      <header className="w-full border-b border-neutral-200/50 bg-white/60 backdrop-blur-xl">
+      <header className="w-full border-b border-[var(--border-color)]/50 bg-[var(--bg-backdrop)] backdrop-blur-xl">
       <Container>
         <nav className="relative flex min-h-[4rem] items-center justify-between">
-          <a href="/" className="nav-logo min-w-[100px] text-2xl text-neutral-900 md:min-w-[120px] md:text-3xl" onClick={(e) => handleNavClick(e, '/')}>
+          <a href="/" className="nav-logo min-w-[100px] text-2xl text-[var(--text-primary)] md:min-w-[120px] md:text-3xl" onClick={(e) => handleNavClick(e, '/')}>
             <span className="nav-logo__line">Van</span>
             <span className="nav-logo__line nav-logo__line--2">Borg</span>
           </a>
@@ -254,10 +255,12 @@ export function Navbar() {
             </div>
 
           {/* Rechts: CTA (desktop) of hamburger (mobile) */}
-          <div className="flex justify-end min-w-[120px] md:min-w-[140px]">
+          <div className="flex items-center justify-end gap-1 min-w-[120px] md:min-w-[140px]">
+            <ThemeToggle className="hidden md:inline-flex" />
             <a href="/contact" className="btn-primary hidden md:inline-flex" onClick={(e) => handleNavClick(e, '/contact')}>
               Contact
             </a>
+            <ThemeToggle className="md:hidden" />
             <button
               ref={mobileToggleRef}
               type="button"
@@ -267,9 +270,9 @@ export function Navbar() {
               aria-controls="mobile-nav-panel"
               aria-label={mobileOpen ? 'Menu sluiten' : 'Menu openen'}
             >
-              <span className="block h-0.5 w-6 bg-neutral-700" />
-              <span className="block h-0.5 w-6 bg-neutral-700" />
-              <span className="block h-0.5 w-6 bg-neutral-700" />
+              <span className="block h-0.5 w-6 bg-[var(--text-secondary)]" />
+              <span className="block h-0.5 w-6 bg-[var(--text-secondary)]" />
+              <span className="block h-0.5 w-6 bg-[var(--text-secondary)]" />
             </button>
           </div>
         </nav>
@@ -289,7 +292,7 @@ export function Navbar() {
             <div
               id="mobile-nav-panel"
               ref={mobileMenuRef}
-              className="nav-mobile-panel border-t border-neutral-200 py-5 md:hidden"
+              className="nav-mobile-panel border-t border-[var(--border-color)] py-5 md:hidden"
               role="dialog"
               aria-modal="true"
               aria-label="Mobiel navigatiemenu"
@@ -306,7 +309,7 @@ export function Navbar() {
                     )}
                     <a
                       href={link.href}
-                      className="nav-mobile-link text-sm font-medium text-neutral-600 hover:text-neutral-900"
+                      className="nav-mobile-link text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                       onClick={(e) => {
                         closeMobileMenu()
                         handleNavClick(e, link.href)
@@ -320,6 +323,25 @@ export function Navbar() {
                 <a href="/contact" className="btn-primary w-fit" onClick={(e) => { closeMobileMenu(); handleNavClick(e, '/contact') }}>
                   Gratis audit
                 </a>
+              </div>
+
+              {/* Contact info + socials in mobile menu */}
+              <div className="mt-4 border-t border-[var(--border-color)] pt-4 flex flex-col gap-3">
+                <div className="flex flex-col gap-2 text-sm text-[var(--text-secondary)]">
+                  <span className="inline-flex items-center gap-2">
+                    <IconClock />
+                    <span>24/7 Bereikbaar</span>
+                  </span>
+                  <a href={`mailto:${topBarEmail}`} className="inline-flex items-center gap-2 hover:text-[var(--text-primary)]">
+                    <IconMail />
+                    <span>{topBarEmail}</span>
+                  </a>
+                  <a href={topBarTelHref} className="inline-flex items-center gap-2 hover:text-[var(--text-primary)]">
+                    <IconPhone />
+                    <span>{topBarPhone}</span>
+                  </a>
+                </div>
+                <SocialLinks />
               </div>
             </div>
           </>

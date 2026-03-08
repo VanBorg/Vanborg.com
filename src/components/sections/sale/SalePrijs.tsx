@@ -70,7 +70,7 @@ export function SalePrijs() {
                     ))}
                   </div>
                 </div>
-                <div style={{ borderTop: '1px solid var(--color-neutral-200)', padding: '0.625rem 0.875rem', background: 'white' }}>
+                <div style={{ borderTop: '1px solid var(--color-neutral-200)', padding: '0.625rem 0.875rem', background: 'var(--bg-surface)' }}>
                   <p style={{ color: 'var(--color-neutral-500)', fontSize: '0.8125rem', margin: 0 }}>
                     Meer pagina&apos;s nodig? Elke extra pagina is beschikbaar <strong style={{ color: 'var(--color-neutral-700)' }}>vanaf &euro; 200</strong> p.p.
                   </p>

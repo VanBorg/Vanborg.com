@@ -250,7 +250,7 @@
   left: 0;
   right: 0;
   top: 100%;
-  background: rgba(255, 255, 255, 0.98);
+  background: var(--bg-backdrop-strong);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 2;
@@ -279,9 +279,10 @@
   background: var(--gradient-section-2);
 }
 
-/* Top bar boven navbar – glaseffect; collapse on scroll */
+/* Top bar boven navbar – glaseffect; collapse on scroll; hidden on mobile (info in mobile menu) */
 .top-bar {
-  background: rgba(238, 242, 238, 0.65);
+  display: none;
+  background: var(--bg-topbar);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   width: 100%;
@@ -290,6 +291,12 @@
   max-height: 5rem;
   overflow: hidden;
   transition: max-height 0.25s ease, padding 0.25s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .top-bar {
+    display: block;
+  }
 }
 
 .top-bar--collapsed {
@@ -357,7 +364,7 @@
 /* Icoontjes in de top bar: donkerder groen zodat ze afsteken tegen de tekst */
 .top-bar__item svg {
   flex-shrink: 0;
-  color: #1b4332;
+  color: var(--accent-green);
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -375,12 +382,12 @@
 }
 
 .top-bar__link:hover {
-  color: #1b4332;
-  background-color: rgba(27, 67, 50, 0.1);
+  color: var(--accent-green);
+  background-color: rgba(45, 106, 79, 0.1);
 }
 
 .top-bar__link:hover svg {
-  color: #0d2818;
+  color: var(--accent-green-light);
   transform: scale(1.08);
 }
 
@@ -404,15 +411,15 @@
 }
 
 .top-bar__socials a {
-  color: #1b4332;
+  color: var(--accent-green);
   padding: 0.25rem;
   border-radius: 4px;
   transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .top-bar__socials a:hover {
-  color: #0d2818;
-  background-color: rgba(27, 67, 50, 0.12);
+  color: var(--accent-green-light);
+  background-color: rgba(45, 106, 79, 0.12);
   transform: scale(1.12);
 }
 

@@ -1,0 +1,128 @@
+/* Aanbieding popup – mobile-first */
+.aanbieding-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.aanbieding-popup-card {
+  position: relative;
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+  border-top: 4px solid var(--accent-green);
+  width: 100%;
+  max-width: 420px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+}
+
+.aanbieding-popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-neutral-700);
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.aanbieding-popup-badge {
+  display: inline-block;
+  background: rgba(45, 106, 79, 0.1);
+  color: var(--accent-green);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.25rem 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.aanbieding-popup-title {
+  font-size: 1.375rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-neutral-900);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.aanbieding-popup-lead {
+  font-size: 1rem;
+  color: var(--color-neutral-700);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.aanbieding-popup-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-green);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.aanbieding-popup-cta {
+  width: 100%;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aanbieding-popup-dismiss {
+  margin-top: 0.875rem;
+  min-height: 44px;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--color-neutral-700);
+  text-decoration: underline;
+}
+
+/* Slightly larger card and text on larger screens */
+@media (min-width: 480px) {
+  .aanbieding-popup-backdrop {
+    padding: 1.5rem;
+  }
+
+  .aanbieding-popup-card {
+    padding: 2rem;
+  }
+
+  .aanbieding-popup-close {
+    top: 0.75rem;
+    right: 0.75rem;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .aanbieding-popup-title {
+    font-size: 1.5rem;
+  }
+
+  .aanbieding-popup-price {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+}

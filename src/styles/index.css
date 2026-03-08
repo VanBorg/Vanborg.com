@@ -21,6 +21,8 @@
 @import './components/legal-content.css';
 @import './components/location-map.css';
 @import './components/whatsapp-widget.css';
+@import './components/cookie-banner.css';
+@import './components/aanbieding-popup.css';
 
 @tailwind base;
 @tailwind components;

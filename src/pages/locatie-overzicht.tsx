@@ -93,7 +93,7 @@ export default function LocatieOverzichtPage() {
                 <li key={loc.slug}>
                   <Link
                     to={`/locatie/${loc.slug}`}
-                    className="block rounded-xl border border-neutral-200 bg-white p-4 shadow-sm transition-colors hover:border-[var(--accent-green)] hover:bg-neutral-50"
+                    className="block rounded-xl border border-neutral-200 bg-[var(--bg-surface)] p-4 shadow-sm transition-colors hover:border-[var(--accent-green)] hover:bg-[var(--bg-surface-elevated)]"
                   >
                     <h3 className="heading-sub">{loc.name}</h3>
                     <p className="mt-1 text-sm text-neutral-500">{loc.regionHint}</p>

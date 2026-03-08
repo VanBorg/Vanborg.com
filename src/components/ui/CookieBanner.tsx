@@ -22,98 +22,41 @@ export function CookieBanner() {
     <div
       role="region"
       aria-label="Cookiemelding"
-      style={{
-        position: 'fixed',
-        bottom: '1.25rem',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        zIndex: 9998,
-        width: 'calc(100% - 2rem)',
-        maxWidth: '640px',
-        background: '#fff',
-        borderRadius: 'var(--radius-lg)',
-        boxShadow: 'var(--shadow-strong)',
-        border: '1px solid var(--color-neutral-200)',
-        padding: '1.25rem 1.5rem',
-        display: 'flex',
-        gap: '1.25rem',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-      }}
+      className="cookie-banner"
     >
-      {/* Cookie icon */}
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="var(--accent-green)"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden
-        style={{ flexShrink: 0 }}
-      >
-        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
-        <path d="M8.5 8.5v.01" />
-        <path d="M16 15.5v.01" />
-        <path d="M12 12v.01" />
-      </svg>
-
-      {/* Text */}
-      <div style={{ flex: 1, minWidth: '180px' }}>
-        <p style={{
-          fontSize: '0.9375rem',
-          fontWeight: 600,
-          color: 'var(--color-neutral-900)',
-          marginBottom: '0.2rem',
-        }}>
-          Wij gebruiken cookies
-        </p>
-        <p style={{
-          fontSize: '0.8125rem',
-          color: 'var(--color-neutral-700)',
-          lineHeight: 1.5,
-        }}>
-          We gebruiken cookies om je ervaring te verbeteren en ons verkeer te analyseren.{' '}
-          <a href="/privacy" style={{ color: 'var(--accent-green)', textDecoration: 'underline' }}>
-            Meer informatie
-          </a>
-        </p>
-      </div>
-
-      {/* Buttons */}
-      <div style={{ display: 'flex', gap: '0.625rem', flexShrink: 0 }}>
-        <button
-          onClick={dismiss}
-          style={{
-            background: 'none',
-            border: '1px solid var(--color-neutral-200)',
-            borderRadius: 'var(--radius-md)',
-            padding: '0.4rem 1rem',
-            fontSize: '0.875rem',
-            fontWeight: 500,
-            color: 'var(--color-neutral-700)',
-            cursor: 'pointer',
-            whiteSpace: 'nowrap',
-          }}
+      <div className="cookie-banner__row">
+        <svg
+          className="cookie-banner__icon"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="var(--accent-green)"
+          strokeWidth="1.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden
         >
+          <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
+          <path d="M8.5 8.5v.01" />
+          <path d="M16 15.5v.01" />
+          <path d="M12 12v.01" />
+        </svg>
+        <div className="cookie-banner__text">
+          <p className="cookie-banner__title">Wij gebruiken cookies</p>
+          <p className="cookie-banner__desc">
+            We gebruiken cookies om je ervaring te verbeteren en ons verkeer te analyseren.{' '}
+            <a href="/privacy" style={{ color: 'var(--accent-green)', textDecoration: 'underline' }}>
+              Meer informatie
+            </a>
+          </p>
+        </div>
+      </div>
+      <div className="cookie-banner__actions">
+        <button type="button" onClick={dismiss} className="cookie-banner__btn cookie-banner__btn--secondary">
           Alleen noodzakelijk
         </button>
-        <button
-          onClick={dismiss}
-          style={{
-            background: 'var(--accent-green)',
-            border: 'none',
-            borderRadius: 'var(--radius-md)',
-            padding: '0.4rem 1rem',
-            fontSize: '0.875rem',
-            fontWeight: 600,
-            color: '#fff',
-            cursor: 'pointer',
-            whiteSpace: 'nowrap',
-          }}
-        >
+        <button type="button" onClick={dismiss} className="cookie-banner__btn cookie-banner__btn--primary">
           Alles accepteren
         </button>
       </div>

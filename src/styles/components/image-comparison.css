@@ -7,7 +7,7 @@
 
 .comparison-card-shadow {
   box-shadow:
-    0 0 0 var(--comparison-ring-offset) #fff,
+    0 0 0 var(--comparison-ring-offset) var(--bg-body),
     0 0 0 calc(var(--comparison-ring-offset) + var(--comparison-ring-width)) var(--comparison-ring-color),
     var(--comparison-shadow);
 }

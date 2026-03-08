@@ -58,14 +58,14 @@
 /* Secondary – outline, schaduw zoals afbeeldingdoos, subtle hover fill */
 .btn-secondary {
   color: var(--color-neutral-900);
-  background: #fff;
+  background: var(--bg-surface);
   border: 2px solid var(--color-neutral-200);
   box-shadow: var(--shadow-button);
 }
 
 .btn-secondary:hover {
-  background-color: #fafafa;
-  border-color: #d4d4d4;
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--color-neutral-400);
   box-shadow: var(--shadow-button-hover);
 }
 

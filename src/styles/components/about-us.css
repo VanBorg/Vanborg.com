@@ -9,10 +9,10 @@
   border: var(--comparison-border-width) solid var(--comparison-border-color);
   border-radius: var(--radius-lg);
   box-shadow:
-    0 0 0 var(--comparison-ring-offset) #fff,
+    0 0 0 var(--comparison-ring-offset) var(--bg-body),
     0 0 0 calc(var(--comparison-ring-offset) + var(--comparison-ring-width)) var(--comparison-ring-color),
     var(--comparison-shadow);
-  background: #fff;
+  background: var(--bg-surface);
 }
 
 @media (min-width: 1024px) {

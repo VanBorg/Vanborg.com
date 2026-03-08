@@ -39,9 +39,9 @@
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 9999px;
-    background: #fff;
-    border: 2px solid var(--color-neutral-300);
-    box-shadow: 0 0 0 3px #fff;
+    background: var(--bg-surface);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 0 0 3px var(--bg-surface);
     transform: translateY(-50%);
   }
 

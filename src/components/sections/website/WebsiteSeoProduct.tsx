@@ -64,7 +64,7 @@ export function WebsiteSeoProduct() {
               </div>
 
               <div className="mt-5" style={{
-                background: 'rgba(0,0,0,0.04)',
+                background: 'var(--color-neutral-100)',
                 borderRadius: '0.5rem',
                 padding: '0.75rem 1rem',
                 fontSize: '0.875rem',

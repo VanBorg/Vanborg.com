@@ -5,15 +5,16 @@
   }
 
   body {
-    background-color: #fff;
-    color: #171717;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--accent-green);
+    box-shadow: 0 0 0 2px var(--bg-body), 0 0 0 4px var(--accent-green);
   }
 
   @media (prefers-reduced-motion: reduce) {
