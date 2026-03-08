@@ -250,7 +250,7 @@ export function Vacatures() {
                             href={MAIL_COMPOSE_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90 bg-white border border-[var(--border-color)] text-[var(--color-neutral-900)]"
+                            className="inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90 bg-[var(--bg-surface)] border border-[var(--border-color)] text-[var(--text-primary)] hover:bg-[var(--bg-surface-elevated)]"
                           >
                             <EmailIcon />
                             Stuur een e-mail

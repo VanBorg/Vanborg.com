@@ -26,7 +26,7 @@ export default function NotFoundPage() {
       </Helmet>
       <Navbar />
       <main>
-        <section className="section bg-section-1 py-20">
+        <section className="section bg-section-1 py-12 lg:py-20">
           <Container>
             <div className="mx-auto max-w-xl text-center">
               <h1 className="heading-hero">Pagina niet gevonden</h1>

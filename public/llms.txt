@@ -18,9 +18,9 @@ Google-profielcategorieen zijn leidend: Internetmarketing (primair) en Marketing
 Services (aligned with Google Business Profile)
 - Lokale SEO - EUR 1.499
   Kom in de top 3 van Google Maps en lokale zoekresultaten via optimalisatie van je Google Business Profiel en website.
-- Google Ads - Vanaf EUR 499
+- Google Ads - Vanaf EUR 549
   Gerichte advertenties voor klanten met directe zoekintentie. Campagnebeheer van zoekwoorden tot advertentieteksten.
-- SEO Website - Vanaf EUR 999
+- SEO Website - Vanaf EUR 1.499
   Professionele, technisch geoptimaliseerde website met snelle laadtijd, sterke zoekwoorden en content die scoort.
 - Aanbieding (Lokale SEO + SEO Website) - EUR 2.999
   Voordeelpakket met SEO-website en lokale Google Maps ranking voor een scherpe actieprijs.
@@ -48,6 +48,19 @@ High-priority pages
 - SEO Website: https://vanborg.com/website
 - Aanbieding: https://vanborg.com/aanbieding
 - Prijzen: https://vanborg.com/prijzen
+- Contact: https://vanborg.com/contact
+- Vacatures: https://vanborg.com/jobs
+- Werkgebieden: https://vanborg.com/locatie
+
+Vacatures (careers)
+Van Borg is actief op zoek naar salestalent. Alle posities zijn volledig remote en op commissiebasis.
+- B2B Closer (2 posities)
+  Sluit deals met gekwalificeerde leads. 10% commissie over setup, retainer en upsells.
+- B2B Appointment Setter – Koud Bellen (3 posities)
+  Bel prospects van de leadlijst en plan afspraken in voor de Closers. EUR 50 per gehonoreerde afspraak.
+- B2B Appointment Setter – Koud Email (1 positie)
+  Zet outbound e-mailcampagnes op en plan afspraken in voor de Closers. EUR 50 per gehonoreerde afspraak.
+Canonical vacaturepagina: https://vanborg.com/jobs
 
 Canonical crawl sources for AI/LLMs
 - https://vanborg.com/company-context-for-ai.html

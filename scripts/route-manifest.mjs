@@ -21,6 +21,7 @@ const STATIC_PATHS = [
   '/locatie',
   '/marketingbureau-veendam',
   '/google-bedrijfsprofiel-veendam',
+  '/jobs',
 ]
 
 export function getBaseUrl() {
