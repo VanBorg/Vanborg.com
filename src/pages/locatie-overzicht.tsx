@@ -7,6 +7,10 @@ import { LOCATION_PAGES } from '../data/locations'
 import { LocationNetworkMap } from '../components/sections/locatie/LocationNetworkMap'
 
 const BASE_URL = 'https://vanborg.com'
+const SCAN_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfbsa-4CWu9Rh0yBDLrVeXYbtXfHlcBJaxqYOQGWeKPDriaMg/viewform?usp=publish-editor'
+const CALENDLY_URL =
+  'https://calendly.com/vanborglimited/van_borg_sales_call'
 
 export default function LocatieOverzichtPage() {
   return (
@@ -44,6 +48,24 @@ export default function LocatieOverzichtPage() {
               <p className="text-section-body mt-3 text-neutral-600">
                 Van Borg is gevestigd in Veendam en helpt ondernemers in de regio met Google Top 3 ranking, Google Ads en SEO-websites.
               </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-4">
+                <a
+                  href={SCAN_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Check mijn huidige ranking
+                </a>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  Bespreek mijn kansen
+                </a>
+              </div>
             </div>
           </Container>
         </section>
