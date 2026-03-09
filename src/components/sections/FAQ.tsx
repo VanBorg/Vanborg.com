@@ -264,7 +264,7 @@ const faqData: FAQTopic[] = [
       },
       {
         q: 'Wat kosten jullie diensten?',
-        a: 'Lokale Top 3 Ranking kost € 1.499 eenmalig, met een optionele retainer van € 499/mnd om je positie te behouden. Google Ads start vanaf € 549 per maand (budget + servicefee). Een SEO Website begint vanaf € 1.499 eenmalig, andere websitetypes vanaf € 799. De combinatie-aanbieding (Ranking + SEO Website) kost € 2.999 eenmalig. Alle prijzen excl. btw. Bekijk het volledige overzicht op de prijzenpagina.',
+        a: 'Lokale Top 3 Ranking kost € 1.499 eenmalig, met een optionele retainer van € 499/mnd om je positie te behouden. Google Ads start vanaf € 549 per maand (budget + servicefee). Een SEO Website begint vanaf € 1.999 eenmalig, andere websitetypes vanaf € 799. De combinatie-aanbieding (Ranking + SEO Website) kost € 2.999 eenmalig. Alle prijzen excl. btw. Bekijk het volledige overzicht op de prijzenpagina.',
         rich: (
           <>
             <Link to="/ranking" className="text-[var(--accent-green-light)]">
@@ -278,7 +278,7 @@ const faqData: FAQTopic[] = [
             <Link to="/website" className="text-[var(--accent-green-light)]">
               SEO Website
             </Link>{' '}
-            begint <strong>vanaf € 1.499 eenmalig</strong>, andere websitetypes vanaf € 799. De{' '}
+            begint <strong>vanaf € 1.999 eenmalig</strong>, andere websitetypes vanaf € 799. De{' '}
             <Link to="/aanbieding" className="text-[var(--accent-green-light)]">
               combinatie-aanbieding
             </Link>{' '}
@@ -300,10 +300,10 @@ const faqData: FAQTopic[] = [
       },
       {
         q: 'Welke soorten websites bouwen jullie en wat kosten ze?',
-        a: 'Wij bouwen diverse soorten websites, allemaal volledig op maat. SEO Website vanaf € 1.499, Webshop vanaf € 1.999, Boeking & Afspraken vanaf € 1.299, Horeca & Restaurants vanaf € 1.299, Portfolio & Presentatie vanaf € 799, Vastgoed & Makelaars vanaf € 1.999, Zorg & Medisch vanaf € 1.499 en Crypto & Web3 vanaf € 1.999. Extra pagina\'s kosten € 200 tot € 300 per stuk. Wil je lokale SEO toevoegen aan een niet-SEO website? Dat kan als add-on voor € 650 eenmalig. Alle prijzen excl. btw.',
+        a: 'Wij bouwen diverse soorten websites, allemaal volledig op maat. SEO Website vanaf € 1.999, Webshop vanaf € 1.999, Boeking & Afspraken vanaf € 1.299, Horeca & Restaurants vanaf € 1.299, Portfolio & Presentatie vanaf € 799, Vastgoed & Makelaars vanaf € 1.999, Zorg & Medisch vanaf € 1.499 en Crypto & Web3 vanaf € 1.999. Extra pagina\'s kosten € 200 tot € 300 per stuk. Wil je lokale SEO toevoegen aan een niet-SEO website? Dat kan als add-on voor € 650 eenmalig. Alle prijzen excl. btw.',
         rich: (
           <>
-            Wij bouwen diverse soorten websites, allemaal volledig op maat. Prijzen (eenmalig, excl. btw): <strong>SEO Website</strong> vanaf € 1.499, <strong>Webshop</strong> vanaf € 1.999, <strong>Boeking &amp; Afspraken</strong> vanaf € 1.299, <strong>Horeca</strong> vanaf € 1.299, <strong>Portfolio</strong> vanaf € 799, <strong>Vastgoed</strong> vanaf € 1.999, <strong>Zorg &amp; Medisch</strong> vanaf € 1.499 en <strong>Crypto &amp; Web3</strong> vanaf € 1.999. Extra pagina&apos;s kosten € 200–300 p.p. Lokale SEO add-on voor niet-SEO websites: € 650. Bekijk alle details op de{' '}
+            Wij bouwen diverse soorten websites, allemaal volledig op maat. Prijzen (eenmalig, excl. btw): <strong>SEO Website</strong> vanaf € 1.999, <strong>Webshop</strong> vanaf € 1.999, <strong>Boeking &amp; Afspraken</strong> vanaf € 1.299, <strong>Horeca</strong> vanaf € 1.299, <strong>Portfolio</strong> vanaf € 799, <strong>Vastgoed</strong> vanaf € 1.999, <strong>Zorg &amp; Medisch</strong> vanaf € 1.499 en <strong>Crypto &amp; Web3</strong> vanaf € 1.999. Extra pagina&apos;s kosten € 200–300 p.p. Lokale SEO add-on voor niet-SEO websites: € 650. Bekijk alle details op de{' '}
             <Link to="/website" className="text-[var(--accent-green-light)]">
               websitepagina
             </Link>{' '}

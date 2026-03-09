@@ -9,7 +9,7 @@ interface WebsiteType {
   isSeoWebsite: boolean
 }
 const websiteTypes: WebsiteType[] = [
-  { naam: 'SEO Website',             prijsLabel: 'Vanaf € 1.499', prijsNum: 1499, isSeoWebsite: true  },
+  { naam: 'SEO Website',             prijsLabel: 'Vanaf € 1.999', prijsNum: 1999, isSeoWebsite: true  },
   { naam: 'Webshop',                 prijsLabel: 'Vanaf € 1.999', prijsNum: 1999, isSeoWebsite: false },
   { naam: 'Boeking & Afspraken',     prijsLabel: 'Vanaf € 1.299', prijsNum: 1299, isSeoWebsite: false },
   { naam: 'Horeca & Restaurants',    prijsLabel: 'Vanaf € 1.299', prijsNum: 1299, isSeoWebsite: false },

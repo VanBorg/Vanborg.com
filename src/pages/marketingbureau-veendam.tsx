@@ -183,7 +183,7 @@ export default function MarketingbureauVeendamPage() {
                   <li>• Snel en mobielvriendelijk, klaar voor conversie</li>
                 </ul>
                 <p className="mt-3 text-section-body">
-                  <strong>Prijs:</strong> Vanaf € 1.499 –{' '}
+                  <strong>Prijs:</strong> Vanaf € 1.999 –{' '}
                   <Link to="/website" className="link-primary">
                     bekijk SEO Website
                   </Link>

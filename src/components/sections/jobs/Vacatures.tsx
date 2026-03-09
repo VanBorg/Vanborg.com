@@ -9,83 +9,162 @@ interface Vacature {
   description: string
   responsibilities: string[]
   requirements: string[]
+  quota: string[]
   offer: string[]
 }
 
 const vacatures: Vacature[] = [
   {
-    title: 'B2B Closer',
+    title: 'B2B Closer – Warme Leads',
     positions: 2,
     description:
-      'Je sluit deals met gekwalificeerde leads die door ons appointment setting team zijn ingepland. Je verkoopt Lokale SEO, SEO-websites en Google Ads aan Nederlandse ondernemers die online beter gevonden willen worden. Je verdient 10% commissie over alles wat je sluit en upselt, inclusief de eenmalige setup, de maandelijkse retainer en elke upsell die jij zelf initieert.',
+      'Je sluit deals met gekwalificeerde leads die door onze appointment setters en koude e-mail outreach worden aangeleverd. Jouw hele bestaan binnen Van Borg draait om het closen van lauwe tot warme leads. Je focust op het verkopen van onze Lokale Top 3 (Lokale SEO) en SEO-websites aan Nederlandse ondernemers die online beter gevonden willen worden. Je bouwt een strakke pipeline op in Close CRM en zorgt dat geen enkele lead onbehandeld blijft. Je start op 10% commissie over alles wat je sluit en upselt. Bij bewezen resultaten groei je door naar 15%.',
     responsibilities: [
-      'Salesgesprekken voeren met gekwalificeerde leads via telefoon en videocall',
-      'Lokale SEO, SEO-websites en Google Ads verkopen en afstemmen op de situatie van de klant',
-      'Upsells initiëren vanaf dag 1, want website, Google Ads en retainer tellen allemaal mee',
-      'Deals sluiten en je pipeline zelfstandig beheren in Close CRM',
+      'Salesgesprekken voeren met warme en lauwe leads via telefoon en videocall',
+      'Primair verkopen: Lokale Top 3 (Lokale SEO) en SEO-websites. Retainers en Google Ads komen later als upsell',
+      'Een strakke pipeline opzetten en beheren in Close CRM zodat elke lead wordt opgevolgd',
+      'Upsells initiëren: als de klant draait, bied je de website, retainer of Google Ads aan',
+      'Alle warme leads van de appointment setters en koude e-mail campagnes in behandeling nemen',
+      'Lauwe leads die door de eigenaar worden doorgestuurd opvolgen en converteren',
       'Klantrelaties warm houden zodat je maandelijkse commissie op de retainer blijft doorlopen',
     ],
     requirements: [
       'Minimaal 2 jaar aantoonbare ervaring in B2B sales of closing',
-      'Ervaring met het verkopen van online marketingdiensten is een groot pluspunt',
-      'Vloeiend Nederlands, sterk aan de telefoon en per video',
-      'Zelfstandig en resultaatgericht, je regelt je eigen zaken',
+      'Ervaring met het verkopen van online marketingdiensten (SEO, Google Ads, websites) is een groot pluspunt',
+      'Vloeiend Nederlands (moedertaal of C2-niveau), sterk aan de telefoon en per video',
+      'Zelfstandig, resultaatgericht en in staat om een eigen pipeline te managen',
+    ],
+    quota: [
+      'Minimaal 1 gesloten klant per 5 afspraken (20% close rate)',
+      'Minimaal 2 nieuwe klanten per week als target',
+      'Alle aangeleverde leads binnen 24 uur opvolgen',
+      'Pipeline in Close CRM dagelijks bijwerken, geen lead mag onbehandeld blijven',
     ],
     offer: [
-      '10% commissie over alles, setup, retainer en elke upsell',
-      'Bij closing van de Lokale SEO setup (€1.499) verdien je €150 eenmalig, daarna €50 per maand zolang de klant actief is',
-      'Warme leads aangeleverd door ons appointment setting team',
-      'Volledig remote werken, geen vaste uren en korte lijnen met de eigenaar',
+      '10% commissie als instap, 15% na bewezen resultaten',
+      'Combideal Lokale Top 3 + website (€3.000): €300 commissie bij 10%, €450 bij 15%',
+      'Bij closing van alleen de Lokale Top 3 setup (€1.499): €150 eenmalig bij 10%, daarna €50/maand zolang de klant actief is',
+      'Bij een SEO-website (vanaf €2.499): €250+ eenmalig bij 10%',
+      'Warme leads aangeleverd door ons appointment setting team en koude e-mail campagnes',
+      'Volledig remote werken met korte lijnen met de eigenaar',
     ],
   },
   {
     title: 'B2B Appointment Setter – Koud Bellen',
-    positions: 3,
+    positions: 4,
     description:
-      'Jij bent het eerste contact met potentiële klanten. Je belt Nederlandse ondernemers van onze leadlijst op, wekt interesse in Lokale SEO en online marketing en plant gekwalificeerde afspraken in voor de Closers. Je verdient €50 per afspraak die daadwerkelijk plaatsvindt. Simpel en eerlijk.',
+      'Jij bent het eerste contact met potentiële klanten. Je belt dagelijks Nederlandse ondernemers van onze leadlijst, wekt interesse in de Lokale Top 3 en SEO-websites, en plant gekwalificeerde afspraken in voor de Closers. Je belt in twee blokken per dag: ochtend (09:00-11:00) en middag (13:30-16:00). Je verdient €50 per afspraak die daadwerkelijk plaatsvindt met een beslisser.',
     responsibilities: [
       'Dagelijks outbound bellen naar prospects van de door Van Borg aangeleverde leadlijst',
-      'Interesse wekken in Lokale SEO, Google Ads en SEO-websites',
-      'Alleen afspraken inplannen met echte beslissers, zodat de Closer zijn tijd goed besteedt',
+      'Interesse wekken in de Lokale Top 3 (Lokale SEO) en SEO-websites',
+      'Alleen afspraken inplannen met echte beslissers zodat de Closer zijn tijd goed besteedt',
       'Bellijsten en CRM bijhouden in Close',
+      'Bellen in twee blokken per dag: ochtend (09:00-11:00) en middag (13:30-16:00)',
     ],
     requirements: [
-      'Je bent niet bang voor afwijzing en hebt ervaring met koud bellen',
+      'Je bent niet bang voor afwijzing en hebt aantoonbare ervaring met koud bellen',
       'Overtuigend, direct en energiek aan de telefoon',
-      'Vloeiend Nederlands',
-      'Minimaal 20 uur per week beschikbaar',
+      'Vloeiend Nederlands (moedertaal of C2-niveau)',
+      'Minimaal 25 uur per week beschikbaar, maandag tot en met vrijdag',
+    ],
+    quota: [
+      'Minimaal 120 belletjes per dag via power dialer (4,5 uur belblokken, ca. 30 dials per uur inclusief gesprekstijd)',
+      'Minimaal 3 gehonoreerde afspraken per dag als target (op basis van 2,5-3% conversie)',
+      'Minimaal 12 gehonoreerde afspraken per week',
+      'Bellen van maandag tot en met vrijdag, twee belblokken per dag: 09:00-11:00 en 13:30-16:00',
+      'Dit zijn minimale targets, niet het moment om te stoppen. Hoe meer je belt, hoe meer je verdient',
     ],
     offer: [
-      '€50 per gehonoreerde afspraak, prospect van onze lijst, beslisser, daagt op',
-      'Bij een no-show of verkeerde persoon vindt er geen uitbetaling plaats',
-      'Volledig remote werken met flexibele werktijden',
+      '€50 per gehonoreerde afspraak: prospect van onze lijst, beslisser, daagt op',
+      'Bij een no-show of verkeerde persoon vindt geen uitbetaling plaats',
+      'Bij 12 afspraken per week verdien je €600/week, bij 15+ zit je op €750+',
+      'Volledig remote werken met flexibele indeling binnen de belblokken',
       'Mogelijkheid om door te groeien naar een Closer-rol',
     ],
   },
   {
-    title: 'B2B Appointment Setter – Koud Email',
-    positions: 1,
+    title: 'B2B Appointment Setter – Koude E-mail',
+    positions: 2,
     description:
-      'Je zet outbound e-mailcampagnes op voor prospects van onze leadlijst en zorgt dat er gekwalificeerde afspraken in de agenda van de Closers komen. Je beheert je eigen sequenties, test wat werkt en verdient €50 per afspraak die daadwerkelijk plaatsvindt.',
+      'Je zet outbound e-mailcampagnes op voor prospects van onze leadlijst, focust op de Lokale Top 3 en SEO-websites, en zorgt dat er gekwalificeerde afspraken in de agenda van de Closers komen. Je hebt 10 voorverwarmde e-mailaccounts tot je beschikking waarmee je 300 nieuwe contacten per dag bereikt, ofwel 1.500 per week. Je beheert je eigen sequenties, test wat werkt en verdient €50 per afspraak die daadwerkelijk plaatsvindt.',
     responsibilities: [
-      'Outbound e-mailcampagnes opzetten en uitvoeren naar prospects van de door Van Borg aangeleverde leadlijst',
+      'Outbound e-mailcampagnes opzetten en uitvoeren naar 1.500 nieuwe prospects per week (10 accounts × 30 e-mails/dag × 5 dagen)',
+      'Campagnes richten op de Lokale Top 3 (Lokale SEO) en SEO-websites',
       'Gepersonaliseerde e-mails schrijven die een reactie uitlokken, geen spam',
       'Follow-ups beheren en reacties snel opvolgen',
       'Alleen afspraken inplannen met beslissers en de pipeline bijhouden in Close CRM',
+      'A/B-testen op onderwerpregels, copy en timing om conversie te verhogen',
+      'Reagerende leads die niet direct een afspraak willen doorzetten naar de urgentie-scan funnel',
     ],
     requirements: [
-      'Aantoonbare ervaring met cold email outreach',
-      'Kennis van tools zoals Instantly, Lemlist of vergelijkbaar',
+      'Aantoonbare ervaring met cold email outreach en bewezen resultaten',
+      'Kennis van tools zoals Instantly, Lemlist, Smartlead of vergelijkbaar',
       'Sterke schriftelijke vaardigheden in het Nederlands',
       'Zelfstandig, georganiseerd en data-gedreven',
     ],
+    quota: [
+      '1.500 nieuwe contacten per week via de 10 voorverwarmde accounts',
+      'Minimaal 5 gehonoreerde afspraken per week als instaptarget (op basis van 4-5% reply rate en ~10% booking rate)',
+      'Sequenties draaien van maandag tot en met vrijdag',
+      'Alle reacties binnen 4 uur opvolgen tijdens werkdagen',
+      'Wekelijkse rapportage van open rates, reply rates en geboekte afspraken',
+    ],
     offer: [
-      '€50 per gehonoreerde afspraak, prospect van onze lijst, beslisser, daagt op',
-      'Bij een no-show of verkeerde persoon vindt er geen uitbetaling plaats',
+      '€50 per gehonoreerde afspraak: prospect van onze lijst, beslisser, daagt op',
+      'Bij een no-show of verkeerde persoon vindt geen uitbetaling plaats',
+      'Bij 5 afspraken per week verdien je €250/week, bij 10+ zit je op €500+',
+      '10 voorverwarmde e-mailaccounts direct beschikbaar',
       'Vrijheid om je eigen strategie en sequenties te bepalen',
       'Volledig remote werken met korte communicatielijnen',
     ],
   },
+  {
+    title: 'Zelfstandig B2B Sales Partner – Full Cycle',
+    positions: 5,
+    description:
+      'Je bent een 100% zelfstandige closer die alles zelf opzet: van leadlijsten en prospecting tot pipeline management en het closen van deals. Het maakt ons niet uit hoe of waar je aan klanten komt. Jij vindt klanten die passen bij onze diensten en sluit ze. Je mag het volledige aanbod verkopen: Lokale Top 3, SEO-websites, Google Ads en retainers. Je eigen software en tools? Ga je gang. Je krijgt 25% commissie over alle omzet die je genereert, oplopend naar 30% na bewezen resultaten.',
+    responsibilities: [
+      'Je eigen leadlijsten samenstellen en prospects identificeren die passen bij onze diensten',
+      'Zelf het eerste contact leggen via telefoon, e-mail, LinkedIn, netwerken of welke methode dan ook',
+      'De volledige salescyclus doorlopen: van prospecting tot closing',
+      'Een eigen pipeline opbouwen en beheren in Close CRM',
+      'Het volledige aanbod verkopen: Lokale Top 3, SEO-websites, Google Ads, CRM-automations en retainers',
+      'Klantrelaties onderhouden voor doorlopende retainercommissie',
+    ],
+    requirements: [
+      'Minimaal 3 jaar ervaring in B2B sales, bij voorkeur in digitale marketing of online diensten',
+      'Bewezen track record van zelfstandig klanten binnenhalen',
+      'Eigen netwerk of bewezen methode om leads te genereren',
+      'Je mag je eigen software en tools gebruiken voor leadgeneratie en outreach',
+      'Vloeiend Nederlands (moedertaal of C2-niveau)',
+      'Ondernemend, proactief en niet afhankelijk van aangeleverde leads',
+    ],
+    quota: [
+      'Minimaal 1 nieuwe klant per week',
+      'Eigen pipeline opgebouwd en bijgehouden in Close CRM',
+      'Na 3 maanden evaluatie op basis van resultaten',
+    ],
+    offer: [
+      '25% commissie als instap, 30% na bewezen resultaten',
+      'Bij closing van de Lokale Top 3 setup (€1.499): €375 eenmalig bij 25%, daarna €125/maand per klant',
+      'Combideal Lokale Top 3 + website (€3.000): €750 commissie bij 25%, €900 bij 30%',
+      'Bij een SEO-website (vanaf €2.499): €625+ eenmalig bij 25%',
+      'Volledig remote, volledige vrijheid in aanpak, tools en werktijden',
+      'Geen micromanagement: jij bepaalt hoe je je targets haalt',
+      'Langetermijnsamenwerking met groeiend commissie-inkomen door retainerklanten',
+    ],
+  },
+]
+
+const algemeenEisen: string[] = [
+  'Nederlands op moedertaalniveau of C2',
+  'Stabiele internetverbinding via ethernetkabel, geschikt voor VoIP-bellen (geen WiFi)',
+  'Beschikbaar van maandag tot en met vrijdag',
+  'Zelfstandig werken zonder dagelijkse aansturing',
+  'Ambitieus, resultaatgericht en bereid om te groeien. We bouwen dit zo op dat iedereen goed kan verdienen, maar wie lui is of niet levert hoort hier niet thuis',
+  'Targets zijn een minimum, geen eindpunt. Als je je dagelijkse target hebt gehaald betekent dat niet dat je klaar bent. Hoe meer je doet, hoe meer je verdient',
+  'Remote werken met volledige flexibiliteit in werkplek. Jij moet ervoor zorgen dat je je werk kunt doen zonder dat het de rest hindert. Commitment is niet optioneel',
+  'Vakantie en vrije dagen zijn altijd bespreekbaar. Wil je 3 maanden per jaar vrij? Prima, maar zorg dat je genoeg resultaat levert om je afwezigheid op te vangen. Anders houdt het op',
 ]
 
 const WHATSAPP_NUMBER = '31644732266'
@@ -152,12 +231,38 @@ export function Vacatures() {
             Openstaande vacatures
           </h2>
           <p className="mt-3 text-section-lead max-w-2xl mx-auto">
-            Bekijk onze openstaande posities en vind de rol die bij jou past.
+            Wij zoeken gedreven salesprofessionals die willen groeien en goed willen verdienen. 100% remote, 100% op commissie, 100% resultaatgericht.
           </p>
         </div>
 
         <div className="faq-shell">
           <div className="faq-grid">
+            {/* Algemene eisen – altijd open, zelfde card-stijl als de vacatures */}
+            <div className="card card-bordered faq-topic">
+              <h3 className="faq-topic__title heading-sub">
+                <div className="faq-topic__header" style={{ cursor: 'default' }}>
+                  <span className="flex items-center flex-wrap">
+                    Geldt voor alle vacatures
+                  </span>
+                </div>
+              </h3>
+              <div className="faq-topic__collapse faq-topic__collapse--open">
+                <div className="faq-topic__inner">
+                  <div className="faq-topic__questions">
+                    <ul className="space-y-1.5">
+                      {algemeenEisen.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-base" style={{ color: 'var(--color-neutral-700)' }}>
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent-green)]" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Vacatures */}
             {vacatures.map((vac, idx) => {
               const isOpen = openIdx === idx
               const headingId = `vacature-heading-${idx}`
@@ -233,6 +338,20 @@ export function Vacatures() {
 
                         <div className="mt-4">
                           <h4 className="text-sm font-bold uppercase tracking-wide" style={{ color: 'var(--color-neutral-900)' }}>
+                            Targets en quota
+                          </h4>
+                          <ul className="mt-2 space-y-1.5">
+                            {vac.quota.map((item) => (
+                              <li key={item} className="flex items-start gap-2 text-base" style={{ color: 'var(--color-neutral-700)' }}>
+                                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent-green)]" />
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="mt-4">
+                          <h4 className="text-sm font-bold uppercase tracking-wide" style={{ color: 'var(--color-neutral-900)' }}>
                             Wat we bieden
                           </h4>
                           <ul className="mt-2 space-y-1.5">
@@ -277,6 +396,38 @@ export function Vacatures() {
                 </div>
               )
             })}
+
+            {/* Capaciteit en verdienpotentieel blok */}
+            <div className="card card-bordered faq-topic">
+              <h3 className="faq-topic__title heading-sub">
+                <div className="faq-topic__header" style={{ cursor: 'default' }}>
+                  <span className="flex items-center flex-wrap">
+                    Onze capaciteit en jouw verdienpotentieel
+                  </span>
+                </div>
+              </h3>
+              <div className="faq-topic__collapse faq-topic__collapse--open">
+                <div className="faq-topic__inner">
+                  <div className="faq-topic__questions">
+                    <p className="faq-question__answer">
+                      Ons development team werkt met de beste AI-tools en software zoals Cursor en n8n.
+                      Daardoor leveren we snel, schaalbaar en op hoog niveau. Op dit moment kunnen we
+                      maandelijks zo'n 25 Lokale Top 3 trajecten en 10 SEO-websites opleveren, en dat
+                      aantal groeit mee met de vraag.
+                    </p>
+                    <p className="faq-question__answer" style={{ marginTop: '0.75rem' }}>
+                      Dat betekent concreet: er zit geen plafond op wat jij kunt verdienen. De targets
+                      hierboven zijn een minimum. Wie harder werkt, meer belt of slimmer mailt, verdient
+                      meer. Daarom bouwen we een stevig salesteam. We willen volume draaien, en we
+                      hebben de capaciteit om dat waar te maken. Groeit de vraag sneller dan ons team
+                      aankan? Dan schalen we het development team op. Jouw resultaten worden nooit
+                      afgeremd door onze achterkant.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </Container>

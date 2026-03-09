@@ -40,7 +40,7 @@ export function WebsiteSeoProduct() {
               <div className="ranking-prijs-badge">SEO Website</div>
 
               <div className="ranking-prijs-bedrag mt-4">
-                Vanaf &euro;&nbsp;1.499
+                Vanaf &euro;&nbsp;1.999
               </div>
               <p className="ranking-prijs-subtekst">Eenmalig &middot; excl. btw</p>
 
