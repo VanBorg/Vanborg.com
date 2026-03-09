@@ -10,9 +10,8 @@ export function JobsHero() {
             100% commissie. Geen plafond. Geen excuses.
           </h2>
           <p className="text-section-body mt-3 text-neutral-500">
-            Van Borg zoekt zelfstandige B2B-salesprofessionals die kunnen bellen,
-            sluiten en zelf hun pipeline runnen. Elke deal die je binnenhaalt is
-            recurring — je bouwt maandelijks passief inkomen op vanaf dag één.
+            Elke deal die je binnenhaalt is
+            recurring, je bouwt maandelijks passief inkomen op.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a href="#vacatures" className="btn-primary">

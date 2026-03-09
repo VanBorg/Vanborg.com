@@ -15,7 +15,7 @@ interface Vacature {
 
 const vacatures: Vacature[] = [
   {
-    title: 'B2B Closer – Warme Leads',
+    title: 'B2B Closer - Warme Leads',
     positions: 2,
     description:
       'Je sluit deals met gekwalificeerde leads die door onze appointment setters en koude e-mail outreach worden aangeleverd. Jouw hele bestaan binnen Van Borg draait om het closen van lauwe tot warme leads. Je focust op het verkopen van onze Lokale Top 3 (Lokale SEO) en SEO-websites aan Nederlandse ondernemers die online beter gevonden willen worden. Je bouwt een strakke pipeline op in Close CRM en zorgt dat geen enkele lead onbehandeld blijft. Je start op 10% commissie over alles wat je sluit en upselt. Bij bewezen resultaten groei je door naar 15%.',
@@ -24,13 +24,14 @@ const vacatures: Vacature[] = [
       'Primair verkopen: Lokale Top 3 (Lokale SEO) en SEO-websites. Retainers en Google Ads komen later als upsell',
       'Een strakke pipeline opzetten en beheren in Close CRM zodat elke lead wordt opgevolgd',
       'Upsells initiëren: als de klant draait, bied je de website, retainer of Google Ads aan',
-      'Alle warme leads van de appointment setters en koude e-mail campagnes in behandeling nemen',
+      'Alle warme leads van de appointment setters en koude e-mail campagnes in behandeling nemen en opvolgen',
       'Lauwe leads die door de eigenaar worden doorgestuurd opvolgen en converteren',
       'Klantrelaties warm houden zodat je maandelijkse commissie op de retainer blijft doorlopen',
     ],
     requirements: [
       'Minimaal 2 jaar aantoonbare ervaring in B2B sales of closing',
       'Ervaring met het verkopen van online marketingdiensten (SEO, Google Ads, websites) is een groot pluspunt',
+      'Stabiele internetverbinding via ethernetkabel, geschikt voor VoIP-bellen (geen WiFi)',
       'Vloeiend Nederlands (moedertaal of C2-niveau), sterk aan de telefoon en per video',
       'Zelfstandig, resultaatgericht en in staat om een eigen pipeline te managen',
     ],
@@ -50,7 +51,7 @@ const vacatures: Vacature[] = [
     ],
   },
   {
-    title: 'B2B Appointment Setter – Koud Bellen',
+    title: 'B2B Appointment Setter - Koud Bellen',
     positions: 4,
     description:
       'Jij bent het eerste contact met potentiële klanten. Je belt dagelijks Nederlandse ondernemers van onze leadlijst, wekt interesse in de Lokale Top 3 en SEO-websites, en plant gekwalificeerde afspraken in voor de Closers. Je belt in twee blokken per dag: ochtend (09:00-11:00) en middag (13:30-16:00). Je verdient €50 per afspraak die daadwerkelijk plaatsvindt met een beslisser.',
@@ -63,12 +64,13 @@ const vacatures: Vacature[] = [
     ],
     requirements: [
       'Je bent niet bang voor afwijzing en hebt aantoonbare ervaring met koud bellen',
+      'Stabiele internetverbinding via ethernetkabel, geschikt voor VoIP-bellen (geen WiFi)',
       'Overtuigend, direct en energiek aan de telefoon',
       'Vloeiend Nederlands (moedertaal of C2-niveau)',
       'Minimaal 25 uur per week beschikbaar, maandag tot en met vrijdag',
     ],
     quota: [
-      'Minimaal 120 belletjes per dag via power dialer (4,5 uur belblokken, ca. 30 dials per uur inclusief gesprekstijd)',
+      'Minimaal 120 tefeloontjes per dag (4,5 uur belblokken, ca. 30 dials per uur inclusief gesprekstijd)',
       'Minimaal 3 gehonoreerde afspraken per dag als target (op basis van 2,5-3% conversie)',
       'Minimaal 12 gehonoreerde afspraken per week',
       'Bellen van maandag tot en met vrijdag, twee belblokken per dag: 09:00-11:00 en 13:30-16:00',
@@ -83,7 +85,7 @@ const vacatures: Vacature[] = [
     ],
   },
   {
-    title: 'B2B Appointment Setter – Koude E-mail',
+    title: 'B2B Appointment Setter - Koude E-mail',
     positions: 2,
     description:
       'Je zet outbound e-mailcampagnes op voor prospects van onze leadlijst, focust op de Lokale Top 3 en SEO-websites, en zorgt dat er gekwalificeerde afspraken in de agenda van de Closers komen. Je hebt 10 voorverwarmde e-mailaccounts tot je beschikking waarmee je 300 nieuwe contacten per dag bereikt, ofwel 1.500 per week. Je beheert je eigen sequenties, test wat werkt en verdient €50 per afspraak die daadwerkelijk plaatsvindt.',
@@ -92,7 +94,7 @@ const vacatures: Vacature[] = [
       'Campagnes richten op de Lokale Top 3 (Lokale SEO) en SEO-websites',
       'Gepersonaliseerde e-mails schrijven die een reactie uitlokken, geen spam',
       'Follow-ups beheren en reacties snel opvolgen',
-      'Alleen afspraken inplannen met beslissers en de pipeline bijhouden in Close CRM',
+      'Alleen afspraken inplannen met beslissers en de pipeline bijhouden in Instantly CRM',
       'A/B-testen op onderwerpregels, copy en timing om conversie te verhogen',
       'Reagerende leads die niet direct een afspraak willen doorzetten naar de urgentie-scan funnel',
     ],
@@ -119,7 +121,7 @@ const vacatures: Vacature[] = [
     ],
   },
   {
-    title: 'Zelfstandig B2B Sales Partner – Full Cycle',
+    title: 'Zelfstandig B2B Sales Partner - Full Cycle',
     positions: 5,
     description:
       'Je bent een 100% zelfstandige closer die alles zelf opzet: van leadlijsten en prospecting tot pipeline management en het closen van deals. Het maakt ons niet uit hoe of waar je aan klanten komt. Jij vindt klanten die passen bij onze diensten en sluit ze. Je mag het volledige aanbod verkopen: Lokale Top 3, SEO-websites, Google Ads en retainers. Je eigen software en tools? Ga je gang. Je krijgt 25% commissie over alle omzet die je genereert, oplopend naar 30% na bewezen resultaten.',
@@ -127,7 +129,7 @@ const vacatures: Vacature[] = [
       'Je eigen leadlijsten samenstellen en prospects identificeren die passen bij onze diensten',
       'Zelf het eerste contact leggen via telefoon, e-mail, LinkedIn, netwerken of welke methode dan ook',
       'De volledige salescyclus doorlopen: van prospecting tot closing',
-      'Een eigen pipeline opbouwen en beheren in Close CRM',
+      'Een eigen pipeline opbouwen en beheren',
       'Het volledige aanbod verkopen: Lokale Top 3, SEO-websites, Google Ads, CRM-automations en retainers',
       'Klantrelaties onderhouden voor doorlopende retainercommissie',
     ],
@@ -141,7 +143,7 @@ const vacatures: Vacature[] = [
     ],
     quota: [
       'Minimaal 1 nieuwe klant per week',
-      'Eigen pipeline opgebouwd en bijgehouden in Close CRM',
+      'Eigen pipeline opgebouwd en bijgehouden',
       'Na 3 maanden evaluatie op basis van resultaten',
     ],
     offer: [
@@ -299,7 +301,7 @@ export function Vacatures() {
                         {idx === 0 && (
                           <div className="mt-3">
                             <Link
-                              to="/prijzen"
+                              to="/prijzen#prijzen-tabel"
                               className="text-sm font-medium underline underline-offset-2"
                               style={{ color: 'var(--color-accent)' }}
                             >
