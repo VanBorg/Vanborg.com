@@ -8,14 +8,21 @@ export function Hero() {
         <div className="hero__layout flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-center lg:gap-12">
 
           <div className="hero__text max-w-lg">
-            <h1 className="heading-hero" style={{ hyphens: 'auto' }} lang="nl">
-              Het nummer één internet&shy;marketingbureau in Veendam en omgeving.
+            <h1 className="heading-hero" lang="nl">
+              <span className="block md:hidden">
+                Het nummer één internetmarketingbureau van Veendam en omgeving.
+              </span>
+              <span className="hidden md:block">
+                Het nummer <strong> 1</strong> internet-
+                <br />
+                marketingbureau van Veendam en omgeving.
+              </span>
             </h1>
             <p className="heading-hero-subtitle mt-3">
               Binnen 90 dagen een Top 3 positie op Google.
             </p>
             <p className="hero__lead text-section-body mt-2" style={{ color: 'var(--color-neutral-700)' }}>
-              Op de kaart: links hoe het was, rechts hoe het nu staat. Amper 3 maanden.
+              Op de kaart: links hoe het was, rechts is amper 3 maanden later.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <a

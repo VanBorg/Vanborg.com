@@ -146,6 +146,119 @@ const faqData: FAQTopic[] = [
     ],
   },
   {
+    title: 'Vacatures',
+    questions: [
+      {
+        q: 'Welke rol heeft de B2B Closer - Warme Leads?',
+        a: 'Als B2B Closer - Warme Leads sluit je deals met lauwe en warme leads die via appointment setting en koude e-mailcampagnes binnenkomen. Je focust op het verkopen van Lokale Top 3 (Lokale SEO) en SEO-websites aan Nederlandse ondernemers en bouwt een strakke pipeline op in Close CRM.',
+        rich: (
+          <>
+            Als{' '}
+            <Link to="/jobs#vacatures" className="text-[var(--accent-green-light)]">
+              B2B Closer - Warme Leads
+            </Link>{' '}
+            sluit je deals met lauwe en warme leads die via appointment setting en koude e-mailcampagnes binnenkomen. Je focust op het verkopen van onze{' '}
+            <Link to="/ranking" className="text-[var(--accent-green-light)]">
+              Lokale Top 3 dienst
+            </Link>{' '}
+            en{' '}
+            <Link to="/website" className="text-[var(--accent-green-light)]">
+              SEO Websites
+            </Link>
+            , bewaakt je pipeline in Close CRM en bouwt zo een doorlopende stroom aan commissies op. Bekijk de volledige rol op de{' '}
+            <Link to="/jobs#vacatures" className="text-[var(--accent-green-light)]">
+              vacaturepagina
+            </Link>
+            .
+          </>
+        ),
+      },
+      {
+        q: 'Wat doet een B2B Appointment Setter – Koud Bellen?',
+        a: 'Als B2B Appointment Setter – Koud Bellen bel je dagelijks Nederlandse ondernemers op basis van aangeleverde leadlijsten. Je wekt interesse in de Lokale Top 3 en SEO-websites en plant afspraken in voor de Closers, met een vaste vergoeding per gehonoreerde afspraak.',
+        rich: (
+          <>
+            De{' '}
+            <Link to="/jobs#vacatures" className="text-[var(--accent-green-light)]">
+              B2B Appointment Setter – Koud Bellen
+            </Link>{' '}
+            belt dagelijks Nederlandse ondernemers op basis van onze leadlijsten. Je wekt interesse in{' '}
+            <Link to="/ranking" className="text-[var(--accent-green-light)]">
+              Lokale Top 3
+            </Link>{' '}
+            en{' '}
+            <Link to="/website" className="text-[var(--accent-green-light)]">
+              SEO Websites
+            </Link>
+            , en plant alleen afspraken met echte beslissers in voor de Closers. Je verdient een vaste fee per gehonoreerde afspraak. Alle details vind je bij de functie op de{' '}
+            <Link to="/jobs#vacatures" className="text-[var(--accent-green-light)]">
+              vacaturepagina
+            </Link>
+            .
+          </>
+        ),
+      },
+      {
+        q: 'Wat houdt de rol B2B Appointment Setter – Koud Email in?',
+        a: 'Als B2B Appointment Setter – Koud Email zet je outbound e-mailcampagnes op via meerdere e-mailaccounts. Je schrijft gepersonaliseerde sequenties, test wat werkt en boekt afspraken in voor de Closers op basis van reacties en reply rates.',
+        rich: (
+          <>
+            In de rol{' '}
+            <Link to="/jobs#vacatures" className="text-[var(--accent-green-light)]">
+              B2B Appointment Setter – Koud Email
+            </Link>{' '}
+            beheer je meerdere outbound e-mailaccounts en sequenties. Je schrijft gepersonaliseerde e-mails, stuurt op open- en reply rates en boekt afspraken in voor de Closers. Je werkt nauw samen met de diensten{' '}
+            <Link to="/ranking" className="text-[var(--accent-green-light)]">
+              Lokale Top 3
+            </Link>
+            ,{' '}
+            <Link to="/website" className="text-[var(--accent-green-light)]">
+              SEO Websites
+            </Link>{' '}
+            en eventueel{' '}
+            <Link to="/ads" className="text-[var(--accent-green-light)]">
+              Google Ads
+            </Link>
+            . De volledige functieomschrijving en targets staan op de{' '}
+            <Link to="/jobs#vacatures" className="text-[var(--accent-green-light)]">
+              vacaturepagina
+            </Link>
+            .
+          </>
+        ),
+      },
+      {
+        q: 'Wat maakt de rol Zelfstandig B2B Sales Partner – Full Cycle anders?',
+        a: 'Als Zelfstandig B2B Sales Partner – Full Cycle ben je volledig verantwoordelijk voor je eigen leadgeneratie, gesprekken en closings. Je mag het volledige aanbod verkopen – Lokale Top 3, SEO Websites, Google Ads en retainers – en ontvangt een hoge commissie per deal.',
+        rich: (
+          <>
+            De rol{' '}
+            <Link to="/jobs#vacatures" className="text-[var(--accent-green-light)]">
+              Zelfstandig B2B Sales Partner – Full Cycle
+            </Link>{' '}
+            is bedoeld voor ervaren salesprofessionals die zelf hun leads genereren, gesprekken voeren en deals closen. Je mag het volledige aanbod verkopen:{' '}
+            <Link to="/ranking" className="text-[var(--accent-green-light)]">
+              Lokale Top 3
+            </Link>
+            ,{' '}
+            <Link to="/website" className="text-[var(--accent-green-light)]">
+              SEO Websites
+            </Link>
+            ,{' '}
+            <Link to="/ads" className="text-[var(--accent-green-light)]">
+              Google Ads
+            </Link>{' '}
+            en doorlopende retainers, met een commissiepercentage dat boven de andere functies ligt. Meer informatie en exacte commissies vind je op de{' '}
+            <Link to="/jobs#vacatures" className="text-[var(--accent-green-light)]">
+              vacatures-pagina
+            </Link>
+            .
+          </>
+        ),
+      },
+    ],
+  },
+  {
     title: 'Contact info',
     questions: [
       {
