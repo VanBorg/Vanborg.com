@@ -18,7 +18,7 @@ const vacatures: Vacature[] = [
     title: 'B2B Closer - Warme Leads',
     positions: 2,
     description:
-      'Je sluit deals met gekwalificeerde leads die door onze appointment setters en koude e-mail outreach worden aangeleverd. Jouw hele bestaan binnen Van Borg draait om het closen van lauwe tot warme leads. Je focust op het verkopen van onze Lokale Top 3 (Lokale SEO) en SEO-websites aan Nederlandse ondernemers die online beter gevonden willen worden. Je bouwt een strakke pipeline op in Close CRM en zorgt dat geen enkele lead onbehandeld blijft. Je start op 10% commissie over alles wat je sluit en upselt. Bij bewezen resultaten groei je door naar 15%.',
+      'Je sluit deals met gekwalificeerde leads die door onze appointment setters en koude e-mail outreach worden aangeleverd. Jouw hele bestaan binnen Van Borg draait om het closen van lauwe tot warme leads. Je focust op het verkopen van onze Lokale Top 3 (Lokale SEO) en SEO-websites aan Nederlandse ondernemers die online beter gevonden willen worden. Je bouwt een strakke pipeline op in Close CRM en zorgt dat geen enkele lead onbehandeld blijft. Je start op 15% commissie over alles wat je sluit en upselt. Bij bewezen resultaten groei je door naar 20%.',
     responsibilities: [
       'Salesgesprekken voeren met warme en lauwe leads via telefoon en videocall',
       'Primair verkopen: Lokale Top 3 (Lokale SEO) en SEO-websites. Retainers en Google Ads komen later als upsell',
@@ -37,15 +37,15 @@ const vacatures: Vacature[] = [
     ],
     quota: [
       'Minimaal 1 gesloten klant per 5 afspraken (20% close rate)',
-      'Minimaal 2 nieuwe klanten per week als target',
+      'Minimaal 3 nieuwe klanten per week als target',
       'Alle aangeleverde leads binnen 24 uur opvolgen',
       'Pipeline in Close CRM dagelijks bijwerken, geen lead mag onbehandeld blijven',
     ],
     offer: [
-      '10% commissie als instap, 15% na bewezen resultaten',
-      'Combideal Lokale Top 3 + website (€3.000): €300 commissie bij 10%, €450 bij 15%',
-      'Bij closing van alleen de Lokale Top 3 setup (€1.499): €150 eenmalig bij 10%, daarna €50/maand zolang de klant actief is',
-      'Bij een SEO-website (vanaf €2.499): €250+ eenmalig bij 10%',
+      '15% commissie als instap, 20% na bewezen resultaten',
+      'Combideal Lokale Top 3 + website (€3.000): €450 commissie bij 15%, €600 bij 20%',
+      'Bij closing van alleen de Lokale Top 3 setup (€1.499): €225 eenmalig bij 15%, daarna €75/maand zolang de klant actief is',
+      'Bij een SEO-website (vanaf €2.499): €375+ eenmalig bij 15%',
       'Warme leads aangeleverd door ons appointment setting team en koude e-mail campagnes',
       'Volledig remote werken met korte lijnen met de eigenaar',
     ],
