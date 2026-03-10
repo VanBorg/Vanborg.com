@@ -35,6 +35,27 @@
   padding-bottom: 2.5rem;
 }
 
+@media (max-width: 639px) {
+  .hero__layout {
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__text {
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .hero__text .heading-hero,
+  .hero__text .heading-hero-subtitle,
+  .hero__text .hero__lead {
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px) {
   .section--hero {
     padding-top: 5rem;

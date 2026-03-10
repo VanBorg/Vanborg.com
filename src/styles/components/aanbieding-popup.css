@@ -18,7 +18,7 @@
   box-shadow: var(--shadow-strong);
   border-top: 4px solid var(--accent-green);
   width: 100%;
-  max-width: 420px;
+  max-width: 360px;
   padding: 1.5rem 1.25rem;
   text-align: center;
 }
@@ -107,6 +107,7 @@
   }
 
   .aanbieding-popup-card {
+    max-width: 420px;
     padding: 2rem;
   }
 

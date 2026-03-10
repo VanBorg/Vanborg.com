@@ -5,7 +5,7 @@ export function JobsHero() {
     <section id="page-hero" className="section bg-section-1 py-12 lg:py-20">
       <Container>
         <div className="max-w-2xl text-center mx-auto">
-          <h1 className="heading-hero whitespace-nowrap">Verdien wat je waard bent</h1>
+          <h1 className="heading-hero">Verdien wat je waard bent</h1>
           <h2 className="heading-hero-subtitle mt-3">
             100% commissie. Geen plafond. Geen excuses.
           </h2>
